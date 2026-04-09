@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>广州OPC政策导航 - AI语音机器人创业者专属</title>
+<meta name="description" content="广州OPC政策导航，覆盖海珠/黄埔/南沙/番禺/天河/白云各区，含倒计时、搜索、材料清单等交互功能">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
 <style>
   :root {
     --bg: #0a0a0f;
@@ -167,7 +169,7 @@
 
   /* Nav */
   .nav-bar {
-    position: sticky; top: 0; z-index: 100;
+    position: sticky; top: 44px; z-index: 100;
     background: rgba(10,10,15,0.85); backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border); padding: 0 20px; overflow-x: auto;
   }
@@ -415,6 +417,14 @@
 </style>
 </head>
 <body>
+
+<!-- Top Nav -->
+<nav style="display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;backdrop-filter:blur(12px)">
+  <span style="font-weight:800;font-size:1em;color:var(--accent-light)">OPC</span>
+  <a href="index.html" style="padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--text-dim)">首页</a>
+  <a href="guangzhou.html" style="padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--accent-light);background:rgba(108,92,231,.1)">广州专版</a>
+  <a href="dashboard.html" style="padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--text-dim)">数据看板</a>
+</nav>
 
 <!-- Reading Progress -->
 <div class="reading-progress" id="readingProgress" style="width:0%"></div>

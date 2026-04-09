@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OPC 数据看板</title>
+<meta name="description" content="全国OPC政策数据看板 - 城市对比、补贴排行、社区统计">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 <style>
 :root{--bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--dim:#8888a0;--accent:#6c5ce7;--al:#a29bfe;--green:#00e676;--yellow:#ffd600;--red:#ff5252;--cyan:#00e5ff;--blue:#448aff;--orange:#ff9100}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -62,21 +64,28 @@ h1{font-size:1.8em;margin-bottom:4px}
 .tl-city{font-size:.75em;padding:1px 6px;border-radius:4px;background:rgba(108,92,231,.15);color:var(--al)}
 .tl-urgent{color:var(--red);font-weight:600}
 
-nav{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
-nav a{padding:6px 16px;border-radius:8px;border:1px solid var(--border);color:var(--dim);font-size:.85em;transition:all .2s}
-nav a:hover,nav a.active{border-color:var(--accent);color:var(--al);background:rgba(108,92,231,.1)}
+/* Top nav */
+.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);
+  border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+.topnav .logo{font-weight:800;font-size:1em;color:var(--al)}
+.topnav a{padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--dim);transition:all .2s}
+.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(108,92,231,.1)}
+.topnav .spacer{flex:1}
 
 @media(max-width:768px){.chart-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
-<div class="container">
-  <nav>
-    <a href="index.html">首页</a>
-    <a href="guangzhou.html">广州专版</a>
-    <a href="dashboard.html" class="active">数据看板</a>
-  </nav>
+<nav class="topnav">
+  <span class="logo">OPC</span>
+  <a href="index.html">首页</a>
+  <a href="guangzhou.html">广州专版</a>
+  <a href="dashboard.html" class="active">数据看板</a>
+  <span class="spacer"></span>
+  <a href="https://github.com/siuserxiaowei/guangzhou-opc-policy" target="_blank" style="font-size:.78em">GitHub</a>
+</nav>
 
+<div class="container">
   <h1>OPC 全国数据看板</h1>
   <p class="sub">实时政策数据统计与分析</p>
 
