@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OPC Policy Schema",
+  "description": "全国OPC政策结构化数据格式定义",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "description": "唯一ID，格式: 城市-区域-序号，如 guangzhou-haizhu-001" },
+    "name": { "type": "string", "description": "政策名称" },
+    "city": { "type": "string", "description": "城市" },
+    "province": { "type": "string", "description": "省份" },
+    "district": { "type": "string", "description": "区/县，省级或市级政策留空" },
+    "level": { "type": "string", "enum": ["national", "province", "city", "district"], "description": "政策层级" },
+    "issuer": { "type": "string", "description": "发文单位" },
+    "publish_date": { "type": "string", "format": "date", "description": "发布日期" },
+    "effective_date": { "type": "string", "format": "date", "description": "生效日期" },
+    "expire_date": { "type": "string", "format": "date", "description": "到期日期" },
+    "status": { "type": "string", "enum": ["draft", "active", "expired", "revoked"], "description": "状态" },
+    "category": {
+      "type": "string",
+      "enum": ["subsidy", "tax", "space", "talent", "computing", "scenario", "competition", "loan", "registration", "comprehensive"],
+      "description": "政策类型"
+    },
+    "summary": { "type": "string", "description": "一句话概述" },
+    "benefits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item": { "type": "string", "description": "补贴项目" },
+          "amount": { "type": "string", "description": "金额描述" },
+          "amount_max": { "type": "number", "description": "最高金额（元），用于排序筛选" },
+          "type": { "type": "string", "enum": ["cash", "voucher", "rent_free", "tax_reduction", "service", "loan", "other"] }
+        }
+      }
+    },
+    "requirements": {
+      "type": "object",
+      "properties": {
+        "registration_location": { "type": "string", "description": "注册地要求，如'海珠区'、'广州市'、'不限'" },
+        "operation_location": { "type": "string", "description": "经营地要求" },
+        "company_age_max_years": { "type": "number", "description": "公司成立年限上限" },
+        "min_employees": { "type": "number" },
+        "max_employees": { "type": "number" },
+        "social_insurance_months": { "type": "number", "description": "社保缴纳月数要求" },
+        "industries": { "type": "array", "items": { "type": "string" }, "description": "适用行业" },
+        "qualifications": { "type": "array", "items": { "type": "string" }, "description": "资质要求，如模型备案、算法备案" },
+        "founder_identity": { "type": "array", "items": { "type": "string" }, "description": "法人身份要求" },
+        "other": { "type": "array", "items": { "type": "string" }, "description": "其他条件" }
+      }
+    },
+    "application": {
+      "type": "object",
+      "properties": {
+        "deadline": { "type": "string", "description": "申报截止/窗口" },
+        "next_window": { "type": "string", "description": "下一个申报窗口" },
+        "method": { "type": "string", "description": "申报方式" },
+        "contact": { "type": "string", "description": "联系人" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "address": { "type": "string" },
+        "url": { "type": "string", "description": "申报入口URL" }
+      }
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "official": { "type": "string", "description": "政策原文链接" },
+        "news": { "type": "array", "items": { "type": "string" }, "description": "新闻报道链接" }
+      }
+    },
+    "communities": {
+      "type": "array",
+      "description": "关联的OPC社区/孵化器",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "address": { "type": "string" },
+          "features": { "type": "array", "items": { "type": "string" } },
+          "contact": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "tags": { "type": "array", "items": { "type": "string" }, "description": "标签，用于搜索" },
+    "updated_at": { "type": "string", "format": "date", "description": "数据更新时间" },
+    "verified": { "type": "boolean", "description": "是否经过人工验证" }
+  },
+  "required": ["id", "name", "city", "province", "level", "status", "category", "summary", "updated_at"]
+}

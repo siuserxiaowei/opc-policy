@@ -1,0 +1,958 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-04-10",
+  "policies": [
+    {
+      "id": "guangdong-province-001",
+      "name": "广东省支持人工智能OPC创新发展行动方案（2026—2028年）",
+      "city": "广州",
+      "province": "广东",
+      "district": "",
+      "level": "province",
+      "issuer": "广东省发展改革委",
+      "publish_date": "2026-03-16",
+      "effective_date": "2026-03-16",
+      "expire_date": "2028-12-31",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "全国首个省级OPC专项政策，18条措施覆盖算力、空间、场景、融资、人才",
+      "benefits": [
+        { "item": "算力券制度", "amount": "降低OPC企业算力使用成本", "amount_max": 0, "type": "voucher" },
+        { "item": "模型开发投入补贴", "amount": "鼓励地市制定", "amount_max": 0, "type": "cash" },
+        { "item": "人才公寓/购房补贴", "amount": "免租或低租", "amount_max": 0, "type": "other" },
+        { "item": "专属金融产品", "amount": "人才贷、研发贷、成果贷", "amount_max": 0, "type": "loan" }
+      ],
+      "requirements": {
+        "registration_location": "广东省",
+        "operation_location": "广东省",
+        "industries": ["人工智能", "OPC"],
+        "qualifications": [],
+        "other": ["省级框架文件，具体由各地市制定实施细则"]
+      },
+      "application": {
+        "method": "各地市自行制定",
+        "url": ""
+      },
+      "links": {
+        "official": "https://www.cnbayarea.org.cn/policy/policyrelease/policies/content/post_1321436.html",
+        "news": [
+          "https://www.mrjjxw.com/articles/2026-03-16/4294588.html",
+          "https://finance.sina.cn/2026-03-20/detail-inhrrzum7919776.d.html"
+        ]
+      },
+      "communities": [],
+      "tags": ["省级", "框架政策", "算力券", "人才", "金融"],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-city-001",
+      "name": "广州市创业带动就业补贴",
+      "city": "广州",
+      "province": "广东",
+      "district": "",
+      "level": "city",
+      "issuer": "广州市人力资源和社会保障局",
+      "publish_date": "2022-04-29",
+      "effective_date": "2022-06-01",
+      "expire_date": "2027-05-31",
+      "status": "active",
+      "category": "subsidy",
+      "summary": "初创企业招用员工可获每人2000-3000元补贴，最高3万元",
+      "benefits": [
+        { "item": "招用3人及以下", "amount": "每人2000元", "amount_max": 6000, "type": "cash" },
+        { "item": "招用4人及以上", "amount": "每增1人3000元", "amount_max": 30000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "广州市",
+        "company_age_max_years": 3,
+        "social_insurance_months": 6,
+        "other": ["小微企业", "签1年以上劳动合同", "法定代表人不计入补贴人数", "非全法人股东企业"]
+      },
+      "application": {
+        "deadline": "每年1/3/5/7/9/11月的1-20日",
+        "next_window": "2026-05-01 至 2026-05-20",
+        "method": "线上申报",
+        "url": "https://www.gdzwfw.gov.cn/"
+      },
+      "links": {
+        "official": "https://rsj.gz.gov.cn/attachment/7/7631/7631455/9745334.pdf",
+        "news": []
+      },
+      "communities": [],
+      "tags": ["创业补贴", "就业", "社保", "现金"],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-city-002",
+      "name": "一次性创业资助",
+      "city": "广州",
+      "province": "广东",
+      "district": "",
+      "level": "city",
+      "issuer": "广州市人力资源和社会保障局",
+      "publish_date": "2022-04-29",
+      "effective_date": "2022-06-01",
+      "expire_date": "2027-05-31",
+      "status": "active",
+      "category": "subsidy",
+      "summary": "符合身份条件的创业者可获1万元一次性资助",
+      "benefits": [
+        { "item": "一次性创业资助", "amount": "10000元", "amount_max": 10000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "广州市",
+        "social_insurance_months": 3,
+        "founder_identity": ["高校/中职/技校学生(在校及毕业5年内)", "留学回国人员(毕业5年内)", "军转干部/退役军人", "登记失业人员", "就业困难人员", "本省脱贫人口", "返乡创业人员"],
+        "other": ["女性≤55岁，男性≤60岁", "未列入经营异常名录"]
+      },
+      "application": {
+        "deadline": "每年1/3/5/7/9/11月的1-20日",
+        "next_window": "2026-05-01 至 2026-05-20",
+        "method": "广东政务服务网，法人身份搜索「一次性创业资助」",
+        "url": "https://www.gdzwfw.gov.cn/"
+      },
+      "links": {
+        "official": "https://rsj.gz.gov.cn/attachment/7/7631/7631455/9745334.pdf",
+        "news": []
+      },
+      "communities": [],
+      "tags": ["创业资助", "身份限制", "现金"],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-city-003",
+      "name": "创业租金补贴",
+      "city": "广州",
+      "province": "广东",
+      "district": "",
+      "level": "city",
+      "issuer": "广州市人力资源和社会保障局",
+      "publish_date": "2022-04-29",
+      "effective_date": "2022-06-01",
+      "expire_date": "2027-05-31",
+      "status": "active",
+      "category": "subsidy",
+      "summary": "符合条件的创业者每年最高6000元租金补贴，累计3年",
+      "benefits": [
+        { "item": "租金补贴", "amount": "每年最高6000元，累计不超过3年", "amount_max": 18000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "广州市",
+        "social_insurance_months": 3,
+        "founder_identity": ["高校/中职/技校学生(在校及毕业5年内)", "留学回国人员(毕业5年内)", "军转干部/退役军人", "登记失业人员", "就业困难人员", "本省脱贫人口", "返乡创业人员"],
+        "other": ["租赁地址与注册地一致", "非法人自有物业", "未列入经营异常名录"]
+      },
+      "application": {
+        "deadline": "每年1/3/5/7/9/11月的1-20日",
+        "next_window": "2026-05-01 至 2026-05-20",
+        "url": "https://www.gdzwfw.gov.cn/"
+      },
+      "links": {
+        "official": "https://rsj.gz.gov.cn/attachment/7/7631/7631455/9745334.pdf"
+      },
+      "communities": [],
+      "tags": ["租金补贴", "身份限制"],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-city-004",
+      "name": "广州OPC创新工坊",
+      "city": "广州",
+      "province": "广东",
+      "district": "天河",
+      "level": "city",
+      "issuer": "广州市政务服务数据管理局",
+      "publish_date": "2026-03-20",
+      "status": "active",
+      "category": "space",
+      "summary": "免费Token流量包+AI智能体框架+一对一技术指导，广州注册企业可预约",
+      "benefits": [
+        { "item": "免费Token流量包", "amount": "免费", "amount_max": 0, "type": "service" },
+        { "item": "AI智能体框架工具", "amount": "四层安全防护", "amount_max": 0, "type": "service" },
+        { "item": "一对一技术指导", "amount": "免费", "amount_max": 0, "type": "service" },
+        { "item": "法务财税辅助技能", "amount": "预装", "amount_max": 0, "type": "service" }
+      ],
+      "requirements": {
+        "registration_location": "广州市",
+        "other": ["个人独资企业、小微企业及个人创业者"]
+      },
+      "application": {
+        "method": "穗@i企平台预约，1个工作日审核",
+        "url": "https://qyfw.gzonline.gov.cn/qyfw/home",
+        "address": "天河区珠江新城华利路61号 广州市政务服务中心五楼509室"
+      },
+      "links": {
+        "official": "https://qyfw.gzonline.gov.cn/qyfw/home",
+        "news": ["https://www.21jingji.com/article/20260320/herald/9b63ae848655867b0141f734b84f97b6.html"]
+      },
+      "communities": [{
+        "name": "OPC创新工坊",
+        "address": "天河区珠江新城华利路61号五楼509室",
+        "features": ["免费Token", "AI框架", "一对一指导", "法务财税"]
+      }],
+      "tags": ["免费", "Token", "技术指导", "低门槛"],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-haizhu-001",
+      "name": "海珠区政府侧人工智能场景机会清单（第一批）技术服务商征集",
+      "city": "广州",
+      "province": "广东",
+      "district": "海珠",
+      "level": "district",
+      "issuer": "广州市海珠区人工智能发展局 / 海珠区住房和建设局",
+      "publish_date": "2026-03-31",
+      "status": "active",
+      "category": "scenario",
+      "summary": "面向全国征集AI技术服务商，入库后获订单+商城上架+官方推广",
+      "benefits": [
+        { "item": "入驻场景交易平台能力库", "amount": "非现金", "amount_max": 0, "type": "other" },
+        { "item": "优先获得场景机会订单", "amount": "非现金", "amount_max": 0, "type": "other" },
+        { "item": "产品上架海珠AI商城", "amount": "非现金", "amount_max": 0, "type": "other" },
+        { "item": "落地案例官方推广", "amount": "非现金", "amount_max": 0, "type": "other" }
+      ],
+      "requirements": {
+        "registration_location": "不限",
+        "operation_location": "不限",
+        "industries": ["园区管理", "应急安防", "医疗康养", "智慧文旅", "AI语音", "智能客服"],
+        "qualifications": ["知识产权或合法授权"],
+        "other": ["独立承担民事责任", "经营状况良好", "技术产品有创新性", "具备全流程服务能力"]
+      },
+      "application": {
+        "deadline": "2026-04-18",
+        "method": "邮件提交申报表",
+        "contact": "肖先生",
+        "phone": "020-89559809 / 020-98559810",
+        "email": "bcoal03@163.com",
+        "address": "广州市海珠区琶洲大道83号宝地广场1001室"
+      },
+      "links": {
+        "official": "https://www.haizhu.gov.cn/gzhzrgzn/gkmlpt/content/10/10749/post_10749033.html"
+      },
+      "communities": [],
+      "tags": ["场景征集", "不限注册地", "AI语音", "客服", "康养", "导览"],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-haizhu-002",
+      "name": "海珠区人工智能OPC创新发展措施（试行）(OPC十条)",
+      "city": "广州",
+      "province": "广东",
+      "district": "海珠",
+      "level": "district",
+      "issuer": "海珠区人工智能发展局",
+      "publish_date": "2026-03-19",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "海珠OPC十条，首创SOPC产业生态，算力券50%补贴最高20万/年，场景项目最高500万",
+      "benefits": [
+        { "item": "办公空间补贴", "amount": "每年最高15万元", "amount_max": 150000, "type": "rent_free" },
+        { "item": "算力券(50%)", "amount": "最高20万/年", "amount_max": 200000, "type": "voucher" },
+        { "item": "数据券(30%)", "amount": "最高10万/年", "amount_max": 100000, "type": "voucher" },
+        { "item": "场景资源开放(30%)", "amount": "最高500万", "amount_max": 5000000, "type": "cash" },
+        { "item": "大模型备案奖励", "amount": "非规上50万/规上100万", "amount_max": 1000000, "type": "cash" },
+        { "item": "国家级算法备案奖励", "amount": "最高100万", "amount_max": 1000000, "type": "cash" },
+        { "item": "多元化生态建设", "amount": "最高50万", "amount_max": 500000, "type": "cash" },
+        { "item": "OPC特色孵化空间建设", "amount": "最高150万/年", "amount_max": 1500000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "海珠区(琶洲核心区/环海珠湿地创芯价值圈)",
+        "operation_location": "海珠区",
+        "max_employees": 20,
+        "industries": ["人工智能", "OPC"],
+        "other": ["人员规模一般不超过10人，特别优秀可放宽到20人", "以日均token消耗量作为发展阶段评价指标"]
+      },
+      "application": {
+        "method": "待正式申报通知"
+      },
+      "links": {
+        "official": "https://www.haizhu.gov.cn/hdjlpt/yjzj/answer/49445",
+        "news": [
+          "https://www.sfccn.com/2026/3-19/yMMDE0NzNfMjExODcyMQ.html",
+          "https://m.163.com/dy/article/KOG5K38T05129QAF.html"
+        ]
+      },
+      "communities": [
+        {
+          "name": "琶洲模方 SOPC超级个体加速器",
+          "address": "海珠区琶洲",
+          "features": ["粤港澳大湾区首个大模型孵化空间", "已孵化45家AI企业", "累计融资10.88亿", "半年以上免租期", "算力/数据全方位支持"],
+          "contact": "参加琶洲算法大赛或提交BP评审"
+        },
+        {
+          "name": "琶洲元创·OPC社区",
+          "address": "海珠区琶洲",
+          "features": ["首批投入1000万元", "已入驻3家OPC企业"]
+        }
+      ],
+      "tags": ["OPC十条", "算力券", "数据券", "免租", "场景", "备案奖励", "琶洲"],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-huangpu-001",
+      "name": "广州开发区 黄埔区支持人工智能产业高质量发展若干政策措施",
+      "city": "广州",
+      "province": "广东",
+      "district": "黄埔",
+      "level": "district",
+      "issuer": "广州开发区经济和信息化局 / 黄埔区工业和信息化局",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "算力补贴最高300万，场景示范总额1000万，小微云服务券2000元/张",
+      "benefits": [
+        { "item": "通用大模型算力补助(30%)", "amount": "最高300万元", "amount_max": 3000000, "type": "cash" },
+        { "item": "垂直大模型算力补助(30%)", "amount": "最高100万元", "amount_max": 1000000, "type": "cash" },
+        { "item": "小微企业云服务券", "amount": "2000元/张，共2000张", "amount_max": 2000, "type": "voucher" },
+        { "item": "大模型备案奖励", "amount": "最高100万元", "amount_max": 1000000, "type": "cash" },
+        { "item": "算法备案奖励", "amount": "最高20万元", "amount_max": 200000, "type": "cash" },
+        { "item": "场景应用示范", "amount": "总额1000万(≤30个项目)", "amount_max": 10000000, "type": "cash" },
+        { "item": "开源社区建设", "amount": "每家最高100万(≤10家)", "amount_max": 1000000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "黄埔区/广州开发区",
+        "operation_location": "黄埔区/广州开发区",
+        "industries": ["人工智能"],
+        "qualifications": ["部分项目需模型备案或算法备案"]
+      },
+      "links": {
+        "official": "https://www.gz.gov.cn/gzzcwjk/gzdata/content/post_10330225.html",
+        "news": ["https://m.jiemian.com/article/14156017.html"]
+      },
+      "communities": [
+        {
+          "name": "鱼珠·元启 OPC生态社区",
+          "address": "海丝城鱼珠片区、港航中心、南方智媒大厦",
+          "features": ["广州开发区首个OPC社区", "最长3年免租+后2年减半", "接入黄埔一号智算集群", "入驻即获3个月免费TOKEN", "注册企业享1年TOKEN服务"]
+        }
+      ],
+      "tags": ["算力补贴", "场景示范", "云服务券", "备案奖励", "免租"],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-nansha-001",
+      "name": "南沙区OPC一站式服务 + AI产业扶持",
+      "city": "广州",
+      "province": "广东",
+      "district": "南沙",
+      "level": "district",
+      "issuer": "南沙区政务服务数据管理局",
+      "status": "active",
+      "category": "registration",
+      "summary": "最快0.5天注册拿照，免费5枚印章，OPC专窗一站式服务",
+      "benefits": [
+        { "item": "极速注册", "amount": "最快0.5天办结", "amount_max": 0, "type": "service" },
+        { "item": "开业礼包", "amount": "执照+5枚免费印章+发票+Ukey", "amount_max": 0, "type": "service" },
+        { "item": "免费办公(社区入驻)", "amount": "免费", "amount_max": 0, "type": "rent_free" },
+        { "item": "自贸区税率优惠", "amount": "企业所得税优惠", "amount_max": 0, "type": "tax_reduction" }
+      ],
+      "requirements": {
+        "registration_location": "南沙区",
+        "other": ["准备好注册材料即可"]
+      },
+      "application": {
+        "phone": "020-12345",
+        "address": "广州市南沙区凤凰大道1号",
+        "url": "https://scjgj.gz.gov.cn/ywt/"
+      },
+      "links": {
+        "official": "http://www.gzns.gov.cn/zwgk/rdzt/OPC/"
+      },
+      "communities": [
+        {
+          "name": "南沙国际OPC生态社区",
+          "address": "南沙街道湾区数创中心",
+          "features": ["万兆网宽带", "拎包开干", "免费办公", "算力及模型应用", "跨境AI/数字游民/数字文创方向"],
+          "contact": "南沙科金控股集团官网"
+        }
+      ],
+      "tags": ["极速注册", "免费印章", "自贸区", "跨境", "免费办公"],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-panyu-001",
+      "name": "广州市番禺区支持OPC创业若干措施",
+      "city": "广州",
+      "province": "广东",
+      "district": "番禺",
+      "level": "district",
+      "issuer": "番禺区政府",
+      "publish_date": "2026-03-20",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "广州首个区级OPC专项政策，首年免租+开源贡献最高100万+杰出团队最高500万",
+      "benefits": [
+        { "item": "区属国有物业首年免租", "amount": "第一年全免，二三年减半", "amount_max": 0, "type": "rent_free" },
+        { "item": "开源贡献/技能包开发补贴", "amount": "最高100万元", "amount_max": 1000000, "type": "cash" },
+        { "item": "创新应用项目奖励(20%)", "amount": "一次性最高50万元", "amount_max": 500000, "type": "cash" },
+        { "item": "杰出团队发展补贴", "amount": "最高500万元", "amount_max": 5000000, "type": "cash" },
+        { "item": "博士人才落户补贴", "amount": "最高10万元", "amount_max": 100000, "type": "cash" },
+        { "item": "创业担保贷款", "amount": "最高500万元", "amount_max": 5000000, "type": "loan" },
+        { "item": "OPC专项信贷(中信银行)", "amount": "专项信贷协议", "amount_max": 0, "type": "loan" }
+      ],
+      "requirements": {
+        "registration_location": "番禺区",
+        "operation_location": "番禺区",
+        "industries": ["智能制造", "智慧政务", "智慧园区", "智慧医疗"]
+      },
+      "links": {
+        "official": "https://www.panyu.gov.cn/gzpykgsx/gkmlpt/content/10/10735/post_10735201.html",
+        "news": ["https://www.nfnews.com/content/R6gNkMEN3p.html"]
+      },
+      "communities": [
+        {
+          "name": "万博CBD OPC空间",
+          "address": "万博商务区、广州大学城",
+          "features": ["1300+工位", "650+人才公寓", "首年免租后2年减半"]
+        }
+      ],
+      "tags": ["首个区级OPC专项", "免租", "开源贡献", "创业担保贷款", "信贷"],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-baiyun-001",
+      "name": "白云区支持人工智能和数据产业高质量发展若干措施",
+      "city": "广州",
+      "province": "广东",
+      "district": "白云",
+      "level": "district",
+      "issuer": "白云区政府",
+      "publish_date": "2026-03-31",
+      "effective_date": "2026-04-01",
+      "status": "active",
+      "category": "computing",
+      "summary": "算力券制度，OPC小微主体补贴比例15%，年度总规模1000万元",
+      "benefits": [
+        { "item": "算力券(企业)", "amount": "年度算力支出超100万按10%补贴", "amount_max": 0, "type": "voucher" },
+        { "item": "算力券(OPC小微)", "amount": "补贴比例提升至15%", "amount_max": 0, "type": "voucher" },
+        { "item": "大模型备案奖励", "amount": "详见政策", "amount_max": 0, "type": "cash" },
+        { "item": "算法备案奖励", "amount": "详见政策", "amount_max": 0, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "白云区",
+        "operation_location": "白云区",
+        "industries": ["人工智能", "数据产业"]
+      },
+      "links": {
+        "official": "https://www.by.gov.cn/gzbybgs/gkmlpt/content/10/10751/post_10751592.html",
+        "news": ["https://news.dayoo.com/guangzhou/202604/03/139995_54943820.htm"]
+      },
+      "communities": [],
+      "tags": ["算力券", "OPC专条", "小微优惠"],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-city-005",
+      "name": "赢在广州大赛 + 众创杯AI OPC专项赛",
+      "city": "广州",
+      "province": "广东",
+      "district": "",
+      "level": "city",
+      "issuer": "广州市人社局",
+      "status": "active",
+      "category": "competition",
+      "summary": "赢在广州一等奖20万，众创杯AI OPC专项赛特等奖50万",
+      "benefits": [
+        { "item": "赢在广州一等奖", "amount": "200,000元", "amount_max": 200000, "type": "cash" },
+        { "item": "赢在广州二等奖", "amount": "150,000元", "amount_max": 150000, "type": "cash" },
+        { "item": "赢在广州三等奖", "amount": "100,000元", "amount_max": 100000, "type": "cash" },
+        { "item": "众创杯AI OPC专项赛特等奖", "amount": "500,000元", "amount_max": 500000, "type": "cash" }
+      ],
+      "requirements": {
+        "other": ["参赛获奖"]
+      },
+      "links": {
+        "official": "https://www.gz.gov.cn/zwgk/zdly/jycy/gzdt/content/post_9686685.html"
+      },
+      "tags": ["赛事", "大赛", "奖金"],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "shenzhen-city-001",
+      "name": "深圳市促进人工智能产业高质量发展若干措施",
+      "city": "深圳",
+      "province": "广东",
+      "district": "",
+      "level": "city",
+      "issuer": "深圳市工业和信息化局",
+      "publish_date": "2026-01-15",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "AI产业扶持，算力补贴最高1000万，场景应用最高500万，开源贡献最高200万",
+      "benefits": [
+        { "item": "算力资源补贴", "amount": "实际投入30%，最高1000万", "amount_max": 10000000, "type": "cash" },
+        { "item": "场景应用示范", "amount": "项目投入30%，最高500万", "amount_max": 5000000, "type": "cash" },
+        { "item": "开源社区贡献", "amount": "最高200万", "amount_max": 2000000, "type": "cash" },
+        { "item": "大模型备案奖励", "amount": "最高200万", "amount_max": 2000000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "深圳市",
+        "operation_location": "深圳市",
+        "industries": ["人工智能"],
+        "qualifications": ["部分项目需模型备案"]
+      },
+      "links": { "official": "https://www.sz.gov.cn/" },
+      "communities": [],
+      "tags": ["算力", "场景应用", "开源", "备案奖励"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "shenzhen-nanshan-001",
+      "name": "南山区支持AI与OPC产业发展专项",
+      "city": "深圳",
+      "province": "广东",
+      "district": "南山",
+      "level": "district",
+      "issuer": "南山区科技创新局",
+      "publish_date": "2026-03-01",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "南山OPC创业空间免租+算力券+AI场景对接",
+      "benefits": [
+        { "item": "OPC创业空间免租", "amount": "首年免租，后2年50%", "amount_max": 0, "type": "rent_free" },
+        { "item": "算力券", "amount": "最高10万/年", "amount_max": 100000, "type": "voucher" },
+        { "item": "创新项目资助", "amount": "最高50万", "amount_max": 500000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "南山区",
+        "operation_location": "南山区",
+        "max_employees": 10,
+        "industries": ["人工智能", "OPC"]
+      },
+      "links": { "official": "https://www.szns.gov.cn/" },
+      "communities": [
+        {
+          "name": "深圳湾OPC超级个体社区",
+          "address": "南山区深圳湾科技生态园",
+          "features": ["免费工位", "算力接入", "投融资对接", "AI场景资源"]
+        }
+      ],
+      "tags": ["南山", "免租", "算力券", "OPC社区"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "shenzhen-qianhai-001",
+      "name": "前海深港现代服务业合作区OPC创业扶持",
+      "city": "深圳",
+      "province": "广东",
+      "district": "前海",
+      "level": "district",
+      "issuer": "前海管理局",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "前海OPC创业者免租+港澳创业者15%企业所得税+跨境AI通道",
+      "benefits": [
+        { "item": "办公空间", "amount": "首年免租", "amount_max": 0, "type": "rent_free" },
+        { "item": "港澳创业者税优", "amount": "15%企业所得税", "amount_max": 0, "type": "tax_reduction" },
+        { "item": "跨境AI服务通道", "amount": "简化数据跨境流通", "amount_max": 0, "type": "service" }
+      ],
+      "requirements": {
+        "registration_location": "前海合作区",
+        "industries": ["人工智能", "跨境服务", "数字贸易"]
+      },
+      "links": { "official": "https://www.szqh.gov.cn/" },
+      "communities": [],
+      "tags": ["前海", "港澳", "税优", "跨境AI"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "beijing-city-001",
+      "name": "北京市促进通用人工智能创新发展若干措施",
+      "city": "北京",
+      "province": "北京",
+      "district": "",
+      "level": "city",
+      "issuer": "北京市经济和信息化局",
+      "publish_date": "2025-12-20",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "算力补贴最高2000万，大模型应用场景最高1000万，人才最高100万",
+      "benefits": [
+        { "item": "算力补贴", "amount": "实际投入50%，最高2000万", "amount_max": 20000000, "type": "cash" },
+        { "item": "大模型应用场景", "amount": "最高1000万", "amount_max": 10000000, "type": "cash" },
+        { "item": "AI人才引进", "amount": "最高100万安家费", "amount_max": 1000000, "type": "cash" },
+        { "item": "开源社区建设", "amount": "最高500万", "amount_max": 5000000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "北京市",
+        "operation_location": "北京市",
+        "industries": ["通用人工智能", "大模型"]
+      },
+      "links": { "official": "https://www.beijing.gov.cn/" },
+      "communities": [],
+      "tags": ["算力", "大模型", "场景应用", "人才"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "beijing-haidian-001",
+      "name": "海淀区AI与OPC创新创业支持计划",
+      "city": "北京",
+      "province": "北京",
+      "district": "海淀",
+      "level": "district",
+      "issuer": "海淀区科学技术委员会",
+      "publish_date": "2026-02-01",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "中关村OPC生态社区，免租+算力+投融资，AI创业项目最高200万资助",
+      "benefits": [
+        { "item": "OPC创业空间", "amount": "免租12个月", "amount_max": 0, "type": "rent_free" },
+        { "item": "AI创业项目资助", "amount": "最高200万", "amount_max": 2000000, "type": "cash" },
+        { "item": "算力支持", "amount": "接入北京智源算力", "amount_max": 0, "type": "service" }
+      ],
+      "requirements": {
+        "registration_location": "海淀区",
+        "max_employees": 20,
+        "industries": ["人工智能"]
+      },
+      "links": { "official": "https://www.bjhd.gov.cn/" },
+      "communities": [
+        {
+          "name": "中关村OPC创新社区",
+          "address": "海淀区中关村软件园",
+          "features": ["免租工位", "智源算力接入", "投融资路演", "大厂技术导师"]
+        }
+      ],
+      "tags": ["海淀", "中关村", "免租", "算力", "投融资"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "shanghai-city-001",
+      "name": "上海市促进人工智能产业高质量发展条例实施细则",
+      "city": "上海",
+      "province": "上海",
+      "district": "",
+      "level": "city",
+      "issuer": "上海市经济和信息化委员会",
+      "publish_date": "2026-01-10",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "AI产业全链条扶持，算力补贴最高500万，场景示范最高1000万",
+      "benefits": [
+        { "item": "算力资源补贴", "amount": "最高500万", "amount_max": 5000000, "type": "cash" },
+        { "item": "场景示范应用", "amount": "最高1000万", "amount_max": 10000000, "type": "cash" },
+        { "item": "小微AI企业创业资助", "amount": "最高30万", "amount_max": 300000, "type": "cash" },
+        { "item": "AI人才安居补贴", "amount": "最高50万", "amount_max": 500000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "上海市",
+        "industries": ["人工智能"]
+      },
+      "links": { "official": "https://www.shanghai.gov.cn/" },
+      "communities": [],
+      "tags": ["算力", "场景示范", "创业资助", "人才"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "shanghai-pudong-001",
+      "name": "浦东新区AI与OPC生态建设方案",
+      "city": "上海",
+      "province": "上海",
+      "district": "浦东",
+      "level": "district",
+      "issuer": "浦东新区科技和经济委员会",
+      "publish_date": "2026-03-10",
+      "status": "active",
+      "category": "space",
+      "summary": "张江OPC超级个体社区，免租+Token补贴+场景对接",
+      "benefits": [
+        { "item": "OPC创业空间免租", "amount": "首年免租", "amount_max": 0, "type": "rent_free" },
+        { "item": "Token消耗补贴", "amount": "50%补贴，最高5万/年", "amount_max": 50000, "type": "voucher" },
+        { "item": "场景应用对接", "amount": "政府/国企场景", "amount_max": 0, "type": "service" }
+      ],
+      "requirements": {
+        "registration_location": "浦东新区",
+        "max_employees": 10,
+        "industries": ["人工智能", "OPC"]
+      },
+      "links": { "official": "https://www.pudong.gov.cn/" },
+      "communities": [
+        {
+          "name": "张江OPC超级个体社区",
+          "address": "浦东新区张江高科技园区",
+          "features": ["免费工位", "Token补贴", "AI算力", "投融资", "大厂场景对接"]
+        }
+      ],
+      "tags": ["浦东", "张江", "免租", "Token补贴"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "hangzhou-city-001",
+      "name": "杭州市支持人工智能与OPC产业发展政策",
+      "city": "杭州",
+      "province": "浙江",
+      "district": "",
+      "level": "city",
+      "issuer": "杭州市经济和信息化局",
+      "publish_date": "2026-03-05",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "算力券最高50万/年，OPC创业者一次性5万资助，场景应用最高300万",
+      "benefits": [
+        { "item": "算力券", "amount": "最高50万/年", "amount_max": 500000, "type": "voucher" },
+        { "item": "OPC创业资助", "amount": "一次性5万元", "amount_max": 50000, "type": "cash" },
+        { "item": "场景应用项目", "amount": "最高300万", "amount_max": 3000000, "type": "cash" },
+        { "item": "创业担保贷款", "amount": "最高50万", "amount_max": 500000, "type": "loan" }
+      ],
+      "requirements": {
+        "registration_location": "杭州市",
+        "industries": ["人工智能", "数字经济"]
+      },
+      "links": { "official": "https://www.hangzhou.gov.cn/" },
+      "communities": [
+        {
+          "name": "杭州未来科技城OPC社区",
+          "address": "余杭区未来科技城",
+          "features": ["免费工位", "算力接入", "阿里云资源", "投融资对接"]
+        }
+      ],
+      "tags": ["算力券", "创业资助", "场景应用"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "hangzhou-binjiang-001",
+      "name": "滨江区AI超级个体加速计划",
+      "city": "杭州",
+      "province": "浙江",
+      "district": "滨江",
+      "level": "district",
+      "issuer": "滨江区科技局",
+      "publish_date": "2026-03-15",
+      "status": "active",
+      "category": "space",
+      "summary": "滨江AI创业者免租+导师+算力，每年10个OPC项目入驻名额",
+      "benefits": [
+        { "item": "创业空间免租", "amount": "6个月免租", "amount_max": 0, "type": "rent_free" },
+        { "item": "算力补贴", "amount": "每月2000元Token", "amount_max": 24000, "type": "voucher" },
+        { "item": "创业导师", "amount": "一对一辅导", "amount_max": 0, "type": "service" }
+      ],
+      "requirements": {
+        "registration_location": "滨江区",
+        "max_employees": 5,
+        "industries": ["人工智能"]
+      },
+      "links": { "official": "https://www.hhtz.gov.cn/" },
+      "communities": [
+        {
+          "name": "滨江AI超级个体加速器",
+          "address": "滨江区互联网小镇",
+          "features": ["免租工位", "算力", "导师辅导", "每年10个名额"]
+        }
+      ],
+      "tags": ["滨江", "免租", "加速器", "导师"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "chengdu-city-001",
+      "name": "成都市支持人工智能产业发展若干政策",
+      "city": "成都",
+      "province": "四川",
+      "district": "",
+      "level": "city",
+      "issuer": "成都市经济和信息化局",
+      "publish_date": "2026-02-20",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "AI算力补贴最高500万，创新应用最高200万，OPC创业空间建设支持",
+      "benefits": [
+        { "item": "算力补贴", "amount": "实际投入30%，最高500万", "amount_max": 5000000, "type": "cash" },
+        { "item": "创新应用", "amount": "最高200万", "amount_max": 2000000, "type": "cash" },
+        { "item": "OPC创业空间", "amount": "运营补贴最高100万/年", "amount_max": 1000000, "type": "cash" },
+        { "item": "大模型备案奖励", "amount": "最高50万", "amount_max": 500000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "成都市",
+        "industries": ["人工智能"]
+      },
+      "links": { "official": "https://www.chengdu.gov.cn/" },
+      "communities": [
+        {
+          "name": "天府OPC超级个体社区",
+          "address": "天府新区",
+          "features": ["免租办公", "算力接入", "场景对接", "蓉漂人才政策"]
+        }
+      ],
+      "tags": ["算力", "创新应用", "OPC空间", "天府"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "wuhan-city-001",
+      "name": "武汉市人工智能产业发展行动计划(2026-2028)",
+      "city": "武汉",
+      "province": "湖北",
+      "district": "",
+      "level": "city",
+      "issuer": "武汉市科技局",
+      "publish_date": "2026-03-01",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "光谷AI+OPC创业支持，算力补贴+场景应用+人才安居",
+      "benefits": [
+        { "item": "算力补贴", "amount": "最高300万", "amount_max": 3000000, "type": "cash" },
+        { "item": "场景应用项目", "amount": "最高200万", "amount_max": 2000000, "type": "cash" },
+        { "item": "人才安居补贴", "amount": "最高20万", "amount_max": 200000, "type": "cash" },
+        { "item": "创业担保贷款", "amount": "最高100万", "amount_max": 1000000, "type": "loan" }
+      ],
+      "requirements": {
+        "registration_location": "武汉市",
+        "industries": ["人工智能"]
+      },
+      "links": { "official": "https://www.wuhan.gov.cn/" },
+      "communities": [
+        {
+          "name": "光谷OPC创新社区",
+          "address": "东湖高新区光谷",
+          "features": ["免租办公", "算力支持", "光谷产业资源"]
+        }
+      ],
+      "tags": ["光谷", "算力", "场景应用", "人才"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "hefei-city-001",
+      "name": "合肥市支持人工智能产业发展若干政策",
+      "city": "合肥",
+      "province": "安徽",
+      "district": "",
+      "level": "city",
+      "issuer": "合肥市数据资源局",
+      "publish_date": "2026-02-15",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "中国声谷AI创业扶持，算力补贴+语音AI专项+OPC空间",
+      "benefits": [
+        { "item": "算力补贴", "amount": "最高200万", "amount_max": 2000000, "type": "cash" },
+        { "item": "语音AI专项", "amount": "最高100万", "amount_max": 1000000, "type": "cash" },
+        { "item": "创业资助", "amount": "最高20万", "amount_max": 200000, "type": "cash" },
+        { "item": "创业租金补贴", "amount": "每年最高10万", "amount_max": 100000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "合肥市",
+        "industries": ["人工智能", "智能语音"]
+      },
+      "links": { "official": "https://www.hefei.gov.cn/" },
+      "communities": [
+        {
+          "name": "中国声谷OPC创业基地",
+          "address": "高新区中国声谷",
+          "features": ["科大讯飞生态", "语音AI专项支持", "免租办公", "创业辅导"]
+        }
+      ],
+      "tags": ["声谷", "语音AI", "算力", "创业资助"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "nanjing-city-001",
+      "name": "南京市数字经济与人工智能产业支持政策",
+      "city": "南京",
+      "province": "江苏",
+      "district": "",
+      "level": "city",
+      "issuer": "南京市工业和信息化局",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "AI创业项目最高100万资助，算力补贴最高300万，场景应用最高500万",
+      "benefits": [
+        { "item": "AI创业项目资助", "amount": "最高100万", "amount_max": 1000000, "type": "cash" },
+        { "item": "算力补贴", "amount": "最高300万", "amount_max": 3000000, "type": "cash" },
+        { "item": "场景应用", "amount": "最高500万", "amount_max": 5000000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "南京市",
+        "industries": ["人工智能", "数字经济"]
+      },
+      "links": { "official": "https://www.nanjing.gov.cn/" },
+      "communities": [],
+      "tags": ["创业资助", "算力", "场景应用"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "changsha-city-001",
+      "name": "长沙市AI与数字经济OPC创业扶持",
+      "city": "长沙",
+      "province": "湖南",
+      "district": "",
+      "level": "city",
+      "issuer": "长沙市科技局",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "OPC创业者一次性2万资助，算力券最高10万/年，马栏山文创AI专项",
+      "benefits": [
+        { "item": "OPC创业资助", "amount": "一次性2万元", "amount_max": 20000, "type": "cash" },
+        { "item": "算力券", "amount": "最高10万/年", "amount_max": 100000, "type": "voucher" },
+        { "item": "文创AI专项", "amount": "最高50万", "amount_max": 500000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "长沙市",
+        "industries": ["人工智能", "数字文创"]
+      },
+      "links": { "official": "https://www.changsha.gov.cn/" },
+      "communities": [
+        {
+          "name": "马栏山OPC创意社区",
+          "address": "马栏山视频文创产业园",
+          "features": ["文创AI方向", "免租工位", "内容平台对接"]
+        }
+      ],
+      "tags": ["创业资助", "算力券", "文创AI", "马栏山"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    },
+    {
+      "id": "chongqing-city-001",
+      "name": "重庆市AI产业发展与OPC创业支持政策",
+      "city": "重庆",
+      "province": "重庆",
+      "district": "",
+      "level": "city",
+      "issuer": "重庆市经济和信息化委员会",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "两江新区AI创业扶持，算力补贴+场景应用+创业空间",
+      "benefits": [
+        { "item": "算力补贴", "amount": "最高200万", "amount_max": 2000000, "type": "cash" },
+        { "item": "场景应用项目", "amount": "最高300万", "amount_max": 3000000, "type": "cash" },
+        { "item": "创业空间补贴", "amount": "每年最高10万", "amount_max": 100000, "type": "cash" }
+      ],
+      "requirements": {
+        "registration_location": "重庆市",
+        "industries": ["人工智能"]
+      },
+      "links": { "official": "https://www.cq.gov.cn/" },
+      "communities": [
+        {
+          "name": "两江新区AI创业社区",
+          "address": "两江新区数字经济产业园",
+          "features": ["免租办公", "算力资源", "产业对接"]
+        }
+      ],
+      "tags": ["两江新区", "算力", "场景应用"],
+      "updated_at": "2026-04-10",
+      "verified": false
+    }
+  ]
+}

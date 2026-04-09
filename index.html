@@ -3,1383 +3,717 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>广州OPC政策导航 - AI语音机器人创业者专属</title>
+<title>全国OPC政策导航 - 一键匹配你能申请的补贴</title>
 <style>
-  :root {
-    --bg: #0a0a0f;
-    --card: #12121a;
-    --card-hover: #1a1a28;
-    --border: #2a2a3a;
-    --text: #e0e0e8;
-    --text-dim: #8888a0;
-    --accent: #6c5ce7;
-    --accent-light: #a29bfe;
-    --green: #00e676;
-    --green-dim: #1b5e20;
-    --yellow: #ffd600;
-    --yellow-dim: #5d4e00;
-    --red: #ff5252;
-    --red-dim: #4a1515;
-    --blue: #448aff;
-    --orange: #ff9100;
-    --cyan: #00e5ff;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+:root {
+  --bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;
+  --text:#e0e0e8;--dim:#8888a0;--accent:#6c5ce7;--al:#a29bfe;
+  --green:#00e676;--gd:#1b5e20;--yellow:#ffd600;--yd:#5d4e00;
+  --red:#ff5252;--rd:#4a1515;--blue:#448aff;--cyan:#00e5ff;--orange:#ff9100;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh}
+a{color:var(--al);text-decoration:none;transition:color .2s}a:hover{color:#fff}
 
-  /* Animations */
-  @keyframes float { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-20px,-20px)} }
-  @keyframes fadeInUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
-  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
-  @keyframes slideInLeft { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
-  @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(255,82,82,0.4)} 50%{box-shadow:0 0 0 12px rgba(255,82,82,0)} }
-  @keyframes countPulse { 0%{transform:scale(1)} 50%{transform:scale(1.05)} 100%{transform:scale(1)} }
-  @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
-  @keyframes gradientMove { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
-  @keyframes particleFloat {
-    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
-  }
+/* Animations */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+@keyframes gradientMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.anim{opacity:0;transform:translateY(30px);transition:all .6s cubic-bezier(.25,.46,.45,.94)}.anim.vis{opacity:1;transform:translateY(0)}
 
-  .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-  .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+/* Hero */
+.hero{position:relative;padding:60px 20px 40px;text-align:center;overflow:hidden;
+  background:linear-gradient(135deg,#0a0a1a 0%,#1a0a2e 40%,#0a1a2e 70%,#0a0a1a 100%)}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+  background:radial-gradient(circle at 30% 50%,rgba(108,92,231,.1) 0%,transparent 50%),
+  radial-gradient(circle at 70% 80%,rgba(0,230,118,.06) 0%,transparent 50%);
+  animation:gradientMove 15s ease infinite}
+.hero h1{font-size:2.6em;font-weight:800;background:linear-gradient(135deg,#fff,var(--al),var(--cyan));
+  background-size:200% 200%;animation:gradientMove 4s ease infinite;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative}
+.hero .sub{font-size:1.1em;color:var(--dim);position:relative;margin:8px 0 20px}
+.hero .version{display:inline-block;padding:4px 16px;border-radius:20px;background:rgba(108,92,231,.15);
+  border:1px solid rgba(108,92,231,.3);color:var(--al);font-size:.82em;position:relative}
 
-  /* Hero */
-  .hero {
-    position: relative;
-    padding: 80px 20px 60px;
-    text-align: center;
-    overflow: hidden;
-    background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #0a1a2e 100%);
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -50%; left: -50%;
-    width: 200%; height: 200%;
-    background: radial-gradient(circle at 30% 50%, rgba(108,92,231,0.08) 0%, transparent 50%),
-                radial-gradient(circle at 70% 80%, rgba(0,230,118,0.06) 0%, transparent 50%);
-    animation: float 20s ease-in-out infinite;
-  }
-  .hero-particles {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden;
-  }
-  .hero-particles .p {
-    position: absolute;
-    width: 4px; height: 4px;
-    border-radius: 50%;
-    background: rgba(162,155,254,0.3);
-    animation: particleFloat linear infinite;
-  }
-  .hero h1 {
-    font-size: 2.8em; font-weight: 800;
-    background: linear-gradient(135deg, #fff 0%, var(--accent-light) 50%, var(--cyan) 100%);
-    background-size: 200% 200%;
-    animation: gradientMove 4s ease infinite;
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    position: relative; margin-bottom: 12px;
-  }
-  .hero .subtitle { font-size: 1.1em; color: var(--text-dim); position: relative; margin-bottom: 24px; }
-  .hero .update-badge {
-    display: inline-block; padding: 4px 16px; border-radius: 20px;
-    background: rgba(108,92,231,0.15); border: 1px solid rgba(108,92,231,0.3);
-    color: var(--accent-light); font-size: 0.85em; position: relative;
-  }
+/* Steps indicator */
+.steps{display:flex;justify-content:center;gap:0;max-width:700px;margin:30px auto 0;position:relative;z-index:1}
+.step{flex:1;text-align:center;position:relative;padding:12px 8px}
+.step::before{content:attr(data-num);display:flex;width:36px;height:36px;border-radius:50%;
+  align-items:center;justify-content:center;margin:0 auto 8px;font-weight:700;font-size:.9em;
+  background:var(--card);border:2px solid var(--border);color:var(--dim);transition:all .4s}
+.step.active::before{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 0 20px rgba(108,92,231,.4)}
+.step.done::before{background:var(--gd);border-color:var(--green);color:var(--green);content:'✓'}
+.step .step-label{font-size:.78em;color:var(--dim);transition:color .3s}
+.step.active .step-label{color:var(--al);font-weight:600}
+.step.done .step-label{color:var(--green)}
+.step-line{position:absolute;top:30px;left:calc(50% + 24px);right:calc(-50% + 24px);height:2px;background:var(--border)}
+.step:last-child .step-line{display:none}
+.step.done .step-line{background:var(--green)}
 
-  /* Countdown */
-  .countdown-bar {
-    max-width: 900px; margin: 20px auto 0; position: relative; z-index: 1;
-    padding: 16px 24px;
-    background: linear-gradient(135deg, rgba(255,82,82,0.12) 0%, rgba(255,145,0,0.08) 100%);
-    border: 1px solid rgba(255,82,82,0.25); border-radius: 12px;
-    display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;
-    animation: pulse 2s infinite;
-  }
-  .countdown-bar .urgent-icon {
-    width: 36px; height: 36px; border-radius: 50%;
-    background: var(--red-dim); color: var(--red);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.2em; font-weight: 700; flex-shrink: 0;
-  }
-  .countdown-bar .countdown-text { font-size: 0.95em; }
-  .countdown-bar .countdown-text strong { color: var(--red); }
-  .countdown-numbers {
-    display: flex; gap: 8px; align-items: center;
-  }
-  .countdown-num {
-    background: rgba(255,82,82,0.2); border: 1px solid rgba(255,82,82,0.3);
-    padding: 6px 12px; border-radius: 8px; text-align: center; min-width: 50px;
-    animation: countPulse 2s infinite;
-  }
-  .countdown-num .n { font-size: 1.4em; font-weight: 800; color: var(--red); display: block; line-height: 1; }
-  .countdown-num .l { font-size: 0.65em; color: var(--text-dim); }
+/* Container */
+.container{max-width:900px;margin:0 auto;padding:40px 20px}
 
-  /* Profile Card */
-  .profile-card {
-    max-width: 900px; margin: 16px auto 0;
-    padding: 24px 32px;
-    background: linear-gradient(135deg, rgba(108,92,231,0.1) 0%, rgba(0,230,118,0.05) 100%);
-    border: 1px solid var(--border); border-radius: 16px;
-    position: relative; z-index: 1;
-  }
-  .profile-card h3 { font-size: 0.85em; color: var(--accent-light); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
-  .profile-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .profile-tags span {
-    padding: 4px 14px; border-radius: 8px; font-size: 0.85em;
-    background: rgba(255,255,255,0.05); border: 1px solid var(--border);
-    color: var(--text); cursor: default; transition: all 0.3s;
-  }
-  .profile-tags span:hover { background: rgba(108,92,231,0.15); border-color: var(--accent); transform: translateY(-2px); }
+/* Form Panel */
+.panel{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:24px;
+  animation:fadeInUp .5s ease;position:relative;overflow:hidden}
+.panel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--cyan));opacity:.5}
+.panel h2{font-size:1.4em;margin-bottom:6px}
+.panel .desc{color:var(--dim);font-size:.9em;margin-bottom:20px}
+.panel.hidden{display:none}
 
-  /* Search */
-  .search-bar {
-    max-width: 900px; margin: 16px auto 0; position: relative; z-index: 1;
-  }
-  .search-bar input {
-    width: 100%; padding: 14px 20px 14px 48px;
-    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
-    color: var(--text); font-size: 0.95em; outline: none;
-    transition: all 0.3s;
-  }
-  .search-bar input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(108,92,231,0.15); }
-  .search-bar input::placeholder { color: var(--text-dim); }
-  .search-bar .search-icon {
-    position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
-    color: var(--text-dim); font-size: 1.1em;
-  }
-  .search-bar .search-clear {
-    position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
-    background: none; border: none; color: var(--text-dim); font-size: 1.2em;
-    cursor: pointer; display: none; transition: color 0.2s;
-  }
-  .search-bar .search-clear:hover { color: var(--text); }
-  .search-highlight { background: rgba(255,214,0,0.25); border-radius: 2px; padding: 0 2px; }
-  .no-results { text-align: center; padding: 60px 20px; color: var(--text-dim); font-size: 1.1em; display: none; }
+/* Form elements */
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:.88em;font-weight:600;margin-bottom:8px;color:var(--al)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+input[type="text"],input[type="number"],select{
+  width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:10px;
+  color:var(--text);font-size:.92em;outline:none;transition:all .3s}
+input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,92,231,.15)}
+select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238888a0' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center}
 
-  /* Nav */
-  .nav-bar {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(10,10,15,0.85); backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border); padding: 0 20px; overflow-x: auto;
-  }
-  .nav-bar::-webkit-scrollbar { height: 0; }
-  .nav-bar .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 0; white-space: nowrap; }
-  .nav-bar a {
-    display: block; padding: 14px 18px; color: var(--text-dim); text-decoration: none;
-    font-size: 0.9em; font-weight: 500; border-bottom: 2px solid transparent; transition: all 0.2s;
-    position: relative;
-  }
-  .nav-bar a:hover, .nav-bar a.active { color: var(--accent-light); border-bottom-color: var(--accent); }
-  .nav-bar a.active::after {
-    content: ''; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%);
-    width: 20px; height: 3px; background: var(--accent); border-radius: 2px;
-  }
+/* Chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:6px 16px;border-radius:8px;font-size:.85em;border:1px solid var(--border);
+  background:transparent;color:var(--dim);cursor:pointer;transition:all .3s;user-select:none}
+.chip:hover{border-color:var(--accent);color:var(--al)}
+.chip.selected{background:rgba(108,92,231,.2);border-color:var(--accent);color:var(--al)}
+.chip.selected::before{content:'✓ '}
 
-  /* Filter Tabs */
-  .filter-bar {
-    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px;
-    padding: 12px 16px; background: var(--card); border: 1px solid var(--border); border-radius: 12px;
-  }
-  .filter-btn {
-    padding: 6px 16px; border-radius: 8px; font-size: 0.85em; font-weight: 500;
-    border: 1px solid var(--border); background: transparent; color: var(--text-dim);
-    cursor: pointer; transition: all 0.3s; white-space: nowrap;
-  }
-  .filter-btn:hover { border-color: var(--accent); color: var(--accent-light); }
-  .filter-btn.active { background: rgba(108,92,231,0.2); border-color: var(--accent); color: var(--accent-light); }
-  .filter-btn .count {
-    display: inline-block; background: rgba(255,255,255,0.1); padding: 1px 6px;
-    border-radius: 4px; font-size: 0.8em; margin-left: 4px;
-  }
+/* Buttons */
+.btn{padding:12px 32px;border-radius:10px;font-size:.95em;font-weight:600;cursor:pointer;
+  border:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 4px 15px rgba(108,92,231,.3)}
+.btn-primary:hover{background:#7c6ef0;transform:translateY(-2px);box-shadow:0 6px 25px rgba(108,92,231,.4)}
+.btn-outline{background:transparent;border:1px solid var(--border);color:var(--dim)}
+.btn-outline:hover{border-color:var(--accent);color:var(--al)}
+.btn-group{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
 
-  /* Stats row */
-  .stats-row {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px; margin-bottom: 32px; max-width: 900px; margin-left: auto; margin-right: auto;
-    position: relative; z-index: 1; padding: 0 20px;
-  }
-  .stat-card {
-    padding: 18px; text-align: center; border-radius: 12px;
-    border: 1px solid var(--border); background: var(--card); transition: all 0.3s;
-    cursor: default;
-  }
-  .stat-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
-  .stat-card .stat-num { font-size: 2em; font-weight: 800; line-height: 1; }
-  .stat-card .stat-label { font-size: 0.78em; color: var(--text-dim); margin-top: 4px; }
+/* Results */
+.result-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:16px;
+  transition:all .3s;animation:fadeInUp .4s ease backwards;cursor:default}
+.result-card:hover{background:var(--card2);border-color:rgba(108,92,231,.3);transform:translateY(-2px)}
+.result-card h3{font-size:1.1em;margin-bottom:4px}
+.result-card .meta{font-size:.8em;color:var(--dim);margin-bottom:10px;display:flex;flex-wrap:wrap;gap:12px}
+.result-card .benefits{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.result-card .benefit-tag{padding:3px 10px;border-radius:6px;font-size:.78em;font-weight:600;
+  background:rgba(0,229,255,.08);color:var(--cyan);border:1px solid rgba(0,229,255,.15)}
+.result-card .match-bar{height:6px;border-radius:3px;background:var(--border);overflow:hidden;margin-top:10px}
+.result-card .match-fill{height:100%;border-radius:3px;transition:width .6s ease}
+.result-card .match-label{font-size:.78em;margin-top:4px;font-weight:600}
+.match-high{color:var(--green)}.match-mid{color:var(--yellow)}.match-low{color:var(--red)}
 
-  .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-  .section { margin-bottom: 60px; }
-  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
-  .section-header h2 { font-size: 1.6em; font-weight: 700; }
-  .section-header .badge { padding: 3px 12px; border-radius: 6px; font-size: 0.75em; font-weight: 600; }
-  .badge-go { background: var(--green-dim); color: var(--green); }
-  .badge-check { background: var(--yellow-dim); color: var(--yellow); }
-  .badge-wait { background: rgba(68,138,255,0.15); color: var(--blue); }
-  .badge-no { background: var(--red-dim); color: var(--red); }
+.tag{display:inline-block;padding:2px 10px;border-radius:4px;font-size:.75em;font-weight:600}
+.tag-go{background:var(--gd);color:var(--green)}.tag-check{background:var(--yd);color:var(--yellow)}
+.tag-no{background:var(--rd);color:var(--red)}.tag-info{background:rgba(68,138,255,.12);color:var(--blue)}
 
-  /* Priority Banner */
-  .priority-banner { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 40px; }
-  .priority-item {
-    padding: 24px; border-radius: 14px; border: 1px solid var(--border); background: var(--card);
-    transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94); position: relative; overflow: hidden; cursor: pointer;
-  }
-  .priority-item::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; }
-  .priority-item.p1::before { background: var(--green); }
-  .priority-item.p2::before { background: var(--yellow); }
-  .priority-item.p3::before { background: var(--blue); }
-  .priority-item:hover { background: var(--card-hover); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
-  .priority-item:active { transform: translateY(-1px); }
-  .priority-label { font-size: 0.75em; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
-  .p1 .priority-label { color: var(--green); }
-  .p2 .priority-label { color: var(--yellow); }
-  .p3 .priority-label { color: var(--blue); }
-  .priority-item h3 { font-size: 1.15em; margin-bottom: 8px; }
-  .priority-item .deadline { font-size: 0.85em; color: var(--red); font-weight: 600; }
-  .priority-item p { font-size: 0.9em; color: var(--text-dim); margin-top: 6px; }
+/* City grid */
+.city-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:20px 0}
+.city-card{padding:20px;border-radius:12px;border:1px solid var(--border);background:var(--card);
+  text-align:center;transition:all .3s;cursor:pointer;position:relative;overflow:hidden}
+.city-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,.4);border-color:var(--accent)}
+.city-card .city-name{font-size:1.3em;font-weight:700;margin-bottom:4px}
+.city-card .city-count{font-size:.8em;color:var(--dim)}
+.city-card .city-tag{position:absolute;top:8px;right:8px;padding:2px 8px;border-radius:4px;font-size:.65em;font-weight:700}
+.city-hot{background:var(--gd);color:var(--green)}.city-coming{background:rgba(255,255,255,.05);color:var(--dim)}
 
-  /* Cards */
-  .card {
-    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
-    padding: 28px; margin-bottom: 20px; transition: all 0.3s;
-  }
-  .card:hover { background: var(--card-hover); border-color: rgba(108,92,231,0.3); }
-  .card h3 { font-size: 1.2em; margin-bottom: 6px; }
-  .card .card-meta { font-size: 0.82em; color: var(--text-dim); margin-bottom: 14px; display: flex; flex-wrap: wrap; gap: 16px; }
-  .card .card-meta span { display: flex; align-items: center; gap: 4px; }
-  .card-body p, .card-body li { font-size: 0.92em; color: var(--text); margin-bottom: 6px; }
-  .card-body ul { list-style: none; padding: 0; }
-  .card-body ul li::before { content: '>'; color: var(--accent); margin-right: 8px; font-weight: 700; }
-  .status { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 0.78em; font-weight: 600; vertical-align: middle; }
-  .status-open { background: var(--green-dim); color: var(--green); }
-  .status-draft { background: var(--yellow-dim); color: var(--yellow); }
-  .status-na { background: rgba(255,255,255,0.05); color: var(--text-dim); }
-  .amount { font-weight: 700; color: var(--cyan); font-size: 1.05em; }
+/* Summary stats */
+.summary-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:20px 0}
+.summary-stat{padding:16px;text-align:center;border-radius:12px;border:1px solid var(--border);background:var(--card)}
+.summary-stat .num{font-size:2em;font-weight:800;line-height:1}.summary-stat .lbl{font-size:.75em;color:var(--dim);margin-top:2px}
 
-  /* Table */
-  .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
-  table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
-  thead { background: rgba(108,92,231,0.08); }
-  th { padding: 12px 16px; text-align: left; font-weight: 600; color: var(--accent-light); white-space: nowrap; border-bottom: 1px solid var(--border); }
-  td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.03); vertical-align: top; }
-  tr:hover td { background: rgba(108,92,231,0.03); }
-  .match { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 6px; font-size: 0.78em; font-weight: 600; }
-  .match-high { background: var(--green-dim); color: var(--green); }
-  .match-mid { background: var(--yellow-dim); color: var(--yellow); }
-  .match-low { background: var(--red-dim); color: var(--red); }
+/* Collapsible detail */
+.detail-toggle{cursor:pointer;color:var(--al);font-size:.85em;font-weight:500;padding:4px 0;user-select:none}
+.detail-toggle:hover{color:#fff}
+.detail-content{max-height:0;overflow:hidden;transition:max-height .4s ease,opacity .3s;opacity:0}
+.detail-content.open{max-height:2000px;opacity:1}
+.detail-content ul{list-style:none;padding:8px 0}
+.detail-content li{padding:4px 0;font-size:.88em;color:var(--text)}
+.detail-content li::before{content:'>';color:var(--accent);margin-right:8px;font-weight:700}
 
-  /* Checklist */
-  .checklist { list-style: none; padding: 0; }
-  .checklist li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.03); display: flex; align-items: flex-start; gap: 10px; font-size: 0.92em; }
-  .checklist li::before { content: none !important; }
-  .checklist .check-icon {
-    width: 20px; height: 20px; border-radius: 6px; display: flex; align-items: center; justify-content: center;
-    font-size: 0.7em; flex-shrink: 0; margin-top: 2px;
-  }
-  .check-yes { background: var(--green-dim); color: var(--green); }
-  .check-maybe { background: var(--yellow-dim); color: var(--yellow); }
-  .check-no { background: var(--red-dim); color: var(--red); }
+footer{text-align:center;padding:40px 20px;color:var(--dim);font-size:.8em;border-top:1px solid var(--border)}
 
-  a { color: var(--accent-light); text-decoration: none; transition: color 0.2s; }
-  a:hover { color: #fff; }
-  .link-btn {
-    display: inline-block; padding: 8px 20px; border-radius: 8px;
-    background: rgba(108,92,231,0.15); border: 1px solid rgba(108,92,231,0.3);
-    color: var(--accent-light); font-size: 0.85em; font-weight: 500; margin: 4px;
-    transition: all 0.3s; cursor: pointer;
-  }
-  .link-btn:hover { background: rgba(108,92,231,0.3); color: #fff; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(108,92,231,0.2); }
-
-  .district-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; }
-
-  /* Collapse with smooth animation */
-  .collapse-header {
-    cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between;
-    padding: 10px 0; transition: color 0.2s;
-  }
-  .collapse-header:hover { color: var(--accent-light); }
-  .collapse-header .arrow {
-    display: inline-block; transition: transform 0.3s; font-size: 0.8em; color: var(--text-dim);
-  }
-  .collapse-header.open .arrow { transform: rotate(180deg); }
-  .collapse-body { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.25,0.46,0.45,0.94), opacity 0.3s; opacity: 0; }
-  .collapse-body.open { max-height: 5000px; opacity: 1; }
-
-  /* Contact */
-  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 12px; }
-  .contact-item {
-    padding: 16px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 10px;
-    font-size: 0.9em; transition: all 0.3s; cursor: default;
-  }
-  .contact-item:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .contact-item .label { font-weight: 600; color: var(--accent-light); font-size: 0.85em; margin-bottom: 4px; }
-
-  /* Timeline */
-  .timeline { position: relative; padding-left: 28px; }
-  .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--border); }
-  .timeline-item {
-    position: relative; margin-bottom: 20px; padding: 16px 20px;
-    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
-    transition: all 0.3s; cursor: default;
-  }
-  .timeline-item:hover { background: var(--card-hover); transform: translateX(4px); }
-  .timeline-item::before {
-    content: ''; position: absolute; left: -24px; top: 22px;
-    width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg);
-    transition: transform 0.3s;
-  }
-  .timeline-item:hover::before { transform: scale(1.4); }
-  .timeline-item.urgent::before { background: var(--red); animation: pulse 2s infinite; }
-  .timeline-date { font-size: 0.8em; color: var(--accent-light); font-weight: 600; }
-
-  /* Back to top */
-  .back-to-top {
-    position: fixed; bottom: 30px; right: 30px; width: 48px; height: 48px;
-    border-radius: 50%; background: var(--accent); color: #fff; border: none;
-    font-size: 1.2em; cursor: pointer; opacity: 0; visibility: hidden;
-    transition: all 0.3s; z-index: 200; box-shadow: 0 4px 20px rgba(108,92,231,0.4);
-  }
-  .back-to-top.show { opacity: 1; visibility: visible; }
-  .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 25px rgba(108,92,231,0.5); }
-
-  /* Progress bar */
-  .reading-progress {
-    position: fixed; top: 0; left: 0; height: 3px; z-index: 1000;
-    background: linear-gradient(90deg, var(--accent), var(--cyan));
-    transition: width 0.1s;
-    box-shadow: 0 0 10px rgba(108,92,231,0.5);
-  }
-
-  /* Tooltip */
-  [data-tooltip] { position: relative; cursor: help; }
-  [data-tooltip]:hover::after {
-    content: attr(data-tooltip); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%);
-    padding: 6px 12px; background: #222; color: #fff; font-size: 0.78em; border-radius: 6px;
-    white-space: nowrap; z-index: 50; animation: fadeIn 0.2s;
-    pointer-events: none;
-  }
-
-  /* Modal */
-  .modal-overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
-    z-index: 500; display: none; align-items: center; justify-content: center;
-    animation: fadeIn 0.2s;
-  }
-  .modal-overlay.show { display: flex; }
-  .modal {
-    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
-    padding: 32px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto;
-    animation: fadeInUp 0.3s;
-  }
-  .modal h3 { margin-bottom: 16px; font-size: 1.3em; }
-  .modal-close {
-    float: right; background: none; border: none; color: var(--text-dim);
-    font-size: 1.5em; cursor: pointer; transition: color 0.2s;
-  }
-  .modal-close:hover { color: var(--text); }
-
-  /* Dark/Light mode toggle */
-  .theme-toggle {
-    position: fixed; bottom: 30px; left: 30px;
-    width: 42px; height: 42px; border-radius: 50%;
-    background: var(--card); border: 1px solid var(--border);
-    color: var(--text-dim); font-size: 1.1em; cursor: pointer;
-    z-index: 200; transition: all 0.3s;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .theme-toggle:hover { border-color: var(--accent); color: var(--accent-light); transform: rotate(30deg); }
-
-  footer {
-    text-align: center; padding: 40px 20px; color: var(--text-dim); font-size: 0.82em;
-    border-top: 1px solid var(--border);
-  }
-
-  @media (max-width: 768px) {
-    .hero h1 { font-size: 1.8em; }
-    .priority-banner, .district-grid, .contact-grid { grid-template-columns: 1fr; }
-    .stats-row { grid-template-columns: repeat(2, 1fr); }
-    .nav-bar a { padding: 12px 14px; font-size: 0.82em; }
-    .card { padding: 20px; }
-    .profile-card { padding: 16px 20px; }
-    .countdown-bar { flex-direction: column; text-align: center; }
-  }
+@media(max-width:768px){
+  .hero h1{font-size:1.8em}.form-row{grid-template-columns:1fr}
+  .city-grid{grid-template-columns:repeat(2,1fr)}.steps{flex-wrap:wrap}
+  .summary-stats{grid-template-columns:repeat(2,1fr)}.panel{padding:20px}
+}
 </style>
 </head>
 <body>
 
-<!-- Reading Progress -->
-<div class="reading-progress" id="readingProgress" style="width:0%"></div>
-
-<!-- Hero -->
 <div class="hero">
-  <div class="hero-particles" id="heroParticles"></div>
-  <h1>广州 OPC 政策导航</h1>
-  <p class="subtitle">AI 语音机器人创业者的申报指南</p>
-  <span class="update-badge">更新于 2026-04-09</span>
-</div>
+  <h1>全国 OPC 政策导航</h1>
+  <p class="sub">填写你的公司情况，一键匹配可申请的补贴和政策</p>
+  <span class="version">Beta · 已收录 11 座城市 27+ 条政策 · 持续扩展中</span>
 
-<!-- Countdown -->
-<div class="countdown-bar" id="countdownBar">
-  <div class="urgent-icon">!</div>
-  <div class="countdown-text">
-    <strong>海珠区场景征集</strong> 截止倒计时
-  </div>
-  <div class="countdown-numbers">
-    <div class="countdown-num"><span class="n" id="cdDays">-</span><span class="l">天</span></div>
-    <div class="countdown-num"><span class="n" id="cdHours">-</span><span class="l">时</span></div>
-    <div class="countdown-num"><span class="n" id="cdMins">-</span><span class="l">分</span></div>
-    <div class="countdown-num"><span class="n" id="cdSecs">-</span><span class="l">秒</span></div>
-  </div>
-</div>
-
-<!-- Stats -->
-<div class="stats-row" style="margin-top:20px">
-  <div class="stat-card" data-tooltip="可立即申报的政策">
-    <div class="stat-num" style="color:var(--green)">2</div>
-    <div class="stat-label">可立即申报</div>
-  </div>
-  <div class="stat-card" data-tooltip="需补充条件后可申">
-    <div class="stat-num" style="color:var(--yellow)">2</div>
-    <div class="stat-label">补条件可申</div>
-  </div>
-  <div class="stat-card" data-tooltip="已正式发布或新增，值得关注">
-    <div class="stat-num" style="color:var(--blue)">3</div>
-    <div class="stat-label">新政策动态</div>
-  </div>
-  <div class="stat-card" data-tooltip="因注册区或备案限制暂不匹配">
-    <div class="stat-num" style="color:var(--red)">6</div>
-    <div class="stat-label">暂不匹配</div>
-  </div>
-  <div class="stat-card" data-tooltip="覆盖海珠/黄埔/南沙/番禺/天河">
-    <div class="stat-num" style="color:var(--accent-light)">7</div>
-    <div class="stat-label">覆盖区域</div>
-  </div>
-</div>
-
-<!-- Profile -->
-<div class="profile-card">
-  <h3>我的公司画像</h3>
-  <div class="profile-tags">
-    <span>越秀区注册</span><span>已有公司</span><span>5人交社保</span>
-    <span>AI语音对话机器人</span><span>无模型备案</span><span>无算法备案</span><span>有营收和合同</span>
-  </div>
-</div>
-
-<!-- Search -->
-<div class="search-bar">
-  <span class="search-icon">&#128269;</span>
-  <input type="text" id="searchInput" placeholder="搜索政策、补贴、区域... (试试: 算力、免租、备案)" oninput="handleSearch(this.value)">
-  <button class="search-clear" id="searchClear" onclick="clearSearch()">&times;</button>
-</div>
-<div class="no-results" id="noResults">没有找到匹配的内容，试试其他关键词</div>
-
-<!-- Nav -->
-<div class="nav-bar" id="navBar">
-  <div class="nav-inner">
-    <a href="#conclusion" class="active">适配结论</a>
-    <a href="#go">立即申报</a>
-    <a href="#check">补条件可申</a>
-    <a href="#watch">新动态</a>
-    <a href="#notapply">不匹配</a>
-    <a href="#districts">各区总览</a>
-    <a href="#province">省市政策</a>
-    <a href="#timeline">时间线</a>
-    <a href="#contacts">联系方式</a>
+  <div class="steps" id="stepsBar">
+    <div class="step active" data-num="1"><div class="step-line"></div><span class="step-label">填写信息</span></div>
+    <div class="step" data-num="2"><div class="step-line"></div><span class="step-label">智能匹配</span></div>
+    <div class="step" data-num="3"><span class="step-label">查看结果</span></div>
   </div>
 </div>
 
 <div class="container">
 
-  <!-- CONCLUSION -->
-  <section class="section animate-on-scroll" id="conclusion">
-    <div class="section-header"><h2>按你的情况，优先级排序</h2></div>
-    <div class="priority-banner">
-      <div class="priority-item p1" onclick="scrollToEl('#go')">
-        <div class="priority-label">第一优先级 - 立即行动</div>
-        <h3>海珠区场景征集 (技术服务商)</h3>
-        <div class="deadline">截止: 2026-04-18</div>
-        <p>不限注册区，AI语音产品可匹配导览/客服/康养等场景，入库后获订单+商城上架</p>
-      </div>
-      <div class="priority-item p2" onclick="scrollToEl('#go .card:nth-child(3)')">
-        <div class="priority-label">第二优先级 - 核实后申报</div>
-        <h3>创业带动就业补贴</h3>
-        <div class="deadline">窗口: 2026-05-01 ~ 05-20</div>
-        <p>5人社保基础好，除去法人后4人约9000元 / 5人约12000元，需确认公司成立未超3年</p>
-      </div>
-      <div class="priority-item p3" onclick="scrollToEl('#check')">
-        <div class="priority-label">第三优先级 - 看法人身份</div>
-        <h3>一次性创业资助 + 租金补贴</h3>
-        <div class="deadline">窗口: 2026-05-01 ~ 05-20</div>
-        <p>资助1万 + 租金每年6000 x 3年，但要求法人属特定身份</p>
-      </div>
-    </div>
-  </section>
+  <!-- Step 1: User Profile Form -->
+  <div class="panel" id="panelForm">
+    <h2>告诉我你的情况</h2>
+    <p class="desc">填写越详细，匹配越精准。不确定的可以跳过。</p>
 
-  <!-- GO -->
-  <section class="section animate-on-scroll" id="go">
-    <div class="section-header">
-      <h2>立即可申报</h2>
-      <span class="badge badge-go">GO</span>
+    <div class="form-group">
+      <label>公司注册地</label>
+      <div class="form-row">
+        <select id="fProvince">
+          <option value="">选择省份</option>
+          <option value="广东">广东</option>
+          <option value="北京">北京</option>
+          <option value="上海">上海</option>
+          <option value="浙江">浙江</option>
+          <option value="四川">四川</option>
+          <option value="湖北">湖北</option>
+          <option value="安徽">安徽</option>
+          <option value="江苏">江苏</option>
+          <option value="湖南">湖南</option>
+          <option value="重庆">重庆</option>
+          <option value="其他">其他省份</option>
+        </select>
+        <select id="fCity">
+          <option value="">选择城市</option>
+        </select>
+      </div>
+      <select id="fDistrict" style="margin-top:8px">
+        <option value="">选择区（可选）</option>
+      </select>
     </div>
 
-    <div class="card" data-searchable>
-      <h3>海珠区政府侧人工智能场景机会清单 (第一批) 技术服务商征集 <span class="match match-high">高度匹配</span></h3>
-      <div class="card-meta">
-        <span>发文: 海珠区人工智能发展局 / 海珠区住房和建设局</span>
-        <span>发布: 2026-03-31</span>
-        <span class="status status-open">征集中</span>
-      </div>
-      <div class="card-body">
-        <p><strong>为什么匹配你：</strong>面向<strong>全国范围内企事业单位</strong>，不限海珠注册。征集方向含园区管理、应急安防、医疗康养、智慧文旅等场景，你的AI语音对话机器人与导览、客服、康养陪护、运营交互场景强匹配。</p>
-        <div class="collapse-header" onclick="toggleCollapse(this)">
-          <h4>申报条件 & 材料</h4>
-          <span class="arrow">&#9660;</span>
+    <div class="form-group">
+      <label>公司情况</label>
+      <div class="form-row">
+        <div>
+          <input type="number" id="fEmployees" placeholder="社保人数" min="0">
         </div>
-        <div class="collapse-body">
-          <ul class="checklist">
-            <li><span class="check-icon check-yes">&#10003;</span>独立承担民事责任的能力</li>
-            <li><span class="check-icon check-yes">&#10003;</span>经营状况良好，无重大违法记录、无严重失信行为</li>
-            <li><span class="check-icon check-maybe">?</span>技术产品具有较强创新性或首创性</li>
-            <li><span class="check-icon check-maybe">?</span>依法取得知识产权或获得合法授权，无知识产权纠纷</li>
-            <li><span class="check-icon check-yes">&#10003;</span>具备方案设计、部署实施、运维保障全流程服务能力</li>
-            <li><span class="check-icon check-yes">&#10003;</span>能配合海珠区开展场景优化升级及效果评估工作</li>
-          </ul>
-          <p style="margin-top:12px"><strong>提交材料：</strong>《海珠区场景机会技术服务商申报表(第一批)》，命名格式"申报场景名称+企业名称"，盖章PDF扫描版 + 可编辑电子版</p>
-        </div>
-        <div style="margin-top:16px;padding:16px;background:rgba(255,82,82,0.08);border-radius:10px;border:1px solid rgba(255,82,82,0.15)">
-          <strong style="color:var(--red)">截止 2026-04-18</strong><br>
-          <span style="font-size:0.9em">邮箱: bcoal03@163.com | 联系人: 肖先生 | 电话: 020-89559809 / 020-98559810</span><br>
-          <span style="font-size:0.9em">地址: 广州市海珠区琶洲大道83号宝地广场1001室</span>
-        </div>
-        <div style="margin-top:12px">
-          <strong>入库后你能获得：</strong>
-          <ul>
-            <li>推荐入驻海珠区AI场景交易平台场景能力库</li>
-            <li>优先获得平台其他场景机会订单</li>
-            <li>落地产品集中上架海珠 AI 产品商城</li>
-            <li>对落地案例进行官方宣传推广</li>
-          </ul>
-        </div>
-        <div style="margin-top:12px">
-          <a class="link-btn" href="https://www.haizhu.gov.cn/gzhzrgzn/gkmlpt/content/10/10749/post_10749033.html" target="_blank">官方通知原文</a>
+        <div>
+          <input type="number" id="fAge" placeholder="公司成立几年（如 2）" min="0" step="0.5">
         </div>
       </div>
     </div>
 
-    <div class="card" data-searchable>
-      <h3>广州市创业带动就业补贴 <span class="match match-mid">需核实条件</span></h3>
-      <div class="card-meta">
-        <span>政策依据: 穗人社规字〔2022〕1号</span>
-        <span>自 2022-06-01 起实施，有效期5年</span>
-        <span class="status status-open">有效</span>
-      </div>
-      <div class="card-body">
-        <p><strong>补贴标准：</strong></p>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>招用人数</th><th>标准</th><th>你的情况预估</th></tr></thead>
-            <tbody>
-              <tr><td>3人及以下</td><td>每人 <span class="amount">2,000元</span></td><td rowspan="2">除去法人后4人 ≈ <span class="amount">9,000元</span><br>除去法人后5人 ≈ <span class="amount">12,000元</span></td></tr>
-              <tr><td>4人及以上</td><td>每增1人 <span class="amount">3,000元</span>，上限 <span class="amount">30,000元</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="collapse-header" onclick="toggleCollapse(this)">
-          <h4>你需要逐一核实的条件</h4>
-          <span class="arrow">&#9660;</span>
-        </div>
-        <div class="collapse-body">
-          <ul class="checklist">
-            <li><span class="check-icon check-maybe">?</span>公司是否在广州市登记注册 <strong>3年内</strong> (即 2023-04-09 之后成立)</li>
-            <li><span class="check-icon check-maybe">?</span>是否属于小微企业</li>
-            <li><span class="check-icon check-maybe">?</span>5人社保中除法人外有几人符合条件</li>
-            <li><span class="check-icon check-maybe">?</span>员工是否已连续 6 个月缴社保</li>
-            <li><span class="check-icon check-maybe">?</span>是否签了 1 年以上劳动合同</li>
-            <li><span class="check-icon check-maybe">?</span>所有股东是否均为自然人 (非全法人股东)</li>
-          </ul>
-        </div>
-        <p style="margin-top:12px"><strong>申请窗口：</strong>每年 1/3/5/7/9/11 月的 1-20 日，下一窗口 <strong style="color:var(--yellow)">2026-05-01 ~ 05-20</strong></p>
-        <a class="link-btn" href="https://rsj.gz.gov.cn/attachment/7/7631/7631455/9745334.pdf" target="_blank">政策原文 PDF</a>
+    <div class="form-group">
+      <label>公司类型</label>
+      <div class="chips" id="chipsCompanyType">
+        <div class="chip" data-val="个人独资">个人独资</div>
+        <div class="chip" data-val="一人有限公司">一人有限公司</div>
+        <div class="chip" data-val="小微企业">小微企业</div>
+        <div class="chip" data-val="个体工商户">个体工商户</div>
+        <div class="chip" data-val="其他">其他</div>
       </div>
     </div>
-  </section>
 
-  <!-- CHECK -->
-  <section class="section animate-on-scroll" id="check">
-    <div class="section-header"><h2>补充条件后可申</h2><span class="badge badge-check">需确认</span></div>
-    <div class="district-grid">
-      <div class="card" data-searchable>
-        <h3>一次性创业资助</h3>
-        <div class="card-meta"><span class="status status-open">有效</span></div>
-        <div class="card-body">
-          <p>金额: <span class="amount">10,000元 (一次性)</span></p>
-          <p style="margin-top:8px"><strong>核心门槛 - 法人身份：</strong></p>
-          <ul>
-            <li>高校/中职/技校学生 (在校或毕业5年内)</li>
-            <li>毕业5年内留学回国人员</li>
-            <li>军转干部/退役军人</li>
-            <li>登记失业/就业困难/脱贫人口</li>
-            <li>返乡创业人员</li>
-          </ul>
-          <p style="margin-top:8px;color:var(--yellow)">法人不属于以上身份则无法申请</p>
-          <p>窗口: 2026-05-01 ~ 05-20</p>
-        </div>
-      </div>
-      <div class="card" data-searchable>
-        <h3>创业租金补贴</h3>
-        <div class="card-meta"><span class="status status-open">有效</span></div>
-        <div class="card-body">
-          <p>金额: 每年 <span class="amount">6,000元</span>，累计不超过 <span class="amount">3年</span></p>
-          <p style="margin-top:8px"><strong>除法人身份要求外，还需：</strong></p>
-          <ul>
-            <li>办公场地为租赁 (非自有)</li>
-            <li>租赁地址 = 注册登记地址</li>
-            <li>申请前连续3个月有在职员工缴社保</li>
-          </ul>
-          <p style="margin-top:8px;color:var(--yellow)">法人身份不符或地址不一致则跳过</p>
-        </div>
+    <div class="form-group">
+      <label>行业方向（可多选）</label>
+      <div class="chips" id="chipsIndustry">
+        <div class="chip" data-val="AI语音/对话">AI语音/对话</div>
+        <div class="chip" data-val="AI视觉/图像">AI视觉/图像</div>
+        <div class="chip" data-val="大模型/NLP">大模型/NLP</div>
+        <div class="chip" data-val="智能硬件">智能硬件</div>
+        <div class="chip" data-val="数字内容/创意">数字内容/创意</div>
+        <div class="chip" data-val="智慧医疗">智慧医疗</div>
+        <div class="chip" data-val="智能制造">智能制造</div>
+        <div class="chip" data-val="跨境/电商">跨境/电商</div>
+        <div class="chip" data-val="教育/培训">教育/培训</div>
+        <div class="chip" data-val="其他AI">其他AI方向</div>
+        <div class="chip" data-val="非AI">非AI行业</div>
       </div>
     </div>
-  </section>
 
-  <!-- WATCH -->
-  <section class="section animate-on-scroll" id="watch">
-    <div class="section-header"><h2>最新政策动态</h2><span class="badge badge-go">NEW</span></div>
-    <div class="district-grid">
-      <div class="card" data-searchable>
-        <h3>海珠区 OPC 十条 <span class="status status-open">已正式发布</span></h3>
-        <div class="card-meta"><span>海珠区人工智能发展局</span><span>2026-03-19 正式公布</span></div>
-        <div class="card-body">
-          <p>首创SOPC产业生态和"4S"模型。以<strong>日均token消耗量</strong>作为OPC发展阶段评价指标。琶洲计划2026年建成2个"超级个体"生态社区，吸引40+高端创业人才。</p>
-          <p style="margin-top:8px;color:var(--green)">方向与你业务高度匹配，关注正式申报通知。</p>
-          <div class="collapse-header" onclick="toggleCollapse(this)">
-            <h4>补贴条款明细</h4>
-            <span class="arrow">&#9660;</span>
-          </div>
-          <div class="collapse-body">
-            <div class="table-wrap">
-              <table>
-                <thead><tr><th>条款</th><th>补贴</th></tr></thead>
-                <tbody>
-                  <tr><td>办公空间补贴</td><td>每年最高 <span class="amount">15万元</span></td></tr>
-                  <tr><td>算力券 (50%)</td><td>最高 <span class="amount">20万/年</span></td></tr>
-                  <tr><td>数据券 (30%)</td><td>最高 <span class="amount">10万/年</span></td></tr>
-                  <tr><td>场景资源开放 (30%)</td><td>最高 <span class="amount">500万</span></td></tr>
-                  <tr><td>大模型备案奖励</td><td>非规上 <span class="amount">50万</span> / 规上 <span class="amount">100万</span></td></tr>
-                  <tr><td>国家级算法备案奖励</td><td>最高 <span class="amount">100万</span></td></tr>
-                  <tr><td>多元化生态建设</td><td>最高 <span class="amount">50万</span></td></tr>
-                  <tr><td>OPC特色孵化空间</td><td>最高 <span class="amount">150万/年</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <a class="link-btn" href="https://www.haizhu.gov.cn/hdjlpt/yjzj/answer/49445" target="_blank">征求意见原文</a>
-        </div>
-      </div>
-      <div class="card" data-searchable>
-        <h3>番禺区 OPC 创业若干措施 <span class="status status-open">已正式发布</span></h3>
-        <div class="card-meta"><span>广州市首个区级OPC专项政策</span><span>已正式落地</span></div>
-        <div class="card-body">
-          <div class="collapse-header" onclick="toggleCollapse(this)">
-            <h4>补贴条款明细</h4>
-            <span class="arrow">&#9660;</span>
-          </div>
-          <div class="collapse-body">
-            <div class="table-wrap">
-              <table>
-                <thead><tr><th>补贴项目</th><th>金额</th></tr></thead>
-                <tbody>
-                  <tr><td>开源贡献/技能包开发</td><td>最高 <span class="amount">100万</span></td></tr>
-                  <tr><td>创新应用项目奖励 (20%)</td><td>最高 <span class="amount">50万</span></td></tr>
-                  <tr><td>杰出团队发展补贴</td><td>最高 <span class="amount">500万</span></td></tr>
-                  <tr><td>创业担保贷款</td><td>最高 <span class="amount">500万</span></td></tr>
-                  <tr><td>首年免租 (区属国有物业)</td><td>后2年减半</td></tr>
-                  <tr><td>博士人才落户补贴</td><td>最高 <span class="amount">10万</span></td></tr>
-                  <tr><td>OPC专项信贷 (中信银行)</td><td>专项信贷协议</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <p style="margin-top:8px;font-size:0.9em">提供"一张办公桌到一套房"的全链条支持，超1300个工位 (大学城+万博商务区)</p>
-          <a class="link-btn" href="https://www.panyu.gov.cn/gzpykgsx/gkmlpt/content/10/10735/post_10735201.html" target="_blank">政策原文</a>
-        </div>
-      </div>
-
-      <div class="card" data-searchable>
-        <h3>白云区 AI 和数据产业新政 (含OPC专条) <span class="status status-open">NEW 4月1日施行</span></h3>
-        <div class="card-meta"><span>2026-03-31 发布</span><span>2026-04-01 施行</span></div>
-        <div class="card-body">
-          <p><strong>算力券政策：</strong></p>
-          <ul>
-            <li>企业年度算力支出超100万，按 <span class="amount">10%</span> 补贴</li>
-            <li>OPC等小微主体补贴比例提升至 <span class="amount">15%</span></li>
-            <li>年度总规模 <span class="amount">1000万元</span></li>
-          </ul>
-          <p style="margin-top:8px">鼓励园区设立"OPC创业专区"，提供一站式服务</p>
-          <p style="margin-top:8px;color:var(--yellow);font-size:0.88em">注意: 需白云区注册/经营才能申请</p>
-          <a class="link-btn" href="https://www.by.gov.cn/gzbybgs/gkmlpt/content/10/10751/post_10751592.html" target="_blank">政策原文</a>
-          <a class="link-btn" href="https://news.dayoo.com/guangzhou/202604/03/139995_54943820.htm" target="_blank">广州日报报道</a>
-        </div>
+    <div class="form-group">
+      <label>你有哪些资质（可多选）</label>
+      <div class="chips" id="chipsQualification">
+        <div class="chip" data-val="有营收">有营收</div>
+        <div class="chip" data-val="有合同">有合同/客户</div>
+        <div class="chip" data-val="有知识产权">有知识产权/软著</div>
+        <div class="chip" data-val="有模型备案">有模型备案</div>
+        <div class="chip" data-val="有算法备案">有算法备案</div>
+        <div class="chip" data-val="有产品上线">有产品上线</div>
+        <div class="chip" data-val="有落地案例">有落地案例</div>
       </div>
     </div>
-  </section>
 
-  <!-- NOT APPLICABLE -->
-  <section class="section animate-on-scroll" id="notapply">
-    <div class="section-header"><h2>当前不适合申报</h2><span class="badge badge-no">暂不匹配</span></div>
-    <div class="card" data-searchable>
-      <div class="card-body">
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>政策</th><th>原因</th><th>何时重新评估</th></tr></thead>
-            <tbody>
-              <tr><td>海珠/白云/黄埔/南沙 大模型备案奖励</td><td><span class="match match-low">无模型备案</span></td><td>完成国家级生成式AI上线备案后</td></tr>
-              <tr><td>海珠/白云/黄埔/南沙 算法备案奖励</td><td><span class="match match-low">无算法备案</span></td><td>完成国家级深度合成服务算法备案后</td></tr>
-              <tr><td>白云区AI数据产业专项</td><td><span class="match match-low">需白云区注册/经营</span></td><td>迁址或设白云子公司</td></tr>
-              <tr><td>黄埔区AI产业专项</td><td><span class="match match-low">需黄埔区注册/经营</span></td><td>迁址或设黄埔子公司</td></tr>
-              <tr><td>南沙区AI产业扶持</td><td><span class="match match-low">需南沙区注册/经营</span></td><td>迁址或设南沙子公司</td></tr>
-              <tr><td>黄埔算力补助 (最高300万)</td><td><span class="match match-low">需购买区内算力</span></td><td>入驻黄埔并使用区内算力</td></tr>
-            </tbody>
-          </table>
-        </div>
+    <div class="form-group">
+      <label>法人身份（影响部分补贴）</label>
+      <div class="chips" id="chipsFounder">
+        <div class="chip" data-val="高校毕业5年内">高校毕业5年内</div>
+        <div class="chip" data-val="留学回国">留学回国</div>
+        <div class="chip" data-val="退役军人">退役军人</div>
+        <div class="chip" data-val="登记失业">登记失业人员</div>
+        <div class="chip" data-val="港澳青年">港澳青年</div>
+        <div class="chip" data-val="以上都不是">以上都不是</div>
       </div>
     </div>
-  </section>
 
-  <!-- DISTRICTS -->
-  <section class="section animate-on-scroll" id="districts">
-    <div class="section-header"><h2>各区 OPC 生态总览</h2></div>
-
-    <!-- Filter -->
-    <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterDistrict('all', this)">全部 <span class="count">7</span></button>
-      <button class="filter-btn" onclick="filterDistrict('haizhu', this)">海珠</button>
-      <button class="filter-btn" onclick="filterDistrict('huangpu', this)">黄埔</button>
-      <button class="filter-btn" onclick="filterDistrict('nansha', this)">南沙</button>
-      <button class="filter-btn" onclick="filterDistrict('panyu', this)">番禺</button>
-      <button class="filter-btn" onclick="filterDistrict('tianhe', this)">天河</button>
-      <button class="filter-btn" onclick="filterDistrict('baiyun', this)">白云 <span style="color:var(--green);font-size:0.7em">NEW</span></button>
-      <button class="filter-btn" onclick="filterDistrict('other', this)">越秀&其他</button>
+    <div class="btn-group">
+      <button class="btn btn-primary" onclick="runMatch()">开始匹配</button>
+      <button class="btn btn-outline" onclick="fillDemo()">用示例数据填充</button>
     </div>
-
-    <div class="district-grid" id="districtGrid">
-      <div class="card district-card" data-district="haizhu" data-searchable>
-        <h3 style="color:var(--green)">海珠区 (琶洲)</h3>
-        <div class="card-meta"><span>政策力度最大</span></div>
-        <div class="card-body">
-          <p><strong>琶洲模方 SOPC加速器</strong></p>
-          <ul>
-            <li>粤港澳大湾区首个大模型孵化空间</li>
-            <li>已孵化45家AI企业，累计融资10.88亿</li>
-            <li>半年以上免租期 + 算力/数据全方位支持</li>
-            <li>入驻: 参加琶洲算法大赛或提交BP评审</li>
-          </ul>
-          <p style="margin-top:10px"><strong>琶洲元创 OPC社区</strong></p>
-          <ul><li>首批投入1000万元，已入驻3家OPC企业</li></ul>
-        </div>
-      </div>
-      <div class="card district-card" data-district="huangpu" data-searchable>
-        <h3 style="color:var(--cyan)">黄埔区 (广州开发区)</h3>
-        <div class="card-meta"><span>算力补贴最强</span></div>
-        <div class="card-body">
-          <p><strong>鱼珠·元启 OPC生态社区</strong></p>
-          <ul>
-            <li>广州开发区首个OPC生态社区 (2026-03-20签约)</li>
-            <li>优质项目最长 3年免租，后2年减半</li>
-            <li>接入"黄埔一号"智算集群</li>
-            <li>入驻即获3个月免费TOKEN</li>
-          </ul>
-          <p style="margin-top:10px"><strong>核心补贴</strong></p>
-          <ul>
-            <li>通用大模型算力: 30%补贴，最高300万</li>
-            <li>小微企业云服务券: 2000元/张 x 2000张</li>
-            <li>场景应用示范: 总额1000万</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card district-card" data-district="nansha" data-searchable>
-        <h3 style="color:var(--orange)">南沙区</h3>
-        <div class="card-meta"><span>注册最快 + 跨境优势</span></div>
-        <div class="card-body">
-          <p><strong>OPC一站式服务</strong></p>
-          <ul>
-            <li>最快 0.5天办结拿照</li>
-            <li>开业礼包: 执照+5枚免费印章+发票+Ukey</li>
-            <li>OPC企业服务专窗: 凤凰大道1号</li>
-          </ul>
-          <p style="margin-top:10px"><strong>南沙国际OPC生态社区</strong></p>
-          <ul>
-            <li>湾区数创中心，万兆网宽带，"拎包开干"</li>
-            <li>免费办公 + 算力模型应用</li>
-            <li>方向: 跨境AI、数字游民、数字文创</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card district-card" data-district="panyu" data-searchable>
-        <h3 style="color:var(--yellow)">番禺区</h3>
-        <div class="card-meta"><span>全市首个OPC专项政策 (征求意见中)</span></div>
-        <div class="card-body">
-          <p><strong>万博CBD OPC空间</strong></p>
-          <ul>
-            <li>万博商务区 + 广州大学城</li>
-            <li>1300+工位，650+人才公寓</li>
-            <li>首年免租，后2年减半</li>
-          </ul>
-          <p style="margin-top:10px"><strong>聚焦领域：</strong>智能制造、智慧政务、智慧园区、智慧医疗</p>
-        </div>
-      </div>
-      <div class="card district-card" data-district="tianhe" data-searchable>
-        <h3 style="color:var(--accent-light)">天河区</h3>
-        <div class="card-meta"><span>有社区，无区级专项政策</span></div>
-        <div class="card-body">
-          <ul>
-            <li><strong>九方万格个人经济体产业园</strong> — 天河软件产业园(广州信息港)，全国首家个人经济体产业园</li>
-            <li><strong>OPC社区·她空间</strong> — 1000平方米，聚焦女性创业者</li>
-            <li><strong>OPC创新工坊(市级)</strong> — 珠江新城华利路61号五楼509室，免费Token + 一对一指导</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card district-card" data-district="baiyun" data-searchable>
-        <h3 style="color:#90caf9">白云区 <span class="status status-open">NEW</span></h3>
-        <div class="card-meta"><span>2026-03-31 发布，04-01 施行</span></div>
-        <div class="card-body">
-          <p><strong>人工智能和数据产业新政 (含OPC专条)</strong></p>
-          <ul>
-            <li><strong>算力券</strong>: 企业年度算力支出超100万按10%补贴</li>
-            <li>OPC等小微主体补贴比例提升至 <span class="amount">15%</span></li>
-            <li>年度总规模 <span class="amount">1000万元</span></li>
-            <li>鼓励园区设立"OPC创业专区"，提供一站式服务</li>
-          </ul>
-          <p style="margin-top:8px;color:var(--yellow);font-size:0.88em">注意: 需白云区注册/经营，你当前越秀注册暂不适用</p>
-          <a class="link-btn" href="https://www.by.gov.cn/gzbybgs/gkmlpt/content/10/10751/post_10751592.html" target="_blank">政策原文</a>
-        </div>
-      </div>
-      <div class="card district-card" data-district="other" data-searchable>
-        <h3>越秀区 & 其他区</h3>
-        <div class="card-meta"><span class="status status-na">暂无OPC专项</span></div>
-        <div class="card-body">
-          <p>越秀、荔湾、增城、花都、从化截至 2026年4月 均未发布 OPC 专项政策。</p>
-          <ul>
-            <li>可享受广州市通用创业补贴 + 省级算力券</li>
-            <li>可考虑在有专项政策的区注册/设子公司</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROVINCE -->
-  <section class="section animate-on-scroll" id="province">
-    <div class="section-header"><h2>省级 & 市级通用政策</h2></div>
-    <div class="card" data-searchable>
-      <h3>广东省 OPC 行动方案 (2026-2028)</h3>
-      <div class="card-meta"><span>广东省发展改革委</span><span>2026-03-16 发布</span><span>全国首个省级OPC专项政策</span></div>
-      <div class="card-body">
-        <p><strong>目标：</strong>2026年培育10个引领性OPC生态社区，2028年建成100个社区、培育1000家标杆企业、集聚10000名创新人才</p>
-        <div class="collapse-header" onclick="toggleCollapse(this)">
-          <h4>18条核心支持措施</h4><span class="arrow">&#9660;</span>
-        </div>
-        <div class="collapse-body">
-          <ul>
-            <li>完善「算力券」制度，降低OPC企业算力使用成本</li>
-            <li>鼓励地市对OPC模型开发投入给予补贴</li>
-            <li>推行公共数据运营服务费政府指导价管理</li>
-            <li>鼓励高校设置「人工智能+」交叉学科</li>
-            <li>将符合条件OPC人才纳入广东省高层次人才认定</li>
-            <li>港澳及海外人才"绿色通道"</li>
-            <li>免租或低租人才公寓、购房补贴</li>
-            <li>"人才贷、研发贷、成果贷"专属金融产品</li>
-            <li>支持校企共建高水平实验室和实训基地</li>
-          </ul>
-        </div>
-        <div style="margin-top:12px">
-          <a class="link-btn" href="https://www.cnbayarea.org.cn/policy/policyrelease/policies/content/post_1321436.html" target="_blank">政策全文</a>
-          <a class="link-btn" href="https://www.mrjjxw.com/articles/2026-03-16/4294588.html" target="_blank">每日经济新闻</a>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-searchable>
-      <h3>广州OPC创新工坊 (市级)</h3>
-      <div class="card-meta"><span>天河区珠江新城华利路61号五楼509室</span></div>
-      <div class="card-body">
-        <ul>
-          <li>国产开源AI智能体框架工具 (含四层安全防护) + 基础Token流量包 (免费)</li>
-          <li>一对一技术指导 + 法务、财税辅助技能预装</li>
-          <li>对象: 广州市注册的个人独资企业、小微企业及个人创业者</li>
-        </ul>
-        <p style="margin-top:8px">预约: <a href="https://qyfw.gzonline.gov.cn/qyfw/home" target="_blank">穗@i企平台</a>，1个工作日审核</p>
-      </div>
-    </div>
-    <div class="card" data-searchable>
-      <h3>赛事与奖项</h3>
-      <div class="card-body">
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>赛事</th><th>奖项</th><th>金额</th></tr></thead>
-            <tbody>
-              <tr><td>赢在广州大赛</td><td>一等奖</td><td><span class="amount">200,000元</span></td></tr>
-              <tr><td>赢在广州大赛</td><td>二等奖</td><td><span class="amount">150,000元</span></td></tr>
-              <tr><td>赢在广州大赛</td><td>三等奖</td><td><span class="amount">100,000元</span></td></tr>
-              <tr><td>赢在广州大赛</td><td>优胜奖</td><td><span class="amount">50,000元</span></td></tr>
-              <tr><td>众创杯 (AI OPC专项赛)</td><td>特等奖</td><td><span class="amount">500,000元</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-searchable>
-      <h3>港澳青年"四免"扶持</h3>
-      <div class="card-body">
-        <p>免租金/水电/物业/网络，最高 <span class="amount">50万元</span>，最长3年</p>
-        <p style="color:var(--text-dim);font-size:0.85em;margin-top:6px">适用于港澳青年创业者</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- TIMELINE -->
-  <section class="section animate-on-scroll" id="timeline">
-    <div class="section-header"><h2>关键时间节点</h2></div>
-    <div class="timeline">
-      <div class="timeline-item urgent">
-        <div class="timeline-date">2026-04-18 截止</div>
-        <p><strong>海珠区场景征集</strong> - 第一批技术服务商申报截止<br><span style="color:var(--red);font-weight:600" id="daysLeftText"></span></p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2026-03-19 已发布</div>
-        <p><strong>海珠区OPC十条</strong> - 已正式公布，关注申报通知</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2026-03-31 已发布</div>
-        <p><strong>白云区AI数据产业新政</strong> - 4月1日起施行，含OPC算力券15%补贴</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">已正式落地</div>
-        <p><strong>番禺区OPC创业扶持</strong> - 广州首个区级OPC专项政策，已可申请</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2026-05-01 ~ 05-20 窗口</div>
-        <p><strong>创业带动就业补贴</strong> - 下一申报窗口</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2026-05-01 ~ 05-20 窗口</div>
-        <p><strong>一次性创业资助 / 租金补贴</strong> - 下一申报窗口 (需法人身份符合)</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2027-05-31 政策到期</div>
-        <p><strong>穗人社规字〔2022〕1号</strong> - 创业补贴系列政策有效期满</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUICK TABLE -->
-  <section class="section animate-on-scroll">
-    <div class="section-header"><h2>快速对照表</h2></div>
-    <div class="table-wrap">
-      <table id="compareTable">
-        <thead>
-          <tr>
-            <th style="cursor:pointer" onclick="sortTable(0)">补贴/机会 &#8693;</th>
-            <th style="cursor:pointer" onclick="sortTable(1)">金额 &#8693;</th>
-            <th>门槛</th>
-            <th style="cursor:pointer" onclick="sortTable(3)">匹配度 &#8693;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>海珠场景征集 (入库)</td><td>非现金，获订单+曝光</td><td>全国企业可申</td><td><span class="match match-high">高度匹配</span></td></tr>
-          <tr><td>创业带动就业补贴</td><td>9,000~30,000元</td><td>3年内初创+社保</td><td><span class="match match-mid">需核实</span></td></tr>
-          <tr><td>一次性创业资助</td><td>10,000元</td><td>法人特定身份</td><td><span class="match match-mid">看法人身份</span></td></tr>
-          <tr><td>创业租金补贴</td><td>6,000元/年 x 3年</td><td>法人身份+地址一致</td><td><span class="match match-mid">看法人身份</span></td></tr>
-          <tr><td>OPC创新工坊</td><td>免费Token+指导</td><td>广州注册企业</td><td><span class="match match-high">可直接去</span></td></tr>
-          <tr><td>海珠OPC十条 (算力券等)</td><td>最高20万/年</td><td>入驻琶洲区域</td><td><span class="match match-mid">政策未落地</span></td></tr>
-          <tr><td>黄埔鱼珠 免租+TOKEN</td><td>3年免租+TOKEN</td><td>入驻鱼珠社区</td><td><span class="match match-mid">需迁址/设子公司</span></td></tr>
-          <tr><td>南沙免费办公</td><td>免费</td><td>入驻南沙社区</td><td><span class="match match-mid">需迁址/设子公司</span></td></tr>
-          <tr><td>赢在广州大赛</td><td>5万~20万</td><td>参赛获奖</td><td><span class="match match-mid">可参赛</span></td></tr>
-          <tr><td>众创杯OPC专项赛</td><td>特等奖50万</td><td>参赛获奖</td><td><span class="match match-mid">可参赛</span></td></tr>
-          <tr><td>大模型/算法备案奖励</td><td>15万~100万</td><td>完成国家级备案</td><td><span class="match match-low">暂不匹配</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- MATERIALS -->
-  <section class="section animate-on-scroll">
-    <div class="section-header"><h2>你现在该准备的材料</h2></div>
-    <div class="district-grid">
-      <div class="card" data-searchable>
-        <h3 style="color:var(--green)">A. 海珠场景征集</h3>
-        <div class="card-body">
-          <ul class="checklist" id="checklistA">
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 公司营业执照</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 产品介绍 PPT 或 BP</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> AI语音对话机器人方案说明</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 已落地案例或合同清单</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 知识产权/软著/商标/授权材料</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 项目实施方案</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 运维与服务保障方案</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 对应场景的功能清单和演示材料</li>
-          </ul>
-          <div style="margin-top:12px;padding:10px;background:rgba(0,230,118,0.06);border-radius:8px">
-            <span style="font-size:0.85em">准备进度: <strong id="progressA">0/8</strong></span>
-            <div style="height:4px;background:var(--border);border-radius:2px;margin-top:6px;overflow:hidden">
-              <div id="progressBarA" style="height:100%;width:0%;background:var(--green);transition:width 0.4s;border-radius:2px"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card" data-searchable>
-        <h3 style="color:var(--yellow)">B. 创业带动就业补贴</h3>
-        <div class="card-body">
-          <ul class="checklist" id="checklistB">
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 营业执照</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 公司注册时间证明</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 员工劳动合同</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 连续6个月社保缴费记录</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 股东结构信息</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 法人信息</li>
-            <li><input type="checkbox" class="todo-check" onchange="updateProgress()"> 单位银行账户信息</li>
-          </ul>
-          <div style="margin-top:12px;padding:10px;background:rgba(255,214,0,0.06);border-radius:8px">
-            <span style="font-size:0.85em">准备进度: <strong id="progressB">0/7</strong></span>
-            <div style="height:4px;background:var(--border);border-radius:2px;margin-top:6px;overflow:hidden">
-              <div id="progressBarB" style="height:100%;width:0%;background:var(--yellow);transition:width 0.4s;border-radius:2px"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTS -->
-  <section class="section animate-on-scroll" id="contacts">
-    <div class="section-header"><h2>关键联系方式</h2></div>
-    <div class="contact-grid">
-      <div class="contact-item"><div class="label">OPC创新工坊 (市级)</div>天河区珠江新城华利路61号五楼509室<br><a href="https://qyfw.gzonline.gov.cn/qyfw/home" target="_blank">穗@i企预约</a></div>
-      <div class="contact-item"><div class="label">海珠区场景征集 (第一批)</div>肖先生: 020-89559809 / 020-98559810<br>邮箱: bcoal03@163.com<br>琶洲大道83号宝地广场1001室</div>
-      <div class="contact-item"><div class="label">海珠区人工智能发展局</div>征求意见邮箱: pzszjj@yeah.net<br>海珠区赤洲街宝珠广场1001</div>
-      <div class="contact-item"><div class="label">南沙政务服务中心 (OPC专窗)</div>电话: 020-12345<br>南沙区凤凰大道1号<br><a href="https://scjgj.gz.gov.cn/ywt/" target="_blank">一网通平台</a></div>
-      <div class="contact-item"><div class="label">黄埔区工信局</div><a href="http://www.hp.gov.cn/gkmlpt/content/10/10330/post_10330226.html" target="_blank">政策全文页</a></div>
-      <div class="contact-item"><div class="label">广州市创业补贴通用申请</div><a href="https://www.gdzwfw.gov.cn/" target="_blank">广东政务服务网</a></div>
-      <div class="contact-item"><div class="label">OPC社区信息聚合</div><a href="https://www.opcquan.com/" target="_blank">OPC圈</a></div>
-    </div>
-  </section>
-
-  <!-- SOURCES -->
-  <section class="section animate-on-scroll">
-    <div class="section-header"><h2>官方来源汇总</h2></div>
-    <div class="card">
-      <div class="card-body">
-        <p><strong>政府原文：</strong></p>
-        <ul>
-          <li><a href="https://www.cnbayarea.org.cn/policy/policyrelease/policies/content/post_1321436.html" target="_blank">广东省OPC行动方案</a></li>
-          <li><a href="https://www.haizhu.gov.cn/gzhzrgzn/gkmlpt/content/10/10749/post_10749033.html" target="_blank">海珠区场景征集通知</a></li>
-          <li><a href="https://www.haizhu.gov.cn/hdjlpt/yjzj/answer/49445" target="_blank">海珠区OPC十条征求意见稿</a></li>
-          <li><a href="https://www.panyu.gov.cn/gzpykgsx/gkmlpt/content/10/10735/post_10735201.html" target="_blank">番禺区OPC征求意见稿</a></li>
-          <li><a href="https://www.by.gov.cn/gzbybgs/gkmlpt/content/10/10751/post_10751592.html" target="_blank">白云区AI数据产业政策</a></li>
-          <li><a href="https://www.gz.gov.cn/gzzcwjk/gzdata/content/post_10330225.html" target="_blank">黄埔区AI产业政策</a></li>
-          <li><a href="https://www.gzns.gov.cn/zwgk/zcwjjjd/zcwj/content/post_10347094.html" target="_blank">南沙区AI产业扶持办法</a></li>
-          <li><a href="https://rsj.gz.gov.cn/attachment/7/7631/7631455/9745334.pdf" target="_blank">广州市就业创业补贴指导清单 (PDF)</a></li>
-        </ul>
-        <p style="margin-top:16px"><strong>新闻报道：</strong></p>
-        <ul>
-          <li><a href="https://www.sfccn.com/2026/3-19/yMMDE0NzNfMjExODcyMQ.html" target="_blank">海珠OPC十条 - 南方财经</a></li>
-          <li><a href="https://www.21jingji.com/article/20260320/herald/9b63ae848655867b0141f734b84f97b6.html" target="_blank">OPC创新工坊上线 - 21经济网</a></li>
-          <li><a href="https://m.jiemian.com/article/14156017.html" target="_blank">广州开抢OPC - 界面新闻</a></li>
-          <li><a href="https://www.nfnews.com/content/R6gNkMEN3p.html" target="_blank">番禺首个OPC政策 - 南方+</a></li>
-          <li><a href="https://www.mrjjxw.com/articles/2026-03-16/4294588.html" target="_blank">全国首个省级政策 - 每日经济新闻</a></li>
-          <li><a href="https://finance.sina.com.cn/roll/2026-04-02/doc-inhtavkf9479843.shtml" target="_blank">广州OPC政策汇总 - 新浪财经</a></li>
-          <li><a href="https://news.dayoo.com/guangzhou/202604/03/139995_54943820.htm" target="_blank">白云区算力券新政 - 广州日报</a></li>
-          <li><a href="https://gd.huaxia.com/c/2026/03/19/2128142.shtml" target="_blank">广东多地OPC生态社区建设 - 华夏经纬网</a></li>
-          <li><a href="https://www.news.cn/tech/20260309/eafd7f32545f4251838f58e987d9b101/c.html" target="_blank">一人公司加速孵化 - 新华网</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<!-- Back to top -->
-<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
-
-<!-- Theme toggle -->
-<button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" data-tooltip="切换主题">&#9789;</button>
-
-<!-- Modal -->
-<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()">&times;</button>
-    <h3 id="modalTitle"></h3>
-    <div id="modalBody"></div>
   </div>
+
+  <!-- Step 2: Loading -->
+  <div class="panel hidden" id="panelLoading" style="text-align:center;padding:60px">
+    <div style="font-size:2em;animation:pulse 1.5s infinite">&#9881;</div>
+    <p style="margin-top:12px;color:var(--al)">正在分析你的情况，匹配最佳政策...</p>
+  </div>
+
+  <!-- Step 3: Results -->
+  <div class="panel hidden" id="panelResults">
+    <h2>匹配结果</h2>
+    <p class="desc" id="resultDesc"></p>
+
+    <div class="summary-stats" id="summaryStats"></div>
+
+    <!-- Tabs -->
+    <div style="display:flex;gap:8px;margin:20px 0;flex-wrap:wrap" id="resultTabs">
+      <button class="chip selected" onclick="filterResults('all',this)">全部</button>
+      <button class="chip" onclick="filterResults('high',this)">高度匹配</button>
+      <button class="chip" onclick="filterResults('mid',this)">条件匹配</button>
+      <button class="chip" onclick="filterResults('low',this)">暂不匹配</button>
+    </div>
+
+    <div id="resultsList"></div>
+
+    <div class="btn-group">
+      <button class="btn btn-outline" onclick="goBack()">&#8592; 修改条件重新匹配</button>
+      <button class="btn btn-outline" onclick="exportResults()">&#8681; 导出结果</button>
+    </div>
+  </div>
+
+  <!-- City Map -->
+  <div class="panel anim" id="panelCities" style="margin-top:40px">
+    <h2>已收录城市</h2>
+    <p class="desc">点击城市查看当地OPC政策详情</p>
+    <div class="city-grid" id="cityGrid"></div>
+  </div>
+
 </div>
 
 <footer>
-  <p>数据来源: 政府官网原文、政府公开文件、官方政务材料</p>
-  <p>更新时间: 2026-04-09 | 不含公众号、媒体转述、园区宣传口径</p>
-  <p style="margin-top:8px;color:var(--accent-light)">为越秀区注册 · AI语音机器人方向 · 5人社保公司定制</p>
+  <p>全国OPC政策导航 · 数据来源: 政府官网、公开政策文件</p>
+  <p style="margin-top:4px"><a href="guangzhou.html">广州专版 (交互详情页)</a> · <a href="https://github.com/siuserxiaowei/guangzhou-opc-policy" target="_blank">GitHub</a></p>
 </footer>
 
 <script>
-// ===== Countdown Timer =====
-function updateCountdown() {
-  const deadline = new Date('2026-04-18T23:59:59+08:00');
-  const now = new Date();
-  const diff = deadline - now;
-  if (diff <= 0) {
-    document.getElementById('countdownBar').innerHTML = '<div class="urgent-icon">!</div><div class="countdown-text"><strong style="color:var(--red)">海珠区场景征集已截止</strong></div>';
-    return;
+// ===== DATA =====
+let POLICIES = [];
+let CITIES = [];
+
+async function loadData() {
+  try {
+    const [pRes, cRes] = await Promise.all([
+      fetch('data/policies.json'),
+      fetch('data/cities.json')
+    ]);
+    const pData = await pRes.json();
+    const cData = await cRes.json();
+    POLICIES = pData.policies || [];
+    CITIES = cData.cities || [];
+    renderCities();
+  } catch(e) {
+    console.error('Load data failed:', e);
+    // Fallback: inline
   }
-  const d = Math.floor(diff / 86400000);
-  const h = Math.floor((diff % 86400000) / 3600000);
-  const m = Math.floor((diff % 3600000) / 60000);
-  const s = Math.floor((diff % 60000) / 1000);
-  document.getElementById('cdDays').textContent = d;
-  document.getElementById('cdHours').textContent = String(h).padStart(2, '0');
-  document.getElementById('cdMins').textContent = String(m).padStart(2, '0');
-  document.getElementById('cdSecs').textContent = String(s).padStart(2, '0');
-  const dlt = document.getElementById('daysLeftText');
-  if (dlt) dlt.textContent = `距今仅剩 ${d} 天 ${h} 小时！`;
 }
-updateCountdown();
-setInterval(updateCountdown, 1000);
+loadData();
 
-// ===== Particles =====
-(function() {
-  const c = document.getElementById('heroParticles');
-  for (let i = 0; i < 20; i++) {
-    const p = document.createElement('div');
-    p.className = 'p';
-    p.style.left = Math.random() * 100 + '%';
-    p.style.top = Math.random() * 100 + '%';
-    p.style.width = (2 + Math.random() * 4) + 'px';
-    p.style.height = p.style.width;
-    p.style.animationDuration = (8 + Math.random() * 12) + 's';
-    p.style.animationDelay = Math.random() * 10 + 's';
-    p.style.opacity = 0.15 + Math.random() * 0.3;
-    c.appendChild(p);
+// ===== CITY/DISTRICT MAPPING =====
+const CITY_MAP = {
+  '广东': {
+    cities: ['广州','深圳','东莞','佛山','珠海','惠州','中山'],
+    districts: {
+      '广州': ['越秀','天河','海珠','荔湾','白云','黄埔','番禺','南沙','花都','增城','从化'],
+      '深圳': ['南山','福田','龙华','宝安','龙岗','罗湖','光明','坪山','盐田'],
+    }
+  },
+  '北京': { cities:['北京'], districts:{'北京':['海淀','朝阳','丰台','西城','东城','通州','大兴','昌平','石景山']}},
+  '上海': { cities:['上海'], districts:{'上海':['浦东','徐汇','静安','黄浦','长宁','杨浦','虹口','闵行','松江','嘉定','宝山']}},
+  '浙江': { cities:['杭州','宁波','温州'], districts:{'杭州':['西湖','余杭','滨江','萧山','拱墅','上城','临平','钱塘']}},
+  '四川': { cities:['成都','绵阳'], districts:{'成都':['高新','天府新区','武侯','锦江','成华','青羊','金牛','龙泉驿']}},
+  '湖北': { cities:['武汉'], districts:{'武汉':['东湖高新','洪山','武昌','江汉','江岸','硚口','汉阳']}},
+  '安徽': { cities:['合肥'], districts:{'合肥':['包河','蜀山','庐阳','瑶海','高新']}},
+  '江苏': { cities:['南京','苏州','无锡'], districts:{'南京':['江宁','鼓楼','玄武','秦淮','建邺','雨花台']}},
+  '湖南': { cities:['长沙'], districts:{'长沙':['岳麓','天心','芙蓉','雨花','开福']}},
+  '重庆': { cities:['重庆'], districts:{'重庆':['渝中','江北','南岸','九龙坡','沙坪坝','渝北','两江新区']}}
+};
+
+document.getElementById('fProvince').addEventListener('change', function() {
+  const prov = this.value;
+  const citySelect = document.getElementById('fCity');
+  const districtSelect = document.getElementById('fDistrict');
+  citySelect.innerHTML = '<option value="">选择城市</option>';
+  districtSelect.innerHTML = '<option value="">选择区（可选）</option>';
+  if (CITY_MAP[prov]) {
+    CITY_MAP[prov].cities.forEach(c => {
+      citySelect.innerHTML += `<option value="${c}">${c}</option>`;
+    });
   }
-})();
-
-// ===== Scroll animations =====
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-
-// ===== Reading progress =====
-window.addEventListener('scroll', () => {
-  const h = document.documentElement.scrollHeight - window.innerHeight;
-  const p = (window.scrollY / h) * 100;
-  document.getElementById('readingProgress').style.width = p + '%';
-  // Back to top
-  document.getElementById('backToTop').classList.toggle('show', window.scrollY > 500);
 });
 
-// ===== Nav active =====
-const sections = document.querySelectorAll('.section[id]');
-const navLinks = document.querySelectorAll('.nav-bar a');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => { if (scrollY >= s.offsetTop - 100) current = s.getAttribute('id'); });
-  navLinks.forEach(l => {
-    l.classList.remove('active');
-    if (l.getAttribute('href') === '#' + current) l.classList.add('active');
-  });
+document.getElementById('fCity').addEventListener('change', function() {
+  const prov = document.getElementById('fProvince').value;
+  const city = this.value;
+  const districtSelect = document.getElementById('fDistrict');
+  districtSelect.innerHTML = '<option value="">选择区（可选）</option>';
+  if (CITY_MAP[prov] && CITY_MAP[prov].districts[city]) {
+    CITY_MAP[prov].districts[city].forEach(d => {
+      districtSelect.innerHTML += `<option value="${d}">${d}</option>`;
+    });
+  }
 });
 
-// ===== Smooth scroll for nav =====
-document.querySelectorAll('.nav-bar a').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-
-// ===== Collapse =====
-function toggleCollapse(el) {
-  el.classList.toggle('open');
-  el.nextElementSibling.classList.toggle('open');
-}
-
-// ===== Scroll to element =====
-function scrollToEl(sel) {
-  const el = document.querySelector(sel);
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-// ===== District filter =====
-function filterDistrict(district, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.district-card').forEach(c => {
-    if (district === 'all' || c.dataset.district === district) {
-      c.style.display = '';
-      c.style.animation = 'fadeInUp 0.4s ease forwards';
+// ===== CHIPS =====
+document.querySelectorAll('.chips').forEach(container => {
+  container.addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    // Company type: single select. Others: multi select
+    if (container.id === 'chipsCompanyType' || container.id === 'chipsFounder') {
+      container.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+      chip.classList.add('selected');
     } else {
-      c.style.display = 'none';
+      chip.classList.toggle('selected');
     }
   });
-}
-
-// ===== Search =====
-function handleSearch(query) {
-  const clear = document.getElementById('searchClear');
-  const noRes = document.getElementById('noResults');
-  clear.style.display = query ? 'block' : 'none';
-  if (!query) {
-    document.querySelectorAll('.card, .section, .priority-item, .timeline-item, .contact-item, .stat-card').forEach(el => { el.style.display = ''; el.style.opacity = '1'; });
-    noRes.style.display = 'none';
-    removeHighlights();
-    return;
-  }
-  const q = query.toLowerCase();
-  let found = 0;
-  removeHighlights();
-  document.querySelectorAll('.card').forEach(card => {
-    const text = card.textContent.toLowerCase();
-    if (text.includes(q)) {
-      card.style.display = '';
-      card.style.opacity = '1';
-      card.style.animation = 'fadeIn 0.3s';
-      found++;
-      highlightText(card, query);
-    } else {
-      card.style.display = 'none';
-    }
-  });
-  noRes.style.display = found === 0 ? 'block' : 'none';
-}
-
-function clearSearch() {
-  document.getElementById('searchInput').value = '';
-  handleSearch('');
-}
-
-function highlightText(container, query) {
-  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null);
-  const nodes = [];
-  while (walker.nextNode()) nodes.push(walker.currentNode);
-  const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-  nodes.forEach(node => {
-    if (node.parentElement.tagName === 'SCRIPT' || node.parentElement.tagName === 'STYLE') return;
-    if (regex.test(node.textContent)) {
-      const span = document.createElement('span');
-      span.innerHTML = node.textContent.replace(regex, '<mark class="search-highlight">$1</mark>');
-      node.parentElement.replaceChild(span, node);
-    }
-  });
-}
-
-function removeHighlights() {
-  document.querySelectorAll('.search-highlight').forEach(mark => {
-    const parent = mark.parentNode;
-    parent.replaceChild(document.createTextNode(mark.textContent), mark);
-    parent.normalize();
-  });
-  document.querySelectorAll('.card span:not([class])').forEach(span => {
-    if (span.childNodes.length === 1 && span.childNodes[0].nodeType === 3) {
-      span.parentNode.replaceChild(span.childNodes[0], span);
-      span.parentNode.normalize();
-    }
-  });
-}
-
-// ===== Table sort =====
-let sortDir = {};
-function sortTable(col) {
-  const table = document.getElementById('compareTable');
-  const tbody = table.querySelector('tbody');
-  const rows = Array.from(tbody.querySelectorAll('tr'));
-  sortDir[col] = !sortDir[col];
-  rows.sort((a, b) => {
-    const at = a.cells[col].textContent.trim();
-    const bt = b.cells[col].textContent.trim();
-    return sortDir[col] ? at.localeCompare(bt, 'zh') : bt.localeCompare(at, 'zh');
-  });
-  rows.forEach(r => { r.style.animation = 'fadeIn 0.3s'; tbody.appendChild(r); });
-}
-
-// ===== Checklist progress =====
-function updateProgress() {
-  ['A', 'B'].forEach(id => {
-    const list = document.getElementById('checklist' + id);
-    if (!list) return;
-    const checks = list.querySelectorAll('.todo-check');
-    const done = Array.from(checks).filter(c => c.checked).length;
-    const total = checks.length;
-    document.getElementById('progress' + id).textContent = done + '/' + total;
-    document.getElementById('progressBar' + id).style.width = (done / total * 100) + '%';
-    // Save to localStorage
-    localStorage.setItem('opc_checklist_' + id, JSON.stringify(Array.from(checks).map(c => c.checked)));
-  });
-}
-
-// Load saved checklist state
-function loadChecklistState() {
-  ['A', 'B'].forEach(id => {
-    const saved = localStorage.getItem('opc_checklist_' + id);
-    if (!saved) return;
-    const list = document.getElementById('checklist' + id);
-    if (!list) return;
-    const checks = list.querySelectorAll('.todo-check');
-    const states = JSON.parse(saved);
-    checks.forEach((c, i) => { if (states[i] !== undefined) c.checked = states[i]; });
-  });
-  updateProgress();
-}
-loadChecklistState();
-
-// ===== Theme =====
-function toggleTheme() {
-  const body = document.body;
-  const isLight = body.style.getPropertyValue('--bg') === '#f5f5f7';
-  if (isLight) {
-    body.style.cssText = '';
-    document.getElementById('themeToggle').innerHTML = '&#9789;';
-  } else {
-    body.style.setProperty('--bg', '#f5f5f7');
-    body.style.setProperty('--card', '#ffffff');
-    body.style.setProperty('--card-hover', '#f0f0f5');
-    body.style.setProperty('--border', '#ddd');
-    body.style.setProperty('--text', '#1a1a2e');
-    body.style.setProperty('--text-dim', '#666');
-    body.style.background = '#f5f5f7';
-    body.style.color = '#1a1a2e';
-    document.getElementById('themeToggle').innerHTML = '&#9728;';
-  }
-}
-
-// ===== Modal =====
-function openModal(title, body) {
-  document.getElementById('modalTitle').textContent = title;
-  document.getElementById('modalBody').innerHTML = body;
-  document.getElementById('modalOverlay').classList.add('show');
-}
-function closeModal() {
-  document.getElementById('modalOverlay').classList.remove('show');
-}
-
-// ===== Keyboard shortcuts =====
-document.addEventListener('keydown', e => {
-  if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
-    e.preventDefault();
-    document.getElementById('searchInput').focus();
-  }
-  if (e.key === 'Escape') {
-    closeModal();
-    clearSearch();
-    document.getElementById('searchInput').blur();
-  }
 });
+
+function getSelected(containerId) {
+  return Array.from(document.querySelectorAll(`#${containerId} .chip.selected`)).map(c => c.dataset.val);
+}
+
+// ===== DEMO DATA =====
+function fillDemo() {
+  document.getElementById('fProvince').value = '广东';
+  document.getElementById('fProvince').dispatchEvent(new Event('change'));
+  setTimeout(() => {
+    document.getElementById('fCity').value = '广州';
+    document.getElementById('fCity').dispatchEvent(new Event('change'));
+    setTimeout(() => {
+      document.getElementById('fDistrict').value = '越秀';
+      document.getElementById('fEmployees').value = '5';
+      document.getElementById('fAge').value = '2';
+      // Select chips
+      selectChip('chipsCompanyType', '小微企业');
+      selectChip('chipsIndustry', 'AI语音/对话');
+      selectChip('chipsQualification', '有营收');
+      selectChip('chipsQualification', '有合同');
+      selectChip('chipsQualification', '有产品上线');
+      selectChip('chipsFounder', '以上都不是');
+    }, 100);
+  }, 100);
+}
+
+function selectChip(containerId, val) {
+  document.querySelectorAll(`#${containerId} .chip`).forEach(c => {
+    if (c.dataset.val === val) c.classList.add('selected');
+  });
+}
+
+// ===== MATCHING ENGINE =====
+function runMatch() {
+  const profile = {
+    province: document.getElementById('fProvince').value,
+    city: document.getElementById('fCity').value,
+    district: document.getElementById('fDistrict').value,
+    employees: parseInt(document.getElementById('fEmployees').value) || 0,
+    companyAge: parseFloat(document.getElementById('fAge').value) || 0,
+    companyType: getSelected('chipsCompanyType'),
+    industries: getSelected('chipsIndustry'),
+    qualifications: getSelected('chipsQualification'),
+    founder: getSelected('chipsFounder')
+  };
+
+  // Save to localStorage
+  localStorage.setItem('opc_profile', JSON.stringify(profile));
+
+  // Update steps
+  setStep(2);
+  document.getElementById('panelForm').classList.add('hidden');
+  document.getElementById('panelLoading').classList.remove('hidden');
+
+  // Simulate processing
+  setTimeout(() => {
+    const results = matchPolicies(profile);
+    showResults(results, profile);
+  }, 800);
+}
+
+function matchPolicies(profile) {
+  return POLICIES.map(policy => {
+    let score = 0;
+    let maxScore = 0;
+    let reasons = [];
+    let blockers = [];
+
+    const req = policy.requirements || {};
+
+    // 1. Location match (critical)
+    maxScore += 40;
+    const regLoc = req.registration_location || '';
+    if (!regLoc || regLoc === '不限') {
+      score += 40;
+      reasons.push('不限注册地');
+    } else if (regLoc.includes(profile.province) || regLoc.includes('广东省') && profile.province === '广东') {
+      if (regLoc.includes(profile.district)) {
+        score += 40;
+        reasons.push(`注册在${profile.district}区，完全匹配`);
+      } else if (regLoc.includes(profile.city)) {
+        score += 35;
+        reasons.push(`注册在${profile.city}，市级匹配`);
+      } else if (policy.level === 'province') {
+        score += 30;
+        reasons.push('省级政策适用');
+      } else {
+        score += 5;
+        blockers.push(`要求在${regLoc}注册/经营`);
+      }
+    } else {
+      blockers.push(`要求在${regLoc}注册`);
+    }
+
+    // 2. Company age
+    if (req.company_age_max_years) {
+      maxScore += 15;
+      if (profile.companyAge > 0 && profile.companyAge <= req.company_age_max_years) {
+        score += 15;
+        reasons.push(`公司成立${profile.companyAge}年，符合${req.company_age_max_years}年内要求`);
+      } else if (profile.companyAge > req.company_age_max_years) {
+        blockers.push(`要求成立${req.company_age_max_years}年内，你已${profile.companyAge}年`);
+      } else {
+        score += 8; // unknown
+      }
+    }
+
+    // 3. Employee/social insurance
+    if (req.social_insurance_months) {
+      maxScore += 15;
+      if (profile.employees >= 1) {
+        score += 12;
+        reasons.push(`有${profile.employees}人缴社保`);
+      }
+    }
+
+    // 4. Founder identity
+    if (req.founder_identity && req.founder_identity.length > 0) {
+      maxScore += 15;
+      const founderMatch = profile.founder.some(f =>
+        req.founder_identity.some(r => r.includes(f) || f.includes(r.substring(0,4)))
+      );
+      if (founderMatch) {
+        score += 15;
+        reasons.push('法人身份符合');
+      } else if (profile.founder.includes('以上都不是')) {
+        blockers.push('法人身份不符合要求');
+      } else {
+        score += 5;
+        reasons.push('法人身份待确认');
+      }
+    }
+
+    // 5. Qualifications
+    if (req.qualifications && req.qualifications.length > 0) {
+      maxScore += 15;
+      const qualMatch = req.qualifications.filter(q =>
+        profile.qualifications.some(pq => q.includes(pq) || pq.includes(q.substring(0,3)))
+      );
+      if (qualMatch.length > 0) {
+        score += 15;
+      } else {
+        const needsModel = req.qualifications.some(q => q.includes('模型备案'));
+        const needsAlgo = req.qualifications.some(q => q.includes('算法备案'));
+        if (needsModel && !profile.qualifications.includes('有模型备案')) {
+          blockers.push('需要模型备案');
+        }
+        if (needsAlgo && !profile.qualifications.includes('有算法备案')) {
+          blockers.push('需要算法备案');
+        }
+      }
+    }
+
+    // Normalize score
+    const pct = maxScore > 0 ? Math.round((score / maxScore) * 100) : 50;
+    const level = blockers.length > 0 && pct < 40 ? 'low' : pct >= 70 ? 'high' : 'mid';
+
+    return {
+      policy,
+      score: pct,
+      level,
+      reasons,
+      blockers
+    };
+  }).sort((a, b) => b.score - a.score);
+}
+
+// ===== DISPLAY RESULTS =====
+function showResults(results, profile) {
+  setStep(3);
+  document.getElementById('panelLoading').classList.add('hidden');
+  document.getElementById('panelResults').classList.remove('hidden');
+
+  const high = results.filter(r => r.level === 'high').length;
+  const mid = results.filter(r => r.level === 'mid').length;
+  const low = results.filter(r => r.level === 'low').length;
+  const maxAmt = Math.max(...results.map(r => {
+    const benefits = r.policy.benefits || [];
+    return Math.max(0, ...benefits.map(b => b.amount_max || 0));
+  }));
+
+  document.getElementById('resultDesc').textContent =
+    `基于你的情况（${profile.city}${profile.district ? profile.district+'区' : ''} · ${profile.employees}人 · ${profile.industries.join('/')||'未指定行业'}），共匹配到 ${results.length} 条政策`;
+
+  document.getElementById('summaryStats').innerHTML = `
+    <div class="summary-stat"><div class="num" style="color:var(--green)">${high}</div><div class="lbl">高度匹配</div></div>
+    <div class="summary-stat"><div class="num" style="color:var(--yellow)">${mid}</div><div class="lbl">条件匹配</div></div>
+    <div class="summary-stat"><div class="num" style="color:var(--red)">${low}</div><div class="lbl">暂不匹配</div></div>
+    <div class="summary-stat"><div class="num" style="color:var(--cyan)">${maxAmt > 0 ? (maxAmt >= 10000 ? Math.round(maxAmt/10000)+'万' : maxAmt+'元') : '-'}</div><div class="lbl">最高补贴</div></div>
+  `;
+
+  window._allResults = results;
+  renderResults(results);
+}
+
+function renderResults(results) {
+  const list = document.getElementById('resultsList');
+  list.innerHTML = '';
+  results.forEach((r, i) => {
+    const p = r.policy;
+    const benefits = (p.benefits || []).slice(0, 4);
+    const levelColor = r.level === 'high' ? 'var(--green)' : r.level === 'mid' ? 'var(--yellow)' : 'var(--red)';
+    const levelText = r.level === 'high' ? '高度匹配' : r.level === 'mid' ? '条件匹配' : '暂不匹配';
+    const tagClass = r.level === 'high' ? 'tag-go' : r.level === 'mid' ? 'tag-check' : 'tag-no';
+
+    const card = document.createElement('div');
+    card.className = 'result-card';
+    card.dataset.level = r.level;
+    card.style.animationDelay = (i * 0.05) + 's';
+    card.innerHTML = `
+      <h3>${p.name} <span class="tag ${tagClass}">${levelText} ${r.score}%</span></h3>
+      <div class="meta">
+        <span>${p.city}${p.district ? ' · '+p.district+'区' : ''}</span>
+        <span>${p.level === 'province' ? '省级' : p.level === 'city' ? '市级' : '区级'}政策</span>
+        <span>${p.status === 'active' ? '生效中' : p.status === 'draft' ? '征求意见' : p.status}</span>
+        ${p.application && p.application.deadline ? `<span style="color:var(--red)">截止: ${p.application.deadline}</span>` : ''}
+      </div>
+      <p style="font-size:.9em;color:var(--dim);margin-bottom:8px">${p.summary}</p>
+      <div class="benefits">${benefits.map(b => `<span class="benefit-tag">${b.item}: ${b.amount}</span>`).join('')}</div>
+      <div class="match-bar"><div class="match-fill" style="width:${r.score}%;background:${levelColor}"></div></div>
+      <div class="match-label" style="color:${levelColor}">${r.score}% 匹配 ${r.reasons.length ? ' · '+r.reasons[0] : ''}</div>
+      ${r.blockers.length ? `<div style="margin-top:6px;font-size:.82em;color:var(--red)">阻碍: ${r.blockers.join(' | ')}</div>` : ''}
+      <div class="detail-toggle" onclick="toggleDetail(this)">展开详情 ▾</div>
+      <div class="detail-content">
+        ${r.reasons.length ? '<p style="font-size:.85em;color:var(--green);margin:8px 0"><strong>匹配原因:</strong></p><ul>'+r.reasons.map(x=>'<li>'+x+'</li>').join('')+'</ul>' : ''}
+        ${r.blockers.length ? '<p style="font-size:.85em;color:var(--red);margin:8px 0"><strong>不匹配原因:</strong></p><ul>'+r.blockers.map(x=>'<li style="color:var(--red)">'+x+'</li>').join('')+'</ul>' : ''}
+        ${p.application && p.application.url ? `<a href="${p.application.url}" target="_blank" style="display:inline-block;margin-top:8px;padding:6px 16px;background:rgba(108,92,231,.15);border:1px solid rgba(108,92,231,.3);border-radius:8px;font-size:.85em">申报入口</a>` : ''}
+        ${p.links && p.links.official ? `<a href="${p.links.official}" target="_blank" style="display:inline-block;margin:8px 8px 0 0;padding:6px 16px;background:rgba(108,92,231,.15);border:1px solid rgba(108,92,231,.3);border-radius:8px;font-size:.85em">政策原文</a>` : ''}
+        ${(p.communities||[]).length ? '<p style="font-size:.85em;color:var(--al);margin:12px 0 4px"><strong>关联社区/孵化器:</strong></p><ul>'+ p.communities.map(c => `<li><strong>${c.name}</strong>${c.address?' · '+c.address:''}${c.features?' — '+c.features.join(', '):''}</li>`).join('') +'</ul>' : ''}
+      </div>
+    `;
+    list.appendChild(card);
+  });
+}
+
+function filterResults(level, btn) {
+  document.querySelectorAll('#resultTabs .chip').forEach(c => c.classList.remove('selected'));
+  btn.classList.add('selected');
+  const filtered = level === 'all' ? window._allResults : window._allResults.filter(r => r.level === level);
+  renderResults(filtered);
+}
+
+function toggleDetail(el) {
+  const content = el.nextElementSibling;
+  content.classList.toggle('open');
+  el.textContent = content.classList.contains('open') ? '收起详情 ▴' : '展开详情 ▾';
+}
+
+function goBack() {
+  setStep(1);
+  document.getElementById('panelResults').classList.add('hidden');
+  document.getElementById('panelForm').classList.remove('hidden');
+}
+
+function exportResults() {
+  if (!window._allResults) return;
+  let text = '全国OPC政策匹配结果\n' + '='.repeat(40) + '\n\n';
+  window._allResults.forEach(r => {
+    text += `[${r.score}% ${r.level === 'high' ? '高度匹配' : r.level === 'mid' ? '条件匹配' : '暂不匹配'}] ${r.policy.name}\n`;
+    text += `  ${r.policy.summary}\n`;
+    if (r.reasons.length) text += `  匹配: ${r.reasons.join('; ')}\n`;
+    if (r.blockers.length) text += `  阻碍: ${r.blockers.join('; ')}\n`;
+    text += '\n';
+  });
+  const blob = new Blob([text], {type: 'text/plain;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'OPC政策匹配结果.txt';
+  a.click();
+}
+
+// ===== STEPS =====
+function setStep(n) {
+  document.querySelectorAll('.step').forEach((s, i) => {
+    s.classList.remove('active', 'done');
+    if (i + 1 < n) s.classList.add('done');
+    if (i + 1 === n) s.classList.add('active');
+  });
+}
+
+// ===== CITIES =====
+function renderCities() {
+  const grid = document.getElementById('cityGrid');
+  grid.innerHTML = '';
+  CITIES.forEach(c => {
+    const card = document.createElement('div');
+    card.className = 'city-card';
+    card.style.borderColor = c.status === 'hot' ? c.color + '40' : 'var(--border)';
+    const tagClass = c.status === 'hot' ? 'city-hot' : 'city-coming';
+    const tagText = c.status === 'hot' ? 'HOT' : c.policy_count > 0 ? 'NEW' : 'SOON';
+    card.innerHTML = `
+      <span class="city-tag ${tagClass}">${tagText}</span>
+      <div class="city-name" style="color:${c.color}">${c.name}</div>
+      <div class="city-count">${c.policy_count > 0 ? c.policy_count + ' 条政策' : '即将上线'}</div>
+      <div style="font-size:.7em;color:var(--dim);margin-top:4px;line-height:1.3">${c.highlight || ''}</div>
+    `;
+    card.onclick = () => {
+      if (c.link) {
+        window.location.href = c.link;
+      } else {
+        // Pre-fill city in form and scroll to it
+        document.getElementById('fProvince').value = c.province;
+        document.getElementById('fProvince').dispatchEvent(new Event('change'));
+        setTimeout(() => {
+          document.getElementById('fCity').value = c.name;
+          document.getElementById('fCity').dispatchEvent(new Event('change'));
+          document.getElementById('panelForm').scrollIntoView({behavior:'smooth'});
+        }, 100);
+      }
+    };
+    grid.appendChild(card);
+  });
+}
+
+// ===== Scroll animation =====
+const obs = new IntersectionObserver(es => { es.forEach(e => { if(e.isIntersecting) e.target.classList.add('vis'); }); }, {threshold:0.1});
+document.querySelectorAll('.anim').forEach(el => obs.observe(el));
+
+// ===== Load saved profile =====
+try {
+  const saved = localStorage.getItem('opc_profile');
+  if (saved) {
+    const p = JSON.parse(saved);
+    if (p.province) document.getElementById('fProvince').value = p.province;
+  }
+} catch(e) {}
 </script>
 
 </body>

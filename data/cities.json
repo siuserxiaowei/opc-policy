@@ -1,0 +1,15 @@
+{
+  "cities": [
+    { "id": "guangzhou", "name": "广州", "province": "广东", "policy_count": 12, "highlight": "海珠OPC十条 · 琶洲模方 · 场景征集中 · 最高500万", "status": "hot", "color": "#00e676", "link": "guangzhou.html" },
+    { "id": "shenzhen", "name": "深圳", "province": "广东", "policy_count": 3, "highlight": "算力补贴最高1000万 · 南山OPC社区 · 前海税优", "status": "hot", "color": "#448aff", "link": "" },
+    { "id": "beijing", "name": "北京", "province": "北京", "policy_count": 2, "highlight": "算力补贴最高2000万 · 中关村OPC社区", "status": "hot", "color": "#ff5252", "link": "" },
+    { "id": "shanghai", "name": "上海", "province": "上海", "policy_count": 2, "highlight": "场景示范最高1000万 · 张江OPC社区", "status": "hot", "color": "#ffd600", "link": "" },
+    { "id": "hangzhou", "name": "杭州", "province": "浙江", "policy_count": 2, "highlight": "算力券50万/年 · 未来科技城OPC · 滨江加速器", "status": "hot", "color": "#00e5ff", "link": "" },
+    { "id": "chengdu", "name": "成都", "province": "四川", "policy_count": 1, "highlight": "天府OPC社区 · 算力补贴最高500万", "status": "active", "color": "#ff9100", "link": "" },
+    { "id": "wuhan", "name": "武汉", "province": "湖北", "policy_count": 1, "highlight": "光谷OPC社区 · 算力最高300万", "status": "active", "color": "#e040fb", "link": "" },
+    { "id": "hefei", "name": "合肥", "province": "安徽", "policy_count": 1, "highlight": "中国声谷 · 语音AI专项 · 算力补贴", "status": "active", "color": "#76ff03", "link": "" },
+    { "id": "nanjing", "name": "南京", "province": "江苏", "policy_count": 1, "highlight": "AI创业资助最高100万 · 场景应用500万", "status": "active", "color": "#64b5f6", "link": "" },
+    { "id": "changsha", "name": "长沙", "province": "湖南", "policy_count": 1, "highlight": "马栏山文创AI · OPC创业资助2万", "status": "active", "color": "#ffab40", "link": "" },
+    { "id": "chongqing", "name": "重庆", "province": "重庆", "policy_count": 1, "highlight": "两江新区 · 算力补贴 · 场景应用", "status": "active", "color": "#ff6e40", "link": "" }
+  ]
+}
