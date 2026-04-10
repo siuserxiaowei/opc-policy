@@ -1,16 +1,27 @@
 {
   "cities": [
-    {"id":"suzhou","name":"苏州","province":"江苏","policy_count":7,"highlight":"全国OPC首选城市·吴江3年免租+100亿信贷·工业园区10亿基金+百万㎡·十大青年社区·国际大赛","status":"hot","color":"#ff4081","link":""},
+    {"id":"suzhou","name":"苏州","province":"江苏","policy_count":7,"highlight":"全国OPC首选城市·吴江3年免租+100亿信贷·工业园区10亿基金+百万㎡·十大青年社区","status":"hot","color":"#ff4081","link":""},
     {"id":"guangzhou","name":"广州","province":"广东","policy_count":12,"highlight":"海珠OPC十条·琶洲模方·场景征集·最高500万","status":"hot","color":"#00e676","link":"guangzhou.html"},
     {"id":"shenzhen","name":"深圳","province":"广东","policy_count":5,"highlight":"训力券最高1000万·模力营10万㎡·华强北12基地·龙虾十条","status":"hot","color":"#448aff","link":""},
+    {"id":"qingdao","name":"青岛","province":"山东","policy_count":2,"highlight":"算力券100万/模型券100万/语料券150万·崂山繁星人才200万·北方OPC先行示范城","status":"hot","color":"#7c4dff","link":""},
     {"id":"beijing","name":"北京","province":"北京","policy_count":4,"highlight":"算力最高3000万·亦庄模数·海淀免费注册·通州OPC","status":"hot","color":"#ff5252","link":""},
     {"id":"shanghai","name":"上海","province":"上海","policy_count":3,"highlight":"算力/模型/语料券各100万·临港零租金·静安视听","status":"hot","color":"#ffd600","link":""},
+    {"id":"yangzhou","name":"扬州","province":"江苏","policy_count":1,"highlight":"单项最高1000万全链条·18个OPC社区·定位中国最优OPC创业之城","status":"hot","color":"#ea80fc","link":""},
     {"id":"hangzhou","name":"杭州","province":"浙江","policy_count":1,"highlight":"上城10亿基金+每年1亿·鸿鹄汇·浙江首个区级OPC专项","status":"hot","color":"#00e5ff","link":""},
     {"id":"wuhan","name":"武汉","province":"湖北","policy_count":1,"highlight":"OPC十条·创业资助100万·算力贷1000万·光谷","status":"hot","color":"#e040fb","link":""},
+    {"id":"jinan","name":"济南","province":"山东","policy_count":1,"highlight":"12个社区节点·50亿AI基金·3000P算力·100TB数据集·讯飞能力免费","status":"hot","color":"#b388ff","link":""},
     {"id":"chengdu","name":"成都","province":"四川","policy_count":1,"highlight":"算力60%补贴·累计最高2500万·天府社区·20个OPC社区","status":"hot","color":"#ff9100","link":""},
+    {"id":"dongguan","name":"东莞","province":"广东","policy_count":1,"highlight":"赋能OPC十条·打样100%补贴·小批量最高80万·1亿创投基金·松山湖","status":"active","color":"#69f0ae","link":""},
+    {"id":"wenzhou","name":"温州","province":"浙江","policy_count":1,"highlight":"浙江首个市级OPC政策·17条·公章免费·一日办结·2万人才1万家","status":"active","color":"#ffab40","link":""},
+    {"id":"wuxi","name":"无锡","province":"江苏","policy_count":1,"highlight":"OPC十条·魔法空间·暖村数字游民·2028年100+OPC企业","status":"active","color":"#80d8ff","link":""},
+    {"id":"ningbo","name":"宁波","province":"浙江","policy_count":1,"highlight":"海曙算力补贴50%·5个社区运营·2026年底10+个500+工位","status":"active","color":"#b9f6ca","link":""},
+    {"id":"suqian","name":"宿迁","province":"江苏","policy_count":1,"highlight":"OPC创业之城十项措施·零租工位·百余种免费AI工具·73户入驻","status":"active","color":"#ffe57f","link":""},
+    {"id":"changzhou","name":"常州","province":"江苏","policy_count":1,"highlight":"OPC国际化·联合Plug and Play·GOAL出海计划·硅谷孵化","status":"active","color":"#84ffff","link":""},
+    {"id":"foshan","name":"佛山","province":"广东","policy_count":1,"highlight":"佛深OPC联盟·三年三免(租金/物业/设备)","status":"active","color":"#ccff90","link":""},
+    {"id":"zhongshan","name":"中山","province":"广东","policy_count":1,"highlight":"三年三免·创业担保贷款500万·300万天使基金·粤港澳青创","status":"active","color":"#f48fb1","link":""},
     {"id":"nanjing","name":"南京","province":"江苏","policy_count":1,"highlight":"江宁3年免费工位·1000万人才专项·50万股权投资","status":"active","color":"#64b5f6","link":""},
     {"id":"hefei","name":"合肥","province":"安徽","policy_count":1,"highlight":"AI模立方·声谷生态·算力/语料/模型券","status":"active","color":"#76ff03","link":""},
-    {"id":"changsha","name":"长沙","province":"湖南","policy_count":1,"highlight":"马栏山6000㎡·1000PFlops算力·开源十条","status":"active","color":"#ffab40","link":""},
+    {"id":"changsha","name":"长沙","province":"湖南","policy_count":1,"highlight":"马栏山6000㎡·1000PFlops算力·开源十条","status":"active","color":"#ffc400","link":""},
     {"id":"chongqing","name":"重庆","province":"重庆","policy_count":1,"highlight":"仙桃数据谷·未来星计划·1万㎡创客空间","status":"active","color":"#ff6e40","link":""}
   ]
 }
