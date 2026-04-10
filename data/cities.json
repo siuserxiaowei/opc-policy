@@ -1,6 +1,6 @@
 {
   "cities": [
-    {"id":"suzhou","name":"苏州","province":"江苏","policy_count":7,"highlight":"全国OPC首选城市·吴江3年免租+100亿信贷·工业园区10亿基金+百万㎡·十大青年社区","status":"hot","color":"#ff4081","link":""},
+    {"id":"suzhou","name":"苏州","province":"江苏","policy_count":14,"highlight":"全国OPC首选城市·吴江3年免租+100亿信贷·工业园区10亿基金+百万㎡·十大青年社区","status":"hot","color":"#ff4081","link":""},
     {"id":"guangzhou","name":"广州","province":"广东","policy_count":12,"highlight":"海珠OPC十条·琶洲模方·场景征集·最高500万","status":"hot","color":"#00e676","link":"guangzhou.html"},
     {"id":"shenzhen","name":"深圳","province":"广东","policy_count":5,"highlight":"训力券最高1000万·模力营10万㎡·华强北12基地·龙虾十条","status":"hot","color":"#448aff","link":""},
     {"id":"qingdao","name":"青岛","province":"山东","policy_count":2,"highlight":"算力券100万/模型券100万/语料券150万·崂山繁星人才200万·北方OPC先行示范城","status":"hot","color":"#7c4dff","link":""},
