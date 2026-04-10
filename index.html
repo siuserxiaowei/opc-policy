@@ -402,43 +402,50 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
 <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<!-- Contact & CTA -->
+<!-- Contact Card (个人网站风格) -->
 <div style="max-width:900px;margin:0 auto;padding:0 20px 30px">
-  <div style="background:linear-gradient(135deg,rgba(108,92,231,.12),rgba(0,230,118,.08));border:1px solid rgba(108,92,231,.25);border-radius:16px;padding:28px;text-align:center">
-    <h3 style="font-size:1.3em;margin-bottom:6px">需要 OPC 创业咨询？</h3>
-    <p style="color:var(--dim);font-size:.9em;margin-bottom:16px">AI语音对话机器人方案 · OPC政策申报指导 · 创业资源对接</p>
-    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:16px">
-      <div style="padding:12px 24px;background:var(--card);border:1px solid var(--border);border-radius:10px;font-size:.9em">
-        <div style="color:var(--al);font-weight:600;margin-bottom:2px">微信联系</div>
-        <div>siuserxiaowei</div>
+  <div style="background:linear-gradient(135deg,#1a1040 0%,#0a2040 50%,#1a1040 100%);border:1px solid rgba(108,92,231,.3);border-radius:20px;padding:32px;display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+    <img src="assets/avatar.jpg" style="width:110px;height:110px;border-radius:50%;border:3px solid rgba(0,229,255,.4);object-fit:cover;flex-shrink:0">
+    <div style="flex:1;min-width:200px">
+      <h3 style="font-size:1.4em;margin-bottom:2px">小伟</h3>
+      <p style="color:var(--cyan);font-size:.9em;margin-bottom:8px">独立开发者 / AI 语音对话机器人方案商</p>
+      <p style="color:var(--dim);font-size:.85em;margin-bottom:14px">AI 语音对话机器人方案设计 & 代工厂，提供从方案到量产的一站式服务。</p>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+        <span style="color:var(--dim);font-size:.88em">微信号：</span>
+        <span id="wxId" style="padding:4px 14px;background:rgba(255,82,82,.12);border:1px solid rgba(255,82,82,.2);border-radius:6px;font-size:.88em;color:#ff8a80;cursor:pointer" onclick="copyWx()">siuserxiaowei</span>
+        <span style="font-size:.78em;color:var(--dim)">（加好友请备注 OPC）</span>
       </div>
-      <div style="padding:12px 24px;background:var(--card);border:1px solid var(--border);border-radius:10px;font-size:.9em">
-        <div style="color:var(--al);font-weight:600;margin-bottom:2px">负责人</div>
-        <div>siuser小伟</div>
-      </div>
-      <div style="padding:12px 24px;background:var(--card);border:1px solid var(--border);border-radius:10px;font-size:.9em">
-        <div style="color:var(--al);font-weight:600;margin-bottom:2px">GitHub</div>
-        <div><a href="https://github.com/siuserxiaowei" target="_blank">siuserxiaowei</a></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="https://github.com/siuserxiaowei" target="_blank" style="padding:8px 18px;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:.85em;display:flex;align-items:center;gap:6px">GitHub</a>
+        <button onclick="copyWx()" style="padding:8px 18px;background:rgba(255,82,82,.1);border:1px solid rgba(255,82,82,.2);border-radius:8px;font-size:.85em;color:#ff8a80;cursor:pointer;display:flex;align-items:center;gap:6px">复制微信号</button>
+        <button onclick="showQR()" style="padding:8px 18px;background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.2);border-radius:8px;font-size:.85em;color:var(--cyan);cursor:pointer">扫码加微信</button>
       </div>
     </div>
-    <p style="font-size:.8em;color:var(--dim)">备注"OPC"加微信，免费咨询政策匹配方案</p>
   </div>
 </div>
 
-<!-- Ad / Cooperation -->
+<!-- QR Code Modal -->
+<div id="qrModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:600;align-items:center;justify-content:center;cursor:pointer" onclick="this.style.display='none'">
+  <div style="background:#fff;border-radius:16px;padding:20px;max-width:320px;text-align:center" onclick="event.stopPropagation()">
+    <img src="assets/wechat-qr.jpg" style="width:100%;border-radius:8px">
+    <p style="color:#333;font-size:.85em;margin-top:10px">微信扫码添加好友，备注「OPC」</p>
+  </div>
+</div>
+
+<!-- Ad / Services -->
 <div style="max-width:900px;margin:0 auto;padding:0 20px 30px">
   <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
-    <div style="padding:18px;border:1px solid var(--border);border-radius:10px;text-align:center;transition:all .3s;cursor:pointer" onclick="window.open('https://github.com/siuserxiaowei')">
+    <div style="padding:18px;border:1px solid var(--border);border-radius:10px;text-align:center;transition:all .3s;cursor:pointer" onclick="showQR()">
       <div style="font-size:1.5em;margin-bottom:6px">🤖</div>
       <div style="font-weight:600;margin-bottom:4px">AI语音对话机器人</div>
       <div style="font-size:.8em;color:var(--dim)">从方案到量产一站式服务<br>适用于客服/导览/康养/教育</div>
-      <div style="margin-top:8px;padding:4px 12px;background:rgba(0,230,118,.1);border-radius:6px;display:inline-block;font-size:.75em;color:var(--green)">咨询方案</div>
+      <div style="margin-top:8px;padding:4px 12px;background:rgba(0,230,118,.1);border-radius:6px;display:inline-block;font-size:.75em;color:var(--green)">扫码咨询方案</div>
     </div>
-    <div style="padding:18px;border:1px solid var(--border);border-radius:10px;text-align:center;transition:all .3s;cursor:pointer">
+    <div style="padding:18px;border:1px solid var(--border);border-radius:10px;text-align:center;transition:all .3s;cursor:pointer" onclick="showQR()">
       <div style="font-size:1.5em;margin-bottom:6px">📢</div>
       <div style="font-weight:600;margin-bottom:4px">广告合作</div>
       <div style="font-size:.8em;color:var(--dim)">OPC社区 / 孵化器 / 服务商<br>精准触达OPC创业者群体</div>
-      <div style="margin-top:8px;padding:4px 12px;background:rgba(108,92,231,.15);border-radius:6px;display:inline-block;font-size:.75em;color:var(--al)">微信: siuserxiaowei</div>
+      <div style="margin-top:8px;padding:4px 12px;background:rgba(108,92,231,.15);border-radius:6px;display:inline-block;font-size:.75em;color:var(--al)">扫码联系</div>
     </div>
   </div>
 </div>
@@ -1022,6 +1029,18 @@ document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
 
 // Load saved profile
 try{const s=localStorage.getItem('opc_profile');if(s){const p=JSON.parse(s);if(p.province)document.getElementById('fProvince').value=p.province;}}catch(e){}
+
+// Copy WeChat ID
+function copyWx(){
+  navigator.clipboard.writeText('siuserxiaowei').then(()=>{
+    const el=document.getElementById('wxId');
+    const old=el.textContent;
+    el.textContent='已复制!';el.style.color='var(--green)';
+    setTimeout(()=>{el.textContent=old;el.style.color='#ff8a80'},1500);
+  });
+}
+// Show QR
+function showQR(){document.getElementById('qrModal').style.display='flex'}
 </script>
 </body>
 </html>
