@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "4.0.0",
   "updated_at": "2026-04-10",
   "policies": [
     {
@@ -1649,7 +1649,7 @@
       "expire_date": "2028-12-31",
       "status": "active",
       "category": "comprehensive",
-      "summary": "初创OPC最高100万资助+算力券20万/年+武汉英才20-100万+算力贷1000万",
+      "summary": "十条：初创最高100万/垂直模型30%最高500万/API采购50%最高100万/算力50%最高20万/算力贷1000万/创业贷500万/购房最高10万/社区最高500万",
       "benefits": [
         {
           "item": "初创OPC资助",
@@ -1658,28 +1658,58 @@
           "type": "cash"
         },
         {
-          "item": "算力服务券(50%)",
-          "amount": "最高20万/年",
-          "amount_max": 200000,
-          "type": "voucher"
+          "item": "垂直模型研发(30%)",
+          "amount": "最高500万",
+          "amount_max": 5000000,
+          "type": "cash"
         },
         {
-          "item": "武汉英才计划",
-          "amount": "20-100万",
+          "item": "大模型API采购(50%)",
+          "amount": "最高100万",
           "amount_max": 1000000,
           "type": "cash"
         },
         {
-          "item": "购房补贴",
-          "amount": "最高10万",
-          "amount_max": 100000,
-          "type": "cash"
+          "item": "算力补助(50%)",
+          "amount": "最高20万/年x3年",
+          "amount_max": 200000,
+          "type": "voucher"
         },
         {
           "item": "算力贷",
           "amount": "单笔最高1000万",
           "amount_max": 10000000,
           "type": "loan"
+        },
+        {
+          "item": "创业担保贷款",
+          "amount": "个人30万/企业500万",
+          "amount_max": 5000000,
+          "type": "loan"
+        },
+        {
+          "item": "购房补贴",
+          "amount": "最高10万(每㎡1000元)",
+          "amount_max": 100000,
+          "type": "cash"
+        },
+        {
+          "item": "人才住房",
+          "amount": "博士2年免租(月最高2000元)",
+          "amount_max": 48000,
+          "type": "rent_free"
+        },
+        {
+          "item": "OPC社区认定",
+          "amount": "最高500万",
+          "amount_max": 5000000,
+          "type": "cash"
+        },
+        {
+          "item": "武汉英才",
+          "amount": "20-100万",
+          "amount_max": 1000000,
+          "type": "cash"
         }
       ],
       "requirements": {
@@ -1693,12 +1723,27 @@
       },
       "communities": [
         {
-          "name": "光谷OPC创新社区",
-          "address": "东湖高新区",
+          "name": "武昌阿里亲橙OPC社区",
+          "address": "武昌区",
           "features": [
-            "免租办公",
-            "算力支持",
-            "光谷产业资源"
+            "4000㎡",
+            "400工位",
+            "已运营"
+          ]
+        },
+        {
+          "name": "洪山区OPC社区",
+          "address": "洪山区",
+          "features": [
+            "1.5万㎡",
+            "1000+工位"
+          ]
+        },
+        {
+          "name": "东湖高新OPC集聚区",
+          "address": "光谷",
+          "features": [
+            "建设中"
           ]
         }
       ],
@@ -1724,7 +1769,7 @@
       "publish_date": "2026-03-26",
       "status": "active",
       "category": "comprehensive",
-      "summary": "13条措施：算力券60%最高500万/模型券30%最高100万/揭榜最高1000万/爆款100万/天使投资100万/2027年建20个社区",
+      "summary": "13条：算力券60%最高500万/模型券30%最高100万/揭榜最高1000万/智能体平台80万/核心技术200万/爆款产品100万/F类人才直通/安居30天免费",
       "benefits": [
         {
           "item": "算力券(60%)",
@@ -1733,34 +1778,46 @@
           "type": "voucher"
         },
         {
-          "item": "模型券(30%)",
+          "item": "模型券(30% Token)",
           "amount": "最高100万",
           "amount_max": 1000000,
           "type": "voucher"
         },
         {
-          "item": "揭榜项目补助",
-          "amount": "最高1000万",
+          "item": "揭榜挂帅项目",
+          "amount": "单个最高1000万",
           "amount_max": 10000000,
           "type": "cash"
         },
         {
-          "item": "爆款产品奖励",
-          "amount": "最高100万",
-          "amount_max": 1000000,
+          "item": "智能体平台奖励",
+          "amount": "最高80万",
+          "amount_max": 800000,
           "type": "cash"
         },
         {
-          "item": "创新成果奖励",
+          "item": "核心技术创新",
           "amount": "最高200万",
           "amount_max": 2000000,
           "type": "cash"
         },
         {
-          "item": "天使投资启动(10%)",
+          "item": "爆款产品(20%销售)",
           "amount": "最高100万",
           "amount_max": 1000000,
           "type": "cash"
+        },
+        {
+          "item": "科研成果转化",
+          "amount": "单项50万/总额300万",
+          "amount_max": 3000000,
+          "type": "cash"
+        },
+        {
+          "item": "F类人才直通",
+          "amount": "注册即认定，免审晋级",
+          "amount_max": 0,
+          "type": "other"
         },
         {
           "item": "社区运营补助",
@@ -1769,16 +1826,16 @@
           "type": "cash"
         },
         {
-          "item": "国家级孵化器",
-          "amount": "最高200万",
-          "amount_max": 2000000,
-          "type": "cash"
+          "item": "人才驿站",
+          "amount": "30天免费+3月免租+3月减半",
+          "amount_max": 0,
+          "type": "rent_free"
         },
         {
-          "item": "人才驿站",
-          "amount": "最长30天免费入住",
-          "amount_max": 0,
-          "type": "service"
+          "item": "15亿产业基金",
+          "amount": "配套汇源贷",
+          "amount_max": 150000000,
+          "type": "loan"
         }
       ],
       "requirements": {
@@ -1800,14 +1857,14 @@
           "features": [
             "近10000㎡",
             "全国首个AI+数字文创OPC",
-            "首批12家签约"
+            "首批12家"
           ]
         },
         {
           "name": "明途启航营",
           "address": "天府新区",
           "features": [
-            "首批93工位",
+            "93工位",
             "AI+文商旅体"
           ]
         },
@@ -3251,17 +3308,59 @@
       "issuer": "扬州市政府",
       "status": "active",
       "category": "comprehensive",
-      "summary": "单项最高1000万全链条补贴/首批18个OPC社区/定位'中国最优OPC创业之城'",
+      "summary": "四券政策(算力+数据+人才+Token)/18个社区全国最密集/顶尖人才最高1亿/双创团队1000万/购房券200万/1000万股权+3000万低息贷",
       "benefits": [
         {
-          "item": "全链条补贴(购房/生活/算力/研发/转化)",
-          "amount": "单项最高1000万",
+          "item": "四券(算力+数据+人才+Token)",
+          "amount": "全链条覆盖",
+          "amount_max": 0,
+          "type": "voucher"
+        },
+        {
+          "item": "算力补贴",
+          "amount": "最高200万",
+          "amount_max": 2000000,
+          "type": "cash"
+        },
+        {
+          "item": "顶尖人才团队",
+          "amount": "最高1亿元综合资助",
+          "amount_max": 100000000,
+          "type": "cash"
+        },
+        {
+          "item": "双创团队",
+          "amount": "最高1000万",
           "amount_max": 10000000,
           "type": "cash"
         },
         {
-          "item": "首批OPC社区",
-          "amount": "18个(星模湾/光点π/数智等)",
+          "item": "领军人才",
+          "amount": "最高500万(3年)",
+          "amount_max": 5000000,
+          "type": "cash"
+        },
+        {
+          "item": "购房安家券",
+          "amount": "最高200万",
+          "amount_max": 2000000,
+          "type": "cash"
+        },
+        {
+          "item": "股权投资",
+          "amount": "最高1000万",
+          "amount_max": 10000000,
+          "type": "loan"
+        },
+        {
+          "item": "低息贷款",
+          "amount": "最高3000万",
+          "amount_max": 30000000,
+          "type": "loan"
+        },
+        {
+          "item": "18个OPC社区",
+          "amount": "全国最密集(含县级)",
           "amount_max": 0,
           "type": "rent_free"
         }
@@ -3367,19 +3466,61 @@
       "publish_date": "2025-12-11",
       "status": "active",
       "category": "comprehensive",
-      "summary": "OPC十条覆盖产品/研发/平台/人才四大方向/魔法空间/2028年培育100+OPC企业",
+      "summary": "OPC十条+养龙虾12条：算力30%最高30万/数据最高50万/备案奖20万/开源100万/具身智能500万/示范项目200万/3年零房租/生活补贴12万",
       "benefits": [
         {
-          "item": "四大方向支持",
-          "amount": "产品/研发/平台/人才",
-          "amount_max": 0,
-          "type": "comprehensive"
+          "item": "算力补贴(30%)",
+          "amount": "年最高30万",
+          "amount_max": 300000,
+          "type": "cash"
         },
         {
-          "item": "OPC创业空间",
-          "amount": "魔法空间(软件园)",
+          "item": "数据交易/购买",
+          "amount": "单项最高50万",
+          "amount_max": 500000,
+          "type": "cash"
+        },
+        {
+          "item": "大模型备案奖",
+          "amount": "最高20万",
+          "amount_max": 200000,
+          "type": "cash"
+        },
+        {
+          "item": "开源工具平台",
+          "amount": "全额补贴最高100万",
+          "amount_max": 1000000,
+          "type": "cash"
+        },
+        {
+          "item": "具身智能关键技术",
+          "amount": "最高500万",
+          "amount_max": 5000000,
+          "type": "cash"
+        },
+        {
+          "item": "示范项目(20%)",
+          "amount": "最高200万",
+          "amount_max": 2000000,
+          "type": "cash"
+        },
+        {
+          "item": "初创项目免租",
+          "amount": "最长3年零房租",
           "amount_max": 0,
           "type": "rent_free"
+        },
+        {
+          "item": "高成长项目",
+          "amount": "5年,年最高3000㎡租金补贴",
+          "amount_max": 0,
+          "type": "rent_free"
+        },
+        {
+          "item": "开源贡献者",
+          "amount": "最高12万生活补贴",
+          "amount_max": 120000,
+          "type": "cash"
         }
       ],
       "requirements": {
@@ -4623,6 +4764,158 @@
       ],
       "updated_at": "2026-04-10",
       "verified": true
+    },
+    {
+      "id": "shenzhen-longhua-001",
+      "name": "深圳龙华区AI智能体与OPC协同发展十大行动",
+      "city": "深圳",
+      "province": "广东",
+      "district": "龙华",
+      "level": "district",
+      "issuer": "龙华区",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "区级独立政策：社区运营补贴最高200万/创业大赛奖金最高80万/核心技术攻关最高100万",
+      "benefits": [
+        {
+          "item": "社区运营补贴",
+          "amount": "最高200万",
+          "amount_max": 2000000,
+          "type": "cash"
+        },
+        {
+          "item": "创业大赛奖金",
+          "amount": "最高80万",
+          "amount_max": 800000,
+          "type": "cash"
+        },
+        {
+          "item": "核心技术攻关",
+          "amount": "最高100万",
+          "amount_max": 1000000,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "龙华区"
+      },
+      "links": {
+        "news": [
+          "https://m.bendibao.com/show998973.html"
+        ]
+      },
+      "communities": [],
+      "tags": [
+        "龙华",
+        "智能体",
+        "十大行动"
+      ],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "jiangsu-province-001",
+      "name": "江苏省\"人工智能+\"行动方案（含OPC专条）",
+      "city": "苏州",
+      "province": "江苏",
+      "district": "",
+      "level": "province",
+      "issuer": "江苏省政府",
+      "publish_date": "2026-01-15",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "省级AI+行动方案写入OPC支持/算力券+模型券+语料券/OPC写入省政府工作报告",
+      "benefits": [
+        {
+          "item": "算力券",
+          "amount": "降低OPC要素成本",
+          "amount_max": 0,
+          "type": "voucher"
+        },
+        {
+          "item": "模型券",
+          "amount": "省级统筹",
+          "amount_max": 0,
+          "type": "voucher"
+        },
+        {
+          "item": "语料券",
+          "amount": "省级统筹",
+          "amount_max": 0,
+          "type": "voucher"
+        }
+      ],
+      "requirements": {
+        "registration_location": "江苏省",
+        "industries": [
+          "人工智能",
+          "OPC"
+        ]
+      },
+      "links": {
+        "news": [
+          "https://finance.sina.com.cn/roll/2026-02-05/doc-inhkuptf2819719.shtml"
+        ]
+      },
+      "communities": [],
+      "tags": [
+        "江苏省",
+        "省级",
+        "AI+",
+        "OPC写入政府工作报告"
+      ],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "nanjing-jianye-001",
+      "name": "南京建邺区OPC政策（补充）",
+      "city": "南京",
+      "province": "江苏",
+      "district": "建邺",
+      "level": "district",
+      "issuer": "建邺区",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "研发补贴最高500万+算力补贴200万+大模型备案奖20万+启动资金5-10万",
+      "benefits": [
+        {
+          "item": "研发补贴",
+          "amount": "最高500万",
+          "amount_max": 5000000,
+          "type": "cash"
+        },
+        {
+          "item": "算力补贴",
+          "amount": "最高200万",
+          "amount_max": 2000000,
+          "type": "cash"
+        },
+        {
+          "item": "大模型备案奖",
+          "amount": "20万",
+          "amount_max": 200000,
+          "type": "cash"
+        },
+        {
+          "item": "启动资金",
+          "amount": "5-10万",
+          "amount_max": 100000,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "建邺区"
+      },
+      "links": {},
+      "communities": [],
+      "tags": [
+        "建邺",
+        "研发500万",
+        "算力200万"
+      ],
+      "updated_at": "2026-04-10",
+      "verified": false
     }
   ]
 }
