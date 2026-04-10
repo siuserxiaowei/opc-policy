@@ -243,6 +243,20 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
     <p style="color:rgba(255,255,255,.8);font-size:.88em">加微信 siuserxiaowei（备注OPC税务），帮你分析最优方案</p>
   </div>
 
+  </div>
+
+  <!-- 私密面板入口（不显眼，只有知道的人会点） -->
+  <div style="margin-top:40px;padding:20px;border:1px dashed var(--border);border-radius:12px;text-align:center">
+    <p style="color:var(--dim);font-size:.82em;margin-bottom:10px">管理员专区</p>
+    <div id="privateEntry" style="display:none">
+      <a href="private.html" style="padding:10px 24px;background:rgba(255,82,82,.1);border:1px solid rgba(255,82,82,.2);border-radius:8px;font-size:.88em;color:#ff8a80;display:inline-block">进入私密面板 →</a>
+    </div>
+    <div id="privateLock">
+      <input type="password" id="entryPwd" placeholder="输入密码" style="padding:8px 16px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:.85em;text-align:center;width:200px" onkeydown="if(event.key==='Enter')checkEntry()">
+      <button onclick="checkEntry()" style="padding:8px 16px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--dim);font-size:.85em;cursor:pointer;margin-left:6px">确认</button>
+    </div>
+  </div>
+
 </div>
 
 <div id="qrModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:600;align-items:center;justify-content:center;cursor:pointer" onclick="this.style.display='none'">
@@ -261,6 +275,24 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
 <script>
 function showQR(){document.getElementById('qrModal').style.display='flex'}
+
+// Private entry
+function checkEntry(){
+  const input = document.getElementById('entryPwd').value;
+  const inputHex = Array.from(input+'!').map(c=>c.charCodeAt(0).toString(16)).join('');
+  if(inputHex === '6f70633230323621'){
+    localStorage.setItem('private_auth','yes');
+    showPrivateEntry();
+  } else {
+    document.getElementById('entryPwd').value='';
+    document.getElementById('entryPwd').placeholder='密码错误';
+  }
+}
+function showPrivateEntry(){
+  document.getElementById('privateEntry').style.display='block';
+  document.getElementById('privateLock').style.display='none';
+}
+if(localStorage.getItem('private_auth')==='yes') showPrivateEntry();
 
 function calcTax(){
   const revenue = parseFloat(document.getElementById('taxRevenue').value) || 0;
