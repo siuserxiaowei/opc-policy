@@ -938,7 +938,7 @@
         }
       ],
       "requirements": {
-        "registration_location": "不限",
+        "registration_location": "深圳市",
         "other": [
           "入驻华强北孵化基地"
         ]
@@ -1322,7 +1322,7 @@
         }
       ],
       "requirements": {
-        "registration_location": "不限",
+        "registration_location": "北京市",
         "other": [
           "首批10家友好社区成员单位"
         ]
@@ -2615,7 +2615,7 @@
         }
       ],
       "requirements": {
-        "registration_location": "昆山市"
+        "registration_location": "昆山"
       },
       "links": {
         "official": "https://www.ks.gov.cn/kss/ttxw/202603/3a4d5a17367c4ed99ce51989eef5b073.shtml"
