@@ -349,6 +349,16 @@
       "status": "active",
       "color": "#8d6e63",
       "link": ""
+    },
+    {
+      "id": "huizhou",
+      "name": "惠州",
+      "province": "广东",
+      "policy_count": 2,
+      "highlight": "惠阳科技团队最高1000万·算力补贴年最高200万·仲恺AI产业园533亿·润泽智算中心·创业资助1万",
+      "status": "active",
+      "color": "#4db6ac",
+      "link": ""
     }
   ]
 }

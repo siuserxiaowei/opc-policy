@@ -1,5 +1,5 @@
 {
-  "version": "4.1.0",
+  "version": "4.2.0",
   "updated_at": "2026-04-10",
   "policies": [
     {
@@ -5169,6 +5169,189 @@
         "硬件",
         "制造",
         "硬创"
+      ],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "huizhou-city-001",
+      "name": "惠州市通用创业补贴 + AI/数字经济政策",
+      "city": "惠州",
+      "province": "广东",
+      "district": "",
+      "level": "city",
+      "issuer": "惠州市人社局/工信局",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "创业资助1万+租金补贴1.8万/3年+孵化基地2年全免+算力补贴10-20%年最高200万+AI示范项目奖50万",
+      "benefits": [
+        {
+          "item": "一次性创业资助",
+          "amount": "1万元",
+          "amount_max": 10000,
+          "type": "cash"
+        },
+        {
+          "item": "创业租金补贴",
+          "amount": "每年最高6000元x3年",
+          "amount_max": 18000,
+          "type": "cash"
+        },
+        {
+          "item": "孵化基地入驻",
+          "amount": "全额免租2年",
+          "amount_max": 0,
+          "type": "rent_free"
+        },
+        {
+          "item": "创业带动就业补贴",
+          "amount": "按招录人数",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "小微社保补贴",
+          "amount": "500元/人/月",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "算力补贴(10-20%)",
+          "amount": "年最高100-200万",
+          "amount_max": 2000000,
+          "type": "cash"
+        },
+        {
+          "item": "AI示范项目奖",
+          "amount": "国家级50万/省级20万",
+          "amount_max": 500000,
+          "type": "cash"
+        },
+        {
+          "item": "软件企业奖",
+          "amount": "营收2000万+最高200万",
+          "amount_max": 2000000,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "惠州市",
+        "founder_identity": [
+          "高校毕业5年内(创业资助)"
+        ],
+        "other": [
+          "创业资助需正常经营6个月以上"
+        ]
+      },
+      "application": {
+        "method": "广东政务服务网",
+        "url": "https://www.gdzwfw.gov.cn/"
+      },
+      "links": {
+        "news": [
+          "https://www.cnbayarea.org.cn/city/huizhou/dtxw/content/post_1281976.html"
+        ]
+      },
+      "communities": [
+        {
+          "name": "仲恺AI产业园",
+          "address": "仲恺高新区",
+          "features": [
+            "产值533亿",
+            "511个项目",
+            "计划突破600亿"
+          ]
+        },
+        {
+          "name": "润泽智算中心",
+          "address": "大亚湾数据产业园",
+          "features": [
+            "大湾区首个超大规模智算中心",
+            "2026年建成"
+          ]
+        }
+      ],
+      "tags": [
+        "惠州",
+        "创业资助",
+        "算力补贴200万",
+        "仲恺",
+        "AI示范",
+        "润泽智算"
+      ],
+      "updated_at": "2026-04-10",
+      "verified": true
+    },
+    {
+      "id": "huizhou-huiyang-001",
+      "name": "惠阳区支持实体经济高质量发展若干措施",
+      "city": "惠州",
+      "province": "广东",
+      "district": "惠阳",
+      "level": "district",
+      "issuer": "惠阳区政府",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "领军人才最高300万/科技创业团队最高1000万/专精特新30万/小升规20万/技改50万/工程师补贴",
+      "benefits": [
+        {
+          "item": "领军人才奖励",
+          "amount": "最高300万",
+          "amount_max": 3000000,
+          "type": "cash"
+        },
+        {
+          "item": "科技创业团队",
+          "amount": "最高1000万",
+          "amount_max": 10000000,
+          "type": "cash"
+        },
+        {
+          "item": "小升规奖励",
+          "amount": "累计20万(产值大可达100万)",
+          "amount_max": 1000000,
+          "type": "cash"
+        },
+        {
+          "item": "专精特新配套",
+          "amount": "小巨人30万/专精特新20万",
+          "amount_max": 300000,
+          "type": "cash"
+        },
+        {
+          "item": "工程师补贴",
+          "amount": "中级2000元/高级5000元",
+          "amount_max": 5000,
+          "type": "cash"
+        },
+        {
+          "item": "厂房租赁补贴",
+          "amount": "5元/月/㎡，最高10-30万/年",
+          "amount_max": 300000,
+          "type": "cash"
+        },
+        {
+          "item": "技改补贴",
+          "amount": "单项目最高50万",
+          "amount_max": 500000,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "惠阳区"
+      },
+      "links": {
+        "news": [
+          "https://www.eesia.cn/contents/113/5917.html"
+        ]
+      },
+      "communities": [],
+      "tags": [
+        "惠阳",
+        "领军人才300万",
+        "创业团队1000万",
+        "专精特新",
+        "技改"
       ],
       "updated_at": "2026-04-10",
       "verified": true
