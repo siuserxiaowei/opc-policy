@@ -22,6 +22,10 @@
     {"id":"nanjing","name":"南京","province":"江苏","policy_count":1,"highlight":"江宁3年免费工位·1000万人才专项·50万股权投资","status":"active","color":"#64b5f6","link":""},
     {"id":"hefei","name":"合肥","province":"安徽","policy_count":1,"highlight":"AI模立方·声谷生态·算力/语料/模型券","status":"active","color":"#76ff03","link":""},
     {"id":"changsha","name":"长沙","province":"湖南","policy_count":1,"highlight":"马栏山6000㎡·1000PFlops算力·开源十条","status":"active","color":"#ffc400","link":""},
-    {"id":"chongqing","name":"重庆","province":"重庆","policy_count":1,"highlight":"仙桃数据谷·未来星计划·1万㎡创客空间","status":"active","color":"#ff6e40","link":""}
+    {"id":"chongqing","name":"重庆","province":"重庆","policy_count":1,"highlight":"仙桃数据谷·未来星计划·1万㎡创客空间","status":"active","color":"#ff6e40","link":""},
+    {"id":"xian","name":"西安","province":"陕西","policy_count":1,"highlight":"国家超算共享算力·商汤/京东云/阿里云·237家AI规上企业","status":"active","color":"#ff8a65","link":""},
+    {"id":"xiamen","name":"厦门","province":"福建","policy_count":1,"highlight":"福建首个OPC社区·自建算力·市区两级算力券·软件园","status":"active","color":"#4fc3f7","link":""},
+    {"id":"fuzhou","name":"福州","province":"福建","policy_count":1,"highlight":"OPC联盟12家·闽商AI伴飞·2800㎡创客空间·福AI夜校","status":"active","color":"#81c784","link":""},
+    {"id":"kunming","name":"昆明","province":"云南","policy_count":1,"highlight":"云南首个OPC社区·零租金·1V1服务·AI算力Token·青创启航贷","status":"active","color":"#ce93d8","link":""}
   ]
 }

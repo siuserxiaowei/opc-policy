@@ -214,7 +214,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 <div class="hero">
   <h1>全国 OPC 政策导航</h1>
   <p class="sub">填写公司情况，一键匹配可申请的补贴和政策</p>
-  <span class="version">已收录 23 座城市 · 51 条政策 · 60+ OPC社区</span>
+  <span class="version">已收录 27 座城市 · 55 条政策 · 70+ OPC社区</span>
 </div>
 
 <!-- Mode Switch -->
@@ -247,7 +247,9 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
             <option value="广东">广东</option><option value="北京">北京</option><option value="上海">上海</option>
             <option value="浙江">浙江</option><option value="四川">四川</option><option value="湖北">湖北</option>
             <option value="安徽">安徽</option><option value="江苏">江苏</option><option value="湖南">湖南</option>
-            <option value="山东">山东</option><option value="重庆">重庆</option><option value="其他">其他省份</option>
+            <option value="山东">山东</option><option value="重庆">重庆</option>
+            <option value="���西">陕西</option><option value="福建">福建</option><option value="云��">云南</option>
+            <option value="其他">其他省份</option>
           </select>
           <select id="fCity"><option value="">选择城市</option></select>
         </div>
@@ -449,7 +451,10 @@ const CITY_MAP = {
   '安徽':{cities:['合肥'],districts:{'合肥':['包河','蜀山','庐阳','高新']}},
   '江苏':{cities:['苏州','南京','无锡','扬州','常州','宿迁'],districts:{'苏州':['工业园区','吴江','昆山','高新区','吴中','相城','姑苏','张家港','常熟','太仓'],'南京':['江宁','鼓楼','玄武','栖霞','江北新区'],'无锡':['高新区','梁溪','锡山','惠山'],'扬州':['广陵','邗江','江都']}},
   '湖南':{cities:['长沙'],districts:{'长沙':['岳麓','天心','望城','经开区']}},
-  '重庆':{cities:['重庆'],districts:{'重庆':['渝中','江北','南岸','两江新区','渝北']}}
+  '重庆':{cities:['重庆'],districts:{'重庆':['渝中','江北','南岸','两江新区','渝北']}},
+  '陕西':{cities:['西安'],districts:{'西安':['雁塔','高新','碑林','未央','长安']}},
+  '福建':{cities:['厦门','福州'],districts:{'厦门':['思明','湖里','集美','海沧'],'福州':['鼓楼','台江','仓山','晋安']}},
+  '云南':{cities:['昆明'],districts:{'昆明':['五华','盘龙','官渡','西山']}}
 };
 
 document.getElementById('fProvince').addEventListener('change', function(){

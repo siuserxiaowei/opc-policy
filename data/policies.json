@@ -843,6 +843,70 @@
       "requirements":{"registration_location":"中山市"},
       "links":{"news":["https://zsrbapp.zsnews.cn/home/content/newsContent/94/708187"]},
       "communities":[],"tags":["中山","粤港澳","三年三免","500万贷款","天使基金"],"updated_at":"2026-04-10","verified":true
+    },
+    {
+      "id":"xian-city-001","name":"西安人工智能OPC创新社区",
+      "city":"西安","province":"陕西","district":"","level":"city",
+      "issuer":"西安市AI产业协会/蒜泥科技","publish_date":"2026-03-28","status":"active","category":"space",
+      "summary":"联合国家超算西安中心共享算力池/商汤京东云阿里云技术开放/全链条服务/237家AI规上企业",
+      "benefits":[
+        {"item":"共享算力池","amount":"国家超算西安中心+雁塔智算","amount_max":0,"type":"voucher"},
+        {"item":"核心技术开放","amount":"商汤/京东云/阿里云","amount_max":0,"type":"service"},
+        {"item":"全链条服务","amount":"工商注册/政策/知识产权/融资/场景","amount_max":0,"type":"service"}
+      ],
+      "requirements":{"registration_location":"西安市","industries":["人工智能"]},
+      "links":{"news":["https://finance.sina.com.cn/jjxw/2026-03-28/doc-inhsnkfm8004615.shtml"]},
+      "communities":[{"name":"西安AI OPC创新社区","features":["蒜泥科技运营","国家超算算力","商汤/京东云/阿里云","全链条服务"]}],
+      "tags":["西安","超算","商汤","阿里云","全链条"],"updated_at":"2026-04-10","verified":true
+    },
+    {
+      "id":"xiamen-city-001","name":"厦门超级合子OPC共生社区(福建首个)",
+      "city":"厦门","province":"福建","district":"","level":"city",
+      "issuer":"厦门市政府","publish_date":"2026-01-23","status":"active","category":"space",
+      "summary":"福建首个OPC社区/自建算力机房+思明智算/市区两级算力券/AIGC工作站/300+潜在创业者",
+      "benefits":[
+        {"item":"自建算力机房","amount":"思明智算中心资源","amount_max":0,"type":"voucher"},
+        {"item":"市区两级算力券","amount":"补贴","amount_max":0,"type":"voucher"},
+        {"item":"AIGC工作站","amount":"设备配备","amount_max":0,"type":"service"}
+      ],
+      "requirements":{"registration_location":"厦门市","industries":["人工智能"]},
+      "links":{"news":["https://news.xmnn.cn/xmxw/202601/t20260123_390225.html"]},
+      "communities":[{"name":"超级合子OPC共生社区","address":"厦门软件园二期","features":["福建首个OPC社区","自建算力","算力券","AIGC工作站","300+创业者对接"]}],
+      "tags":["厦门","福建首个","软件园","算力券","共生社区"],"updated_at":"2026-04-10","verified":true
+    },
+    {
+      "id":"fuzhou-city-001","name":"福州OPC联盟+'闽商AI伴飞'服务包",
+      "city":"福州","province":"福建","district":"","level":"city",
+      "issuer":"福州市政府","publish_date":"2026-02-04","status":"active","category":"comprehensive",
+      "summary":"福建OPC联盟12家签约/闽商AI伴飞服务包/青榕工程人才政策/2800㎡创客空间/福AI夜校免费培训",
+      "benefits":[
+        {"item":"闽商AI伴飞服务包","amount":"场地+资金对接+法律","amount_max":0,"type":"service"},
+        {"item":"创客空间","amount":"2800㎡","amount_max":0,"type":"rent_free"},
+        {"item":"青榕工程人才扶持","amount":"定制政策","amount_max":0,"type":"other"},
+        {"item":"福AI夜校","amount":"免费AI技能培训","amount_max":0,"type":"service"},
+        {"item":"算力基础设施","amount":"数字产业基地","amount_max":0,"type":"voucher"}
+      ],
+      "requirements":{"registration_location":"福州市"},
+      "links":{"official":"https://www.fuzhou.gov.cn/zgfzzt/hnhjfz/rctt/202602/t20260204_5281133.htm"},
+      "communities":[{"name":"福州数字产业基地OPC空间","features":["2800㎡","OPC联盟12家","福AI夜校"]}],
+      "tags":["福州","OPC联盟","闽商AI伴飞","青榕工程","夜校"],"updated_at":"2026-04-10","verified":true
+    },
+    {
+      "id":"kunming-city-001","name":"昆明庾园社区AI青创空间(云南首个)",
+      "city":"昆明","province":"云南","district":"西山","level":"district",
+      "issuer":"西山区福海街道","publish_date":"2026-04-08","status":"active","category":"space",
+      "summary":"云南首个OPC社区/零租金免费工位/1V1专属服务/免费AI算力Token/青创启航贷",
+      "benefits":[
+        {"item":"零租金免费工位","amount":"免费","amount_max":0,"type":"rent_free"},
+        {"item":"1V1专属服务专员","amount":"免费","amount_max":0,"type":"service"},
+        {"item":"AI算力Token","amount":"免费/优惠(电信合作)","amount_max":0,"type":"voucher"},
+        {"item":"青创启航贷","amount":"融资产品","amount_max":0,"type":"loan"},
+        {"item":"注册+社保指导","amount":"全流程","amount_max":0,"type":"service"}
+      ],
+      "requirements":{"registration_location":"昆明市"},
+      "links":{"news":["https://www.kunming.cn/news/c/2026-04-08/14032174.shtml"]},
+      "communities":[{"name":"庾园AI青创空间","address":"西山区福海街道","features":["云南首个OPC社区","零租金","1V1服务","AI算力Token","青创启航贷"]}],
+      "tags":["昆明","云南首个","零租金","AI Token","青创"],"updated_at":"2026-04-10","verified":true
     }
   ]
 }
