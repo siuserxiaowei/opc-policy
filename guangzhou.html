@@ -1407,14 +1407,18 @@ function renderPriorities(p) {
   const saved = localStorage.getItem('opc_profile');
   if (saved) {
     const raw = JSON.parse(saved);
-    // Normalize: index.html format -> guangzhou format
+    // Normalize: handle both index.html format and guangzhou format
+    const founderRaw = raw.founder;
+    const founderStr = Array.isArray(founderRaw) ? founderRaw[0] || '' : (founderRaw || '');
+    const qualsRaw = raw.quals || raw.qualifications || [];
+    const industryRaw = raw.industry || (Array.isArray(raw.industries) ? raw.industries.join('/') : '');
     const p = {
       district: raw.district || '',
-      employees: raw.employees || 0,
-      age: raw.age || raw.companyAge || 0,
-      industry: raw.industry || (raw.industries ? raw.industries.join('/') : ''),
-      founder: raw.founder || (Array.isArray(raw.founder) ? raw.founder[0] : ''),
-      quals: raw.quals || raw.qualifications || []
+      employees: parseInt(raw.employees) || 0,
+      age: parseFloat(raw.age || raw.companyAge) || 0,
+      industry: industryRaw,
+      founder: founderStr,
+      quals: Array.isArray(qualsRaw) ? qualsRaw : []
     };
     renderProfile(p);
     renderPriorities(p);
