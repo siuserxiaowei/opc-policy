@@ -246,9 +246,13 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
         <h3 style="font-size:1.3em;margin:0 0 4px;color:var(--text)">张永航</h3>
         <p style="font-size:.88em;color:var(--cyan);margin-bottom:8px">盈丰税务规划</p>
         <p style="font-size:.82em;color:var(--dim);margin-bottom:12px">专注 OPC 一人公司财税合规，从架构选择到税务优化，提供全链路专业咨询。</p>
-        <div onclick="showQR()" style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:var(--accent);color:#fff;border-radius:8px;font-size:.88em;font-weight:600;cursor:pointer;transition:all .2s">
-          <span>扫码咨询</span>
-          <span style="font-size:.78em;opacity:.8">备注「OPC税务」</span>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="color:var(--dim);font-size:.85em">微信号：</span>
+            <span id="advisorWx" style="padding:4px 14px;background:rgba(0,229,255,.08);border:1px solid rgba(0,229,255,.15);border-radius:6px;font-size:.9em;color:var(--cyan);cursor:pointer;font-weight:600" onclick="copyAdvisorWx()">pp667899</span>
+            <span id="advisorCopyTip" style="font-size:.75em;color:var(--green);opacity:0;transition:opacity .3s">已复制</span>
+          </div>
+          <span style="font-size:.78em;color:var(--dim)">（加好友请备注「OPC税务」）</span>
         </div>
       </div>
     </div>
@@ -286,6 +290,12 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
 <script>
 function showQR(){document.getElementById('qrModal').style.display='flex'}
+function copyAdvisorWx(){
+  navigator.clipboard.writeText('pp667899').then(()=>{
+    const tip=document.getElementById('advisorCopyTip');tip.style.opacity='1';
+    setTimeout(()=>{tip.style.opacity='0'},1500);
+  });
+}
 
 // Private entry
 function checkEntry(){
