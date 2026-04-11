@@ -1468,19 +1468,19 @@ function renderCities(){
   const grid=document.getElementById('cityGrid');
   grid.innerHTML='';
   CITIES.forEach(c=>{
-    const card=document.createElement('div');
+    const link = c.link || `city.html?name=${encodeURIComponent(c.name)}`;
+    const card = document.createElement('a');
+    card.href = link;
     card.className='city-card';
     card.style.borderColor=c.status==='hot'?c.color+'40':'var(--border)';
+    card.style.display='block';
+    card.style.textDecoration='none';
+    card.style.color='inherit';
     card.innerHTML=`
       <span class="city-tag ${c.status==='hot'?'city-hot':'city-coming'}">${c.status==='hot'?'HOT':c.policy_count>0?'NEW':'SOON'}</span>
       <div class="city-name" style="color:${c.color}">${c.name}</div>
       <div class="city-count">${c.policy_count} 条政策</div>
       <div class="city-hl">${c.highlight||''}</div>`;
-    card.onclick=()=>{
-      if(c.link){window.location.href=c.link;return;}
-      // Go to city detail page
-      window.location.href=`city.html?name=${encodeURIComponent(c.name)}`;
-    };
     grid.appendChild(card);
   });
 }
