@@ -5,39 +5,69 @@
  * 自动检测政策变动（新增/修改/过期/废止）
  */
 
+// 全局关键词库（所有源共用）
+const KEYWORDS_CORE = ['OPC', '一人公司', '一人企业', '超级个体', '个人经济体'];
+const KEYWORDS_POLICY = ['创业补贴', '创业资助', '算力补贴', '算力券', '免租', '孵化'];
+const KEYWORDS_AI = ['人工智能', 'AI创业', 'AI应用', '智能体', '大模型', 'AIGC'];
+const KEYWORDS_SCENE = ['场景应用', '场景征集', '应用示范', '数据券', '流量券'];
+const KEYWORDS_TALENT = ['人才补贴', '创业带动就业', '创业租金', '创业担保贷款'];
+const ALL_KEYWORDS = [...KEYWORDS_CORE, ...KEYWORDS_POLICY, ...KEYWORDS_AI, ...KEYWORDS_SCENE, ...KEYWORDS_TALENT];
+
+// 精简关键词（核心+政策类）
+const KW_STANDARD = [...KEYWORDS_CORE, ...KEYWORDS_POLICY];
+// 完整关键词（含AI和场景）
+const KW_FULL = ALL_KEYWORDS;
+
 const SOURCES = [
-  // 广东
-  { name: '广州市政府', url: 'https://www.gz.gov.cn/zwgk/zdly/', keywords: ['OPC', '一人公司', '超级个体'] },
-  { name: '海珠区政府', url: 'https://www.haizhu.gov.cn/gzhzrgzn/', keywords: ['OPC', '人工智能', '场景'] },
-  { name: '越秀区政府', url: 'http://www.yuexiu.gov.cn/yxdt/yxkx/', keywords: ['OPC', '一人公司', '人工智能', 'AI'] },
-  { name: '深圳市政府', url: 'https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/', keywords: ['OPC', '一人公司', 'AI创业'] },
-  { name: '东莞市政府', url: 'https://www.dg.gov.cn/zwgk/', keywords: ['OPC', '一人公司'] },
-  { name: '惠州市政府', url: 'https://www.huizhou.gov.cn/', keywords: ['OPC', '一人公司', '人工智能'] },
-  { name: '惠阳区政府', url: 'http://www.huiyang.gov.cn/', keywords: ['OPC', '一人公司', 'AI'] },
-  // 长三角
-  { name: '苏州市政府', url: 'https://www.suzhou.gov.cn/szsrmzf/szyw/', keywords: ['OPC', '一人公司'] },
-  { name: '杭州市政府', url: 'https://www.hangzhou.gov.cn/', keywords: ['OPC', '一人公司'] },
-  { name: '上海市经信委', url: 'https://jxj.sh.gov.cn/', keywords: ['OPC', '超级创业者'] },
-  { name: '南京市政府', url: 'https://www.nanjing.gov.cn/', keywords: ['OPC', '一人公司'] },
-  { name: '无锡市政府', url: 'https://www.wuxi.gov.cn/', keywords: ['OPC', '一人公司'] },
-  { name: '常州市政府', url: 'https://www.changzhou.gov.cn/', keywords: ['OPC', '一人公司'] },
-  { name: '宁波市政府', url: 'https://www.ningbo.gov.cn/', keywords: ['OPC', '一人公司'] },
-  // 北方
-  { name: '北京市经信局', url: 'https://jxj.beijing.gov.cn/zwgk/', keywords: ['OPC', '人工智能', '模数'] },
-  { name: '青岛市政府', url: 'http://gxj.qingdao.gov.cn/', keywords: ['OPC', '一人公司'] },
-  { name: '济南市政府', url: 'https://www.jinan.gov.cn/', keywords: ['OPC', '数智'] },
-  { name: '天津市政府', url: 'https://www.tj.gov.cn/', keywords: ['OPC', '一人公司'] },
-  // 中西部
-  { name: '武汉市政府', url: 'https://www.wuhan.gov.cn/zwgk/', keywords: ['OPC', '一人公司'] },
-  { name: '成都市政府', url: 'https://www.chengdu.gov.cn/', keywords: ['OPC', '一人公司'] },
-  { name: '西安市政府', url: 'https://www.xa.gov.cn/', keywords: ['OPC', '一人公司'] },
-  { name: '长沙市政府', url: 'https://www.changsha.gov.cn/', keywords: ['OPC', '一人公司'] },
-  { name: '重庆市政府', url: 'https://www.cq.gov.cn/', keywords: ['OPC', '一人公司'] },
-  { name: '合肥市政府', url: 'https://www.hefei.gov.cn/', keywords: ['OPC', '一人公司'] },
-  { name: '昆明市政府', url: 'https://www.km.gov.cn/', keywords: ['OPC', '一人公司'] },
-  // 福建
-  { name: '厦门市政府', url: 'https://www.xm.gov.cn/', keywords: ['OPC', '一人公司'] },
-  { name: '福州市政府', url: 'https://www.fuzhou.gov.cn/', keywords: ['OPC', '一人公司'] },
+  // === 广东（重点监控）===
+  { name: '广州市政府', url: 'https://www.gz.gov.cn/zwgk/zdly/', keywords: KW_FULL },
+  { name: '海珠区政府', url: 'https://www.haizhu.gov.cn/gzhzrgzn/', keywords: KW_FULL },
+  { name: '越秀区政府', url: 'http://www.yuexiu.gov.cn/yxdt/yxkx/', keywords: KW_FULL },
+  { name: '黄埔区政府', url: 'http://www.hp.gov.cn/', keywords: KW_FULL },
+  { name: '南沙区政府', url: 'http://www.gzns.gov.cn/zwgk/', keywords: KW_FULL },
+  { name: '番禺区政府', url: 'https://www.panyu.gov.cn/', keywords: KW_FULL },
+  { name: '天河区政府', url: 'https://www.thnet.gov.cn/', keywords: KW_FULL },
+  { name: '深圳市政府', url: 'https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/', keywords: KW_FULL },
+  { name: '东莞市政府', url: 'https://www.dg.gov.cn/zwgk/', keywords: KW_STANDARD },
+  { name: '惠州市政府', url: 'https://www.huizhou.gov.cn/', keywords: KW_STANDARD },
+  { name: '佛山市政府', url: 'https://www.foshan.gov.cn/', keywords: KW_STANDARD },
+  { name: '珠海市政府', url: 'https://www.zhuhai.gov.cn/', keywords: KW_STANDARD },
+  { name: '中山市政府', url: 'https://www.zs.gov.cn/', keywords: KW_STANDARD },
+  { name: '梅州市政府', url: 'https://www.meizhou.gov.cn/', keywords: KW_STANDARD },
+  { name: '广东省发改委', url: 'https://drc.gd.gov.cn/', keywords: KW_FULL },
+  // === 长三角 ===
+  { name: '苏州市政府', url: 'https://www.suzhou.gov.cn/szsrmzf/szyw/', keywords: KW_FULL },
+  { name: '杭州市政府', url: 'https://www.hangzhou.gov.cn/', keywords: KW_FULL },
+  { name: '上海市经信委', url: 'https://jxj.sh.gov.cn/', keywords: KW_FULL },
+  { name: '南京市政府', url: 'https://www.nanjing.gov.cn/', keywords: KW_STANDARD },
+  { name: '无锡市政府', url: 'https://www.wuxi.gov.cn/', keywords: KW_STANDARD },
+  { name: '常州市政府', url: 'https://www.changzhou.gov.cn/', keywords: KW_STANDARD },
+  { name: '宁波市政府', url: 'https://www.ningbo.gov.cn/', keywords: KW_STANDARD },
+  { name: '温州市政府', url: 'https://www.wenzhou.gov.cn/', keywords: KW_STANDARD },
+  { name: '扬州市政府', url: 'https://www.yangzhou.gov.cn/', keywords: KW_STANDARD },
+  { name: '南通市政府', url: 'https://www.nantong.gov.cn/', keywords: KW_STANDARD },
+  { name: '徐州市政府', url: 'https://www.xuzhou.gov.cn/', keywords: KW_STANDARD },
+  { name: '盐城市政府', url: 'https://www.yancheng.gov.cn/', keywords: KW_STANDARD },
+  { name: '连云港市政府', url: 'https://www.lyg.gov.cn/', keywords: KW_STANDARD },
+  { name: '宿迁市政府', url: 'https://www.suqian.gov.cn/', keywords: KW_STANDARD },
+  // === 北方 ===
+  { name: '北京市经信局', url: 'https://jxj.beijing.gov.cn/zwgk/', keywords: KW_FULL },
+  { name: '青岛市政府', url: 'http://gxj.qingdao.gov.cn/', keywords: KW_STANDARD },
+  { name: '济南市政府', url: 'https://www.jinan.gov.cn/', keywords: KW_STANDARD },
+  { name: '天津市政府', url: 'https://www.tj.gov.cn/', keywords: KW_STANDARD },
+  { name: '石家庄市政府', url: 'https://www.sjz.gov.cn/', keywords: KW_STANDARD },
+  // === 中西部 ===
+  { name: '武汉市政府', url: 'https://www.wuhan.gov.cn/zwgk/', keywords: KW_STANDARD },
+  { name: '成都市政府', url: 'https://www.chengdu.gov.cn/', keywords: KW_STANDARD },
+  { name: '西安市政府', url: 'https://www.xa.gov.cn/', keywords: KW_STANDARD },
+  { name: '长沙市政府', url: 'https://www.changsha.gov.cn/', keywords: KW_STANDARD },
+  { name: '重庆市政府', url: 'https://www.cq.gov.cn/', keywords: KW_STANDARD },
+  { name: '合肥市政府', url: 'https://www.hefei.gov.cn/', keywords: KW_STANDARD },
+  { name: '昆明市政府', url: 'https://www.km.gov.cn/', keywords: KW_STANDARD },
+  // === 东南沿海 ===
+  { name: '厦门市政府', url: 'https://www.xm.gov.cn/', keywords: KW_STANDARD },
+  { name: '福州市政府', url: 'https://www.fuzhou.gov.cn/', keywords: KW_STANDARD },
+  { name: '海口市政府', url: 'https://www.haikou.gov.cn/', keywords: KW_STANDARD },
 ];
 
 // ===== 爬取链接 =====
