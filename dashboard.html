@@ -179,20 +179,31 @@ h1{font-size:1.8em;margin-bottom:4px}
 <script>
 // Load data from JSON directly (static mode) or API
 async function loadDashboard() {
-  let data;
-  try {
-    // Try API first
-    const resp = await fetch('/api/dashboard');
-    if (resp.ok) { data = await resp.json(); }
-  } catch(e) {}
+  // 1. 加载本地 policies.json
+  const resp = await fetch('data/policies.json');
+  const raw = await resp.json();
+  let policies = raw.policies || [];
 
-  if (!data) {
-    // Static mode: compute from policies.json
-    const resp = await fetch('data/policies.json');
-    const raw = await resp.json();
-    data = computeDashboard(raw.policies);
-  }
-  renderDashboard(data);
+  // 2. 合并爬虫新发现的政策
+  try {
+    const crawlerResp = await fetch('https://opc-crawler.siuserxy.workers.dev/extracted', {
+      signal: AbortSignal.timeout(5000)
+    });
+    if (crawlerResp.ok) {
+      const crawlerData = await crawlerResp.json();
+      const newPolicies = crawlerData.policies || [];
+      const existingIds = new Set(policies.map(p => p.id));
+      const existingNames = new Set(policies.map(p => p.name));
+      for (const p of newPolicies) {
+        if (!existingIds.has(p.id) && !existingNames.has(p.name)) {
+          p.auto_extracted = true;
+          policies.push(p);
+        }
+      }
+    }
+  } catch(e) { console.log('[Crawler] 跳过合并:', e.message); }
+
+  renderDashboard(computeDashboard(policies));
 }
 
 function computeDashboard(policies) {

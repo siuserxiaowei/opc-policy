@@ -632,7 +632,49 @@ async function loadData() {
   renderCities();
   populateBrowseFilters();
   filterBrowse();
+
+  // 异步合并爬虫发现的新政策（不阻塞页面渲染）
+  mergeCrawlerData();
 }
+
+async function mergeCrawlerData() {
+  try {
+    const resp = await fetch('https://opc-crawler.siuserxy.workers.dev/extracted', {
+      signal: AbortSignal.timeout(5000)
+    });
+    if (!resp.ok) return;
+    const data = await resp.json();
+    const newPolicies = data.policies || [];
+    if (!newPolicies.length) return;
+
+    // 去重：按 id 和 name 双重检查
+    const existingIds = new Set(POLICIES.map(p => p.id));
+    const existingNames = new Set(POLICIES.map(p => p.name));
+    let added = 0;
+
+    for (const p of newPolicies) {
+      if (existingIds.has(p.id) || existingNames.has(p.name)) continue;
+      p.auto_extracted = true; // 标记为爬虫自动提取
+      POLICIES.push(p);
+      existingIds.add(p.id);
+      existingNames.add(p.name);
+      added++;
+    }
+
+    if (added > 0) {
+      console.log(`[Crawler] 合并了 ${added} 条新政策`);
+      // 刷新浏览列表
+      populateBrowseFilters();
+      filterBrowse();
+      // 更新城市卡片数量
+      renderCities();
+    }
+  } catch(e) {
+    // 爬虫不可用不影响正常使用
+    console.log('[Crawler] 跳过合并:', e.message);
+  }
+}
+
 loadData();
 
 // ===== MODE SWITCH =====
