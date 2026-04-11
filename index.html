@@ -199,12 +199,38 @@ select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%
 
 footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;border-top:1px solid var(--border)}
 
+/* Mobile: tablet */
 @media(max-width:768px){
   .hero h1{font-size:1.6em}.form-row{grid-template-columns:1fr}
   .city-grid{grid-template-columns:repeat(2,1fr)}.steps{gap:0}
   .summary-stats{grid-template-columns:repeat(2,1fr)}.panel{padding:18px}
-  .topnav{overflow-x:auto;gap:4px}.topnav a{white-space:nowrap;padding:6px 10px}
+  .topnav{overflow-x:auto;gap:4px;-ms-overflow-style:none;scrollbar-width:none}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{white-space:nowrap;padding:6px 10px}
   .chat-user{margin-left:10px}.chat-ai{margin-right:10px}
+  .inline-edit-grid{grid-template-columns:1fr 1fr!important}
+  .contact-card-inner{flex-direction:column;text-align:center}
+  .contact-card-inner img{width:80px!important;height:80px!important}
+  .contact-card-inner .card-text{min-width:0!important}
+}
+/* Mobile: phone */
+@media(max-width:480px){
+  .hero h1{font-size:1.3em}
+  .hero .sub{font-size:.85em}
+  .city-grid{grid-template-columns:repeat(2,1fr);gap:6px}
+  .city-card{padding:10px}
+  .city-card .city-name{font-size:1em}
+  .mode-tabs{gap:3px;padding:10px 12px}
+  .mode-tab{padding:6px 14px;font-size:.82em}
+  .panel{padding:14px;border-radius:10px}
+  .btn-group{flex-direction:column}
+  .btn-group .btn{width:100%;justify-content:center}
+  .inline-edit-grid{grid-template-columns:1fr!important}
+  .summary-stats{grid-template-columns:1fr}
+  .topnav .logo{font-size:.85em}
+  .back-top{width:40px;height:40px;font-size:.9em;bottom:20px;right:16px}
+  .step .step-label{font-size:.65em}
+  .chat-user,.chat-ai{margin-left:0!important;margin-right:0!important;max-width:100%!important}
 }
 </style>
 </head>
@@ -357,7 +383,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
       <!-- 内嵌快速修改区（默认隐藏） -->
       <div id="inlineEdit" style="display:none;background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:16px">
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px">
+        <div class="inline-edit-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px">
           <div>
             <label style="font-size:.78em;color:var(--al)">城市</label>
             <select id="qCity" style="width:100%;padding:8px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:.85em"></select>
@@ -371,7 +397,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
             <input type="number" id="qEmployees" style="width:100%;padding:8px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:.85em" min="0">
           </div>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px">
+        <div class="inline-edit-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px">
           <div>
             <label style="font-size:.78em;color:var(--al)">成立几年</label>
             <input type="number" id="qAge" style="width:100%;padding:8px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:.85em" min="0" step="0.5">
@@ -460,9 +486,9 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
 <!-- Contact Card (个人网站风格) -->
 <div style="max-width:900px;margin:0 auto;padding:0 20px 30px">
-  <div style="background:linear-gradient(135deg,#1a1040 0%,#0a2040 50%,#1a1040 100%);border:1px solid rgba(108,92,231,.3);border-radius:20px;padding:32px;display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+  <div class="contact-card-inner" style="background:linear-gradient(135deg,#1a1040 0%,#0a2040 50%,#1a1040 100%);border:1px solid rgba(108,92,231,.3);border-radius:20px;padding:32px;display:flex;align-items:center;gap:28px;flex-wrap:wrap">
     <img src="assets/avatar.jpg" style="width:110px;height:110px;border-radius:50%;border:3px solid rgba(0,229,255,.4);object-fit:cover;flex-shrink:0">
-    <div style="flex:1;min-width:200px">
+    <div class="card-text" style="flex:1;min-width:0">
       <h3 style="font-size:1.4em;margin-bottom:2px">小伟</h3>
       <p style="color:var(--cyan);font-size:.9em;margin-bottom:8px">独立开发者 / 连续创业者 / AIGC从业者 / OPC超级个体</p>
       <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px">

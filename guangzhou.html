@@ -405,6 +405,26 @@
     border-top: 1px solid var(--border);
   }
 
+  /* Top nav */
+  .top-nav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);
+    border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;backdrop-filter:blur(12px)}
+  .top-nav .logo{font-weight:800;font-size:1em;color:var(--accent-light)}
+  .top-nav a{padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--text-dim);text-decoration:none;transition:all .2s;white-space:nowrap}
+  .top-nav a:hover{color:var(--accent-light);background:rgba(108,92,231,.1)}
+  .top-nav a.active{color:var(--accent-light);background:rgba(108,92,231,.1)}
+
+  /* Nav bar scroll hint */
+  .nav-bar{position:relative}
+  .nav-bar::after{content:'';position:absolute;right:0;top:0;bottom:0;width:40px;
+    background:linear-gradient(90deg,transparent,var(--bg));pointer-events:none;z-index:2;opacity:0;transition:opacity .3s}
+  .nav-bar.has-overflow::after{opacity:1}
+
+  /* Table scroll hint */
+  .table-wrap{position:relative}
+  .table-wrap::after{content:'← 左右滑动查看 →';position:absolute;bottom:-20px;left:0;right:0;
+    text-align:center;font-size:.7em;color:var(--text-dim);opacity:0;transition:opacity .3s}
+  .table-wrap.scrollable::after{opacity:1}
+
   @media (max-width: 768px) {
     .hero h1 { font-size: 1.8em; }
     .priority-banner, .district-grid, .contact-grid { grid-template-columns: 1fr; }
@@ -413,19 +433,47 @@
     .card { padding: 20px; }
     .profile-card { padding: 16px 20px; }
     .countdown-bar { flex-direction: column; text-align: center; }
+    .top-nav{overflow-x:auto;gap:4px;-ms-overflow-style:none;scrollbar-width:none}
+    .top-nav::-webkit-scrollbar{display:none}
+    .top-nav a{padding:6px 10px;font-size:.78em}
+    .nav-bar::after{opacity:1}
+    .table-wrap.scrollable::after{opacity:1}
+  }
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 1.4em; }
+    .hero .subtitle { font-size: .9em; }
+    .stats-row { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .stat-card { padding: 14px 10px; }
+    .stat-card .num { font-size: 1.6em; }
+    .card { padding: 16px; border-radius: 10px; }
+    .card h3 { font-size: 1em; }
+    .profile-card { padding: 12px 14px; }
+    .profile-tags span { font-size: .78em; padding: 3px 10px; }
+    .search-bar input { padding: 12px 16px 12px 40px; font-size: .88em; }
+    .nav-bar a { padding: 10px 12px; font-size: .78em; }
+    .section-header h2 { font-size: 1.15em; }
+    .countdown-num { min-width: 42px; padding: 4px 8px; }
+    .countdown-num .n { font-size: 1.1em; }
+    .container { padding: 16px 12px; }
+    .back-to-top { width: 40px; height: 40px; font-size: .9em; bottom: 20px; right: 14px; }
+    .theme-toggle { width: 36px; height: 36px; font-size: .9em; bottom: 20px; left: 14px; }
+    footer { padding: 24px 16px; font-size: .75em; }
+    .timeline-item::before { left: -26px; width: 12px; height: 12px; }
+    .timeline { padding-left: 24px; }
+    .tag { font-size: .65em; padding: 1px 6px; }
   }
 </style>
 </head>
 <body>
 
 <!-- Top Nav -->
-<nav style="display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;backdrop-filter:blur(12px)">
-  <span style="font-weight:800;font-size:1em;color:var(--accent-light)">OPC</span>
-  <a href="index.html" style="padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--text-dim)">首页</a>
-  <a href="guangzhou.html" style="padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--accent-light);background:rgba(108,92,231,.1)">广州专版</a>
-  <a href="yuexiu.html" style="padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--text-dim)">越秀区</a>
+<nav class="top-nav">
+  <span class="logo">OPC</span>
+  <a href="index.html">首页</a>
+  <a href="guangzhou.html" class="active">广州专版</a>
+  <a href="yuexiu.html">越秀区</a>
   <a href="tax.html">税务指南</a>
-  <a href="dashboard.html" style="padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--text-dim)">数据看板</a>
+  <a href="dashboard.html">数据看板</a>
 </nav>
 
 <!-- Reading Progress -->
@@ -1204,6 +1252,35 @@
 </footer>
 
 <script>
+// ===== Mobile: nav overflow hint + table scroll hint =====
+(function(){
+  // Nav bar scroll hint
+  const nb = document.querySelector('.nav-bar');
+  if(nb){
+    const inner = nb.querySelector('.nav-inner');
+    function checkOverflow(){
+      if(inner && inner.scrollWidth > nb.clientWidth) nb.classList.add('has-overflow');
+      else nb.classList.remove('has-overflow');
+    }
+    checkOverflow();
+    window.addEventListener('resize', checkOverflow);
+    // hide hint after user scrolls
+    nb.addEventListener('scroll', function(){nb.classList.remove('has-overflow')}, {once:true});
+  }
+  // Table scroll hints
+  document.querySelectorAll('.table-wrap').forEach(function(tw){
+    const t = tw.querySelector('table');
+    if(t && t.scrollWidth > tw.clientWidth) tw.classList.add('scrollable');
+  });
+  window.addEventListener('resize', function(){
+    document.querySelectorAll('.table-wrap').forEach(function(tw){
+      const t = tw.querySelector('table');
+      if(t && t.scrollWidth > tw.clientWidth) tw.classList.add('scrollable');
+      else tw.classList.remove('scrollable');
+    });
+  });
+})();
+
 // ===== Countdown Timer =====
 function updateCountdown() {
   const deadline = new Date('2026-04-18T23:59:59+08:00');
