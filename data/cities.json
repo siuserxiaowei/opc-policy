@@ -369,6 +369,16 @@
       "status": "active",
       "color": "#a5d6a7",
       "link": ""
+    },
+    {
+      "id": "zhengzhou",
+      "name": "郑州",
+      "province": "河南",
+      "policy_count": 4,
+      "highlight": "河南首个OPC专项政策·算力券100万·大模型1000万·30亿基金",
+      "status": "hot",
+      "color": "#ff9100",
+      "link": ""
     }
   ]
 }
