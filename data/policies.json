@@ -377,7 +377,20 @@
       "links": {
         "official": "https://www.haizhu.gov.cn/gzhzrgzn/gkmlpt/content/10/10749/post_10749033.html"
       },
-      "communities": [],
+      "communities": [
+        {
+          "name": "琶洲元创OPC社区",
+          "address": "琶洲",
+          "operator": "中科科创联合基金",
+          "features": ["首期1000万基金", "投孵联动", "硬科技OPC", "八大闭环服务"]
+        },
+        {
+          "name": "TIT创意园OPC社区",
+          "address": "海珠区TIT创意园",
+          "operator": "TIT创意园",
+          "features": ["微信生态对接", "服装设计类OPC"]
+        }
+      ],
       "tags": [
         "场景征集",
         "不限注册地",
@@ -475,6 +488,18 @@
           "features": [
             "首批投入1000万元"
           ]
+        },
+        {
+          "name": "琶洲元创OPC社区",
+          "address": "琶洲",
+          "operator": "中科科创联合基金",
+          "features": ["首期1000万基金", "投孵联动", "硬科技OPC", "八大闭环服务"]
+        },
+        {
+          "name": "TIT创意园OPC社区",
+          "address": "海珠区TIT创意园",
+          "operator": "TIT创意园",
+          "features": ["微信生态对接", "服装设计类OPC"]
         }
       ],
       "tags": [
@@ -760,6 +785,40 @@
       "verified": true,
       "landing_status": "active",
       "landing_difficulty": "medium"
+    },
+    {
+      "id": "guangzhou-baiyun-002",
+      "name": "广州市白云区支持人工智能和数据产业高质量发展若干措施",
+      "city": "广州",
+      "province": "广东",
+      "district": "白云区",
+      "level": "district",
+      "issuer": "广州市白云区人民政府",
+      "publish_date": "2026-03-31",
+      "effective_date": "2026-04-01",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "4月1日起实施，OPC算力券补贴15%（高于普通企业10%），揭榜挂帅最高1000万，数据标注最高200万",
+      "landing_status": "active",
+      "landing_difficulty": "medium",
+      "benefits": [
+        {"item": "算力券（OPC专享15%）", "amount": "年度算力支出15%", "amount_max": 10000000, "type": "voucher"},
+        {"item": "揭榜挂帅专项", "amount": "最高1000万", "amount_max": 10000000, "type": "cash"},
+        {"item": "数据标注企业奖励", "amount": "收入总额4%", "amount_max": 2000000, "type": "cash"},
+        {"item": "高质量数据集评定", "amount": "最高100万", "amount_max": 1000000, "type": "cash"},
+        {"item": "大模型及算法研发", "amount": "最高100万", "amount_max": 1000000, "type": "cash"},
+        {"item": "OPC创新应用大赛获奖", "amount": "最高10万", "amount_max": 100000, "type": "cash"}
+      ],
+      "requirements": {"registration_location": "广州市白云区", "industries": ["人工智能", "数据产业"]},
+      "application": {"method": "免申即享或一站式申报，白云区政务和数据局"},
+      "links": {
+        "official": "",
+        "news": ["https://m.thepaper.cn/newsDetail_forward_32890184", "https://news.dayoo.com/guangzhou/202604/03/139995_54943820.htm"]
+      },
+      "communities": [],
+      "tags": ["白云区", "算力券", "OPC专享15%", "揭榜挂帅", "免申即享"],
+      "updated_at": "2026-04-14",
+      "verified": true
     },
     {
       "id": "guangzhou-city-005",
@@ -1896,130 +1955,236 @@
     },
     {
       "id": "chengdu-city-001",
-      "name": "成都市打造人工智能OPC创新发展新高地行动计划",
+      "name": "成都市打造人工智能OPC创新发展新高地行动计划（13条）",
       "city": "成都",
       "province": "四川",
       "district": "",
       "level": "city",
-      "issuer": "成都市政府",
+      "issuer": "成都市人民政府",
       "publish_date": "2026-03-26",
       "status": "active",
       "category": "comprehensive",
-      "summary": "13条：算力券60%最高500万/模型券30%最高100万/揭榜最高1000万/智能体平台80万/核心技术200万/爆款产品100万/F类人才直通/安居30天免费",
+      "summary": "13条举措，各项可叠加累计最高2500万。算力券500万/年，揭榜挂帅单项1000万，模型券100万",
+      "landing_status": "active",
+      "landing_difficulty": "medium",
       "benefits": [
         {
-          "item": "算力券(60%)",
-          "amount": "年最高500万",
+          "item": "算力券",
+          "amount": "算力费用60%（自主可控）",
           "amount_max": 5000000,
           "type": "voucher"
         },
         {
-          "item": "模型券(30% Token)",
-          "amount": "最高100万",
+          "item": "模型券",
+          "amount": "Token消耗30%",
           "amount_max": 1000000,
           "type": "voucher"
         },
         {
           "item": "揭榜挂帅项目",
-          "amount": "单个最高1000万",
+          "amount": "项目资金15%",
           "amount_max": 10000000,
           "type": "cash"
         },
         {
-          "item": "智能体平台奖励",
-          "amount": "最高80万",
-          "amount_max": 800000,
+          "item": "智能体爆款产品奖励",
+          "amount": "销售收入20%",
+          "amount_max": 1000000,
           "type": "cash"
         },
         {
-          "item": "核心技术创新",
+          "item": "标杆应用场景",
+          "amount": "实际投入30%",
+          "amount_max": 1000000,
+          "type": "cash"
+        },
+        {
+          "item": "天使/风投获投奖励",
+          "amount": "投资额10%",
+          "amount_max": 1000000,
+          "type": "cash"
+        },
+        {
+          "item": "知识产权创新成果",
           "amount": "最高200万",
           "amount_max": 2000000,
           "type": "cash"
         },
         {
-          "item": "爆款产品(20%销售)",
+          "item": "国家级孵化器补助",
+          "amount": "一次性200万",
+          "amount_max": 2000000,
+          "type": "cash"
+        },
+        {
+          "item": "OPC社区运营补助",
           "amount": "最高100万",
           "amount_max": 1000000,
           "type": "cash"
         },
         {
-          "item": "科研成果转化",
-          "amount": "单项50万/总额300万",
+          "item": "贷款利息补贴",
+          "amount": "LPR最高30%",
+          "amount_max": 200000,
+          "type": "loan"
+        },
+        {
+          "item": "产学研创新联合体",
+          "amount": "单项50万总额300万",
           "amount_max": 3000000,
           "type": "cash"
         },
         {
-          "item": "F类人才直通",
-          "amount": "注册即认定，免审晋级",
-          "amount_max": 0,
-          "type": "other"
+          "item": "高校毕业生创办OPC",
+          "amount": "5000/1万/2万元",
+          "amount_max": 20000,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "成都市",
+        "industries": [
+          "人工智能",
+          "OPC"
+        ]
+      },
+      "application": {
+        "method": "成都市科技局申报",
+        "deadline": "2026-04-30"
+      },
+      "links": {
+        "official": "",
+        "news": [
+          "https://finance.sina.com.cn/wm/2026-03-27/doc-inhsmnzs5305545.shtml",
+          "https://news.qq.com/rain/a/20260324A04C7200"
+        ]
+      },
+      "communities": [],
+      "tags": [
+        "13条",
+        "算力券",
+        "揭榜挂帅",
+        "模型券",
+        "2500万"
+      ],
+      "updated_at": "2026-04-14",
+      "verified": true
+    },
+    {
+      "id": "chengdu-city-002",
+      "name": "成都市科技金融资助管理办法（OPC贷款利息100%补助）",
+      "city": "成都",
+      "province": "四川",
+      "district": "",
+      "level": "city",
+      "issuer": "成都市科技局",
+      "publish_date": "2026-04-14",
+      "status": "active",
+      "category": "loan",
+      "summary": "OPC贷款利息按LPR 100%补助，每户每年最高20万元；天使投资补助最高100万",
+      "landing_status": "active",
+      "landing_difficulty": "medium",
+      "benefits": [
+        {
+          "item": "OPC贷款利息100%补助",
+          "amount": "LPR全额补助",
+          "amount_max": 200000,
+          "type": "loan"
         },
         {
-          "item": "社区运营补助",
+          "item": "天使投资补助",
           "amount": "最高100万",
           "amount_max": 1000000,
           "type": "cash"
-        },
-        {
-          "item": "人才驿站",
-          "amount": "30天免费+3月免租+3月减半",
-          "amount_max": 0,
-          "type": "rent_free"
-        },
-        {
-          "item": "15亿产业基金",
-          "amount": "配套汇源贷",
-          "amount_max": 150000000,
-          "type": "loan"
         }
       ],
       "requirements": {
         "registration_location": "成都市",
         "industries": [
           "人工智能"
+        ],
+        "other": [
+          "从业不超200人",
+          "本科30%以上",
+          "成立不超5年",
+          "研发费20%以上"
         ]
       },
+      "application": {
+        "method": "成都市科技局"
+      },
       "links": {
+        "official": "",
         "news": [
-          "https://finance.sina.com.cn/wm/2026-03-27/doc-inhsmnzs5305545.shtml",
-          "https://www.21jingji.com/article/20260323/herald/9807928954276bb5ff380d7491c17e55.html"
+          "https://finance.sina.com.cn/jjxw/2026-04-14/doc-inhukvar9444941.shtml"
+        ]
+      },
+      "communities": [],
+      "tags": [
+        "科技金融",
+        "贷款利息全补",
+        "天使投资"
+      ],
+      "updated_at": "2026-04-14",
+      "verified": true
+    },
+    {
+      "id": "chengdu-chenghua-001",
+      "name": "成华区AI+机器人产业10亿基金",
+      "city": "成都",
+      "province": "四川",
+      "district": "成华区",
+      "level": "district",
+      "issuer": "成华区政府",
+      "publish_date": "2026-03-31",
+      "status": "active",
+      "category": "computing",
+      "summary": "华智人才股权投资基金10亿元（首期5亿），星元云智OPC Hub，西部首个智算底座AI实验室",
+      "landing_status": "active",
+      "landing_difficulty": "hard",
+      "benefits": [
+        {
+          "item": "华智人才股权投资基金",
+          "amount": "总规模10亿元，首期5亿",
+          "amount_max": 0,
+          "type": "loan"
+        }
+      ],
+      "requirements": {
+        "registration_location": "成都市成华区",
+        "industries": [
+          "人工智能",
+          "机器人"
+        ]
+      },
+      "application": {
+        "method": "成华区科技局"
+      },
+      "links": {
+        "official": "",
+        "news": [
+          "https://www.nbd.com.cn/articles/2026-03-30/4315111.html"
         ]
       },
       "communities": [
         {
-          "name": "天府软件pi立方OPC社区",
-          "address": "高新区",
+          "name": "星元云智OPC Hub",
+          "address": "成华区东广人工智能谷",
+          "operator": "成华区政府",
           "features": [
-            "近10000㎡",
-            "全国首个AI+数字文创OPC",
-            "首批12家"
-          ]
-        },
-        {
-          "name": "明途启航营",
-          "address": "天府新区",
-          "features": [
-            "93工位",
-            "AI+文商旅体"
-          ]
-        },
-        {
-          "name": "东林村OPC",
-          "address": "郫都区",
-          "features": [
-            "乡村振兴OPC"
+            "西部首个智算底座AI实验室",
+            "AI+机器人",
+            "边缘算力"
           ]
         }
       ],
       "tags": [
-        "成都",
-        "算力60%",
-        "模型券",
-        "天府",
-        "累计2500万"
+        "成华区",
+        "10亿基金",
+        "机器人",
+        "智算实验室"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-04-14",
       "verified": true
     },
     {
