@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>成都OPC创业指南（私密）</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>">
+<style>
+:root{--bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--dim:#8888a0;
+  --accent:#6c5ce7;--al:#a29bfe;--green:#00e676;--gd:#1b5e20;--yellow:#ffd600;--yd:#5d4e00;
+  --red:#ff5252;--rd:#4a1515;--cyan:#00e5ff;--blue:#448aff;--orange:#ff9100}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--al);text-decoration:none}a:hover{color:#fff}
+
+#lockScreen{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center}
+#lockScreen .lock-box{text-align:center;max-width:360px;padding:40px}
+#lockScreen h2{font-size:1.4em;margin-bottom:8px}
+#lockScreen p{color:var(--dim);font-size:.88em;margin-bottom:20px}
+#lockScreen input{width:100%;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:1em;text-align:center;outline:none;letter-spacing:2px}
+#lockScreen input:focus{border-color:var(--accent)}
+#lockScreen .err{color:var(--red);font-size:.82em;margin-top:8px;display:none}
+
+#mainContent{display:none}
+.container{max-width:900px;margin:0 auto;padding:30px 20px}
+.hero{padding:50px 20px 30px;text-align:center;background:linear-gradient(135deg,#0a0a1a 0%,#2a0a1e 50%,#0a1a2e 100%)}
+.hero h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,#fff,var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .sub{color:var(--dim);font-size:.95em;margin:8px 0}
+.hero .badge{display:inline-block;padding:4px 14px;border-radius:14px;font-size:.78em;background:rgba(255,82,82,.12);border:1px solid rgba(255,82,82,.25);color:var(--red)}
+
+.panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px}
+.panel h2{font-size:1.25em;margin-bottom:8px}
+.panel h3{font-size:1.05em;margin:16px 0 6px;color:var(--al)}
+.panel .desc{color:var(--dim);font-size:.85em;margin-bottom:12px}
+
+.warn-box{background:linear-gradient(135deg,rgba(255,82,82,.08),rgba(255,145,0,.06));border:1px solid rgba(255,82,82,.2);border-radius:12px;padding:20px;margin-bottom:20px}
+.warn-box h2{color:var(--red);margin-bottom:8px}
+
+.go-box{background:linear-gradient(135deg,rgba(0,230,118,.06),rgba(0,229,255,.04));border:1px solid rgba(0,230,118,.15);border-radius:12px;padding:20px;margin-bottom:20px}
+.go-box h2{color:var(--green);margin-bottom:8px}
+
+table{width:100%;border-collapse:collapse;font-size:.85em;margin:12px 0}
+thead{background:rgba(108,92,231,.08)}
+th{padding:10px 12px;text-align:left;font-weight:600;color:var(--al);border-bottom:1px solid var(--border)}
+td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.03)}
+.hl{color:var(--cyan);font-weight:700}
+.good{color:var(--green);font-weight:600}
+.bad{color:var(--red);font-weight:600}
+
+.step{padding:16px;background:var(--bg);border:1px solid var(--border);border-radius:10px;margin:10px 0}
+.step .num{display:inline-block;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;text-align:center;line-height:28px;font-weight:700;font-size:.85em;margin-right:8px}
+
+.source{font-size:.75em;color:var(--dim);margin-top:6px}
+.source a{color:var(--dim)}
+
+footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;border-top:1px solid var(--border)}
+@media(max-width:480px){.hero h1{font-size:1.5em}.panel{padding:16px}.container{padding:16px 12px}}
+</style>
+</head>
+<body>
+
+<div id="lockScreen">
+  <div class="lock-box">
+    <h2>🔒 私密文档</h2>
+    <p>本页面包含针对性创业建议，仅限受邀者访问</p>
+    <input type="password" id="pwdInput" placeholder="输入访问密码" onkeydown="if(event.key==='Enter')checkPwd()">
+    <div class="err" id="pwdErr">密码错误，请联系分享者获取</div>
+  </div>
+</div>
+
+<div id="mainContent">
+
+<div class="hero">
+  <h1>成都OPC创业指南</h1>
+  <p class="sub">针对「刚离职 · 成都注册公司 · 想转个体户」的完整分析</p>
+  <span class="badge">私密文档 · 请勿外传</span>
+</div>
+
+<div class="container">
+
+  <!-- 核心结论 -->
+  <div class="warn-box">
+    <h2>核心结论：别转个体户</h2>
+    <p style="font-size:.92em">OPC政策只认<strong>一人有限公司</strong>，不认个体户。转了就丧失全部OPC补贴资格——成都的算力券500万、模型券100万、揭榜挂帅1000万，全没了。</p>
+    <p style="font-size:.85em;color:var(--dim);margin-top:8px">税负差异在小微企业优惠下已经很小（5% vs 核定0.5%），省的那点税远不如OPC补贴值钱。</p>
+  </div>
+
+  <!-- 公司 vs 个体户 -->
+  <div class="panel">
+    <h2>一人有限公司 vs 个体户 — 完整对比</h2>
+
+    <table>
+      <thead><tr><th>维度</th><th>一人有限公司</th><th>个体工商户</th></tr></thead>
+      <tbody>
+        <tr><td>企业所得税</td><td>小微 <span class="hl">5%</span></td><td>不缴</td></tr>
+        <tr><td>个人所得税</td><td>分红 20%</td><td>经营所得 5%-35%</td></tr>
+        <tr><td>核定征收</td><td>部分园区可核定</td><td>可申请，个税低至 <span class="hl">0.5%</span></td></tr>
+        <tr><td>实际税负（年利润100万）</td><td>约24万</td><td>约14万（<span class="good">省10万</span>）</td></tr>
+        <tr><td>增值税</td><td colspan="2">月销≤10万均免征，小规模1%</td></tr>
+        <tr><td><strong>OPC政策资格</strong></td><td><span class="good">有 ✅</span></td><td><span class="bad">无 ❌</span></td></tr>
+        <tr><td>OPC社区入驻</td><td><span class="good">可以</span></td><td><span class="bad">不可以</span></td></tr>
+        <tr><td>算力券（500万/年）</td><td><span class="good">可申请</span></td><td><span class="bad">不可申请</span></td></tr>
+        <tr><td>法律责任</td><td><span class="good">有限责任</span></td><td><span class="bad">无限连带</span></td></tr>
+        <tr><td>融资能力</td><td><span class="good">可引入投资</span></td><td><span class="bad">不能</span></td></tr>
+        <tr><td>注册多家</td><td><span class="good">新法允许多家</span></td><td><span class="bad">只能一家</span></td></tr>
+        <tr><td>注销难度</td><td>麻烦（2-3个月）</td><td>简单</td></tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:.82em;color:var(--dim);margin-top:8px"><strong>结论：</strong>个体户唯一优势是税负低和注销方便。但在OPC政策红利期，为了省几万块税放弃几百万补贴资格，完全不值。</p>
+
+    <div class="source">
+      来源：<a href="https://zhuanlan.zhihu.com/p/157125323" target="_blank">知乎</a> ·
+      <a href="https://www.sohu.com/a/968428261_122367755" target="_blank">搜狐</a> ·
+      <a href="https://caifuhao.eastmoney.com/news/20260109164332655872510" target="_blank">东方财富</a>
+    </div>
+  </div>
+
+  <!-- 能不能直接转 -->
+  <div class="panel">
+    <h2>法律上能不能直接"转"？</h2>
+    <p style="font-size:.9em"><strong>不能。</strong>目前只有"个转企"（个体户升公司）的直接变更通道，反向没有。只能走<strong>"注销公司 → 新注册个体户"</strong>的路径。</p>
+
+    <h3>注销流程（耗时2-3个月）</h3>
+    <p style="font-size:.85em;color:var(--dim)">成立清算组 → 登报公示45天 → 注销社保 → 注销国地税（需完税证明）→ 注销银行账户 → 工商注销</p>
+    <p style="font-size:.85em;color:var(--red);margin-top:6px">如果有未结清税务或债务，流程更长。而且注销后再注册个体户，之前的公司成立年限归零。</p>
+  </div>
+
+  <!-- 推荐路径 -->
+  <div class="go-box">
+    <h2>推荐路径：保留公司 → 入驻OPC社区 → 零成本启动</h2>
+  </div>
+
+  <div class="panel">
+    <h2>四步走，零成本启动</h2>
+
+    <div class="step">
+      <span class="num">1</span><strong>保留成都的一人有限公司</strong>
+      <p style="font-size:.85em;color:var(--dim);margin-top:4px">不用转个体户。如果经营范围没有AI相关，去工商变更加上"人工智能技术服务、软件开发"。新公司法5年认缴，初期不用实缴。</p>
+    </div>
+
+    <div class="step">
+      <span class="num">2</span><strong>立刻申请入驻OPC社区（本周就可以）</strong>
+      <p style="font-size:.85em;color:var(--dim);margin-top:4px">三个推荐，任选一个：</p>
+      <table>
+        <thead><tr><th>社区</th><th>免租</th><th>特色</th><th>联系</th></tr></thead>
+        <tbody>
+          <tr><td><strong>天府软件π立方</strong></td><td>最长1年</td><td>全国首个OPC社区，华为云7折，15亿基金</td><td>028-86031523</td></tr>
+          <tr><td><strong>蓉数OPC社区</strong></td><td>180天</td><td>天府智算算力+30类API，知识产权归你</td><td>扫码报名</td></tr>
+          <tr><td><strong>诸葛空间π立方</strong></td><td>180天</td><td>36氪合作，百亿基金对接</td><td>扫码报名</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:.82em;color:var(--green);margin-top:6px">入驻条件：带电脑就行，不要求有营收或稳定业务。社区看的是AI方向和潜力。蓉数每3个月评估一次，有缓冲。</p>
+    </div>
+
+    <div class="step">
+      <span class="num">3</span><strong>4月30日前看能不能申报补贴</strong>
+      <table>
+        <thead><tr><th>项目</th><th>补贴</th><th>截止</th></tr></thead>
+        <tbody>
+          <tr><td>模型使用补贴</td><td>Token费用30%，最高 <span class="hl">100万</span></td><td>4月30日</td></tr>
+          <tr><td>标志性应用场景奖励</td><td>投入30%，最高 <span class="hl">100万</span></td><td>4月30日</td></tr>
+          <tr><td>企业融资奖励</td><td>融资额10%，最高 <span class="hl">100万</span></td><td>4月30日</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:.82em;color:var(--dim);margin-top:4px">刚起步可能暂时没法申报这几个，但先了解流程，下一轮窗口提前准备。</p>
+      <div class="source"><a href="https://finance.sina.cn/stock/jdts/2026-04-01/detail-inhsysks2703724.d.html" target="_blank">申报详情 →</a></div>
+    </div>
+
+    <div class="step">
+      <span class="num">4</span><strong>运营满6个月后领创业补贴</strong>
+      <table>
+        <thead><tr><th>补贴</th><th>金额</th><th>条件</th></tr></thead>
+        <tbody>
+          <tr><td>首次创业补贴</td><td><span class="hl">5,000元</span></td><td>毕业5年内，经营满6个月</td></tr>
+          <tr><td>追加创业补贴</td><td>最高 <span class="hl">1万元</span></td><td>经营满18个月</td></tr>
+          <tr><td>创业担保贷款</td><td>最高 <span class="hl">50万</span></td><td>高校毕业生，3年期，50%贴息</td></tr>
+          <tr><td>贷款利息补助</td><td>LPR <span class="hl">100%</span>全额补助</td><td>OPC企业，每年最高20万</td></tr>
+          <tr><td>算力券</td><td>每年最高 <span class="hl">500万</span></td><td>有实际算力消耗后申请</td></tr>
+          <tr><td>模型券</td><td>最高 <span class="hl">100万</span></td><td>Token消耗30%</td></tr>
+          <tr><td>青年人才驿站</td><td><span class="hl">30天免费住</span></td><td>来蓉青年</td></tr>
+          <tr><td>租房优惠</td><td><span class="hl">3月免租+3月半价</span></td><td>AI OPC青年人才</td></tr>
+        </tbody>
+      </table>
+      <div class="source">
+        来源：<a href="https://m.cd.bendibao.com/live/198743.shtm" target="_blank">成都本地宝</a> ·
+        <a href="https://finance.sina.com.cn/jjxw/2026-04-14/doc-inhukvar9444941.shtml" target="_blank">科技金融新政</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 税负优化 -->
+  <div class="panel">
+    <h2>税负怎么办？不转个体户也能低</h2>
+
+    <h3>小微企业优惠（一人有限公司直接享受）</h3>
+    <table>
+      <tbody>
+        <tr><td>企业所得税</td><td>年利润≤300万，实际税率 <span class="hl">5%</span></td></tr>
+        <tr><td>增值税</td><td>月销≤10万 <span class="good">免征</span>（年120万以内不交增值税）</td></tr>
+        <tr><td>六税两费</td><td><span class="good">减半</span>征收</td></tr>
+        <tr><td>个体户减半</td><td>年利润≤200万部分 <span class="good">减半</span>（如果以后还是想转个体户）</td></tr>
+      </tbody>
+    </table>
+
+    <h3>刚离职没业务的实际税负</h3>
+    <p style="font-size:.88em">前几个月大概率没营收或营收很低。月销10万以下免增值税，年利润300万以下企业所得税才5%。<strong>实际上你朋友前半年的税负基本为零。</strong></p>
+    <p style="font-size:.85em;color:var(--dim);margin-top:6px">不分红就不交个人所得税（递延纳税优势）。利润留在公司里用于发展，等到有稳定收入后再考虑分红方案。这是个体户做不到的。</p>
+  </div>
+
+  <!-- 成都vs广州 -->
+  <div class="panel">
+    <h2>成都 vs 广州 — 该选哪个？</h2>
+
+    <table>
+      <thead><tr><th>维度</th><th>成都</th><th>广州</th></tr></thead>
+      <tbody>
+        <tr><td>政策力度</td><td><span class="good">累计最高2500万</span></td><td>海珠单项最高500万</td></tr>
+        <tr><td>算力券</td><td><span class="good">500万/年（60%）</span></td><td>20万/年（50%）</td></tr>
+        <tr><td>社区成熟度</td><td><span class="good">7个已运营</span></td><td>琶洲模方+元创（2个运营）</td></tr>
+        <tr><td>入驻门槛</td><td><span class="good">带电脑就行</span></td><td>提交BP或参加大赛</td></tr>
+        <tr><td>生活成本</td><td><span class="good">低</span></td><td>高</td></tr>
+        <tr><td>市场/场景</td><td>西南市场</td><td><span class="good">大湾区，场景丰富</span></td></tr>
+        <tr><td>融资环境</td><td>15亿产业基金</td><td><span class="good">大湾区资本更活跃</span></td></tr>
+        <tr><td>适合阶段</td><td><span class="good">初创期（现在）</span></td><td>成长期（有产品后）</td></tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:.88em;margin-top:12px"><strong>建议：</strong>你朋友现在的情况（刚离职、没稳定业务、公司注册在成都）——<span class="good">成都是最优选</span>。政策最具体、社区已运营、门槛低、生活成本低。等业务做起来了再考虑广州大湾区。</p>
+  </div>
+
+  <!-- 立即行动 -->
+  <div class="panel" style="border:1px solid rgba(0,230,118,.2)">
+    <h2 style="color:var(--green)">立即行动清单</h2>
+    <div style="font-size:.9em">
+      <p>☐ <strong>本周</strong>：打电话 028-86031523 咨询π立方入驻，或扫码报名蓉数社区</p>
+      <p>☐ <strong>本周</strong>：确认公司经营范围有没有AI相关，没有就去变更</p>
+      <p>☐ <strong>4月30日前</strong>：了解模型补贴/场景奖励的申报要求，评估能不能赶上这轮</p>
+      <p>☐ <strong>入驻后</strong>：拿到免费工位、算力配额、API接口，开始做产品</p>
+      <p>☐ <strong>6个月后</strong>：申请首次创业补贴5000元</p>
+      <p>☐ <strong>有收入后</strong>：申请算力券（500万/年）、模型券（100万）</p>
+    </div>
+  </div>
+
+  <!-- 联系 -->
+  <div style="text-align:center;padding:30px 0">
+    <p style="color:var(--dim);font-size:.85em">有问题随时联系</p>
+    <p style="margin-top:8px">
+      <span style="padding:6px 16px;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:.88em">政策咨询：siuserxiaowei</span>
+      <span style="padding:6px 16px;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:.88em;margin-left:8px">税务咨询：pp667899</span>
+    </p>
+  </div>
+
+</div>
+
+</div>
+
+<footer>
+  <p>本文档仅供参考，具体以政府官方文件为准</p>
+  <p style="margin-top:4px"><a href="index.html">OPC政策导航</a> · <a href="chengdu.html">成都专版</a> · <a href="tax.html">税务指南</a></p>
+</footer>
+
+<script>
+const HASH = '6368656e67647536363621';
+const KEY = 'chengdu_guide_auth';
+
+function checkPwd(){
+  const input = document.getElementById('pwdInput').value;
+  const inputHex = Array.from(input+'!').map(c=>c.charCodeAt(0).toString(16)).join('');
+  if(inputHex === HASH){
+    localStorage.setItem(KEY, 'yes');
+    unlock();
+  } else {
+    document.getElementById('pwdErr').style.display = 'block';
+    document.getElementById('pwdInput').value = '';
+  }
+}
+function unlock(){
+  document.getElementById('lockScreen').style.display = 'none';
+  document.getElementById('mainContent').style.display = 'block';
+}
+if(localStorage.getItem(KEY) === 'yes') unlock();
+</script>
+</body>
+</html>
