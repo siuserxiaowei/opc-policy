@@ -123,6 +123,7 @@
         "社保",
         "现金"
       ],
+      "actual_cases": "5人缴社保基础，预估可获9000-12000元就业补贴。最近窗口5月1-20日，需提前准备社保缴纳证明",
       "updated_at": "2026-04-10",
       "verified": true,
       "landing_status": "active",
@@ -179,6 +180,7 @@
         "创业资助",
         "身份限制"
       ],
+      "actual_cases": "审核通过+5天公示后约20-30个工作日到账。需连续3个月有员工缴社保。申请入口：广东政务服务网搜索'一次性创业资助'",
       "updated_at": "2026-04-10",
       "verified": true,
       "landing_status": "active",
@@ -6041,6 +6043,58 @@
       "communities": [],
       "tags": ["航空港", "大模型", "数据标注", "18条"],
       "updated_at": "2026-04-12",
+      "verified": true
+    },
+    {
+      "id": "guangdong-competition-001",
+      "name": "2026广东'众创杯'创业大赛 — 人工智能OPC专项赛",
+      "city": "广州",
+      "province": "广东",
+      "district": "",
+      "level": "province",
+      "issuer": "广东省人力资源和社会保障厅",
+      "publish_date": "2026-03-27",
+      "status": "active",
+      "category": "competition",
+      "summary": "OPC专项赛特等奖50万元资助，5月10日截止报名，所有参赛项目纳入省级创业项目库",
+      "landing_status": "active",
+      "landing_difficulty": "hard",
+      "benefits": [
+        {"item": "企业组特等奖", "amount": "50万元资助", "amount_max": 500000, "type": "cash"},
+        {"item": "纳入省级创业项目库", "amount": "优秀项目获场地孵化+担保贷款+融资对接", "amount_max": 0, "type": "service"}
+      ],
+      "requirements": {"registration_location": "广东省（不限户籍）", "industries": ["人工智能", "OPC"], "other": ["年满16岁", "主导项目并拥有商业模式决策权", "依托AI智能体", "有创新成果+完整商业计划书"]},
+      "application": {"method": "线上申报", "deadline": "2026-05-10"},
+      "links": {"official": "", "news": ["https://finance.sina.com.cn/roll/2026-03-27/doc-inhskwec8395999.shtml"]},
+      "communities": [],
+      "tags": ["众创杯", "OPC专项赛", "50万", "5月10日截止"],
+      "updated_at": "2026-04-14",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-haizhu-003",
+      "name": "第五届琶洲算法大赛 — 超级龙虾OPC挑战赛",
+      "city": "广州",
+      "province": "广东",
+      "district": "海珠区",
+      "level": "district",
+      "issuer": "海珠区政府 + 广州市工信局",
+      "publish_date": "2026-03-01",
+      "status": "active",
+      "category": "competition",
+      "summary": "全国首个政府主导的超级个体赛事，获奖优先入驻海珠OPC空间+匹配最高500万政策",
+      "landing_status": "active",
+      "landing_difficulty": "hard",
+      "benefits": [
+        {"item": "获奖优先入驻海珠OPC空间", "amount": "免费工位+算力补贴", "amount_max": 0, "type": "rent_free"},
+        {"item": "匹配OPC扶持政策", "amount": "最高500万", "amount_max": 5000000, "type": "cash"}
+      ],
+      "requirements": {"registration_location": "不限", "industries": ["人工智能", "算法"]},
+      "application": {"method": "琶洲算法大赛官网报名"},
+      "links": {"official": "http://www.aicompetition-pz.com/", "news": []},
+      "communities": [],
+      "tags": ["琶洲算法大赛", "龙虾", "以赛代评"],
+      "updated_at": "2026-04-14",
       "verified": true
     }
   ]
