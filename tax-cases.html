@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>财税实战案例 · 私密</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{--bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--dim:#8888a0;
+  --accent:#6c5ce7;--al:#a29bfe;--green:#00e676;--yellow:#ffd600;--cyan:#00e5ff;--red:#ff5252;--orange:#ff9100}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--al);text-decoration:none}
+
+#lockScreen{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center}
+#lockScreen .lock-box{text-align:center;max-width:360px;padding:40px}
+#lockScreen h2{font-size:1.4em;margin-bottom:8px}
+#lockScreen p{color:var(--dim);font-size:.88em;margin-bottom:20px}
+#lockScreen input{width:100%;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:1em;text-align:center;outline:none;letter-spacing:4px}
+#lockScreen input:focus{border-color:var(--accent)}
+#lockScreen .err{color:var(--red);font-size:.82em;margin-top:8px;display:none}
+
+#mainContent{display:none}
+.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);flex-wrap:wrap}
+.topnav .logo{font-weight:800;font-size:1em;color:var(--al)}
+.topnav a{padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--dim);transition:all .2s}
+.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(108,92,231,.1)}
+.topnav .spacer{flex:1}
+.topnav .private-tag{padding:3px 10px;border-radius:4px;background:rgba(255,82,82,.12);color:var(--red);font-size:.72em;font-weight:600}
+
+.container{max-width:1000px;margin:0 auto;padding:30px 20px}
+.hero{padding:40px 20px 20px;text-align:center;background:linear-gradient(135deg,#0a0a1a 0%,#1a0a20 50%,#0a0a1a 100%)}
+.hero h1{font-size:1.8em;font-weight:800;color:var(--text)}
+.hero .sub{color:var(--dim);font-size:.9em;margin:4px 0}
+
+.panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px}
+.panel h2{font-size:1.2em;margin-bottom:10px}
+.panel h3{font-size:1em;margin:14px 0 6px;color:var(--al)}
+.panel p,.panel li{font-size:.88em;margin-bottom:5px}
+.panel ul{list-style:none;padding:0}
+.panel ul li{padding:4px 0;border-bottom:1px solid rgba(255,255,255,.02)}
+.panel ul li::before{content:'>';color:var(--accent);margin-right:8px;font-weight:700}
+
+.amount{color:var(--cyan);font-weight:700}
+.warn{color:var(--yellow)}
+.good{color:var(--green)}
+
+.case-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:20px;margin:14px 0;position:relative;overflow:hidden}
+.case-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--accent)}
+.case-card.relevant::before{background:var(--green)}
+.case-card .case-tag{display:inline-block;padding:2px 10px;border-radius:4px;font-size:.72em;font-weight:600;margin-bottom:10px}
+.case-tag.story{background:rgba(108,92,231,.15);color:var(--al)}
+.case-tag.strategy{background:rgba(0,230,118,.12);color:var(--green)}
+.case-tag.warning{background:rgba(255,210,0,.12);color:var(--yellow)}
+.case-tag.you{background:rgba(255,82,82,.12);color:var(--red)}
+.case-card .scene{font-weight:700;font-size:1em;margin-bottom:8px}
+.case-card .dialogue{background:rgba(255,255,255,.02);border-radius:8px;padding:14px;margin:10px 0;font-size:.86em;line-height:1.9}
+.case-card .dialogue .role{font-weight:700;color:var(--orange)}
+.case-card .dialogue .role.acc{color:var(--cyan)}
+.case-card .takeaway{margin-top:12px;padding:12px 16px;background:rgba(108,92,231,.06);border-radius:8px;border-left:3px solid var(--accent)}
+.case-card .takeaway h4{font-size:.88em;color:var(--al);margin-bottom:4px}
+.case-card .takeaway p{font-size:.84em;color:var(--dim);margin:2px 0}
+.case-card .takeaway .key{color:var(--text);font-weight:600}
+
+.you-box{padding:14px 18px;background:rgba(0,230,118,.04);border:1px solid rgba(0,230,118,.15);border-radius:10px;margin:10px 0}
+.you-box h4{color:var(--green);font-size:.9em;margin-bottom:6px}
+.you-box p{font-size:.84em;margin:3px 0}
+
+.section-divider{text-align:center;padding:30px 0 10px;color:var(--dim);font-size:.82em;letter-spacing:4px}
+
+table{width:100%;border-collapse:collapse;font-size:.85em;margin:10px 0}
+th{padding:8px 12px;text-align:left;color:var(--al);border-bottom:1px solid var(--border);background:rgba(108,92,231,.05)}
+td{padding:8px 12px;border-bottom:1px solid rgba(255,255,255,.02)}
+</style>
+</head>
+<body>
+
+<div id="lockScreen">
+  <div class="lock-box">
+    <h2>财税实战案例</h2>
+    <p>仅限管理员访问</p>
+    <input type="password" id="pwdInput" placeholder="输入密码" onkeydown="if(event.key==='Enter')checkPwd()">
+    <div class="err" id="pwdErr">密码错误</div>
+  </div>
+</div>
+
+<div id="mainContent">
+
+<nav class="topnav">
+  <span class="logo">OPC</span>
+  <a href="index.html">首页</a>
+  <a href="guangzhou.html">广州专版</a>
+  <a href="private.html">私密面板</a>
+  <a href="tax-cases.html" class="active">实战案例</a>
+  <span class="spacer"></span>
+  <span class="private-tag">仅自己可见</span>
+</nav>
+
+<div class="hero">
+  <h1>财税实战案例库</h1>
+  <p class="sub">段子里的真知识 + 实操级策略 · 标注了跟你直接相关的</p>
+</div>
+
+<div class="container">
+
+  <!-- ========== 第一部分：段子里的真智慧 ========== -->
+  <div class="section-divider">— 段子里的真智慧 —</div>
+
+  <!-- 案例1: 拒签50万 -->
+  <div class="panel">
+    <h2>案例一：拒签50万单子的会计</h2>
+
+    <div class="case-card relevant">
+      <span class="case-tag you">跟你直接相关</span>
+      <div class="scene">场景：小规模纳税人，客户要签50万大单</div>
+
+      <div class="dialogue">
+        <p><span class="role">客户</span>：签个50万的单子吧？</p>
+        <p><span class="role acc">上海会计</span>：不能签。我们是小规模纳税人，接了这单年收入超500万，税务局强制转一般纳税人，增值税从1%升到13%。供应商没进项票，成本无法抵扣，利润全变税基，所得税直接顶格25%。</p>
+        <p><span class="role">老板</span>：那买辆50万的车呢？</p>
+        <p><span class="role acc">上海会计</span>：买！车可一次性计入成本扣除，账面利润从340万降到290万，所得税从85万降到15万，省70万。这叫资产配置。</p>
+      </div>
+
+      <div class="takeaway">
+        <h4>核心知识点</h4>
+        <p><span class="key">1. 小规模 vs 一般纳税人的生死线 = 年开票500万</span></p>
+        <p>小规模增值税1%（2026年优惠税率），一般纳税人13%。差了12倍。</p>
+        <p><span class="key">2. 没有进项票的一般纳税人是灾难</span></p>
+        <p>如果你的上游（供应商、分包方）给不了增值税专用发票，你转成一般纳税人后13%全是自己扛。</p>
+        <p><span class="key">3. 固定资产一次性扣除是合法的"利润压缩器"</span></p>
+        <p>国家政策允许500万以下的设备/车辆一次性计入当期成本（不需要分年折旧），直接减少当年应纳税所得额。</p>
+      </div>
+
+      <div class="you-box">
+        <h4>跟你的关系</h4>
+        <p>你现在是<strong>小规模纳税人</strong>，做AI语音机器人方案。务必盯紧年开票额：</p>
+        <p>- 接近500万时，要么控制开票节奏（推迟到下一个自然年），要么提前规划好进项票来源</p>
+        <p>- 如果某个大单会让你越线，可以拆分成两个自然年的合同</p>
+        <p>- 年底利润太高？买设备（服务器、开发用电脑、测试设备）一次性扣除，合法省税</p>
+        <p>- <strong>你的AI硬件（ESP32开发板、麦克风阵列、测试样机）全都算</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例2: 注销避税 -->
+  <div class="panel">
+    <h2>案例二：公司注销的"最后一笔账"</h2>
+
+    <div class="case-card">
+      <span class="case-tag story">段子</span>
+      <div class="scene">场景：公司要注销，账上50万怎么拿出来</div>
+
+      <div class="dialogue">
+        <p><span class="role">老板</span>：我账上还有50万，你转给我就行。</p>
+        <p><span class="role acc">上海会计</span>：直接转？50万分红要交20%个税，到手只剩40万。</p>
+        <p><span class="role">老板</span>：那怎么办？</p>
+        <p><span class="role acc">上海会计</span>：先"开除"你自己，拿N+1劳动补偿金。补偿金在当地年均工资3倍以内免税。剩下的部分再分红。</p>
+      </div>
+
+      <div class="takeaway">
+        <h4>核心知识点</h4>
+        <p><span class="key">1. 分红税20%是硬伤</span></p>
+        <p>公司赚的钱，交完25%企税，再分红给个人还要交20%个税。100万利润最终到手只有60万。</p>
+        <p><span class="key">2. 劳动补偿金有免税额度</span></p>
+        <p>N+1补偿金中，不超过当地上年职工年均工资3倍的部分免征个税。广州2025年标准约13万/年，3倍就是39万免税。</p>
+        <p><span class="key">3. 这不是偷税，是税目转换</span></p>
+        <p>"劳动补偿"和"股东分红"是两个不同税目，税率天差地别。合法利用不同税目的税率差异叫税务筹划。</p>
+      </div>
+
+      <div class="you-box">
+        <h4>跟你的关系</h4>
+        <p>你现在不需要注销，但要记住两件事：</p>
+        <p>- <strong>尽量不分红</strong>。利润留在公司里，用于业务扩展、买设备、发工资，都比直接分红划算</p>
+        <p>- 如果需要从公司拿钱，优先用<strong>工资+合理报销</strong>的方式，工资有5000/月免征额+专项扣除</p>
+        <p>- 万一哪天公司不做了，提前规划退出路径，别等到注销那天才想这个问题</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例3: 股东借款 -->
+  <div class="panel">
+    <h2>案例三：开除老板娘平账</h2>
+
+    <div class="case-card relevant">
+      <span class="case-tag warning">高频踩坑</span>
+      <div class="scene">场景：老板从自己公司借了30万，一直没还</div>
+
+      <div class="dialogue">
+        <p><span class="role acc">上海会计</span>：老板，你从公司借的30万还了吗？</p>
+        <p><span class="role">老板</span>：我的公司我的钱，还什么还？</p>
+        <p><span class="role acc">上海会计</span>：公私不分，这是挪用公款。而且<strong>借款超过一个纳税年度不归还，税务局视同分红，要交20%个税</strong>。30万就是6万的税。</p>
+      </div>
+
+      <div class="takeaway">
+        <h4>核心知识点</h4>
+        <p><span class="key">股东借款超期 = 视同分红，必须交20%个税</span></p>
+        <p>依据：财税[2003]158号文，个人投资者从公司借款，在纳税年度终了后既不归还又未用于经营的，视为分红。</p>
+        <p><span class="key">正确做法</span></p>
+        <p>- 年底前归还，下一年再借（"借新还旧"，但不能太明显）</p>
+        <p>- 有明确用途的备用金借支，保留用途证明</p>
+        <p>- 或者干脆通过工资、报销等正规渠道拿钱</p>
+      </div>
+
+      <div class="you-box">
+        <h4>跟你的关系</h4>
+        <p>你是一人有限公司，<strong>这个坑最容易踩</strong>：</p>
+        <p>- 公司账户的钱不能随便转到个人卡，每一笔都要有名目（工资/报销/借款）</p>
+        <p>- 如果有借款，<strong>年底前必须还</strong>，否则被视同分红交20%</p>
+        <p>- 一人公司还有个特殊风险：如果不能证明个人财产和公司财产独立，可能被"刺破公司面纱"，承担无限责任</p>
+        <p>- <strong>建议</strong>：每年做一次审计报告，证明公私分离</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例4: 工资科目 -->
+  <div class="panel">
+    <h2>案例四：财务人员工资进"财务费用"？</h2>
+
+    <div class="case-card">
+      <span class="case-tag story">冷知识</span>
+      <div class="scene">场景：新会计按字面意思归类工资科目</div>
+
+      <div class="dialogue">
+        <p><span class="role">新会计</span>：车间工人工资进制造费用，销售人员进销售费用，管理人员进管理费用。</p>
+        <p><span class="role acc">上海会计</span>：那财务人员工资呢？</p>
+        <p><span class="role">新会计</span>：进财务费用啊！</p>
+        <p><span class="role acc">上海会计</span>：哈哈，"财务费用"不是放财务人员工资的，是放利息、手续费、汇兑损益的。财务人员工资进"管理费用"。</p>
+      </div>
+
+      <div class="takeaway">
+        <h4>核心知识点</h4>
+        <p><span class="key">科目分错会影响报表和税务申报</span></p>
+        <p>- 管理费用：行政人员、财务人员的工资</p>
+        <p>- 销售费用：销售人员的工资</p>
+        <p>- 财务费用：利息支出、银行手续费、汇兑损益（跟"人"无关）</p>
+        <p><span class="key">为什么重要？</span></p>
+        <p>科目归错会让研发费用加计扣除、高企认定时的费用比例计算出问题，直接影响你能不能拿到优惠。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 第二部分：我补充的实战案例 ========== -->
+  <div class="section-divider">— 更多实战案例 —</div>
+
+  <!-- 案例5: 发票的学问 -->
+  <div class="panel">
+    <h2>案例五：一张发票差出20万税</h2>
+
+    <div class="case-card relevant">
+      <span class="case-tag you">跟你直接相关</span>
+      <div class="scene">场景：AI方案商给客户报价100万，发票怎么开？</div>
+
+      <div class="dialogue">
+        <p><span class="role">老板</span>：客户要100万的AI语音方案，我开一张100万的"技术服务费"发票行吗？</p>
+        <p><span class="role acc">会计</span>：等等。这100万里面，硬件（设备、模组）占多少，软件和服务占多少？</p>
+        <p><span class="role">老板</span>：硬件大概40万，软件开发和部署60万。</p>
+        <p><span class="role acc">会计</span>：那必须分开开。硬件开"电子设备"13%，软件开"信息技术服务"6%（小规模1%）。全开成13%的话，60万的软件部分白多交了7%，就是4.2万。</p>
+        <p><span class="role acc">会计</span>：更好的做法——如果软件部分能拿到软著，走"软件产品销售"，一般纳税人还能即征即退到3%。</p>
+      </div>
+
+      <div class="takeaway">
+        <h4>核心知识点</h4>
+        <p><span class="key">混合销售 vs 兼营：开票方式决定税率</span></p>
+        <p>- 硬件+软件一起卖，如果不分开核算，全部按最高税率13%缴税</p>
+        <p>- 分开核算后，硬件13%，技术服务6%，软件产品即征即退实际3%</p>
+        <p><span class="key">AI方案商的最优开票结构</span></p>
+        <p>- 硬件部分：货物销售13%（小规模1%）</p>
+        <p>- 软件产品部分：有软著可走即征即退（实际3%）</p>
+        <p>- 技术服务部分：信息技术服务6%（小规模1%）</p>
+        <p>- 部署运维部分：信息技术服务6%（小规模1%）</p>
+      </div>
+
+      <div class="you-box">
+        <h4>跟你的关系</h4>
+        <p>你做AI语音机器人方案，<strong>每一单都涉及硬件+软件+服务</strong>，这是最容易多交税的地方：</p>
+        <p>- 跟客户签合同时，把"硬件采购"、"软件授权"、"技术服务"拆开写</p>
+        <p>- 对应开三种发票，各走各的税率</p>
+        <p>- 软件部分去申请软著，未来转一般纳税人后可以即征即退</p>
+        <p>- <strong>一年做10单，光这一个操作可能省5-10万</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例6: 社保的坑 -->
+  <div class="panel">
+    <h2>案例六：5个人的社保怎么交最划算</h2>
+
+    <div class="case-card relevant">
+      <span class="case-tag you">跟你直接相关</span>
+      <div class="scene">场景：小公司5个人交社保，全按最低基数？</div>
+
+      <div class="dialogue">
+        <p><span class="role">老板</span>：社保全按最低基数交，省钱。</p>
+        <p><span class="role acc">会计</span>：现在不行了。2025年起社保入税，税务局直接拿你的工资申报数据和社保基数比对。工资报8000、社保按4000交，一对就穿了。</p>
+        <p><span class="role">老板</span>：那怎么办？</p>
+        <p><span class="role acc">会计</span>：合法的方式是调整薪酬结构。基本工资定合理水平，其他通过合规的福利形式发放——比如通讯补贴、交通补贴、差旅补贴，这些在标准内不计入社保基数。</p>
+      </div>
+
+      <div class="takeaway">
+        <h4>核心知识点</h4>
+        <p><span class="key">社保入税后，基数造假风险极大</span></p>
+        <p>- 税务局可以直接交叉比对个税申报和社保基数</p>
+        <p>- 被查到补缴+滞纳金+罚款，可能比省下的还多</p>
+        <p><span class="key">合规的薪酬优化方式</span></p>
+        <p>- 合理设定基本工资（不低于当地最低工资标准）</p>
+        <p>- 通讯补贴（广州标准内免税，约300-500/月）</p>
+        <p>- 差旅补贴（实报实销部分不计入）</p>
+        <p>- 年终奖单独计税（可以选择并入综合所得或单独计税，哪个低选哪个）</p>
+      </div>
+
+      <div class="you-box">
+        <h4>跟你的关系</h4>
+        <p>你公司5个人交社保，每个月社保支出不小：</p>
+        <p>- 广州2025年社保最低基数约4588/月，公司部分约占工资的30%+</p>
+        <p>- 5个人一年社保公司部分大约 <strong>8-12万</strong>（取决于基数）</p>
+        <p>- 如果有人可以走<strong>兼职/劳务合同</strong>而非全职雇佣，可以省社保（但要确保业务真实性）</p>
+        <p>- 技术外包给个体户，走B2B服务费发票，也是合规降成本的方式</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例7: 个体户核定征收 -->
+  <div class="panel">
+    <h2>案例七：咨询费100万，交多少税？</h2>
+
+    <div class="case-card">
+      <span class="case-tag strategy">节税利器</span>
+      <div class="scene">场景：同样100万收入，不同主体交的税天差地别</div>
+
+      <table>
+        <tr><th>收入方式</th><th>税种</th><th>税率</th><th>100万到手</th></tr>
+        <tr><td>个人直接收</td><td>劳务报酬</td><td>20%-40%</td><td>约 <span class="amount">60万</span></td></tr>
+        <tr><td>公司收→分红</td><td>企税25%+分红20%</td><td>综合40%</td><td>约 <span class="amount">60万</span></td></tr>
+        <tr><td>小微公司收→分红</td><td>企税5%+分红20%</td><td>综合24%</td><td>约 <span class="amount">76万</span></td></tr>
+        <tr><td>个体户（核定征收）</td><td>核定应税所得率</td><td>综合约5%</td><td>约 <span class="amount">95万</span></td></tr>
+      </table>
+
+      <div class="takeaway">
+        <h4>核心知识点</h4>
+        <p><span class="key">个体户核定征收是合法的节税王炸</span></p>
+        <p>- 核定征收：税务局不看你的实际利润，按收入的一个比例（通常5%-10%）核定应税所得</p>
+        <p>- 100万收入，核定应税所得率10%，应税所得=10万，个税约5000-1万</p>
+        <p>- 加上增值税1%（小规模）≈1万，综合税负约2-5%</p>
+        <p><span class="key">注意事项</span></p>
+        <p>- 各地核定政策不同，广州目前部分区还能核定</p>
+        <p>- 业务必须真实，不能是纯粹的"开票工具"</p>
+        <p>- 如果只给一个甲方开票，容易被认定为虚开</p>
+      </div>
+
+      <div class="you-box">
+        <h4>跟你的关系</h4>
+        <p>你的策略五已经规划了个体户作为多主体架构的一部分：</p>
+        <p>- <strong>OPC网站收入</strong>（咨询、广告）→ 走个体户，核定征收</p>
+        <p>- <strong>个人IP变现</strong>（培训、课程、自媒体）→ 走个体户</p>
+        <p>- 注意：个体户必须有2-3个不同客户，不能只服务你自己的公司</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例8: 研发费用 -->
+  <div class="panel">
+    <h2>案例八：Token费也能抵税？</h2>
+
+    <div class="case-card relevant">
+      <span class="case-tag you">跟你直接相关</span>
+      <div class="scene">场景：AI公司每月花3万调用大模型API，这笔钱能不能少交税？</div>
+
+      <div class="dialogue">
+        <p><span class="role">老板</span>：我每个月Claude API、OpenAI Token花3万多，这算什么费用？</p>
+        <p><span class="role acc">会计</span>：如果你把它归入"研发费用-直接投入费用"，不仅能正常扣除，还能享受<strong>120%加计扣除</strong>。</p>
+        <p><span class="role">老板</span>：什么意思？</p>
+        <p><span class="role acc">会计</span>：你花了36万/年的Token费，记入研发费用后，税前可以扣除36万×(1+120%)=<strong>79.2万</strong>。相当于多扣了43.2万，按5%小微税率算，省税<strong>2.16万</strong>。按25%税率算，省<strong>10.8万</strong>。</p>
+      </div>
+
+      <div class="takeaway">
+        <h4>能计入研发费用的AI相关支出</h4>
+        <table>
+          <tr><th>费用项</th><th>科目</th><th>加计扣除</th></tr>
+          <tr><td>Claude/GPT API调用费</td><td>直接投入-材料费</td><td>120%</td></tr>
+          <tr><td>云服务器（阿里云/AWS）</td><td>直接投入-动力费</td><td>120%</td></tr>
+          <tr><td>开发人员工资</td><td>人员人工费</td><td>120%</td></tr>
+          <tr><td>测试硬件（ESP32等）</td><td>直接投入-材料费</td><td>120%</td></tr>
+          <tr><td>开发工具订阅（GitHub等）</td><td>直接投入-工具费</td><td>120%</td></tr>
+          <tr><td>外包开发费</td><td>委托外部研发</td><td>80%（打八折）</td></tr>
+        </table>
+        <p style="margin-top:8px;font-size:.82em;color:var(--dim)">注：委托外部研发只能按80%计入加计扣除基数</p>
+      </div>
+
+      <div class="you-box">
+        <h4>跟你的关系</h4>
+        <p>你做AI语音方案，这些费用<strong>全都有</strong>：</p>
+        <p>- API调用费（Claude、其他大模型）</p>
+        <p>- 云服务费</p>
+        <p>- 开发人员工资（包括你自己，如果你参与技术开发）</p>
+        <p>- 硬件采购</p>
+        <p>- <strong>现在就开始建研发台账</strong>，把这些费用单独归集，年度汇算清缴时申报加计扣除</p>
+        <p>- 不需要审批，自行申报即可</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例9: 年底突击 -->
+  <div class="panel">
+    <h2>案例九：年底利润太高怎么"花掉"</h2>
+
+    <div class="case-card">
+      <span class="case-tag strategy">年底必看</span>
+      <div class="scene">场景：12月了，账面利润310万，超了小微300万的线</div>
+
+      <div class="dialogue">
+        <p><span class="role">老板</span>：今年赚了310万，超了300万的小微线，企税从5%变25%了？</p>
+        <p><span class="role acc">会计</span>：超出的10万按25%交，300万以内还是5%。但你可以在年底前把利润压下来。</p>
+        <p><span class="role">老板</span>：怎么压？</p>
+        <p><span class="role acc">会计</span>：几个合法方式——</p>
+      </div>
+
+      <div class="takeaway">
+        <h4>年底利润调节工具箱（全部合法）</h4>
+        <p><span class="key">1. 提前采购设备</span> — 500万以下一次性扣除</p>
+        <p><span class="key">2. 预付明年的云服务/API费用</span> — 取得发票即可入账</p>
+        <p><span class="key">3. 年终奖</span> — 给员工（包括自己）发年终奖，计入当年成本</p>
+        <p><span class="key">4. 培训费/会议费</span> — 安排团队培训、参加行业会议</p>
+        <p><span class="key">5. 捐赠</span> — 年利润12%以内的公益捐赠可以税前扣除</p>
+        <p><span class="key">6. 加速计提坏账准备</span> — 有超期应收账款的可以计提</p>
+        <p style="margin-top:8px;color:var(--yellow);font-size:.84em">注意：所有操作必须在12月31日之前完成，且有真实业务和发票支撑。纯粹为了避税的虚假交易违法。</p>
+      </div>
+
+      <div class="you-box">
+        <h4>跟你的关系</h4>
+        <p>如果你今年利润接近300万的线：</p>
+        <p>- 提前囤一批ESP32模组、服务器、办公设备</p>
+        <p>- 预付Claude API年费、云服务年费</p>
+        <p>- 给自己和员工发合理的年终奖</p>
+        <p>- <strong>目标：把应税所得压在300万以内，整体税率维持5%</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例10: 合同签法 -->
+  <div class="panel">
+    <h2>案例十：同一笔生意，合同签法不同，税差30%</h2>
+
+    <div class="case-card relevant">
+      <span class="case-tag you">跟你直接相关</span>
+      <div class="scene">场景：客户要一套AI语音解决方案，总价80万</div>
+
+      <table>
+        <tr><th>签法</th><th>内容</th><th>增值税</th><th>备注</th></tr>
+        <tr><td style="color:var(--red)">差的签法</td><td>一份合同："AI语音系统集成服务 80万"</td><td>全按13%</td><td>被视为混合销售，全额高税率</td></tr>
+        <tr><td style="color:var(--green)">好的签法</td><td>拆成3份合同</td><td>分别计税</td><td>每部分适用不同税率</td></tr>
+      </table>
+
+      <div style="margin-top:12px">
+        <p style="font-size:.88em"><strong>拆分方案：</strong></p>
+        <table>
+          <tr><th>合同</th><th>金额</th><th>税率（小规模）</th><th>税率（一般纳税人）</th></tr>
+          <tr><td>硬件采购合同</td><td>25万</td><td>1%</td><td>13%</td></tr>
+          <tr><td>软件授权合同</td><td>30万</td><td>1%</td><td>即征即退实际3%</td></tr>
+          <tr><td>技术服务合同</td><td>25万</td><td>1%</td><td>6%</td></tr>
+        </table>
+      </div>
+
+      <div class="you-box">
+        <h4>跟你的关系</h4>
+        <p>你每接一个AI语音方案的单子，都涉及硬件+软件+服务。<strong>从现在起，每份合同都拆着签</strong>：</p>
+        <p>- 跟客户解释"为了清晰的交付验收，我们分硬件、软件、服务三块签"</p>
+        <p>- 客户不会在意（反正总价一样），但你的税差了一大截</p>
+        <p>- 特别是转成一般纳税人之后，软件即征即退能省很多</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 第三部分：真实案例 ========== -->
+  <div class="section-divider">— 身边的真实案例 —</div>
+
+  <!-- 案例11: 大哥的土地财税术 -->
+  <div class="panel">
+    <h2>案例十一：800亩地的财税术 — 大哥的真实操作</h2>
+
+    <div class="case-card">
+      <span class="case-tag" style="background:rgba(255,145,0,.12);color:var(--orange)">真实案例</span>
+      <div class="scene">背景：2011-2014年，无锡开发区，制造业老板，做产品加工接外单</div>
+
+      <div class="dialogue">
+        <p><span class="role">大哥</span>：赚了钱不能放账上，放着就是利润，利润就要交税。</p>
+        <p><span class="role">大哥</span>：买地。开发区的地便宜，政府还求着你买。利润变成地，成本上去了，税就下来了。</p>
+        <p><span class="role">大哥</span>：地拿到手，拿去银行抵押，贷款又出来了。手上的现金没少，但账上的利润没了。</p>
+        <p><span class="role">大哥</span>：贷款还要还利息？利息也是成本，又抵一轮税。</p>
+        <p><span class="role">大哥</span>：我这800亩算少的了，旁边那几个老板都这么搞。</p>
+      </div>
+
+      <div class="takeaway">
+        <h4>操作链条拆解</h4>
+        <div style="background:rgba(255,255,255,.02);border-radius:8px;padding:16px;margin:10px 0;font-size:.86em;font-family:monospace;line-height:2">
+          利润（要交25%企税）<br>
+          &nbsp;&nbsp;↓ 买地建厂房<br>
+          固定资产（土地摊销 + 厂房折旧 = 成本↑ 利润↓ 税↓）<br>
+          &nbsp;&nbsp;↓ 抵押给银行<br>
+          贷款现金（贷款不是收入，不交税，钱又回来了）<br>
+          &nbsp;&nbsp;↓ 还贷款<br>
+          利息支出（财务费用，再抵一轮税）<br>
+          &nbsp;&nbsp;↓ 同时<br>
+          土地升值（资产增值，但不卖就不触发税）
+        </div>
+
+        <h4 style="margin-top:14px">为什么这套操作在当时几乎无风险</h4>
+        <table>
+          <tr><td style="color:var(--al);width:120px">地价便宜</td><td>开发区招商引资，工业用地远低于市场价，有些象征性收费</td></tr>
+          <tr><td style="color:var(--al)">土地升值</td><td>长三角工业地皮年年涨，买了就是赚</td></tr>
+          <tr><td style="color:var(--al)">银行配合</td><td>实体制造业有地有厂房，银行放贷宽松，抵押率50%-70%</td></tr>
+          <tr><td style="color:var(--al)">政府鼓励</td><td>你买地建厂解决就业，政府还给你补贴和税收返还</td></tr>
+        </table>
+
+        <h4 style="margin-top:14px">核心财税知识点</h4>
+        <p><span class="key">1. 利润→资产 = 合法的利润压缩</span></p>
+        <p>企业购买的固定资产（土地、厂房、设备），通过折旧/摊销计入成本，直接减少应纳税所得额。这是税法鼓励的——国家希望企业把钱花在扩大再生产上。</p>
+        <p><span class="key">2. 资产抵押贷款 ≠ 收入</span></p>
+        <p>贷款是负债，不是收入，不产生纳税义务。花出去的钱通过贷款"回收"，但税已经少交了。</p>
+        <p><span class="key">3. 贷款利息 = 财务费用 = 再抵税</span></p>
+        <p>企业经营性贷款的利息支出，可以税前扣除。相当于银行帮你再省一轮。</p>
+        <p><span class="key">4. 资产不卖就不触发增值税</span></p>
+        <p>土地涨了10倍，只要不卖，就不用交增值税和所得税。长期持有 = 无限递延纳税。</p>
+      </div>
+
+      <div class="you-box">
+        <h4>缩小版：你能用的等价操作</h4>
+        <p>你没有买地的体量，但<strong>底层逻辑完全一样</strong>——利润变资产，资产抵税，现金回流：</p>
+        <table>
+          <tr><th>大哥的做法</th><th>你的等价操作</th></tr>
+          <tr><td>利润 → 买800亩地</td><td>利润 → 买设备/服务器/预付云服务年费</td></tr>
+          <tr><td>土地折旧摊销抵税</td><td>500万以下设备一次性扣除抵税</td></tr>
+          <tr><td>地抵押 → 银行贷款</td><td>设备融资租赁 / 经营贷（未来规模大了可用）</td></tr>
+          <tr><td>贷款利息 → 财务费用抵税</td><td>经营贷利息 → 同样可以抵税</td></tr>
+          <tr><td>地升值但不卖</td><td>设备持续使用，残值为0但还能用</td></tr>
+        </table>
+        <p style="margin-top:10px"><strong>记住这个公式：赚到的钱，先花在能抵税的地方，再想办法让现金回来。</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例12: 薇娅翻车 -->
+  <div class="panel">
+    <h2>案例十二：薇娅13.41亿罚单 — 个体户避税的红线</h2>
+
+    <div class="case-card">
+      <span class="case-tag warning">反面教材</span>
+      <div class="scene">2021年12月，头部主播薇娅（黄薇）被追缴税款、加收滞纳金并处罚款共计13.41亿元</div>
+
+      <div class="takeaway">
+        <h4>她怎么操作的</h4>
+        <p><span class="key">1. 设立多个个人独资企业和合伙企业</span></p>
+        <p>在多个税收洼地（上海崇明、江苏等）注册了十几个个体户/个独企业，享受核定征收。</p>
+        <p><span class="key">2. 把个人劳务报酬转化为企业经营所得</span></p>
+        <p>本来应该按"劳务报酬"交20%-45%的个税，通过个体户转成"经营所得"核定征收，实际税负降到几个点。</p>
+        <p><span class="key">3. 虚构业务、隐匿收入</span></p>
+        <p>部分收入直接不入账，通过关联企业走账隐匿。</p>
+      </div>
+
+      <div class="takeaway" style="border-left-color:var(--red)">
+        <h4 style="color:var(--red)">为什么翻车了</h4>
+        <p><span class="key">金税四期 + 大数据比对</span></p>
+        <p>- 税务局可以看到你所有银行账户的资金流水</p>
+        <p>- 个体户的收入来源如果90%以上来自同一个甲方 → 被认定为"实质雇佣关系"，不是经营</p>
+        <p>- 多个个体户同时给一个人服务 → 明显的拆分避税</p>
+        <p>- 收入规模和个体户的"经营"规模严重不匹配</p>
+      </div>
+
+      <div class="you-box">
+        <h4>你要注意的红线</h4>
+        <p>你的策略五有个体户部分，<strong>合法没问题，但要守住这几条线</strong>：</p>
+        <p>- 个体户必须有<strong>真实业务</strong>，不能只是开票工具</p>
+        <p>- 客户来源要分散，<strong>不能90%收入来自你自己的公司</strong></p>
+        <p>- 金额要合理，一个"咨询个体户"年开票500万，税务局会盯上</p>
+        <p>- <strong>不要搞多个个体户</strong>，一个就够了，多了就是靶子</p>
+        <p>- 核定征收是地方政策，随时可能取消，不要把架构建在这上面</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例13: AI创业公司高企之路 -->
+  <div class="panel">
+    <h2>案例十三：3个软著换来200万补贴 — 某AI公司的高企认定</h2>
+
+    <div class="case-card relevant">
+      <span class="case-tag" style="background:rgba(255,145,0,.12);color:var(--orange)">真实案例</span>
+      <div class="scene">深圳南山，5人AI公司，做智能客服方案，2023年拿到高企认定</div>
+
+      <div class="takeaway">
+        <h4>他怎么做到的</h4>
+        <table>
+          <tr><th>时间</th><th>动作</th><th>成本</th></tr>
+          <tr><td>第1年</td><td>注册3个软件著作权（智能客服系统、语音识别模块、对话管理平台）</td><td>约600元/个</td></tr>
+          <tr><td>第1年</td><td>建立研发项目台账，把程序员工资、云服务费、API费全部归入研发费用</td><td>0（只是记账方式变了）</td></tr>
+          <tr><td>第2年</td><td>再注册2个软著，累计5个知识产权</td><td>约1200元</td></tr>
+          <tr><td>第2年</td><td>确保研发费用占比>5%，高新收入占比>60%</td><td>0（本来就达标）</td></tr>
+          <tr><td>第3年</td><td>申报高新技术企业认定</td><td>找中介约2-3万，自己做0</td></tr>
+        </table>
+
+        <h4 style="margin-top:14px">拿到了什么</h4>
+        <table>
+          <tr><td style="color:var(--al);width:160px">企税</td><td>25% → <span class="amount">15%</span>，年省利润的10%</td></tr>
+          <tr><td style="color:var(--al)">区级奖励</td><td>南山区首次认定奖励 <span class="amount">20万</span></td></tr>
+          <tr><td style="color:var(--al)">市级奖励</td><td>深圳市配套 <span class="amount">5万</span></td></tr>
+          <tr><td style="color:var(--al)">研发补助</td><td>研发费用后补助 <span class="amount">约30万</span>（按实际研发费用的一定比例）</td></tr>
+          <tr><td style="color:var(--al)">人才补贴</td><td>高企员工可申请人才房/租房补贴</td></tr>
+          <tr><td style="color:var(--al)">招投标加分</td><td>政府项目、大企业招标优先</td></tr>
+        </table>
+
+        <p style="margin-top:10px;font-size:.86em;color:var(--dim)">总投入不到5万，三年累计回报超过200万（税收减免+补贴+招标优势）。</p>
+      </div>
+
+      <div class="you-box">
+        <h4>你的情况几乎一模一样</h4>
+        <p>你和这家公司的画像高度重合：5人团队、AI技术公司、有实际产品和营收。</p>
+        <p><strong>你现在就可以启动：</strong></p>
+        <p>- 今年注册3个软著：AI语音对话机器人系统、语音交互管理平台、智能语音方案设计工具</p>
+        <p>- 软著登记费约600元/个，30-60天下证（加急更快）</p>
+        <p>- 同步建研发台账（这个案例八已经讲了）</p>
+        <p>- 越秀区首次高企认定预计奖励 <span class="amount">10-20万</span></p>
+        <p>- <strong>明年就可以申报</strong>，成立满1年+3个软著+研发台账就够了</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例14: 深圳自贸区转口 -->
+  <div class="panel">
+    <h2>案例十四：深圳卖家的"自贸区转一圈" — 资金效率提升术</h2>
+
+    <div class="case-card">
+      <span class="case-tag" style="background:rgba(255,145,0,.12);color:var(--orange)">真实案例</span>
+      <div class="scene">深圳跨境电商卖家，年销售额2000万，利润400万</div>
+
+      <div class="takeaway">
+        <h4>操作方式</h4>
+        <p><span class="key">在前海注册一家贸易公司，作为"中间商"</span></p>
+        <div style="background:rgba(255,255,255,.02);border-radius:8px;padding:16px;margin:10px 0;font-size:.86em;font-family:monospace;line-height:2">
+          工厂（生产）<br>
+          &nbsp;&nbsp;↓ 以成本价+微利 卖给<br>
+          前海公司（中间商，享受15%企税）<br>
+          &nbsp;&nbsp;↓ 以市场价 卖给<br>
+          海外客户 / 国内客户
+        </div>
+        <p>大部分利润留在前海公司（15%企税），而不是留在主体公司（25%企税）。</p>
+
+        <h4 style="margin-top:14px">具体效果</h4>
+        <table>
+          <tr><th></th><th>不做架构</th><th>前海架构</th></tr>
+          <tr><td style="color:var(--al)">利润归属</td><td>400万全在主体公司</td><td>50万在主体（微利）+ 350万在前海</td></tr>
+          <tr><td style="color:var(--al)">企税</td><td>400万 × 25% = 100万</td><td>50万×5% + 350万×15% = 55万</td></tr>
+          <tr><td style="color:var(--al)">省税</td><td>—</td><td class="amount">每年省45万</td></tr>
+        </table>
+
+        <h4 style="margin-top:14px">前海的额外好处</h4>
+        <p>- 跨境人民币结算便利（收外汇更方便）</p>
+        <p>- 保税仓储（货物进出更灵活）</p>
+        <p>- 港澳专业人士个税补贴（超过15%的部分政府补）</p>
+      </div>
+
+      <div class="you-box">
+        <h4>跟你的关系</h4>
+        <p>你的策略一已经规划了南沙/前海子公司，逻辑和这个案例完全一样：</p>
+        <p>- 越秀母公司做研发（微利或亏损）</p>
+        <p>- 南沙/前海子公司对外签约收款（利润留这里，享受15%）</p>
+        <p>- <strong>关键前提</strong>：利润超过300万再搞，因为300万以内小微5%比15%还低</p>
+        <p>- 如果未来有海外客户（AI方案出海），前海的跨境结算优势会很有用</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例15: 程序员创业的税务坑 -->
+  <div class="panel">
+    <h2>案例十五：程序员辞职创业，第一年就被税"教做人"</h2>
+
+    <div class="case-card">
+      <span class="case-tag warning">常见翻车</span>
+      <div class="scene">某程序员从大厂辞职，接外包单，年入80万，以为跟上班一样交个税就行</div>
+
+      <div class="takeaway">
+        <h4>他踩了哪些坑</h4>
+
+        <p><span class="key">坑1：没注册公司，按"劳务报酬"交税</span></p>
+        <p>- 客户要求开发票，他去税务局代开，按"劳务报酬所得"交税</p>
+        <p>- 80万劳务报酬，扣除20%费用后，适用40%税率，速算扣除7000</p>
+        <p>- 实际交税约 <span class="amount">12万+</span>（还不算增值税附加）</p>
+        <p>- 如果注册公司（小微），80万利润企税只交4万，差了3倍</p>
+
+        <p style="margin-top:10px"><span class="key">坑2：公私不分，所有钱进个人卡</span></p>
+        <p>- 客户直接打款到他个人银行卡</p>
+        <p>- 银行大额交易自动上报，税务局一查就发现收入未申报</p>
+        <p>- 补税+滞纳金+0.5倍罚款</p>
+
+        <p style="margin-top:10px"><span class="key">坑3：不懂季度预缴</span></p>
+        <p>- 注册公司后，以为年底一次性报税就行</p>
+        <p>- 实际上企税要<strong>按季度预缴</strong>（每季度结束后15天内）</p>
+        <p>- 漏了几个季度，滞纳金按日万分之五累计</p>
+      </div>
+
+      <div class="you-box">
+        <h4>你要检查的</h4>
+        <p>你已经有公司了，但这几个点确认一下：</p>
+        <p>- <strong>所有业务收入都走公司对公账户</strong>，不要走个人卡</p>
+        <p>- <strong>季度预缴别忘了</strong>：每年1/4/7/10月的15号之前</p>
+        <p>- 给客户开票要及时，收入和开票时间要匹配</p>
+        <p>- 如果有些小单不方便走公司（比如OPC咨询），以后走个体户</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例16: 亏损也是资产 -->
+  <div class="panel">
+    <h2>案例十六：京东亏了12年，但刘强东赚翻了 — 亏损的战略价值</h2>
+
+    <div class="case-card">
+      <span class="case-tag strategy">高阶思维</span>
+      <div class="scene">京东从2004年到2016年连续亏损12年，但刘强东身价千亿</div>
+
+      <div class="takeaway">
+        <h4>亏损的"秘密"</h4>
+        <p><span class="key">账面亏损 ≠ 真的在亏钱</span></p>
+        <p>京东每年把利润全部砸进仓储物流基础设施：</p>
+        <p>- 建仓库 → 固定资产折旧 → 成本↑</p>
+        <p>- 招物流人员 → 人力成本↑</p>
+        <p>- 研发物流系统 → 研发费用↑</p>
+        <p>账面上利润为零甚至亏损，但资产在疯狂增长。</p>
+
+        <p style="margin-top:10px"><span class="key">亏损的三大好处</span></p>
+        <p>1. <strong>不用交企业所得税</strong>（没利润就没税）</p>
+        <p>2. <strong>亏损可以往后结转5年</strong>（高新企业可以10年）。今年亏100万，未来5年赚的钱可以先抵掉这100万再交税</p>
+        <p>3. <strong>资产在手</strong>。仓库、系统、团队都是实实在在的，随时可以变现</p>
+
+        <p style="margin-top:10px"><span class="key">和大哥买地是同一个逻辑</span></p>
+        <p>利润 → 变成资产 → 账面亏损/微利 → 不交税 → 资产持续升值</p>
+        <p>区别只是京东买的是仓库和系统，大哥买的是工业用地。</p>
+      </div>
+
+      <div class="you-box">
+        <h4>跟你的关系</h4>
+        <p>你现在是成长期，<strong>有利润但不多</strong>，策略应该是：</p>
+        <p>- 利润优先投入研发和资产（设备、系统、知识产权），而不是分红</p>
+        <p>- 如果某一年投入特别大导致亏损，<strong>不要慌</strong>——亏损可以结转5年抵扣未来利润</p>
+        <p>- 拿到高企认定后，亏损结转期从5年延长到<strong>10年</strong></p>
+        <p>- <strong>核心思路：账面"穷"，资产"富"</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 总结：跟你最相关的行动 ========== -->
+  <div class="section-divider">— 优先级排序 —</div>
+
+  <div class="panel" style="border-color:rgba(0,230,118,.3)">
+    <h2 style="color:var(--green)">跟你现状最相关的，按优先级排</h2>
+    <table>
+      <tr><th style="width:40px">#</th><th>行动</th><th>预估年省</th><th>难度</th></tr>
+      <tr><td>1</td><td><strong>建研发费用台账</strong>（Token费、云服务、硬件、工资全部归集）</td><td class="amount">2-10万</td><td style="color:var(--green)">低，自己做</td></tr>
+      <tr><td>2</td><td><strong>合同拆分签</strong>（硬件/软件/服务分开）</td><td class="amount">每单省3-8%</td><td style="color:var(--green)">低，改模板</td></tr>
+      <tr><td>3</td><td><strong>盯紧500万开票线</strong>（接近时控制节奏或拆年度）</td><td class="amount">可能省几十万</td><td style="color:var(--green)">低，做好规划</td></tr>
+      <tr><td>4</td><td><strong>年底利润调节</strong>（买设备/预付/年终奖压到300万以内）</td><td class="amount">5-15万</td><td style="color:var(--yellow)">中，需提前规划</td></tr>
+      <tr><td>5</td><td><strong>公私分离</strong>（不从公司随便借钱，每年做审计报告）</td><td class="warn">避免罚款</td><td style="color:var(--green)">低，养成习惯</td></tr>
+      <tr><td>6</td><td><strong>申请软著2-3个</strong>（为高企和即征即退做准备）</td><td class="amount">未来可期</td><td style="color:var(--yellow)">中，需要材料</td></tr>
+      <tr><td>7</td><td><strong>注册个体户</strong>（承接咨询/IP变现类收入）</td><td class="amount">省15-35%税</td><td style="color:var(--yellow)">中，核定看地区</td></tr>
+    </table>
+  </div>
+
+  <div style="text-align:center;padding:30px 0;color:var(--dim);font-size:.8em">
+    <a href="private.html">← 返回私密面板</a>
+    <span style="margin:0 16px">|</span>
+    本页内容仅供参考，重大决策请咨询专业税务师
+  </div>
+
+</div>
+</div>
+
+<script>
+const HASH = '6f70633230323621';
+const KEY = 'private_auth';
+
+function checkPwd(){
+  const input = document.getElementById('pwdInput').value;
+  const inputHex = Array.from(input+'!').map(c=>c.charCodeAt(0).toString(16)).join('');
+  if(inputHex === HASH){
+    localStorage.setItem(KEY, 'yes');
+    unlock();
+  } else {
+    document.getElementById('pwdErr').style.display = 'block';
+    document.getElementById('pwdInput').value = '';
+  }
+}
+
+function unlock(){
+  document.getElementById('lockScreen').style.display = 'none';
+  document.getElementById('mainContent').style.display = 'block';
+}
+
+if(localStorage.getItem(KEY) === 'yes') unlock();
+</script>
+</body>
+</html>

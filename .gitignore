@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+*.DS_Store
+
+# 敏感内容 / 仅本地可见（申报材料、私人笔记、旧备份、草稿等）
+# 这些文件在本地工作区存在，但不会被 git 追踪
+private/
+
+# 默认忽略申报材料和压缩包（即使在 private/ 外也不追踪）
+*.docx
+*.xlsx
+*.zip
+*.tar.gz
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Cloudflare
+.wrangler/
+
+# Logs
+*.log
