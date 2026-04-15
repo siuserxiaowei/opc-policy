@@ -1,6 +1,6 @@
 {
-  "version": "5.1.0",
-  "updated_at": "2026-04-10",
+  "version": "5.1.1",
+  "updated_at": "2026-04-15",
   "policies": [
     {
       "id": "guangdong-province-001",
@@ -384,13 +384,21 @@
           "name": "琶洲元创OPC社区",
           "address": "琶洲",
           "operator": "中科科创联合基金",
-          "features": ["首期1000万基金", "投孵联动", "硬科技OPC", "八大闭环服务"]
+          "features": [
+            "首期1000万基金",
+            "投孵联动",
+            "硬科技OPC",
+            "八大闭环服务"
+          ]
         },
         {
           "name": "TIT创意园OPC社区",
           "address": "海珠区TIT创意园",
           "operator": "TIT创意园",
-          "features": ["微信生态对接", "服装设计类OPC"]
+          "features": [
+            "微信生态对接",
+            "服装设计类OPC"
+          ]
         }
       ],
       "tags": [
@@ -495,13 +503,21 @@
           "name": "琶洲元创OPC社区",
           "address": "琶洲",
           "operator": "中科科创联合基金",
-          "features": ["首期1000万基金", "投孵联动", "硬科技OPC", "八大闭环服务"]
+          "features": [
+            "首期1000万基金",
+            "投孵联动",
+            "硬科技OPC",
+            "八大闭环服务"
+          ]
         },
         {
           "name": "TIT创意园OPC社区",
           "address": "海珠区TIT创意园",
           "operator": "TIT创意园",
-          "features": ["微信生态对接", "服装设计类OPC"]
+          "features": [
+            "微信生态对接",
+            "服装设计类OPC"
+          ]
         }
       ],
       "tags": [
@@ -804,21 +820,68 @@
       "landing_status": "active",
       "landing_difficulty": "medium",
       "benefits": [
-        {"item": "算力券（OPC专享15%）", "amount": "年度算力支出15%", "amount_max": 10000000, "type": "voucher"},
-        {"item": "揭榜挂帅专项", "amount": "最高1000万", "amount_max": 10000000, "type": "cash"},
-        {"item": "数据标注企业奖励", "amount": "收入总额4%", "amount_max": 2000000, "type": "cash"},
-        {"item": "高质量数据集评定", "amount": "最高100万", "amount_max": 1000000, "type": "cash"},
-        {"item": "大模型及算法研发", "amount": "最高100万", "amount_max": 1000000, "type": "cash"},
-        {"item": "OPC创新应用大赛获奖", "amount": "最高10万", "amount_max": 100000, "type": "cash"}
+        {
+          "item": "算力券（OPC专享15%）",
+          "amount": "年度算力支出15%",
+          "amount_max": 10000000,
+          "type": "voucher"
+        },
+        {
+          "item": "揭榜挂帅专项",
+          "amount": "最高1000万",
+          "amount_max": 10000000,
+          "type": "cash"
+        },
+        {
+          "item": "数据标注企业奖励",
+          "amount": "收入总额4%",
+          "amount_max": 2000000,
+          "type": "cash"
+        },
+        {
+          "item": "高质量数据集评定",
+          "amount": "最高100万",
+          "amount_max": 1000000,
+          "type": "cash"
+        },
+        {
+          "item": "大模型及算法研发",
+          "amount": "最高100万",
+          "amount_max": 1000000,
+          "type": "cash"
+        },
+        {
+          "item": "OPC创新应用大赛获奖",
+          "amount": "最高10万",
+          "amount_max": 100000,
+          "type": "cash"
+        }
       ],
-      "requirements": {"registration_location": "广州市白云区", "industries": ["人工智能", "数据产业"]},
-      "application": {"method": "免申即享或一站式申报，白云区政务和数据局"},
+      "requirements": {
+        "registration_location": "广州市白云区",
+        "industries": [
+          "人工智能",
+          "数据产业"
+        ]
+      },
+      "application": {
+        "method": "免申即享或一站式申报，白云区政务和数据局"
+      },
       "links": {
         "official": "",
-        "news": ["https://m.thepaper.cn/newsDetail_forward_32890184", "https://news.dayoo.com/guangzhou/202604/03/139995_54943820.htm"]
+        "news": [
+          "https://m.thepaper.cn/newsDetail_forward_32890184",
+          "https://news.dayoo.com/guangzhou/202604/03/139995_54943820.htm"
+        ]
       },
       "communities": [],
-      "tags": ["白云区", "算力券", "OPC专享15%", "揭榜挂帅", "免申即享"],
+      "tags": [
+        "白云区",
+        "算力券",
+        "OPC专享15%",
+        "揭榜挂帅",
+        "免申即享"
+      ],
       "updated_at": "2026-04-14",
       "verified": true
     },
@@ -2699,8 +2762,57 @@
             "三年免租",
             "人才公寓低价租",
             "共享算力",
-            "拎包入驻"
-          ]
+            "拎包入驻",
+            "慧湖小领军政策2年跟踪服务"
+          ],
+          "source": "https://www.sipac.gov.cn/szgyyq/mtjj/202604/95511453cc5e4173ba78ee0c3e79b0d3.shtml",
+          "verified": true
+        },
+        {
+          "name": "模术空间OPC社区",
+          "address": "苏州工业园区金鸡湖大道88号人工智能产业园",
+          "operator": "苏州国际科技园 SISPARK",
+          "track": "大模型生态 / AI+制造",
+          "features": [
+            "全省首个大模型生态社区",
+            "24000P智算算力即开即用",
+            "六位一体全生命周期服务"
+          ],
+          "source": "https://www.sipac.gov.cn/szgyyq/mtjj/202604/95511453cc5e4173ba78ee0c3e79b0d3.shtml",
+          "verified": true
+        },
+        {
+          "name": "中科创谷OPC社区",
+          "address": "苏州工业园区",
+          "track": "人工智能 / 生物医药 / 智能新材料",
+          "features": [
+            "数字孪生+算力赋能模式",
+            "综合类标杆社区"
+          ],
+          "source": "https://www.sipac.gov.cn/szgyyq/mtjj/202604/95511453cc5e4173ba78ee0c3e79b0d3.shtml",
+          "verified": true
+        },
+        {
+          "name": "南湖梦AI OPC求解社区",
+          "address": "苏州国际科技园 SISPARK",
+          "operator": "苏州南湖梦科技集团股份有限公司",
+          "track": "AI大模型 / 智能体",
+          "features": [
+            "联动百度飞桨人工智能产业赋能中心",
+            "文心大模型数据生态中心联合运营",
+            "全栈技术赋能"
+          ],
+          "source": "https://www.sipac.gov.cn/szgyyq/mtjj/202601/dbc23caa9d1d45f28ef9de6ccaf0409f.shtml",
+          "status_note": "2026年1月启动；首批20家授牌名单未在官方文本中逐条公示",
+          "verified": true
+        },
+        {
+          "name": "河海大学苏州未来水谷OPC社区",
+          "address": "苏州工业园区",
+          "operator": "河海大学苏州高等研究院",
+          "track": "产学研转化",
+          "source": "https://www.zgjssw.gov.cn/yaowen/202604/t20260412_8567875.shtml",
+          "verified": true
         }
       ],
       "tags": [
@@ -2710,7 +2822,7 @@
         "独墅湖",
         "特训营"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-04-15",
       "verified": true
     },
     {
@@ -2865,6 +2977,15 @@
             "OPC创业首选地",
             "一站式办理"
           ]
+        },
+        {
+          "name": "中新昆承OPC社区",
+          "address": "昆山",
+          "features": [
+            "案例：鲸愈沪宁智能科技入驻"
+          ],
+          "source": "https://www.yangtse.com/news/jiangsu/suzhou/202604/t20260411_341127.html",
+          "verified": true
         }
       ],
       "tags": [
@@ -2873,7 +2994,7 @@
         "OPC专窗",
         "魔滴空间"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-04-15",
       "verified": true
     },
     {
@@ -3072,6 +3193,20 @@
             "免费工位",
             "算力1.5折"
           ]
+        },
+        {
+          "name": "苏州创业园OPC社区",
+          "address": "苏州高新区",
+          "operator": "苏州高新技术创业服务中心",
+          "track": "全市首批专业化OPC社区",
+          "features": [
+            "1+6+X全域生态体系",
+            "算力支撑",
+            "场景对接",
+            "产学研合作"
+          ],
+          "source": "https://www.yangtse.com/news/jiangsu/suzhou/202604/t20260411_341127.html",
+          "verified": true
         }
       ],
       "tags": [
@@ -3079,7 +3214,7 @@
         "算力1.5折",
         "Agent"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-04-15",
       "verified": true
     },
     {
@@ -3153,13 +3288,19 @@
         {
           "name": "大数据开发者创新中心OPC生态基地",
           "address": "相城区"
+        },
+        {
+          "name": "高铁新城环秀湖人工智能OPC社区",
+          "address": "相城区苏州高铁新城环秀湖",
+          "source": "https://www.zgjssw.gov.cn/yaowen/202604/t20260412_8567875.shtml",
+          "verified": true
         }
       ],
       "tags": [
         "相城",
         "大数据"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-04-15",
       "verified": true
     },
     {
@@ -3193,13 +3334,25 @@
         {
           "name": "校园里青年社区",
           "address": "姑苏区"
+        },
+        {
+          "name": "平江新城OPC社区",
+          "address": "姑苏区平江新城",
+          "source": "https://news.2500sz.com/doc/2026/04/11/1205116.shtml",
+          "verified": true
+        },
+        {
+          "name": "城市智谷OPC社区",
+          "address": "姑苏区",
+          "source": "https://www.zgjssw.gov.cn/yaowen/202604/t20260412_8567875.shtml",
+          "verified": true
         }
       ],
       "tags": [
         "姑苏",
         "校园"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-04-15",
       "verified": true
     },
     {
@@ -5823,24 +5976,40 @@
       ],
       "requirements": {
         "registration_location": "郑东新区",
-        "industries": ["人工智能", "OPC"]
+        "industries": [
+          "人工智能",
+          "OPC"
+        ]
       },
       "application": {
         "method": "联系中原科技城OPC生态联盟"
       },
       "links": {
         "official": "",
-        "news": ["https://finance.sina.com.cn/jjxw/2026-04-11/doc-inhucmte1422501.shtml"]
+        "news": [
+          "https://finance.sina.com.cn/jjxw/2026-04-11/doc-inhucmte1422501.shtml"
+        ]
       },
       "communities": [
         {
           "name": "中原科技城OPC生态联盟",
           "address": "郑州中原科技城投资促进中心",
           "operator": "郑州数据交易中心+曙光信息+张江智慧岛+河南省人工智能协会",
-          "features": ["拎脑入驻", "国家超算郑州中心算力", "数据交易生态", "全生命周期服务"]
+          "features": [
+            "拎脑入驻",
+            "国家超算郑州中心算力",
+            "数据交易生态",
+            "全生命周期服务"
+          ]
         }
       ],
-      "tags": ["OPC专项", "郑东新区", "中原科技城", "算力", "数据交易"],
+      "tags": [
+        "OPC专项",
+        "郑东新区",
+        "中原科技城",
+        "算力",
+        "数据交易"
+      ],
       "updated_at": "2026-04-12",
       "verified": false
     },
@@ -5899,7 +6068,9 @@
       ],
       "requirements": {
         "registration_location": "郑州市",
-        "industries": ["人工智能"]
+        "industries": [
+          "人工智能"
+        ]
       },
       "application": {
         "method": "郑州市政务公开平台申报"
@@ -5909,7 +6080,12 @@
         "news": []
       },
       "communities": [],
-      "tags": ["算力券", "场景应用", "独角兽", "专精特新"],
+      "tags": [
+        "算力券",
+        "场景应用",
+        "独角兽",
+        "专精特新"
+      ],
       "updated_at": "2026-04-12",
       "verified": true
     },
@@ -5968,7 +6144,9 @@
       ],
       "requirements": {
         "registration_location": "河南省",
-        "industries": ["人工智能"]
+        "industries": [
+          "人工智能"
+        ]
       },
       "application": {
         "method": "河南省发改委申报"
@@ -5978,7 +6156,12 @@
         "news": []
       },
       "communities": [],
-      "tags": ["省级", "算力券", "产业基金", "个人可申请"],
+      "tags": [
+        "省级",
+        "算力券",
+        "产业基金",
+        "个人可申请"
+      ],
       "updated_at": "2026-04-12",
       "verified": true,
       "actual_cases": "算力券政策明确支持个人申请，OPC创业者可以个人身份直接申请算力补贴"
@@ -6031,17 +6214,27 @@
       ],
       "requirements": {
         "registration_location": "郑州航空港区",
-        "industries": ["人工智能", "大数据"]
+        "industries": [
+          "人工智能",
+          "大数据"
+        ]
       },
       "application": {
         "method": "航空港区管委会申报"
       },
       "links": {
         "official": "https://m.zzhkgq.gov.cn/2025/01-10/3110433.html",
-        "news": ["https://finance.sina.com.cn/jjxw/2025-01-09/doc-ineekqsq9397074.shtml"]
+        "news": [
+          "https://finance.sina.com.cn/jjxw/2025-01-09/doc-ineekqsq9397074.shtml"
+        ]
       },
       "communities": [],
-      "tags": ["航空港", "大模型", "数据标注", "18条"],
+      "tags": [
+        "航空港",
+        "大模型",
+        "数据标注",
+        "18条"
+      ],
       "updated_at": "2026-04-12",
       "verified": true
     },
@@ -6060,14 +6253,49 @@
       "landing_status": "active",
       "landing_difficulty": "hard",
       "benefits": [
-        {"item": "企业组特等奖", "amount": "50万元资助", "amount_max": 500000, "type": "cash"},
-        {"item": "纳入省级创业项目库", "amount": "优秀项目获场地孵化+担保贷款+融资对接", "amount_max": 0, "type": "service"}
+        {
+          "item": "企业组特等奖",
+          "amount": "50万元资助",
+          "amount_max": 500000,
+          "type": "cash"
+        },
+        {
+          "item": "纳入省级创业项目库",
+          "amount": "优秀项目获场地孵化+担保贷款+融资对接",
+          "amount_max": 0,
+          "type": "service"
+        }
       ],
-      "requirements": {"registration_location": "广东省（不限户籍）", "industries": ["人工智能", "OPC"], "other": ["年满16岁", "主导项目并拥有商业模式决策权", "依托AI智能体", "有创新成果+完整商业计划书"]},
-      "application": {"method": "线上申报", "deadline": "2026-05-10"},
-      "links": {"official": "", "news": ["https://finance.sina.com.cn/roll/2026-03-27/doc-inhskwec8395999.shtml"]},
+      "requirements": {
+        "registration_location": "广东省（不限户籍）",
+        "industries": [
+          "人工智能",
+          "OPC"
+        ],
+        "other": [
+          "年满16岁",
+          "主导项目并拥有商业模式决策权",
+          "依托AI智能体",
+          "有创新成果+完整商业计划书"
+        ]
+      },
+      "application": {
+        "method": "线上申报",
+        "deadline": "2026-05-10"
+      },
+      "links": {
+        "official": "",
+        "news": [
+          "https://finance.sina.com.cn/roll/2026-03-27/doc-inhskwec8395999.shtml"
+        ]
+      },
       "communities": [],
-      "tags": ["众创杯", "OPC专项赛", "50万", "5月10日截止"],
+      "tags": [
+        "众创杯",
+        "OPC专项赛",
+        "50万",
+        "5月10日截止"
+      ],
       "updated_at": "2026-04-14",
       "verified": true
     },
@@ -6086,14 +6314,39 @@
       "landing_status": "active",
       "landing_difficulty": "hard",
       "benefits": [
-        {"item": "获奖优先入驻海珠OPC空间", "amount": "免费工位+算力补贴", "amount_max": 0, "type": "rent_free"},
-        {"item": "匹配OPC扶持政策", "amount": "最高500万", "amount_max": 5000000, "type": "cash"}
+        {
+          "item": "获奖优先入驻海珠OPC空间",
+          "amount": "免费工位+算力补贴",
+          "amount_max": 0,
+          "type": "rent_free"
+        },
+        {
+          "item": "匹配OPC扶持政策",
+          "amount": "最高500万",
+          "amount_max": 5000000,
+          "type": "cash"
+        }
       ],
-      "requirements": {"registration_location": "不限", "industries": ["人工智能", "算法"]},
-      "application": {"method": "琶洲算法大赛官网报名"},
-      "links": {"official": "http://www.aicompetition-pz.com/", "news": []},
+      "requirements": {
+        "registration_location": "不限",
+        "industries": [
+          "人工智能",
+          "算法"
+        ]
+      },
+      "application": {
+        "method": "琶洲算法大赛官网报名"
+      },
+      "links": {
+        "official": "http://www.aicompetition-pz.com/",
+        "news": []
+      },
       "communities": [],
-      "tags": ["琶洲算法大赛", "龙虾", "以赛代评"],
+      "tags": [
+        "琶洲算法大赛",
+        "龙虾",
+        "以赛代评"
+      ],
       "updated_at": "2026-04-14",
       "verified": true
     }
