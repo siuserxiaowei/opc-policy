@@ -354,10 +354,19 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   <span class="version" style="color:var(--dim)">38 城 · 94 条政策 · 130+ OPC 社区 · 每条带官方来源</span>
 </div>
 
-<!-- 时效公告 -->
-<div style="max-width:900px;margin:12px auto;padding:12px 20px;background:rgba(37,99,235,.06);border:1px solid rgba(37,99,235,.1);border-radius:10px;text-align:center;position:relative;z-index:1">
-  <span style="font-size:.88em">🏆 <strong style="color:var(--al)">众创杯OPC专项赛</strong> 报名截止 <strong style="color:#B91C1C">5月10日</strong> · 特等奖 <strong style="color:#15803D">50万</strong> · <a href="https://finance.sina.com.cn/roll/2026-03-27/doc-inhskwec8395999.shtml" target="_blank" style="color:var(--al)">了解详情 →</a></span>
+<!-- 时效公告（可关闭 + 过期自动隐藏） -->
+<div id="announcement" style="display:none;max-width:900px;margin:12px auto;padding:10px 40px 10px 16px;background:var(--card);border:1px solid var(--border);border-radius:8px;position:relative;z-index:1;font-size:.85em;color:var(--dim)">
+  🏆 <strong style="color:var(--al)">众创杯OPC专项赛</strong> 报名截止 <strong style="color:#B91C1C">5月10日</strong> · 特等奖 50万 · <a href="https://finance.sina.com.cn/roll/2026-03-27/doc-inhskwec8395999.shtml" target="_blank" style="color:var(--al)">详情 →</a>
+  <button onclick="this.parentElement.style.display='none';localStorage.setItem('ann-dismiss','zhcc-0510')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--dim);font-size:1.1em;cursor:pointer;padding:4px">&times;</button>
 </div>
+<script>
+(function(){
+  var deadline = new Date('2026-05-10T23:59:59+08:00');
+  if (Date.now() < deadline && localStorage.getItem('ann-dismiss') !== 'zhcc-0510') {
+    document.getElementById('announcement').style.display = 'block';
+  }
+})();
+</script>
 
 <!-- Mode Switch -->
 <div class="mode-tabs">

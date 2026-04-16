@@ -509,11 +509,18 @@
   </div>
 </div>
 
-<div style="max-width:900px;margin:12px auto 0;padding:14px 20px;background:linear-gradient(135deg,rgba(37,99,235,.08),rgba(21,128,61,.06));border:1px solid rgba(37,99,235,.15);border-radius:12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1">
-  <span style="font-size:1.1em">🏆</span>
-  <span style="font-size:.9em"><strong style="color:var(--accent-light)">众创杯OPC专项赛</strong> 报名截止 <strong style="color:var(--red)">5月10日</strong> · 特等奖 <strong style="color:var(--green)">50万元</strong></span>
-  <a href="https://finance.sina.com.cn/roll/2026-03-27/doc-inhskwec8395999.shtml" target="_blank" style="padding:5px 14px;background:var(--accent);color:#fff;border-radius:6px;font-size:.82em;font-weight:600;text-decoration:none">了解详情 →</a>
+<div id="announcement" style="display:none;max-width:900px;margin:12px auto 0;padding:10px 40px 10px 16px;background:var(--card);border:1px solid var(--border);border-radius:8px;position:relative;z-index:1;font-size:.85em;color:var(--text-dim);text-align:center">
+  🏆 <strong style="color:var(--accent-light)">众创杯OPC专项赛</strong> 报名截止 <strong style="color:var(--red)">5月10日</strong> · 特等奖 50万 · <a href="https://finance.sina.com.cn/roll/2026-03-27/doc-inhskwec8395999.shtml" target="_blank" style="color:var(--accent-light)">详情 →</a>
+  <button onclick="this.parentElement.style.display='none';localStorage.setItem('ann-dismiss','zhcc-0510')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--text-dim);font-size:1.1em;cursor:pointer;padding:4px">&times;</button>
 </div>
+<script>
+(function(){
+  var deadline = new Date('2026-05-10T23:59:59+08:00');
+  if (Date.now() < deadline && localStorage.getItem('ann-dismiss') !== 'zhcc-0510') {
+    document.getElementById('announcement').style.display = 'block';
+  }
+})();
+</script>
 
 <!-- Stats -->
 <div class="stats-row" style="margin-top:20px">
