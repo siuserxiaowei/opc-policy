@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OPC政策详情</title>
+<title>OPC 全国城市总览 | 各城市政策一览</title>
+<meta name="description" content="全国OPC城市政策总览：按城市查看政策数量、补贴项目、OPC社区，快速找到最适合的城市。">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
 <style>
 :root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
@@ -125,8 +126,51 @@ const cityName = params.get('name') || '';
 
 async function loadCity() {
   if (!cityName) {
-    document.getElementById('cityTitle').textContent = '未指定城市';
-    document.getElementById('content').innerHTML = '<div class="empty"><h2>请从首页选择城市</h2><p><a href="index.html">返回首页 →</a></p></div>';
+    document.getElementById('cityTitle').textContent = '全国 OPC 城市总览';
+    document.getElementById('citySub').textContent = '点击城市查看详细政策';
+    // Load all policies and show city overview
+    try {
+      const resp = await fetch('data/policies.json');
+      const data = await resp.json();
+      const allPolicies = data.policies || [];
+      // Group by city
+      const cityMap = {};
+      for (const p of allPolicies) {
+        if (!cityMap[p.city]) cityMap[p.city] = { policies: [], communities: 0, maxAmount: 0 };
+        cityMap[p.city].policies.push(p);
+        cityMap[p.city].communities += (p.communities || []).length;
+        for (const b of (p.benefits || [])) {
+          if ((b.amount_max || 0) > cityMap[p.city].maxAmount) cityMap[p.city].maxAmount = b.amount_max;
+        }
+      }
+      const cities = Object.entries(cityMap).sort((a, b) => b[1].policies.length - a[1].policies.length);
+      const totalCities = cities.length;
+      const totalPolicies = allPolicies.length;
+      document.getElementById('statsRow').innerHTML = `
+        <div class="stat"><div class="n" style="color:var(--cyan)">${totalCities}</div><div class="l">覆盖城市</div></div>
+        <div class="stat"><div class="n" style="color:var(--green)">${totalPolicies}</div><div class="l">政策总数</div></div>
+      `;
+      // Dedicated pages
+      const dedicatedPages = { '广州': 'guangzhou.html', '成都': 'chengdu.html', '苏州': 'suzhou.html' };
+      let html = '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px">';
+      for (const [name, info] of cities) {
+        const href = dedicatedPages[name] || `city.html?name=${encodeURIComponent(name)}`;
+        const maxAmt = info.maxAmount >= 10000 ? Math.round(info.maxAmount / 10000) + '万' : (info.maxAmount || '-');
+        const hasDedicated = dedicatedPages[name] ? '<span style="font-size:.7em;padding:1px 6px;background:var(--gd);color:var(--green);border-radius:3px;margin-left:6px">专版</span>' : '';
+        html += `<a href="${href}" class="policy-card" style="text-decoration:none;display:block">`;
+        html += `<h3 style="color:var(--text)">${name}${hasDedicated}</h3>`;
+        html += `<div class="meta"><span>${info.policies.length} 条政策</span>`;
+        if (info.communities > 0) html += `<span>${info.communities} 个社区</span>`;
+        html += `</div>`;
+        html += `<p class="summary">最高补贴：${maxAmt}元</p>`;
+        html += `</a>`;
+      }
+      html += '</div>';
+      document.getElementById('content').innerHTML = html;
+      document.title = `OPC 全国城市总览 | ${totalCities} 城 ${totalPolicies} 条政策`;
+    } catch(e) {
+      document.getElementById('content').innerHTML = '<div class="empty"><h2>数据加载失败</h2><p><a href="index.html">返回首页 →</a></p></div>';
+    }
     return;
   }
 
