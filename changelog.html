@@ -107,7 +107,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   <h1>维护日志 · 核实记录</h1>
   <p>本页记录 opcgate.com 的所有数据核验、更新、修复动作。每条都可追溯到具体的 git commit，拒绝 AI 编造，每次改动都公开透明。</p>
   <div class="stats">
-    <div class="s"><div class="n">61</div><div class="l">总维护次数</div></div>
+    <div class="s"><div class="n">67</div><div class="l">总维护次数</div></div>
     <div class="s"><div class="n">5</div><div class="l">数据核验动作</div></div>
     <div class="s"><div class="n">1</div><div class="l">活跃月份</div></div>
     <div class="s"><div class="n" style="color:var(--green)">LIVE</div><div class="l">持续维护中</div></div>
@@ -118,10 +118,76 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
   <div class="months">
     <span class="ml">按月分布：</span>
-    <span class="m-chip">2026-04 · 61 次</span>
+    <span class="m-chip">2026-04 · 67 次</span>
   </div>
 
   
+    <div class="cm-item cat-other">
+      <div class="cm-head">
+        <span class="cm-icon">📌</span>
+        <span class="cm-label">其他</span>
+        <span class="cm-date">2026-04-16 08:33</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/b681c6ae70f40b9f03421c3b05c9a5fb600932c1" target="_blank" rel="noopener" class="cm-sha">b681c6a</a>
+        <span class="cm-stats">2 文件 <span class="st-plus">+131</span> <span class="st-minus">−2</span></span>
+      </div>
+      <div class="cm-subject">修正: deploy.sh 留在 GitHub，generate_changelog.py/generate_rss.py 移走</div>
+      <div class="cm-body">按用户原本意图拆分：<br>- deploy.sh           → 推（公开部署流程）<br>- generate_changelog  → 移走（内部数据生成）<br>- generate_rss        → 移走（同上）<br>.gitignore 使用 scripts/* + !scripts/deploy.sh 模式。</div>
+    </div>
+    <div class="cm-item cat-other">
+      <div class="cm-head">
+        <span class="cm-icon">📌</span>
+        <span class="cm-label">其他</span>
+        <span class="cm-date">2026-04-16 08:33</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/92dffcb8af1d55a3ff28eddcdd3130a11069656b" target="_blank" rel="noopener" class="cm-sha">92dffcb</a>
+        <span class="cm-stats">4 文件 <span class="st-plus">+3</span> <span class="st-minus">−602</span></span>
+      </div>
+      <div class="cm-subject">清理: 移除 scripts/ 所有工具脚本从 git 追踪</div>
+      <div class="cm-body">按用户要求，工具脚本属于内部资产（deploy.sh 含部署流程、<br>generate_* 含数据生成逻辑），保留本地但不入库。<br>.gitignore 新增: scripts/</div>
+    </div>
+    <div class="cm-item cat-ops">
+      <div class="cm-head">
+        <span class="cm-icon">⚙️</span>
+        <span class="cm-label">运维</span>
+        <span class="cm-date">2026-04-16 08:32</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/5dec8333b5269c8f2db305410ea1371e9f394a93" target="_blank" rel="noopener" class="cm-sha">5dec833</a>
+        <span class="cm-stats">1 文件 <span class="st-plus">+128</span> <span class="st-minus">−0</span></span>
+      </div>
+      <div class="cm-subject">ops: 添加 deploy.sh 一键部署脚本</div>
+      <div class="cm-body">白名单模式构建 dist/ 目录后 wrangler pages deploy 到 Cloudflare Pages。<br>包含黑名单校验防止意外上传 backend/crawler-worker/private/等敏感目录。<br>用法：<br>  ./scripts/deploy.sh              # 全量部署<br>  ./scripts/deploy.sh --dry-run    # 只构建不上传，用于检查</div>
+    </div>
+    <div class="cm-item cat-other">
+      <div class="cm-head">
+        <span class="cm-icon">📌</span>
+        <span class="cm-label">其他</span>
+        <span class="cm-date">2026-04-16 08:23</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/f2814643a034abba48d650ad26821288e786312e" target="_blank" rel="noopener" class="cm-sha">f281464</a>
+        <span class="cm-stats">12 文件 <span class="st-plus">+7</span> <span class="st-minus">−1598</span></span>
+      </div>
+      <div class="cm-subject">清理: 从 GitHub 移除爬虫/数据抓取/Cloudflare 配置等隐私内容</div>
+      <div class="cm-body">用户要求：GitHub 只放对外的内容框架（政策数据、html 页面、营销素材），<br>爬虫/申报/抓取逻辑/部署配置等商业资产不入库。<br>从 git 追踪移除（本地文件保留）：<br>- backend/                    # Flask app + crawler.py + requirements<br>- crawler-worker/             # Cloudflare Workers 爬虫部署<br>- .wrangler/                  # wrangler 缓存（账号 ID）<br>.gitignore 新增规则：<br>- backend/ crawler-worker/ crawler/ spider/ scrapy.cfg<br>注意：历史 commit 里仍有这些文件的内容（需要 git filter-branch / BFG<br>才能彻底清除）。本次只保证未来 commit 不再包含。如需彻底清除历史，<br>可后续执行：<br>  git filter-repo --path backend --path crawler-worker --invert-paths --force</div>
+    </div>
+    <div class="cm-item cat-other">
+      <div class="cm-head">
+        <span class="cm-icon">📌</span>
+        <span class="cm-label">其他</span>
+        <span class="cm-date">2026-04-16 08:22</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/8851fa1daa957a5159cbd597ea07f7c89e7bc711" target="_blank" rel="noopener" class="cm-sha">8851fa1</a>
+        <span class="cm-stats">1 文件 <span class="st-plus">+0</span> <span class="st-minus">−1</span></span>
+      </div>
+      <div class="cm-subject">撤销: 删除 CNAME 文件，不再通过 GitHub Pages 托管 opcgate.com</div>
+      <div class="cm-body">之前为了绕过 Cloudflare Pages 部署断掉的问题临时加了 CNAME，<br>但这属于越权决策。opcgate.com 是用户的独立项目，应由用户自行决定<br>托管方式。<br>此次撤销影响：<br>- GitHub Pages 不再强制 301 到 opcgate.com<br>- siuserxiaowei.github.io/opc-policy/ 恢复正常访问<br>- GitHub Pages custom domain 已通过 API 同步取消 (cname=null)<br>- opcgate.com 的托管问题交回用户决定（Cloudflare Pages / VPS / 其他）<br>敏感内容审计（git ls-files 验证）：<br>- private/ 目录完全未被追踪 ✓<br>- 申报表 .docx 未被追踪 ✓<br>- 微信.md / 路线图文档未被追踪 ✓<br>- 旧 .wrangler/cache 只含 account id 和邮箱，无 token</div>
+    </div>
+    <div class="cm-item cat-other">
+      <div class="cm-head">
+        <span class="cm-icon">📌</span>
+        <span class="cm-label">其他</span>
+        <span class="cm-date">2026-04-15 20:59</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/5cd46d0a0cc9fcc391dc77d1914cc4107107adb5" target="_blank" rel="noopener" class="cm-sha">5cd46d0</a>
+        <span class="cm-stats">15 文件 <span class="st-plus">+2038</span> <span class="st-minus">−12</span></span>
+      </div>
+      <div class="cm-subject">P0: 可验证情报站基础建设（verified 可视化 / 倒计时 / 百度推送 / RSS / changelog / 纠错入口）</div>
+      <div class="cm-body">## 核心 UI 改动 (index.html)<br>首页顶栏反 AI 编造定位条：<br>- &#x27;🛡️ 每条政策附官方链接 · 拒绝 AI 编造 · 多源交叉核实&#x27;<br>- 入口：维护日志 / RSS 订阅<br>政策卡片升级：<br>- ✓ 已核验 badge（来源域名显示在标签里）<br>- ⏰ 申报截止倒计时（红/橙/绿/灰四色预警，&lt;=7天高亮脉冲）<br>- 官方来源区块（展开详情后显示&#x27;🏛️ 政策原文 sipac.gov.cn&#x27; &#x27;📰 xinhua.net&#x27; &#x27;📝 申报入口&#x27; 可点击跳转）<br>- 关联社区每条带 source 链接（&#x27;来源：sipac.gov.cn ↗&#x27;）+ verified 标识<br>- 🔧 发现错误？提交纠错 → 跳 GitHub Issue 新建，预填政策 ID 和模板<br>## 新增页面<br>changelog.html (维护日志)<br>- 从 git log 自动提取所有 commit（61 条）<br>- 分类标签：城市数据 / 数据核实 / 新功能 / 修复 / 文档 / 运维 / 素材<br>- 每条显示 sha 链接（点击跳 GitHub commit）、文件变动统计<br>- 按月份分布 chip 展示<br>- 脚本：scripts/generate_changelog.py（每次 commit 后跑一次）<br>rss.xml (RSS 订阅)<br>- 从 policies.json 按 publish_date 倒序输出最近 50 条<br>- 每条 item 含：摘要 / 补贴表格 / 申请条件 / 官方来源 / 关联社区<br>- &lt;link rel=&#x27;alternate&#x27;&gt; 让浏览器自动发现<br>- 脚本：scripts/generate_rss.py（每次数据更新后跑一次）<br>## 全站优化<br>百度自动推送脚本：<br>- 所有 html 页面底部加 bdstatic.com/linksubmit/push.js<br>- 国内 SEO 秒收录（opcquan.com 同款实现）<br>nav 栏加&#x27;维护日志&#x27;链接：<br>- index / guangzhou / chengdu / suzhou / yuexiu / tax / dashboard / city 全覆盖<br>## 技术细节<br>新增 CSS classes:<br>.trust-slogan / .verified-badge / .source-link / .countdown{urgent,warn,ok,expired}<br>.correction-btn / .src-section / .comm-item<br>新增 JS 辅助函数:<br>calcCountdown() / extractDomain() / verifiedBadgeHtml()<br>sourceSectionHtml() / communitiesHtml() / correctionUrl()</div>
+    </div>
     <div class="cm-item cat-ops">
       <div class="cm-head">
         <span class="cm-icon">⚙️</span>
@@ -797,7 +863,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 </div>
 
 <footer>
-  <p>opcgate.com · 维护日志自动生成于 2026-04-15 20:56</p>
+  <p>opcgate.com · 维护日志自动生成于 2026-04-16 09:13</p>
   <p style="margin-top:4px"><a href="https://github.com/siuserxiaowei/opc-policy">在 GitHub 上查看完整提交历史 ↗</a></p>
 </footer>
 

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>爬虫 Review 面板 | opcgate.com</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕷️</text></svg>">
+<style>
+:root{--bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--dim:#8888a0;
+  --accent:#6c5ce7;--al:#a29bfe;--green:#00e676;--gd:#1b5e20;--yellow:#ffd600;--yd:#5d4e00;
+  --cyan:#00e5ff;--red:#ff5252;--rd:#4a1515;--orange:#ff9100;--blue:#448aff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--al);text-decoration:none}a:hover{color:#fff}
+button{font-family:inherit;cursor:pointer}
+
+/* Lock screen */
+#lockScreen{position:fixed;inset:0;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center}
+#lockScreen .lock-box{text-align:center;max-width:360px;padding:40px}
+#lockScreen h2{font-size:1.4em;margin-bottom:8px}
+#lockScreen p{color:var(--dim);font-size:.88em;margin-bottom:20px}
+#lockScreen input{width:100%;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:1em;text-align:center;outline:none;letter-spacing:4px}
+#lockScreen input:focus{border-color:var(--accent)}
+#lockScreen .err{color:var(--red);font-size:.82em;margin-top:8px;display:none}
+
+#mainContent{display:none}
+
+/* Nav */
+.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);overflow-x:auto}
+.topnav .logo{font-weight:800;font-size:1em;color:var(--al)}
+.topnav a{padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--dim);transition:all .2s;white-space:nowrap}
+.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(108,92,231,.1)}
+.topnav .private-tag{padding:3px 10px;border-radius:4px;background:rgba(255,82,82,.12);color:var(--red);font-size:.72em;font-weight:700;margin-left:8px}
+.topnav .spacer{flex:1}
+
+/* Hero */
+.hero{padding:30px 20px 20px;text-align:center;background:linear-gradient(135deg,#0a0a1a,#0a1a2e,#0a0a1a)}
+.hero h1{font-size:1.7em;font-weight:800;background:linear-gradient(135deg,#fff,var(--cyan),var(--al));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .sub{color:var(--dim);font-size:.88em;margin:6px 0}
+
+/* Stats row */
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;max-width:1100px;margin:16px auto;padding:0 20px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;transition:all .2s}
+.stat:hover{border-color:rgba(108,92,231,.3)}
+.stat .n{font-size:1.7em;font-weight:800;line-height:1}
+.stat .l{font-size:.7em;color:var(--dim);margin-top:3px}
+
+/* Container */
+.container{max-width:1100px;margin:0 auto;padding:20px}
+
+/* Toolbar */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:14px 18px;background:var(--card);border:1px solid var(--border);border-radius:10px;margin-bottom:16px}
+.btn{padding:8px 16px;border:1px solid var(--border);border-radius:8px;background:var(--card2);color:var(--text);font-size:.85em;font-weight:600;transition:all .2s}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(1.1)}
+.btn.danger{border-color:rgba(255,82,82,.4);color:var(--red)}
+.btn.danger:hover{background:var(--red);color:#fff}
+.btn.small{padding:4px 10px;font-size:.72em}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+
+.filter-input{flex:1;min-width:180px;padding:8px 14px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:.85em;outline:none}
+.filter-input:focus{border-color:var(--accent)}
+
+.group-select{padding:8px 12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:.85em;outline:none}
+
+/* Review items */
+.group{margin-bottom:24px}
+.group-title{font-size:.92em;font-weight:700;color:var(--al);margin-bottom:8px;padding:6px 12px;background:rgba(108,92,231,.08);border-radius:6px;display:inline-block}
+.group-title .count{color:var(--cyan);font-weight:800;margin-left:6px}
+
+.review-item{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:14px 18px;margin-bottom:8px;transition:all .2s}
+.review-item:hover{border-left-color:var(--cyan);background:var(--card2)}
+.review-item .title{font-size:.95em;font-weight:600;color:var(--text);margin-bottom:4px;line-height:1.5}
+.review-item .title a{color:var(--text)}
+.review-item .title a:hover{color:var(--cyan)}
+.review-item .meta{display:flex;flex-wrap:wrap;gap:10px;font-size:.72em;color:var(--dim);margin-bottom:8px}
+.review-item .meta .chip{padding:2px 8px;background:rgba(255,255,255,.03);border-radius:4px;border:1px solid rgba(255,255,255,.05)}
+.review-item .meta .city-chip{color:var(--cyan);border-color:rgba(0,229,255,.15);background:rgba(0,229,255,.04)}
+.review-item .meta .src-chip{color:var(--al)}
+.review-item .url{font-size:.72em;color:var(--dim);word-break:break-all;margin-bottom:10px;font-family:'JetBrains Mono',monospace}
+.review-item .url a{color:var(--dim)}
+.review-item .url a:hover{color:var(--cyan)}
+.review-item .actions{display:flex;gap:6px;flex-wrap:wrap}
+
+/* Tabs */
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--border);margin-bottom:16px}
+.tab{padding:10px 18px;color:var(--dim);font-size:.88em;font-weight:600;border-bottom:2px solid transparent;cursor:pointer;transition:all .2s}
+.tab:hover{color:var(--al)}
+.tab.active{color:var(--cyan);border-bottom-color:var(--cyan)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* Source health table */
+.src-table{width:100%;border-collapse:collapse;font-size:.82em}
+.src-table th{text-align:left;padding:10px 12px;color:var(--al);border-bottom:1px solid var(--border);background:rgba(108,92,231,.06);font-weight:600}
+.src-table td{padding:8px 12px;border-bottom:1px solid rgba(255,255,255,.03)}
+.src-table tr:hover td{background:rgba(108,92,231,.03)}
+.status-ok{color:var(--green);font-weight:700}
+.status-error{color:var(--red);font-weight:700}
+
+/* Toast */
+#toast{position:fixed;top:24px;right:24px;padding:14px 22px;background:var(--card);border:1px solid var(--accent);border-radius:10px;font-size:.88em;z-index:10000;display:none;max-width:360px;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+#toast.ok{border-color:var(--green)}
+#toast.err{border-color:var(--red)}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:9998;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;max-width:640px;width:100%;max-height:80vh;overflow-y:auto}
+.modal-box h3{margin-bottom:10px;color:var(--cyan)}
+.modal-box p{font-size:.85em;color:var(--dim);margin-bottom:10px}
+.modal-box textarea{width:100%;min-height:260px;padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'JetBrains Mono',monospace;font-size:.8em;outline:none;resize:vertical}
+.modal-box .modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}
+
+footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;border-top:1px solid var(--border);margin-top:30px}
+
+/* Loading */
+.loading{text-align:center;padding:40px;color:var(--dim)}
+.loading::after{content:' ...';animation:dots 1.5s steps(4) infinite}
+@keyframes dots{0%,20%{content:''}40%{content:' .'}60%{content:' ..'}80%,100%{content:' ...'}}
+
+@media(max-width:640px){
+  .hero h1{font-size:1.3em}
+  .container{padding:14px}
+  .review-item{padding:12px 14px}
+  .toolbar{padding:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- 密码锁 -->
+<div id="lockScreen">
+  <div class="lock-box">
+    <h2>🕷️ 爬虫 Review 面板</h2>
+    <p>仅限管理员访问（密码同 private.html）</p>
+    <input type="password" id="pwdInput" placeholder="输入密码" onkeydown="if(event.key==='Enter')checkPwd()">
+    <div class="err" id="pwdErr">密码错误</div>
+  </div>
+</div>
+
+<!-- 主内容 -->
+<div id="mainContent">
+
+<nav class="topnav">
+  <span class="logo">OPC</span>
+  <a href="index.html">首页</a>
+  <a href="suzhou.html">苏州专版</a>
+  <a href="guangzhou.html">广州专版</a>
+  <a href="changelog.html">维护日志</a>
+  <a href="dashboard.html">数据看板</a>
+  <a href="admin.html" class="active">🕷️ Review 面板</a>
+  <span class="spacer"></span>
+  <span class="private-tag">PRIVATE</span>
+</nav>
+
+<div class="hero">
+  <h1>🕷️ 爬虫 Review 面板</h1>
+  <p class="sub">每 12 小时自动抓取 44 个政府网站，发现新的 OPC 政策链接。人工确认后才能进入 <code>policies.json</code>。</p>
+</div>
+
+<div class="stats-row">
+  <div class="stat"><div class="n" id="statPending" style="color:var(--cyan)">—</div><div class="l">待 review 链接</div></div>
+  <div class="stat"><div class="n" id="statTotal" style="color:var(--al)">—</div><div class="l">累计抓到</div></div>
+  <div class="stat"><div class="n" id="statSrcOk" style="color:var(--green)">—</div><div class="l">健康源</div></div>
+  <div class="stat"><div class="n" id="statSrcErr" style="color:var(--red)">—</div><div class="l">失败源</div></div>
+  <div class="stat"><div class="n" id="statLastCrawl" style="color:var(--orange);font-size:.95em">—</div><div class="l">最近爬取</div></div>
+</div>
+
+<div class="container">
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('review')">📋 待 Review 链接</div>
+    <div class="tab" onclick="switchTab('health')">🏥 源健康状态</div>
+    <div class="tab" onclick="switchTab('history')">📊 爬取历史</div>
+  </div>
+
+  <!-- Tab 1: Review -->
+  <div id="tabReview" class="tab-content active">
+    <div class="toolbar">
+      <input type="text" class="filter-input" id="filterInput" placeholder="🔍 搜索标题或城市..." oninput="renderFinds()">
+      <select class="group-select" id="groupBy" onchange="renderFinds()">
+        <option value="city">按城市分组</option>
+        <option value="source">按源分组</option>
+        <option value="none">不分组 · 按时间倒序</option>
+      </select>
+      <button class="btn primary" onclick="refreshData()">🔄 刷新</button>
+      <button class="btn" onclick="triggerCrawl()">⚡ 立即爬取</button>
+    </div>
+
+    <div id="findsList">
+      <div class="loading">加载中</div>
+    </div>
+  </div>
+
+  <!-- Tab 2: Source health -->
+  <div id="tabHealth" class="tab-content">
+    <div class="toolbar">
+      <button class="btn" onclick="loadHealth()">🔄 刷新健康状态</button>
+    </div>
+    <div id="healthList">
+      <div class="loading">加载中</div>
+    </div>
+  </div>
+
+  <!-- Tab 3: History -->
+  <div id="tabHistory" class="tab-content">
+    <div id="historyList">
+      <div class="loading">加载中</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>🕷️ opcgate.com 爬虫 Review 面板 · 数据来自 opc-crawler.siuserxy.workers.dev</p>
+  <p style="margin-top:4px">方案 C：链接发现 + 人工 review · 拒绝 AI 幻觉</p>
+</footer>
+
+<!-- JSON 模板弹窗 -->
+<div class="modal" id="jsonModal">
+  <div class="modal-box">
+    <h3>📋 policies.json 模板</h3>
+    <p>复制下面的 JSON，填完具体数据后加入 <code>data/policies.json</code> 的 <code>policies</code> 数组里。</p>
+    <textarea id="jsonTemplate" readonly></textarea>
+    <div class="modal-actions">
+      <button class="btn" onclick="copyJson()">📋 复制 JSON</button>
+      <button class="btn primary" onclick="markReviewedFromModal()">✓ 已录入（标记完成）</button>
+      <button class="btn danger" onclick="closeModal()">关闭</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ================== Auth ==================
+const HASH = '6f70633230323621'; // opc2026
+const AUTH_KEY = 'opc_admin_auth';
+
+function checkPwd(){
+  const input = document.getElementById('pwdInput').value;
+  const hex = Array.from(input+'!').map(c=>c.charCodeAt(0).toString(16)).join('');
+  if(hex === HASH){
+    localStorage.setItem(AUTH_KEY, 'yes');
+    unlock();
+  } else {
+    document.getElementById('pwdErr').style.display = 'block';
+    document.getElementById('pwdInput').value = '';
+  }
+}
+
+function unlock(){
+  document.getElementById('lockScreen').style.display = 'none';
+  document.getElementById('mainContent').style.display = 'block';
+  refreshData();
+}
+
+if(localStorage.getItem(AUTH_KEY) === 'yes') unlock();
+else document.getElementById('pwdInput').focus();
+
+// ================== API ==================
+const API = 'https://opc-crawler.siuserxy.workers.dev';
+
+async function api(path, options = {}){
+  try {
+    const resp = await fetch(API + path, options);
+    if(!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    return await resp.json();
+  } catch(e) {
+    showToast('API 请求失败: ' + e.message, 'err');
+    return null;
+  }
+}
+
+// ================== State ==================
+let allFinds = [];
+let sourceHealth = null;
+let crawlStatus = null;
+let currentModalUrl = null;
+
+// ================== Rendering ==================
+function refreshData(){
+  document.getElementById('findsList').innerHTML = '<div class="loading">加载中</div>';
+  Promise.all([
+    api('/all'),
+    api('/sources-health'),
+    api('/status'),
+  ]).then(([findsRes, healthRes, statusRes]) => {
+    allFinds = findsRes?.finds || [];
+    sourceHealth = healthRes;
+    crawlStatus = statusRes;
+    updateStats();
+    renderFinds();
+    renderHistory();
+  });
+}
+
+function loadHealth(){
+  api('/sources-health').then(res => {
+    sourceHealth = res;
+    renderHealth();
+  });
+}
+
+function updateStats(){
+  document.getElementById('statPending').textContent = allFinds.length;
+  document.getElementById('statTotal').textContent = crawlStatus?.total_urls || '—';
+  document.getElementById('statSrcOk').textContent = sourceHealth?.healthy || '—';
+  document.getElementById('statSrcErr').textContent = sourceHealth?.failing || '—';
+  const lastCrawl = crawlStatus?.last_crawl;
+  if(lastCrawl && lastCrawl !== 'never'){
+    const d = new Date(lastCrawl);
+    const diffMin = Math.floor((Date.now() - d.getTime()) / 60000);
+    let txt;
+    if(diffMin < 60) txt = diffMin + ' 分前';
+    else if(diffMin < 1440) txt = Math.floor(diffMin/60) + ' 小时前';
+    else txt = Math.floor(diffMin/1440) + ' 天前';
+    document.getElementById('statLastCrawl').textContent = txt;
+  }
+}
+
+function timeAgo(iso){
+  const d = new Date(iso);
+  const diff = Math.floor((Date.now() - d.getTime()) / 60000);
+  if(diff < 1) return '刚刚';
+  if(diff < 60) return diff + '分前';
+  if(diff < 1440) return Math.floor(diff/60) + '时前';
+  return Math.floor(diff/1440) + '天前';
+}
+
+function escapeHtml(s){
+  if(!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function renderFinds(){
+  const filter = document.getElementById('filterInput').value.toLowerCase();
+  const groupBy = document.getElementById('groupBy').value;
+  const list = document.getElementById('findsList');
+
+  let finds = allFinds.filter(f => {
+    if(!filter) return true;
+    const hay = ((f.title||'') + (f.city||'') + (f.source||'')).toLowerCase();
+    return hay.includes(filter);
+  });
+
+  if(!finds.length){
+    list.innerHTML = `<div class="loading" style="color:var(--green)">✓ 所有链接都已 review 或没有新发现</div>`;
+    return;
+  }
+
+  // 分组
+  let groups;
+  if(groupBy === 'none'){
+    groups = [{title: `所有链接`, items: finds}];
+  } else {
+    const map = {};
+    const key = groupBy === 'city' ? 'city' : 'source';
+    finds.forEach(f => {
+      const k = f[key] || '未分类';
+      if(!map[k]) map[k] = [];
+      map[k].push(f);
+    });
+    groups = Object.entries(map)
+      .sort((a,b) => b[1].length - a[1].length)
+      .map(([title, items]) => ({title, items}));
+  }
+
+  list.innerHTML = groups.map(g => `
+    <div class="group">
+      <div class="group-title">${escapeHtml(g.title)} <span class="count">(${g.items.length})</span></div>
+      ${g.items.map(f => renderItem(f)).join('')}
+    </div>
+  `).join('');
+}
+
+function renderItem(f){
+  const url = escapeHtml(f.url || '');
+  const title = escapeHtml(f.title || '(无标题)');
+  const source = escapeHtml(f.source || '');
+  const city = f.city ? escapeHtml(f.city + (f.district ? '·'+f.district : '')) : '';
+  const found = f.found_at ? timeAgo(f.found_at) : '';
+  const dataKey = encodeURIComponent(f.url || '');
+
+  return `
+    <div class="review-item" data-url="${dataKey}">
+      <div class="title"><a href="${url}" target="_blank" rel="noopener">${title}</a></div>
+      <div class="meta">
+        ${city ? `<span class="chip city-chip">📍 ${city}</span>` : ''}
+        <span class="chip src-chip">🏛️ ${source}</span>
+        ${found ? `<span class="chip">⏱️ ${found}</span>` : ''}
+      </div>
+      <div class="url"><a href="${url}" target="_blank" rel="noopener">${url}</a></div>
+      <div class="actions">
+        <button class="btn small primary" onclick="openJsonModal('${dataKey}')">📋 生成 JSON 模板</button>
+        <button class="btn small" onclick="markReviewed('${dataKey}')">✓ 已录入</button>
+        <button class="btn small danger" onclick="ignoreUrl('${dataKey}')">✗ 忽略</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderHealth(){
+  if(!sourceHealth){
+    document.getElementById('healthList').innerHTML = '<div class="loading">加载中</div>';
+    return;
+  }
+  const rows = sourceHealth.sources.map(s => `
+    <tr>
+      <td>${escapeHtml(s.name)}</td>
+      <td class="${s.status==='ok' ? 'status-ok' : 'status-error'}">${s.status==='ok' ? '✓ OK' : '✗ ERROR'}</td>
+      <td>${s.links_found ?? 0}</td>
+      <td style="color:var(--dim);font-size:.8em">${s.error ? escapeHtml(s.error) : '—'}</td>
+    </tr>
+  `).join('');
+  document.getElementById('healthList').innerHTML = `
+    <p style="color:var(--dim);font-size:.85em;margin-bottom:10px">
+      总源 ${sourceHealth.total} · 健康 <span style="color:var(--green)">${sourceHealth.healthy}</span> · 失败 <span style="color:var(--red)">${sourceHealth.failing}</span>
+    </p>
+    <table class="src-table">
+      <thead><tr><th>源</th><th>状态</th><th>本次发现</th><th>错误</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+
+function renderHistory(){
+  if(!crawlStatus){
+    document.getElementById('historyList').innerHTML = '<div class="loading">加载中</div>';
+    return;
+  }
+  const rows = (crawlStatus.history || []).slice().reverse().map(h => {
+    const d = new Date(h.timestamp);
+    const date = d.toLocaleString('zh-CN', {month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'});
+    return `
+      <tr>
+        <td>${date}</td>
+        <td style="color:var(--cyan)">${h.new_links}</td>
+        <td style="color:${h.errors > h.sources_ok ? 'var(--red)' : 'var(--dim)'}">${h.errors}</td>
+        <td style="color:var(--green)">${h.sources_ok || (h.sources_checked - h.errors)}</td>
+      </tr>
+    `;
+  }).join('');
+  document.getElementById('historyList').innerHTML = `
+    <p style="color:var(--dim);font-size:.85em;margin-bottom:10px">
+      最近 ${crawlStatus.history?.length || 0} 次爬取记录
+    </p>
+    <table class="src-table">
+      <thead><tr><th>时间</th><th>新链接</th><th>错误</th><th>健康源</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+
+// ================== Actions ==================
+function getFindByKey(key){
+  const url = decodeURIComponent(key);
+  return allFinds.find(f => f.url === url);
+}
+
+function openJsonModal(key){
+  const f = getFindByKey(key);
+  if(!f) return;
+  currentModalUrl = f.url;
+  const id = (f.source || 'src').replace(/[^a-z0-9]/gi,'-').toLowerCase() + '-' + Date.now().toString().slice(-6);
+  const tmpl = {
+    id,
+    name: f.title,
+    city: f.city || '',
+    province: f.province || '',
+    district: f.district || '',
+    level: f.district ? 'district' : (f.city ? 'city' : 'province'),
+    issuer: f.source || '',
+    publish_date: new Date().toISOString().slice(0,10),
+    status: 'active',
+    category: 'comprehensive',
+    summary: '请填写一句话摘要（50 字内）',
+    benefits: [
+      { item: '请填写补贴项', amount: '请填写金额描述', amount_max: 0, type: 'cash' }
+    ],
+    requirements: {
+      registration_location: f.city || '',
+      industries: ['人工智能', 'OPC']
+    },
+    application: {
+      method: '',
+      deadline: null
+    },
+    links: {
+      official: f.url
+    },
+    communities: [],
+    tags: [],
+    updated_at: new Date().toISOString().slice(0,10),
+    verified: true
+  };
+  document.getElementById('jsonTemplate').value = JSON.stringify(tmpl, null, 2);
+  document.getElementById('jsonModal').classList.add('show');
+}
+
+function closeModal(){
+  document.getElementById('jsonModal').classList.remove('show');
+  currentModalUrl = null;
+}
+
+function copyJson(){
+  const textarea = document.getElementById('jsonTemplate');
+  textarea.select();
+  document.execCommand('copy');
+  showToast('✓ JSON 已复制，粘贴到 data/policies.json', 'ok');
+}
+
+function markReviewedFromModal(){
+  if(currentModalUrl) markReviewed(encodeURIComponent(currentModalUrl));
+  closeModal();
+}
+
+async function markReviewed(key){
+  const url = decodeURIComponent(key);
+  const res = await api('/reviewed', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url })
+  });
+  if(res?.ok){
+    showToast('✓ 已标记为 reviewed', 'ok');
+    allFinds = allFinds.filter(f => f.url !== url);
+    updateStats();
+    renderFinds();
+  }
+}
+
+async function ignoreUrl(key){
+  const url = decodeURIComponent(key);
+  if(!confirm('确定忽略这个链接？（加入黑名单，下次爬取不再发现）')) return;
+  const res = await api('/ignore', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url, reason: 'manual' })
+  });
+  if(res?.ok){
+    showToast('✓ 已加入黑名单', 'ok');
+    allFinds = allFinds.filter(f => f.url !== url);
+    updateStats();
+    renderFinds();
+  }
+}
+
+async function triggerCrawl(){
+  const btn = event.target;
+  btn.disabled = true;
+  btn.textContent = '⏳ 爬取中...';
+  showToast('⚡ 触发爬取，请稍候（约 1-2 分钟）', 'ok');
+  const res = await api('/crawl', { method: 'POST' });
+  btn.disabled = false;
+  btn.textContent = '⚡ 立即爬取';
+  if(res){
+    showToast(`✓ 本次新发现 ${res.new_links} 条，错误 ${res.errors}`, 'ok');
+    refreshData();
+  }
+}
+
+function switchTab(name){
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('tab' + name.charAt(0).toUpperCase() + name.slice(1)).classList.add('active');
+  if(name === 'health' && !sourceHealth) loadHealth();
+  else if(name === 'health') renderHealth();
+}
+
+function showToast(msg, type='ok'){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = type;
+  t.style.display = 'block';
+  setTimeout(() => t.style.display = 'none', 3500);
+}
+
+// Close modal on outside click
+document.getElementById('jsonModal').addEventListener('click', (e) => {
+  if(e.target.id === 'jsonModal') closeModal();
+});
+</script>
+
+<!-- 百度自动推送 -->
+<script>
+(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  } else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</div>
+</body>
+</html>
