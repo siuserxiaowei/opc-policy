@@ -19,8 +19,9 @@ crawler/
 spider/
 scrapy.cfg
 
-# 工具脚本整个 scripts/ 不入库（含部署脚本、生成脚本等内部工具）
-scripts/
+# 工具脚本默认不入库，但 deploy.sh 例外（公开部署流程方便他人 fork 复用）
+scripts/*
+!scripts/deploy.sh
 
 # Python
 __pycache__/
