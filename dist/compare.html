@@ -11,22 +11,22 @@
 <link rel="canonical" href="https://opcgate.com/compare.html">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
 <style>
-:root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
-  --accent:#2563EB;--al:#3B82F6;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
-  --red:#B91C1C;--rd:#FEE2E2;--cyan:#0F766E;--blue:#2563EB;--orange:#B45309}
+:root{--bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--dim:#8888a0;
+  --accent:#6c5ce7;--al:#a29bfe;--green:#00e676;--gd:#1b5e20;--yellow:#ffd600;--yd:#5d4e00;
+  --red:#ff5252;--rd:#4a1515;--cyan:#00e5ff;--blue:#448aff;--orange:#ff9100}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-a{color:var(--al);text-decoration:none}a:hover{color:var(--accent)}
+a{color:var(--al);text-decoration:none}a:hover{color:#fff}
 select,button{font-family:inherit}
 
-.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(255,255,255,.95);
+.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);
   border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);overflow-x:auto}
 .topnav .logo{font-weight:800;font-size:1em;color:var(--al)}
 .topnav a{padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--dim);transition:all .2s;white-space:nowrap}
-.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(37,99,235,.08)}
+.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(108,92,231,.1)}
 
-.hero{padding:40px 20px 20px;text-align:center;background:linear-gradient(135deg,#EFF6FF,#EFF6FF,#EFF6FF)}
-.hero h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,var(--text),var(--cyan),var(--al));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero{padding:40px 20px 20px;text-align:center;background:linear-gradient(135deg,#0a0a1a,#0a1a3a,#0a0a1a)}
+.hero h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,#fff,var(--cyan),var(--al));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero .sub{color:var(--dim);font-size:.92em;margin:6px 0}
 
 .container{max-width:1200px;margin:0 auto;padding:20px}
@@ -36,18 +36,18 @@ select,button{font-family:inherit}
 .select-bar label{font-size:.82em;color:var(--dim);display:block;margin-bottom:4px}
 .select-bar select{padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:.9em;min-width:160px;outline:none;cursor:pointer}
 .select-bar select:focus{border-color:var(--accent)}
-.select-bar .add-btn{padding:10px 18px;background:rgba(15,118,110,.1);border:1px solid rgba(15,118,110,.25);border-radius:8px;color:var(--cyan);font-size:.88em;font-weight:600;cursor:pointer;transition:all .2s}
-.select-bar .add-btn:hover{background:rgba(15,118,110,.2)}
-.select-bar .clear-btn{padding:10px 18px;background:rgba(185,28,28,.08);border:1px solid rgba(185,28,28,.2);border-radius:8px;color:var(--red);font-size:.88em;cursor:pointer}
+.select-bar .add-btn{padding:10px 18px;background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.25);border-radius:8px;color:var(--cyan);font-size:.88em;font-weight:600;cursor:pointer;transition:all .2s}
+.select-bar .add-btn:hover{background:rgba(0,229,255,.2)}
+.select-bar .clear-btn{padding:10px 18px;background:rgba(255,82,82,.08);border:1px solid rgba(255,82,82,.2);border-radius:8px;color:var(--red);font-size:.88em;cursor:pointer}
 
 /* 对比表 */
 .compare-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .compare-table{width:100%;border-collapse:collapse;font-size:.88em;min-width:500px}
 .compare-table thead{position:sticky;top:52px;z-index:10}
-.compare-table th{padding:14px 16px;background:rgba(37,99,235,.08);border-bottom:2px solid var(--accent);text-align:center;font-weight:700;font-size:.95em;color:var(--al);min-width:180px}
-.compare-table th:first-child{text-align:left;min-width:140px;font-size:.82em;color:var(--dim);background:rgba(247,248,250,.95);position:sticky;left:0;z-index:11}
-.compare-table td{padding:12px 16px;border-bottom:1px solid rgba(0,0,0,.03);vertical-align:top}
-.compare-table td:first-child{font-weight:600;color:var(--al);font-size:.82em;background:rgba(247,248,250,.9);position:sticky;left:0;z-index:1;white-space:nowrap}
+.compare-table th{padding:14px 16px;background:rgba(108,92,231,.12);border-bottom:2px solid var(--accent);text-align:center;font-weight:700;font-size:.95em;color:var(--al);min-width:180px}
+.compare-table th:first-child{text-align:left;min-width:140px;font-size:.82em;color:var(--dim);background:rgba(10,10,15,.8);position:sticky;left:0;z-index:11}
+.compare-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.03);vertical-align:top}
+.compare-table td:first-child{font-weight:600;color:var(--al);font-size:.82em;background:rgba(10,10,15,.6);position:sticky;left:0;z-index:1;white-space:nowrap}
 .compare-table tr:hover td{background:rgba(108,92,231,.03)}
 .compare-table .highlight{color:var(--cyan);font-weight:700}
 .compare-table .good{color:var(--green)}
@@ -63,7 +63,7 @@ select,button{font-family:inherit}
 .empty h2{font-size:1.3em;margin-bottom:8px;color:var(--text)}
 
 /* 推荐小结 */
-.verdict{background:linear-gradient(135deg,rgba(15,118,110,.06),rgba(37,99,235,.04));border:1px solid rgba(15,118,110,.2);border-radius:12px;padding:20px;margin-top:20px}
+.verdict{background:linear-gradient(135deg,rgba(0,229,255,.06),rgba(108,92,231,.06));border:1px solid rgba(0,229,255,.2);border-radius:12px;padding:20px;margin-top:20px}
 .verdict h3{font-size:1.05em;color:var(--cyan);margin-bottom:8px}
 .verdict p{font-size:.88em;color:var(--dim);line-height:1.8}
 .verdict .rec{color:var(--green);font-weight:700}
@@ -207,7 +207,7 @@ function render(){
 
 function renderChips(){
   const el = document.getElementById('selectedChips');
-  el.innerHTML = selected.map(c => `<span style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.2);border-radius:6px;font-size:.85em;color:var(--al)">
+  el.innerHTML = selected.map(c => `<span style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;background:rgba(108,92,231,.15);border:1px solid rgba(108,92,231,.3);border-radius:6px;font-size:.85em;color:var(--al)">
     ${c} <span style="cursor:pointer;color:var(--red);margin-left:4px" onclick="removeCity('${c}')">✕</span>
   </span>`).join('');
   document.getElementById('selectedLabel').textContent = `已选 ${selected.length} 个城市`;

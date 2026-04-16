@@ -6,21 +6,21 @@
 <title>OPC政策详情</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
 <style>
-:root{--bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--dim:#8888a0;
-  --accent:#6c5ce7;--al:#a29bfe;--green:#00e676;--gd:#1b5e20;--yellow:#ffd600;--yd:#5d4e00;
+:root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
+  --accent:#2563EB;--al:#3B82F6;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
   --red:#ff5252;--cyan:#00e5ff;--blue:#448aff;--orange:#ff9100}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-a{color:var(--al);text-decoration:none}a:hover{color:#fff}
+a{color:var(--al);text-decoration:none}a:hover{color:var(--accent)}
 
-.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);
+.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(255,255,255,.95);
   border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
 .topnav .logo{font-weight:800;font-size:1em;color:var(--al)}
 .topnav a{padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--dim);transition:all .2s;white-space:nowrap}
-.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(108,92,231,.1)}
+.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(37,99,235,.08)}
 
-.hero{padding:50px 20px 30px;text-align:center;background:linear-gradient(135deg,#0a0a1a 0%,#1a0a2e 50%,#0a1a2e 100%)}
-.hero h1{font-size:2.2em;font-weight:800;background:linear-gradient(135deg,#fff,var(--al),var(--cyan));
+.hero{padding:50px 20px 30px;text-align:center;background:linear-gradient(135deg,#EFF6FF 0%,#F0FDF4 50%,#F0FDFA 100%)}
+.hero h1{font-size:2.2em;font-weight:800;background:linear-gradient(135deg,var(--text),var(--al),var(--cyan));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero .sub{color:var(--dim);font-size:.95em;margin:8px 0}
 
@@ -37,30 +37,30 @@ a{color:var(--al);text-decoration:none}a:hover{color:#fff}
 
 .policy-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;
   margin-bottom:16px;transition:all .3s}
-.policy-card:hover{border-color:rgba(108,92,231,.3);transform:translateY(-2px)}
+.policy-card:hover{border-color:rgba(37,99,235,.2);transform:translateY(-2px)}
 .policy-card h3{font-size:1.1em;margin-bottom:6px;line-height:1.4}
 .policy-card .meta{font-size:.78em;color:var(--dim);margin-bottom:10px;display:flex;flex-wrap:wrap;gap:8px}
 .policy-card .summary{font-size:.88em;color:var(--dim);margin-bottom:12px}
 
 .benefits-table{width:100%;font-size:.85em;border-collapse:collapse;margin:10px 0}
-.benefits-table th{text-align:left;padding:8px 10px;background:rgba(108,92,231,.08);color:var(--al);
+.benefits-table th{text-align:left;padding:8px 10px;background:rgba(37,99,235,.06);color:var(--al);
   border-bottom:1px solid var(--border);font-weight:600}
-.benefits-table td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.03)}
+.benefits-table td{padding:8px 10px;border-bottom:1px solid rgba(0,0,0,.03)}
 .benefits-table .amount{color:var(--cyan);font-weight:700}
 
 .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.72em;font-weight:600;margin-right:4px}
 .tag-active{background:var(--gd);color:var(--green)}
 .tag-draft{background:var(--yd);color:var(--yellow)}
-.tag-province{background:rgba(108,92,231,.15);color:var(--al)}
-.tag-city{background:rgba(0,229,255,.1);color:var(--cyan)}
-.tag-district{background:rgba(255,145,0,.1);color:var(--orange)}
+.tag-province{background:rgba(37,99,235,.1);color:var(--al)}
+.tag-city{background:rgba(15,118,110,.1);color:var(--cyan)}
+.tag-district{background:rgba(180,83,9,.1);color:var(--orange)}
 
 .community-card{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:10px}
 .community-card h4{font-size:.95em;margin-bottom:4px;color:var(--cyan)}
 .community-card .detail{font-size:.82em;color:var(--dim)}
 
 .links{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
-.links a{padding:4px 12px;background:rgba(108,92,231,.1);border:1px solid rgba(108,92,231,.2);
+.links a{padding:4px 12px;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.15);
   border-radius:6px;font-size:.78em}
 
 .empty{text-align:center;padding:60px 20px;color:var(--dim)}
@@ -202,7 +202,7 @@ async function loadCity() {
       if (p.district) html += `<span>${p.district}</span>`;
       if (p.issuer) html += `<span>${p.issuer}</span>`;
       if (p.publish_date) html += `<span>${p.publish_date}</span>`;
-      if (p.auto_extracted) html += `<span class="tag" style="background:rgba(255,145,0,.1);color:var(--orange)">AI提取</span>`;
+      if (p.auto_extracted) html += `<span class="tag" style="background:rgba(180,83,9,.1);color:var(--orange)">AI提取</span>`;
       html += `</div>`;
 
       if (p.summary) html += `<p class="summary">${p.summary}</p>`;
@@ -236,7 +236,7 @@ async function loadCity() {
         html += `<p style="font-size:.82em;color:var(--dim);margin-top:4px"><strong style="color:var(--al)">申请方式：</strong>${p.application.method}</p>`;
       }
       if (p.application_url) {
-        html += `<p style="margin-top:4px"><a href="${p.application_url}" target="_blank" style="font-size:.82em;padding:4px 12px;background:rgba(108,92,231,.15);border:1px solid rgba(108,92,231,.25);border-radius:6px;display:inline-block">在线申请入口 →</a></p>`;
+        html += `<p style="margin-top:4px"><a href="${p.application_url}" target="_blank" style="font-size:.82em;padding:4px 12px;background:rgba(37,99,235,.1);border:1px solid rgba(108,92,231,.25);border-radius:6px;display:inline-block">在线申请入口 →</a></p>`;
       }
       if (p.application?.deadline) {
         html += `<p style="font-size:.82em;color:var(--red);margin-top:4px"><strong>截止日期：</strong>${p.application.deadline}</p>`;
@@ -249,14 +249,14 @@ async function loadCity() {
         html += `<p style="font-size:.82em;font-weight:600;color:var(--al);margin-bottom:6px">📋 需要准备的材料：</p>`;
         html += `<div style="display:flex;flex-wrap:wrap;gap:4px">`;
         for (const m of mats) {
-          html += `<span style="font-size:.78em;padding:3px 10px;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:5px;color:var(--dim)">${m}</span>`;
+          html += `<span style="font-size:.78em;padding:3px 10px;background:rgba(0,0,0,.04);border:1px solid var(--border);border-radius:5px;color:var(--dim)">${m}</span>`;
         }
         html += `</div></div>`;
       }
 
       // Actual cases
       if (p.actual_cases) {
-        html += `<div style="margin-top:10px;padding:12px;background:rgba(0,230,118,.04);border:1px solid rgba(0,230,118,.12);border-radius:8px">`;
+        html += `<div style="margin-top:10px;padding:12px;background:rgba(21,128,61,.04);border:1px solid rgba(21,128,61,.12);border-radius:8px">`;
         html += `<p style="font-size:.82em;font-weight:600;color:var(--green);margin-bottom:4px">📊 实际案例：</p>`;
         html += `<p style="font-size:.82em;color:var(--dim)">${p.actual_cases}</p>`;
         html += `</div>`;

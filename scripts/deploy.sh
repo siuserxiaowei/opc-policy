@@ -60,6 +60,9 @@ fi
 if [[ -d cities ]]; then
   cp -r cities "$DIST/"
 fi
+if [[ -d seo ]]; then
+  cp -r seo "$DIST/"
+fi
 
 # ── 显式黑名单校验（双重保险） ───────────────────────────────────────
 echo "→ 黑名单校验"

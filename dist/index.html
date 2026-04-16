@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OPC政策导航 | 全国36城79条OPC一人公司补贴政策一键匹配 - opcgate.com</title>
-<meta name="description" content="全国OPC（一人公司）政策导航，覆盖36座城市79条政策130+OPC社区。填写你的公司情况，一键匹配可申请的补贴。涵盖苏州、广州、深圳、北京、上海、杭州、青岛、武汉、成都等城市的算力券、免租空间、创业资助、人才补贴。">
+<title>OPC 选址决策工具 | 帮你判断哪个城市最适合做 OPC - opcgate.com</title>
+<meta name="description" content="不是帮你看政策，是帮你做出 OPC 落地决策。38 城 85 条政策 130+ 社区并排对比，每条带官方来源。快速排除不合适的城市和社区，找到最适合你的。">
 <meta name="keywords" content="OPC,一人公司,OPC政策,OPC补贴,OPC社区,超级个体,AI创业,算力券,创业补贴,OPC创业,一人公司注册,OPC孵化器,opcgate">
-<meta property="og:title" content="OPC政策导航 | 全国36城OPC补贴一键匹配">
+<meta property="og:title" content="OPC 选址决策工具 | 帮你判断哪个城市最适合做 OPC">
 <meta property="og:description" content="覆盖36城79条政策130+OPC社区。苏州/广州/深圳/北京/上海/杭州/青岛/武汉/成都。算力券、免租空间、创业资助一键查询匹配。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://opcgate.com">
 <meta property="og:image" content="https://opcgate.com/assets/avatar.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OPC政策导航 | 全国36城补贴一键匹配">
-<meta name="twitter:description" content="覆盖36城79条OPC政策，填写公司情况一键匹配可申请的补贴。">
+<meta name="twitter:title" content="OPC 选址决策工具 | 帮你做出 OPC 落地决策">
+<meta name="twitter:description" content="不是帮你看政策，是帮你做出落地决策。38 城 85 条政策 130+ 社区，每条带官方来源。">
 <meta name="author" content="siuser小伟">
 <link rel="canonical" href="https://opcgate.com">
 <link rel="alternate" type="application/rss+xml" title="opcgate.com · 全国 OPC 政策更新" href="https://opcgate.com/rss.xml">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"OPC政策导航","description":"全国OPC一人公司政策导航，一键匹配可申请的补贴","url":"https://opcgate.com","author":{"@type":"Person","name":"siuser小伟"},"applicationCategory":"BusinessApplication","operatingSystem":"Web"}
+{"@context":"https://schema.org","@type":"WebApplication","name":"OPC 选址决策工具","description":"帮你快速排除不合适的城市和社区，做出 OPC 落地决策。38 城 85 条政策 130+ 社区，每条带官方来源。","url":"https://opcgate.com","author":{"@type":"Person","name":"siuser小伟"},"applicationCategory":"BusinessApplication","operatingSystem":"Web"}
 </script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
 <style>
@@ -311,6 +311,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   <a href="guangzhou.html">广州专版</a>
   <a href="chengdu.html">成都专版</a>
   <a href="suzhou.html">苏州专版</a>
+  <a href="compare.html">城市对比</a>
   <a href="yuexiu.html">越秀区</a>
   <a href="tax.html">税务指南</a>
   <a href="dashboard.html">数据看板</a>
@@ -515,6 +516,34 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
         <button class="btn btn-outline" onclick="exportResults('txt')">导出 TXT</button>
         <button class="btn btn-outline" onclick="exportResults('csv')">导出 CSV</button>
         <button class="btn btn-primary" onclick="generateChecklist()">📋 生成材料清单</button>
+      </div>
+
+      <!-- 订阅监控入口 -->
+      <div style="margin-top:20px;background:linear-gradient(135deg,rgba(108,92,231,.08),rgba(0,229,255,.06));border:1px solid rgba(108,92,231,.2);border-radius:14px;padding:24px">
+        <h3 style="font-size:1.05em;margin-bottom:6px;color:var(--al)">📡 订阅政策变动监控</h3>
+        <p style="font-size:.85em;color:var(--dim);margin-bottom:14px">不想错过截止日期？不想漏掉新出的补贴？订阅你关注的城市，有变动第一时间知道。</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:500px">
+          <div style="padding:14px;background:var(--card);border:1px solid var(--border);border-radius:10px">
+            <div style="font-size:.78em;color:var(--green);font-weight:700;margin-bottom:4px">免费</div>
+            <div style="font-size:.88em;font-weight:600;margin-bottom:4px">RSS 订阅</div>
+            <ul style="font-size:.78em;color:var(--dim);padding-left:14px;margin-bottom:10px">
+              <li>所有城市政策更新</li>
+              <li>用 Feedly / Inoreader 阅读</li>
+              <li>新政策自动推送</li>
+            </ul>
+            <a href="rss.xml" style="display:inline-block;padding:6px 14px;background:rgba(0,230,118,.1);border:1px solid rgba(0,230,118,.2);border-radius:6px;font-size:.82em;color:var(--green);font-weight:600">📡 订阅 RSS</a>
+          </div>
+          <div style="padding:14px;background:var(--card);border:1px solid var(--border);border-radius:10px">
+            <div style="font-size:.78em;color:var(--orange);font-weight:700;margin-bottom:4px">即将推出</div>
+            <div style="font-size:.88em;font-weight:600;margin-bottom:4px">城市监控</div>
+            <ul style="font-size:.78em;color:var(--dim);padding-left:14px;margin-bottom:10px">
+              <li>关注指定城市 / 社区</li>
+              <li>截止日期提前提醒</li>
+              <li>每周变动摘要邮件</li>
+            </ul>
+            <span style="display:inline-block;padding:6px 14px;background:rgba(255,145,0,.08);border:1px solid rgba(255,145,0,.15);border-radius:6px;font-size:.82em;color:var(--orange)">🔜 敬请期待</span>
+          </div>
+        </div>
       </div>
 
       <!-- 材料清单面板 -->
@@ -908,20 +937,170 @@ function showResults(results, profile){
   setStep(3);
   document.getElementById('panelLoading').classList.add('hidden');
   document.getElementById('panelResults').classList.remove('hidden');
-  const high=results.filter(r=>r.level==='high').length;
-  const mid=results.filter(r=>r.level==='mid').length;
-  const low=results.filter(r=>r.level==='low').length;
+  const high=results.filter(r=>r.level==='high');
+  const mid=results.filter(r=>r.level==='mid');
+  const low=results.filter(r=>r.level==='low');
   const maxAmt = Math.max(0,...results.flatMap(r=>(r.policy.benefits||[]).map(b=>b.amount_max||0)));
 
   document.getElementById('resultDesc').textContent =
     `${profile.city}${profile.district?profile.district+'区':''} · ${profile.employees||'?'}人 · ${profile.industries.join('/')||'未指定'} — 共 ${results.length} 条政策`;
   document.getElementById('summaryStats').innerHTML = `
-    <div class="summary-stat"><div class="num" style="color:var(--green)">${high}</div><div class="lbl">高度匹配</div></div>
-    <div class="summary-stat"><div class="num" style="color:var(--yellow)">${mid}</div><div class="lbl">条件匹配</div></div>
-    <div class="summary-stat"><div class="num" style="color:var(--red)">${low}</div><div class="lbl">暂不匹配</div></div>
+    <div class="summary-stat"><div class="num" style="color:var(--green)">${high.length}</div><div class="lbl">高度匹配</div></div>
+    <div class="summary-stat"><div class="num" style="color:var(--yellow)">${mid.length}</div><div class="lbl">条件匹配</div></div>
+    <div class="summary-stat"><div class="num" style="color:var(--red)">${low.length}</div><div class="lbl">暂不匹配</div></div>
     <div class="summary-stat"><div class="num" style="color:var(--cyan)">${maxAmt>=10000?Math.round(maxAmt/10000)+'万':maxAmt>0?maxAmt+'元':'-'}</div><div class="lbl">最高补贴</div></div>`;
+
+  // === 决策结论 ===
+  const verdict = buildVerdict(results, profile);
+  let verdictEl = document.getElementById('verdictPanel');
+  if(!verdictEl){
+    verdictEl = document.createElement('div');
+    verdictEl.id = 'verdictPanel';
+    const tabs = document.getElementById('resultTabs');
+    tabs.parentNode.insertBefore(verdictEl, tabs);
+  }
+  verdictEl.innerHTML = verdict;
+
   window._allResults = results;
+  window._profile = profile;
   renderResults(results);
+}
+
+function buildVerdict(results, profile){
+  const high = results.filter(r=>r.level==='high');
+  const mid = results.filter(r=>r.level==='mid');
+  const low = results.filter(r=>r.level==='low');
+
+  // Top 3 推荐政策
+  const top3 = results.slice(0,3);
+
+  // 按城市聚合推荐
+  const cityScores = {};
+  results.forEach(r => {
+    const c = r.policy.city;
+    if(!c) return;
+    if(!cityScores[c]) cityScores[c] = {city:c, totalScore:0, count:0, highCount:0, comms:0, maxAmt:0};
+    cityScores[c].totalScore += r.score;
+    cityScores[c].count++;
+    if(r.level==='high') cityScores[c].highCount++;
+    cityScores[c].comms += (r.policy.communities||[]).length;
+    (r.policy.benefits||[]).forEach(b => {
+      if((b.amount_max||0) > cityScores[c].maxAmt) cityScores[c].maxAmt = b.amount_max;
+    });
+  });
+  const rankedCities = Object.values(cityScores).sort((a,b) => {
+    if(b.highCount !== a.highCount) return b.highCount - a.highCount;
+    return b.totalScore/b.count - a.totalScore/a.count;
+  });
+  const bestCity = rankedCities[0];
+  const notRec = rankedCities.filter(c => c.highCount === 0 && c.count > 0);
+
+  // 不推荐项
+  const blockerSummary = [];
+  low.forEach(r => {
+    r.blockers.forEach(b => {
+      if(!blockerSummary.includes(b)) blockerSummary.push(b);
+    });
+  });
+
+  // 3 步行动建议
+  const actions = [];
+  if(high.length > 0){
+    const firstHigh = high[0].policy;
+    if(firstHigh.application?.url) actions.push(`<a href="${firstHigh.application.url}" target="_blank" style="color:var(--cyan)">立即申报"${firstHigh.name.substring(0,20)}"</a>`);
+    else actions.push(`查看 "${firstHigh.name.substring(0,25)}" 的申报流程`);
+  }
+  if(bestCity && bestCity.comms > 0) actions.push(`考虑入驻 ${bestCity.city} 的 OPC 社区（共 ${bestCity.comms} 个可选）`);
+  else actions.push('关注目标城市的 OPC 社区招募公告');
+  const deadlines = results.filter(r => r.policy.application?.deadline).map(r => ({name:r.policy.name.substring(0,20), deadline: r.policy.application.deadline})).sort((a,b)=>a.deadline.localeCompare(b.deadline));
+  if(deadlines.length) actions.push(`注意最近截止：${deadlines[0].name} (${deadlines[0].deadline})`);
+  else actions.push('持续关注政策动态（<a href="rss.xml" style="color:var(--cyan)">订阅 RSS</a>）');
+
+  const amtStr = n => n >= 10000 ? (n/10000).toFixed(0)+'万' : n+'元';
+
+  return `
+  <div style="background:linear-gradient(135deg,rgba(0,229,255,.06),rgba(108,92,231,.06));border:1px solid rgba(0,229,255,.2);border-radius:14px;padding:22px;margin:16px 0">
+    <h3 style="font-size:1.1em;color:var(--cyan);margin-bottom:12px">⚡ 决策结论</h3>
+
+    ${bestCity ? `<div style="margin-bottom:14px">
+      <span style="font-size:.82em;color:var(--dim)">🏆 最推荐城市：</span>
+      <strong style="color:var(--green);font-size:1.1em">${bestCity.city}</strong>
+      <span style="font-size:.82em;color:var(--dim)">（${bestCity.highCount} 条高度匹配 · ${bestCity.comms} 个社区 · 最高 ${amtStr(bestCity.maxAmt)}）</span>
+    </div>` : ''}
+
+    ${notRec.length ? `<div style="margin-bottom:14px">
+      <span style="font-size:.82em;color:var(--dim)">⚠️ 暂不推荐：</span>
+      ${notRec.map(c => `<span style="color:var(--red);font-size:.88em">${c.city}</span>`).join('、')}
+      <span style="font-size:.78em;color:var(--dim)">（${c=>c.highCount===0?'无高度匹配政策':''}）</span>
+    </div>` : ''}
+
+    ${blockerSummary.length ? `<div style="margin-bottom:14px">
+      <span style="font-size:.82em;color:var(--dim)">🚧 主要阻碍：</span>
+      <span style="font-size:.85em;color:var(--yellow)">${blockerSummary.slice(0,3).join(' · ')}</span>
+    </div>` : ''}
+
+    <div style="margin-bottom:14px">
+      <span style="font-size:.82em;color:var(--dim)">📋 Top 3 推荐政策：</span>
+      <ol style="font-size:.85em;padding-left:18px;margin:6px 0;color:var(--text)">
+        ${top3.map(r => `<li><strong style="color:var(--al)">${r.policy.name.substring(0,35)}</strong> <span style="color:var(--dim)">${r.policy.city} · ${r.score}%</span></li>`).join('')}
+      </ol>
+    </div>
+
+    <div style="padding-top:12px;border-top:1px solid rgba(255,255,255,.06)">
+      <span style="font-size:.82em;color:var(--dim)">🎯 下一步行动：</span>
+      <ol style="font-size:.85em;padding-left:18px;margin:6px 0;color:var(--green)">
+        ${actions.map(a => `<li>${a}</li>`).join('')}
+      </ol>
+    </div>
+
+    <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+      <button onclick="exportVerdict()" style="padding:8px 16px;background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.25);border-radius:8px;color:var(--cyan);font-size:.82em;font-weight:600;cursor:pointer">📄 导出决策报告</button>
+      <a href="rss.xml" style="padding:8px 16px;background:rgba(108,92,231,.1);border:1px solid rgba(108,92,231,.25);border-radius:8px;color:var(--al);font-size:.82em;font-weight:600;display:inline-flex;align-items:center">📡 订阅政策更新</a>
+      ${bestCity ? `<a href="compare.html" style="padding:8px 16px;background:rgba(255,145,0,.1);border:1px solid rgba(255,145,0,.25);border-radius:8px;color:var(--orange);font-size:.82em;font-weight:600;display:inline-flex;align-items:center">⚖️ 对比更多城市</a>` : ''}
+    </div>
+  </div>`;
+}
+
+function exportVerdict(){
+  const p = window._profile;
+  const results = window._allResults;
+  if(!p || !results) return;
+
+  const high = results.filter(r=>r.level==='high');
+  const mid = results.filter(r=>r.level==='mid');
+  const low = results.filter(r=>r.level==='low');
+
+  let txt = '# OPC 选址决策报告\n';
+  txt += `生成时间: ${new Date().toLocaleString('zh-CN')}\n`;
+  txt += `来源: opcgate.com · 每条带官方链接 · 拒绝AI编造\n\n`;
+  txt += '## 你的情况\n';
+  txt += `城市: ${p.city}${p.district?' '+p.district+'区':''}\n`;
+  txt += `社保人数: ${p.employees||'未填'}\n`;
+  txt += `行业: ${p.industries?.join('、')||'未填'}\n`;
+  txt += `公司类型: ${p.companyType||'未填'}\n\n`;
+  txt += '## 匹配结果\n';
+  txt += `高度匹配: ${high.length} 条 / 条件匹配: ${mid.length} 条 / 暂不匹配: ${low.length} 条\n\n`;
+  txt += '## Top 3 推荐\n';
+  results.slice(0,3).forEach((r,i) => {
+    txt += `${i+1}. ${r.policy.name} (${r.policy.city}) - ${r.score}%\n`;
+    txt += `   ${r.policy.summary}\n`;
+    if(r.policy.links?.official) txt += `   来源: ${r.policy.links.official}\n`;
+    txt += '\n';
+  });
+  if(high.length){
+    txt += '## 高度匹配的全部政策\n';
+    high.forEach(r => {
+      txt += `- ${r.policy.name} (${r.score}%)\n`;
+      (r.policy.benefits||[]).forEach(b => { txt += `  · ${b.item}: ${b.amount}\n`; });
+    });
+  }
+  txt += '\n---\nopcgate.com · OPC选址决策工具\n';
+
+  const blob = new Blob([txt], {type:'text/plain;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `OPC决策报告_${p.city}_${new Date().toISOString().slice(0,10)}.txt`;
+  a.click();
 }
 
 // 计算距截止日期的天数

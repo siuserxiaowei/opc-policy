@@ -107,7 +107,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   <h1>维护日志 · 核实记录</h1>
   <p>本页记录 opcgate.com 的所有数据核验、更新、修复动作。每条都可追溯到具体的 git commit，拒绝 AI 编造，每次改动都公开透明。</p>
   <div class="stats">
-    <div class="s"><div class="n">69</div><div class="l">总维护次数</div></div>
+    <div class="s"><div class="n">72</div><div class="l">总维护次数</div></div>
     <div class="s"><div class="n">5</div><div class="l">数据核验动作</div></div>
     <div class="s"><div class="n">1</div><div class="l">活跃月份</div></div>
     <div class="s"><div class="n" style="color:var(--green)">LIVE</div><div class="l">持续维护中</div></div>
@@ -118,10 +118,43 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
   <div class="months">
     <span class="ml">按月分布：</span>
-    <span class="m-chip">2026-04 · 69 次</span>
+    <span class="m-chip">2026-04 · 72 次</span>
   </div>
 
   
+    <div class="cm-item cat-fix">
+      <div class="cm-head">
+        <span class="cm-icon">🔧</span>
+        <span class="cm-label">修复</span>
+        <span class="cm-date">2026-04-16 18:27</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/4e43d543470c1dc0c619968c6077556661bde77b" target="_blank" rel="noopener" class="cm-sha">4e43d54</a>
+        <span class="cm-stats">1 文件 <span class="st-plus">+6</span> <span class="st-minus">−6</span></span>
+      </div>
+      <div class="cm-subject">fix: title/meta/OG/twitter/schema 全部对齐新定位&#x27;OPC 选址决策工具&#x27;</div>
+      
+    </div>
+    <div class="cm-item cat-other">
+      <div class="cm-head">
+        <span class="cm-icon">📌</span>
+        <span class="cm-label">其他</span>
+        <span class="cm-date">2026-04-16 17:58</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/bf1b29a2f4ef5aaafb3622e0b5ec2df2fc0f1da0" target="_blank" rel="noopener" class="cm-sha">bf1b29a</a>
+        <span class="cm-stats">13 文件 <span class="st-plus">+733</span> <span class="st-minus">−6</span></span>
+      </div>
+      <div class="cm-subject">修改意见3-5完成: 决策结论 + 订阅入口 + SEO对比矩阵</div>
+      <div class="cm-body">## 第3条: 结果页给决策结论<br>- 匹配结果顶部新增 ⚡决策结论 区块<br>- 自动输出: 最推荐城市(综合评分最高) + 暂不推荐城市 + 主要阻碍<br>- Top 3 推荐政策列表<br>- 3步行动建议(含申报链接/社区入驻/截止提醒)<br>- 📄导出决策报告 按钮(TXT格式，带opcgate.com水印)<br>- ⚖️对比更多城市 + 📡订阅政策更新 快捷入口<br>## 第4条: 监控做成订阅入口<br>- 结果页底部新增&#x27;订阅政策变动监控&#x27;面板<br>- 免费: RSS订阅(已上线)<br>- 即将推出: 城市监控(关注指定城市/截止提醒/每周摘要邮件)<br>- 免费/付费分层UI已搭好，付费功能标&#x27;敬请期待&#x27;<br>## 第5条: SEO对比页矩阵<br>- scripts/generate_seo_pages.py 自动生成11个热门对比页<br>- 广州vs深圳vs苏州 / 北京vs上海vs深圳 / 苏州vs杭州vs南京 等<br>- 含行业导向页: AI语音创业选广州还是深圳 / 2026最佳OPC城市<br>- 每页SEO优化: title/description/keywords/canonical/OG<br>- 百度推送脚本<br>- seo/index.html 索引页<br>- deploy.sh 白名单已加 seo/</div>
+    </div>
+    <div class="cm-item cat-add">
+      <div class="cm-head">
+        <span class="cm-icon">➕</span>
+        <span class="cm-label">新增</span>
+        <span class="cm-date">2026-04-16 17:53</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/0490292e4551ea968ee147d06e4df63d9decdb9e" target="_blank" rel="noopener" class="cm-sha">0490292</a>
+        <span class="cm-stats">83 文件 <span class="st-plus">+20362</span> <span class="st-minus">−52</span></span>
+      </div>
+      <div class="cm-subject">新增: 城市/社区对比页 compare.html + 全站 nav 入口</div>
+      <div class="cm-body">修改意见第2条落地：把城市/社区对比做成主产品<br>功能：<br>- 选 2-4 个城市并排对比<br>- 13 个对比维度：省份/政策数/社区数/最高补贴/免租工位/<br>  现金补贴TOP3/算力券/贷款基金/适合/不适合/社区列表/更新日期/详情链接<br>- 自动高亮每行最优项（蓝色高亮）<br>- ⚡ 快速判断区块：自动输出综合最优城市+注意事项最多城市<br>- 5 个一键热门对比按钮（广深苏/广成/苏杭宁/京沪深/青郑武）<br>- 数据从 policies.json 实时读取，和首页完全同源<br>UI设计：<br>- 表头固定、行标签固定（适合横向滚动）<br>- 适合/不适合用绿标签和红标签区分<br>- 响应式（移动端横滚）<br>全站 nav 8 个主页面加&#x27;城市对比&#x27;入口</div>
+    </div>
     <div class="cm-item cat-other">
       <div class="cm-head">
         <span class="cm-icon">📌</span>
@@ -885,7 +918,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 </div>
 
 <footer>
-  <p>opcgate.com · 维护日志自动生成于 2026-04-16 17:44</p>
+  <p>opcgate.com · 维护日志自动生成于 2026-04-16 18:27</p>
   <p style="margin-top:4px"><a href="https://github.com/siuserxiaowei/opc-policy">在 GitHub 上查看完整提交历史 ↗</a></p>
 </footer>
 

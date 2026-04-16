@@ -7,7 +7,7 @@
 <meta name="description" content="全国OPC政策数据看板 - 城市对比、补贴排行、社区统计">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 <style>
-:root{--bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--dim:#8888a0;--accent:#6c5ce7;--al:#a29bfe;--green:#00e676;--yellow:#ffd600;--red:#ff5252;--cyan:#00e5ff;--blue:#448aff;--orange:#ff9100}
+:root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;--accent:#2563EB;--al:#3B82F6;--green:#00e676;--yellow:#ffd600;--red:#ff5252;--cyan:#00e5ff;--blue:#448aff;--orange:#ff9100}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 a{color:var(--al);text-decoration:none}
@@ -51,9 +51,9 @@ h1{font-size:1.8em;margin-bottom:4px}
 .rank-item:hover{background:var(--card2)}
 .rank-num{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.75em;font-weight:700;flex-shrink:0}
 .rank-1{background:rgba(255,214,0,.15);color:var(--yellow)}
-.rank-2{background:rgba(0,230,118,.1);color:var(--green)}
-.rank-3{background:rgba(0,229,255,.1);color:var(--cyan)}
-.rank-other{background:rgba(255,255,255,.05);color:var(--dim)}
+.rank-2{background:rgba(21,128,61,.1);color:var(--green)}
+.rank-3{background:rgba(15,118,110,.1);color:var(--cyan)}
+.rank-other{background:rgba(0,0,0,.04);color:var(--dim)}
 .rank-name{flex:1;font-weight:500}.rank-val{font-weight:700;color:var(--cyan);font-size:.95em}
 
 /* Timeline */
@@ -61,15 +61,15 @@ h1{font-size:1.8em;margin-bottom:4px}
 .tl-item{display:flex;gap:12px;padding:10px 14px;background:var(--bg);border-radius:8px}
 .tl-date{width:90px;flex-shrink:0;font-size:.82em;color:var(--al);font-weight:600}
 .tl-content{flex:1;font-size:.88em}
-.tl-city{font-size:.75em;padding:1px 6px;border-radius:4px;background:rgba(108,92,231,.15);color:var(--al)}
+.tl-city{font-size:.75em;padding:1px 6px;border-radius:4px;background:rgba(37,99,235,.1);color:var(--al)}
 .tl-urgent{color:var(--red);font-weight:600}
 
 /* Top nav */
-.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);
+.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(255,255,255,.95);
   border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
 .topnav .logo{font-weight:800;font-size:1em;color:var(--al)}
 .topnav a{padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--dim);transition:all .2s}
-.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(108,92,231,.1)}
+.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(37,99,235,.08)}
 .topnav .spacer{flex:1}
 
 /* Compare tool */

@@ -7,20 +7,20 @@
 <meta name="description" content="OPC一人公司税务完全指南：个人独资vs一人有限vs个体户税负对比，小微企业5%企税，前海/海南/南沙15%优惠，研发加计扣除，最优税务架构建议。">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 <style>
-:root{--bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--dim:#8888a0;
-  --accent:#6c5ce7;--al:#a29bfe;--green:#00e676;--gd:#1b5e20;--yellow:#ffd600;--yd:#5d4e00;
+:root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
+  --accent:#2563EB;--al:#3B82F6;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
   --red:#ff5252;--cyan:#00e5ff;--blue:#448aff;--orange:#ff9100}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-a{color:var(--al);text-decoration:none}a:hover{color:#fff}
-.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+a{color:var(--al);text-decoration:none}a:hover{color:var(--accent)}
+.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(255,255,255,.95);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
 .topnav .logo{font-weight:800;font-size:1em;color:var(--al)}
 .topnav a{padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--dim);transition:all .2s}
-.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(108,92,231,.1)}
+.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(37,99,235,.08)}
 .topnav .spacer{flex:1}
 .container{max-width:1000px;margin:0 auto;padding:30px 20px}
-.hero{padding:50px 20px 30px;text-align:center;background:linear-gradient(135deg,#0a0a1a 0%,#1a0a2e 50%,#0a1a2e 100%)}
-.hero h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,#fff,var(--al),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero{padding:50px 20px 30px;text-align:center;background:linear-gradient(135deg,#EFF6FF 0%,#F0FDF4 50%,#F0FDFA 100%)}
+.hero h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,var(--text),var(--al),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero .sub{color:var(--dim);font-size:.95em;margin:6px 0}
 .panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px}
 .panel h2{font-size:1.3em;margin-bottom:12px}
@@ -29,9 +29,9 @@ a{color:var(--al);text-decoration:none}a:hover{color:#fff}
 .panel ul{list-style:none;padding:0}
 .panel ul li::before{content:'>';color:var(--accent);margin-right:8px;font-weight:700}
 table{width:100%;border-collapse:collapse;font-size:.88em;margin:12px 0}
-thead{background:rgba(108,92,231,.08)}
+thead{background:rgba(37,99,235,.06)}
 th{padding:10px 14px;text-align:left;font-weight:600;color:var(--al);border-bottom:1px solid var(--border)}
-td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.03)}
+td{padding:10px 14px;border-bottom:1px solid rgba(0,0,0,.03)}
 tr:hover td{background:rgba(108,92,231,.03)}
 .highlight{color:var(--cyan);font-weight:700}
 .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.72em;font-weight:600}
@@ -42,7 +42,7 @@ tr:hover td{background:rgba(108,92,231,.03)}
 .calc-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px}
 .calc-row label{font-size:.82em;color:var(--al);display:block;margin-bottom:4px}
 .calc-row input,.calc-row select{width:100%;padding:8px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:.88em}
-.calc-result{padding:16px;background:rgba(0,229,255,.05);border:1px solid rgba(0,229,255,.15);border-radius:10px;margin-top:12px}
+.calc-result{padding:16px;background:rgba(15,118,110,.05);border:1px solid rgba(15,118,110,.15);border-radius:10px;margin-top:12px}
 .btn{padding:10px 24px;border-radius:8px;font-size:.9em;font-weight:600;cursor:pointer;border:none;background:var(--accent);color:#fff;transition:all .2s}
 .btn:hover{background:#7c6ef0}
 .region-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0}
@@ -52,7 +52,7 @@ tr:hover td{background:rgba(108,92,231,.03)}
 .region-card .name{font-weight:600;margin-bottom:4px}
 .region-card .detail{font-size:.78em;color:var(--dim)}
 .timeline{font-size:.88em}
-.timeline .item{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.03);display:flex;gap:12px}
+.timeline .item{padding:10px 0;border-bottom:1px solid rgba(0,0,0,.03);display:flex;gap:12px}
 .timeline .date{width:120px;flex-shrink:0;color:var(--al);font-weight:600}
 footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;border-top:1px solid var(--border)}
 @media(max-width:768px){.calc-row{grid-template-columns:1fr}.region-grid{grid-template-columns:1fr 1fr}}
@@ -89,17 +89,17 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
         <tr><th>对比项</th><th>一人有限公司</th><th>个人独资企业</th><th>个体工商户</th></tr>
       </thead>
       <tbody>
-        <tr><td colspan="4" style="background:rgba(108,92,231,.06);color:var(--al);font-weight:600;font-size:.82em">所得税</td></tr>
+        <tr><td colspan="4" style="background:rgba(37,99,235,.04);color:var(--al);font-weight:600;font-size:.82em">所得税</td></tr>
         <tr><td>企业所得税</td><td>25%（小微 <span class="highlight">5%</span>）</td><td>不缴</td><td>不缴</td></tr>
         <tr><td>个人所得税</td><td>分红 20%</td><td>经营所得 5%-35%</td><td>经营所得 5%-35%</td></tr>
         <tr><td>所得税综合税负</td><td>小微约 24%</td><td>核定后约 <span class="highlight">4.8%-6.6%</span></td><td>核定后 <span class="highlight">更低</span></td></tr>
-        <tr><td colspan="4" style="background:rgba(0,229,255,.06);color:var(--cyan);font-weight:600;font-size:.82em">增值税</td></tr>
+        <tr><td colspan="4" style="background:rgba(15,118,110,.06);color:var(--cyan);font-weight:600;font-size:.82em">增值税</td></tr>
         <tr><td>纳税人类型</td><td>小规模/一般纳税人</td><td>小规模纳税人</td><td>小规模纳税人</td></tr>
         <tr><td>小规模税率</td><td>1%（2027年底前）</td><td>1%（2027年底前）</td><td>1%（2027年底前）</td></tr>
         <tr><td>免征条件</td><td colspan="3">月销 ≤ 10万 / 季度 ≤ 30万 → <span class="highlight">免征增值税</span>（三种主体均适用）</td></tr>
         <tr><td>一般纳税人税率</td><td>6%（服务）/ 13%（货物）</td><td>通常不选择</td><td>通常不选择</td></tr>
         <tr><td>进项抵扣</td><td><span class="tag tag-best">一般纳税人可抵扣</span></td><td>小规模不可抵扣</td><td>小规模不可抵扣</td></tr>
-        <tr><td colspan="4" style="background:rgba(0,230,118,.06);color:var(--green);font-weight:600;font-size:.82em">附加税费</td></tr>
+        <tr><td colspan="4" style="background:rgba(21,128,61,.06);color:var(--green);font-weight:600;font-size:.82em">附加税费</td></tr>
         <tr><td>城建税+教育附加</td><td colspan="3">增值税的 12%（城建7%+教育3%+地方教育2%），小微 <span class="highlight">减半</span></td></tr>
         <tr><td colspan="4" style="background:rgba(255,214,0,.06);color:var(--yellow);font-weight:600;font-size:.82em">综合对比</td></tr>
         <tr><td>全税种综合税负<br><span style="font-size:.72em;color:var(--dim)">（含增值税+所得税+附加）</span></td><td>小微约 <span class="highlight">25%-28%</span><br><span style="font-size:.72em;color:var(--dim)">可递延、可抵扣</span></td><td>核定后约 <span class="highlight">5.5%-8%</span><br><span style="font-size:.72em;color:var(--dim)">无限连带责任</span></td><td>核定后约 <span class="highlight">3%-6%</span><br><span style="font-size:.72em;color:var(--dim)">无限连带责任</span></td></tr>
@@ -256,7 +256,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   </div>
 
   <!-- Advisor Card -->
-  <div class="panel" style="background:linear-gradient(135deg,rgba(108,92,231,.08) 0%,rgba(0,229,255,.05) 100%);border:1px solid rgba(108,92,231,.25)">
+  <div class="panel" style="background:linear-gradient(135deg,rgba(37,99,235,.06) 0%,rgba(15,118,110,.05) 100%);border:1px solid rgba(108,92,231,.25)">
     <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
       <div style="flex-shrink:0;text-align:center">
         <img src="assets/zhang-qr.png" style="width:160px;border-radius:12px;border:1px solid var(--border);cursor:pointer" onclick="showZhangQR()" title="扫码添加张总微信">
@@ -267,16 +267,16 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
         <h3 style="font-size:1.3em;margin:0 0 4px;color:var(--text)">张永航</h3>
         <p style="font-size:.88em;color:var(--cyan);margin-bottom:8px">盈丰税务规划 · 广州</p>
         <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px">
-          <span style="padding:2px 8px;border-radius:4px;font-size:.72em;background:rgba(0,229,255,.08);color:var(--cyan);border:1px solid rgba(0,229,255,.12)">OPC财税合规</span>
-          <span style="padding:2px 8px;border-radius:4px;font-size:.72em;background:rgba(108,92,231,.12);color:var(--al);border:1px solid rgba(108,92,231,.18)">企业税务架构</span>
-          <span style="padding:2px 8px;border-radius:4px;font-size:.72em;background:rgba(0,230,118,.08);color:var(--green);border:1px solid rgba(0,230,118,.12)">核定征收</span>
+          <span style="padding:2px 8px;border-radius:4px;font-size:.72em;background:rgba(15,118,110,.08);color:var(--cyan);border:1px solid rgba(15,118,110,.12)">OPC财税合规</span>
+          <span style="padding:2px 8px;border-radius:4px;font-size:.72em;background:rgba(37,99,235,.08);color:var(--al);border:1px solid rgba(108,92,231,.18)">企业税务架构</span>
+          <span style="padding:2px 8px;border-radius:4px;font-size:.72em;background:rgba(21,128,61,.08);color:var(--green);border:1px solid rgba(21,128,61,.12)">核定征收</span>
           <span style="padding:2px 8px;border-radius:4px;font-size:.72em;background:rgba(255,214,0,.08);color:var(--yellow);border:1px solid rgba(255,214,0,.12)">税收优惠申报</span>
         </div>
         <p style="font-size:.82em;color:var(--dim);margin-bottom:12px">多年财税从业经验，专注 OPC 一人公司财税合规。从主体选择、注册落地到税务优化，提供全链路专业咨询。</p>
         <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
           <div style="display:flex;align-items:center;gap:8px">
             <span style="color:var(--dim);font-size:.85em">微信号：</span>
-            <span id="advisorWx" style="padding:4px 14px;background:rgba(0,229,255,.08);border:1px solid rgba(0,229,255,.15);border-radius:6px;font-size:.9em;color:var(--cyan);cursor:pointer;font-weight:600" onclick="copyAdvisorWx()">pp667899</span>
+            <span id="advisorWx" style="padding:4px 14px;background:rgba(15,118,110,.08);border:1px solid rgba(15,118,110,.15);border-radius:6px;font-size:.9em;color:var(--cyan);cursor:pointer;font-weight:600" onclick="copyAdvisorWx()">pp667899</span>
             <span id="advisorCopyTip" style="font-size:.75em;color:var(--green);opacity:0;transition:opacity .3s">已复制</span>
           </div>
           <span style="font-size:.78em;color:var(--dim)">（加好友请备注「OPC税务」）</span>
@@ -291,7 +291,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   <div style="margin-top:40px;padding:20px;border:1px dashed var(--border);border-radius:12px;text-align:center">
     <p style="color:var(--dim);font-size:.82em;margin-bottom:10px">管理员专区</p>
     <div id="privateEntry" style="display:none">
-      <a href="private.html" style="padding:10px 24px;background:rgba(255,82,82,.1);border:1px solid rgba(255,82,82,.2);border-radius:8px;font-size:.88em;color:#ff8a80;display:inline-block">进入私密面板 →</a>
+      <a href="private.html" style="padding:10px 24px;background:rgba(185,28,28,.1);border:1px solid rgba(185,28,28,.2);border-radius:8px;font-size:.88em;color:#ff8a80;display:inline-block">进入私密面板 →</a>
     </div>
     <div id="privateLock">
       <input type="password" id="entryPwd" placeholder="输入密码" style="padding:8px 16px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:.85em;text-align:center;width:200px" onkeydown="if(event.key==='Enter')checkEntry()">

@@ -7,12 +7,12 @@
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕷️</text></svg>">
 <style>
-:root{--bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--dim:#8888a0;
-  --accent:#6c5ce7;--al:#a29bfe;--green:#00e676;--gd:#1b5e20;--yellow:#ffd600;--yd:#5d4e00;
+:root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
+  --accent:#2563EB;--al:#3B82F6;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
   --cyan:#00e5ff;--red:#ff5252;--rd:#4a1515;--orange:#ff9100;--blue:#448aff}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--al);text-decoration:none}a:hover{color:#fff}
+a{color:var(--al);text-decoration:none}a:hover{color:var(--accent)}
 button{font-family:inherit;cursor:pointer}
 
 /* Lock screen */
@@ -27,22 +27,22 @@ button{font-family:inherit;cursor:pointer}
 #mainContent{display:none}
 
 /* Nav */
-.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);overflow-x:auto}
+.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(255,255,255,.95);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);overflow-x:auto}
 .topnav .logo{font-weight:800;font-size:1em;color:var(--al)}
 .topnav a{padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--dim);transition:all .2s;white-space:nowrap}
-.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(108,92,231,.1)}
-.topnav .private-tag{padding:3px 10px;border-radius:4px;background:rgba(255,82,82,.12);color:var(--red);font-size:.72em;font-weight:700;margin-left:8px}
+.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(37,99,235,.08)}
+.topnav .private-tag{padding:3px 10px;border-radius:4px;background:rgba(185,28,28,.12);color:var(--red);font-size:.72em;font-weight:700;margin-left:8px}
 .topnav .spacer{flex:1}
 
 /* Hero */
-.hero{padding:30px 20px 20px;text-align:center;background:linear-gradient(135deg,#0a0a1a,#0a1a2e,#0a0a1a)}
-.hero h1{font-size:1.7em;font-weight:800;background:linear-gradient(135deg,#fff,var(--cyan),var(--al));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero{padding:30px 20px 20px;text-align:center;background:linear-gradient(135deg,#EFF6FF,#F0FDFA,#EFF6FF)}
+.hero h1{font-size:1.7em;font-weight:800;background:linear-gradient(135deg,var(--text),var(--cyan),var(--al));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero .sub{color:var(--dim);font-size:.88em;margin:6px 0}
 
 /* Stats row */
 .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;max-width:1100px;margin:16px auto;padding:0 20px}
 .stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;transition:all .2s}
-.stat:hover{border-color:rgba(108,92,231,.3)}
+.stat:hover{border-color:rgba(37,99,235,.2)}
 .stat .n{font-size:1.7em;font-weight:800;line-height:1}
 .stat .l{font-size:.7em;color:var(--dim);margin-top:3px}
 
@@ -55,7 +55,7 @@ button{font-family:inherit;cursor:pointer}
 .btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 .btn.primary:hover{filter:brightness(1.1)}
-.btn.danger{border-color:rgba(255,82,82,.4);color:var(--red)}
+.btn.danger{border-color:rgba(185,28,28,.4);color:var(--red)}
 .btn.danger:hover{background:var(--red);color:#fff}
 .btn.small{padding:4px 10px;font-size:.72em}
 .btn:disabled{opacity:.5;cursor:not-allowed}
@@ -67,7 +67,7 @@ button{font-family:inherit;cursor:pointer}
 
 /* Review items */
 .group{margin-bottom:24px}
-.group-title{font-size:.92em;font-weight:700;color:var(--al);margin-bottom:8px;padding:6px 12px;background:rgba(108,92,231,.08);border-radius:6px;display:inline-block}
+.group-title{font-size:.92em;font-weight:700;color:var(--al);margin-bottom:8px;padding:6px 12px;background:rgba(37,99,235,.06);border-radius:6px;display:inline-block}
 .group-title .count{color:var(--cyan);font-weight:800;margin-left:6px}
 
 .review-item{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:14px 18px;margin-bottom:8px;transition:all .2s}
@@ -76,8 +76,8 @@ button{font-family:inherit;cursor:pointer}
 .review-item .title a{color:var(--text)}
 .review-item .title a:hover{color:var(--cyan)}
 .review-item .meta{display:flex;flex-wrap:wrap;gap:10px;font-size:.72em;color:var(--dim);margin-bottom:8px}
-.review-item .meta .chip{padding:2px 8px;background:rgba(255,255,255,.03);border-radius:4px;border:1px solid rgba(255,255,255,.05)}
-.review-item .meta .city-chip{color:var(--cyan);border-color:rgba(0,229,255,.15);background:rgba(0,229,255,.04)}
+.review-item .meta .chip{padding:2px 8px;background:rgba(0,0,0,.03);border-radius:4px;border:1px solid rgba(0,0,0,.04)}
+.review-item .meta .city-chip{color:var(--cyan);border-color:rgba(15,118,110,.15);background:rgba(15,118,110,.04)}
 .review-item .meta .src-chip{color:var(--al)}
 .review-item .url{font-size:.72em;color:var(--dim);word-break:break-all;margin-bottom:10px;font-family:'JetBrains Mono',monospace}
 .review-item .url a{color:var(--dim)}
@@ -94,8 +94,8 @@ button{font-family:inherit;cursor:pointer}
 
 /* Source health table */
 .src-table{width:100%;border-collapse:collapse;font-size:.82em}
-.src-table th{text-align:left;padding:10px 12px;color:var(--al);border-bottom:1px solid var(--border);background:rgba(108,92,231,.06);font-weight:600}
-.src-table td{padding:8px 12px;border-bottom:1px solid rgba(255,255,255,.03)}
+.src-table th{text-align:left;padding:10px 12px;color:var(--al);border-bottom:1px solid var(--border);background:rgba(37,99,235,.04);font-weight:600}
+.src-table td{padding:8px 12px;border-bottom:1px solid rgba(0,0,0,.03)}
 .src-table tr:hover td{background:rgba(108,92,231,.03)}
 .status-ok{color:var(--green);font-weight:700}
 .status-error{color:var(--red);font-weight:700}

@@ -13,27 +13,27 @@
 <link rel="canonical" href="https://opcgate.com/suzhou.html">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏯</text></svg>">
 <style>
-:root{--bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--dim:#8888a0;
-  --accent:#6c5ce7;--al:#a29bfe;--green:#00e676;--gd:#1b5e20;--yellow:#ffd600;--yd:#5d4e00;
-  --red:#ff5252;--rd:#4a1515;--cyan:#00e5ff;--blue:#448aff;--orange:#ff9100}
+:root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
+  --accent:#2563EB;--al:#3B82F6;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
+  --red:#B91C1C;--rd:#FEE2E2;--cyan:#0F766E;--blue:#2563EB;--orange:#B45309}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-a{color:var(--al);text-decoration:none}a:hover{color:#fff}
+a{color:var(--al);text-decoration:none}a:hover{color:var(--accent)}
 
-.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);
+.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(255,255,255,.95);
   border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);overflow-x:auto}
 .topnav .logo{font-weight:800;font-size:1em;color:var(--al)}
 .topnav a{padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--dim);transition:all .2s;white-space:nowrap}
-.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(108,92,231,.1)}
+.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(37,99,235,.08)}
 
 .container{max-width:1000px;margin:0 auto;padding:30px 20px}
-.hero{padding:50px 20px 30px;text-align:center;background:linear-gradient(135deg,#0a0a1a 0%,#1a0a2e 50%,#0a1a3a 100%);position:relative;overflow:hidden}
-.hero h1{font-size:2.2em;font-weight:800;background:linear-gradient(135deg,#fff,var(--cyan),var(--al));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero{padding:50px 20px 30px;text-align:center;background:linear-gradient(135deg,#EFF6FF 0%,#F0FDF4 50%,#EFF6FF 100%);position:relative;overflow:hidden}
+.hero h1{font-size:2.2em;font-weight:800;background:linear-gradient(135deg,var(--text),var(--cyan),var(--al));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero .sub{color:var(--dim);font-size:.95em;margin:6px 0 16px}
 .hero .badge{display:inline-block;padding:4px 14px;border-radius:14px;font-size:.78em;margin:0 4px}
-.badge-hot{background:rgba(255,82,82,.12);border:1px solid rgba(255,82,82,.25);color:var(--red)}
-.badge-live{background:rgba(0,230,118,.12);border:1px solid rgba(0,230,118,.25);color:var(--green)}
-.badge-verified{background:rgba(0,229,255,.12);border:1px solid rgba(0,229,255,.25);color:var(--cyan)}
+.badge-hot{background:rgba(185,28,28,.12);border:1px solid rgba(185,28,28,.25);color:var(--red)}
+.badge-live{background:rgba(21,128,61,.12);border:1px solid rgba(21,128,61,.25);color:var(--green)}
+.badge-verified{background:rgba(15,118,110,.12);border:1px solid rgba(15,118,110,.25);color:var(--cyan)}
 
 .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;max-width:1000px;margin:20px auto;padding:0 20px}
 .stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center}
@@ -44,9 +44,9 @@ a{color:var(--al);text-decoration:none}a:hover{color:#fff}
 .panel .desc{color:var(--dim);font-size:.88em;margin-bottom:16px}
 
 table{width:100%;border-collapse:collapse;font-size:.85em;margin:12px 0}
-thead{background:rgba(108,92,231,.08)}
+thead{background:rgba(37,99,235,.06)}
 th{padding:10px 12px;text-align:left;font-weight:600;color:var(--al);border-bottom:1px solid var(--border)}
-td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.03)}
+td{padding:10px 12px;border-bottom:1px solid rgba(0,0,0,.03)}
 tr:hover td{background:rgba(108,92,231,.03)}
 .highlight{color:var(--cyan);font-weight:700}
 
@@ -59,25 +59,25 @@ tr:hover td{background:rgba(108,92,231,.03)}
 .comm-card .detail{font-size:.82em;color:var(--dim);margin-bottom:8px}
 .comm-card .tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
 .comm-card .tags span{padding:2px 8px;border-radius:4px;font-size:.68em;font-weight:600}
-.comm-card .src{font-size:.72em;color:var(--dim);padding-top:8px;border-top:1px solid rgba(255,255,255,.04);margin-top:8px}
+.comm-card .src{font-size:.72em;color:var(--dim);padding-top:8px;border-top:1px solid rgba(0,0,0,.04);margin-top:8px}
 .comm-card .src a{color:var(--cyan);font-weight:500}
 .comm-card .src a:hover{text-decoration:underline}
 
 .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.72em;font-weight:600}
 .tag-go{background:var(--gd);color:var(--green)}.tag-soon{background:var(--yd);color:var(--yellow)}
 .tag-hot{background:var(--rd);color:var(--red)}
-.tag-verified{background:rgba(0,229,255,.12);color:var(--cyan);border:1px solid rgba(0,229,255,.2)}
+.tag-verified{background:rgba(15,118,110,.12);color:var(--cyan);border:1px solid rgba(15,118,110,.2)}
 
-.trust-banner{background:linear-gradient(135deg,rgba(0,229,255,.06),rgba(108,92,231,.06));border:1px solid rgba(0,229,255,.2);border-radius:14px;padding:18px 22px;margin-bottom:20px}
+.trust-banner{background:linear-gradient(135deg,rgba(15,118,110,.06),rgba(37,99,235,.04));border:1px solid rgba(15,118,110,.2);border-radius:14px;padding:18px 22px;margin-bottom:20px}
 .trust-banner .icon{font-size:1.3em;margin-right:6px}
 .trust-banner h3{font-size:1em;color:var(--cyan);margin-bottom:4px}
 .trust-banner p{font-size:.82em;color:var(--dim);line-height:1.6}
 
-.debunk-box{background:linear-gradient(135deg,rgba(255,82,82,.04),rgba(255,145,0,.04));border:1px solid rgba(255,82,82,.2);border-radius:12px;padding:20px;margin-bottom:20px}
+.debunk-box{background:linear-gradient(135deg,rgba(185,28,28,.04),rgba(180,83,9,.04));border:1px solid rgba(185,28,28,.2);border-radius:12px;padding:20px;margin-bottom:20px}
 .debunk-box h3{color:var(--red);margin-bottom:8px;font-size:1.05em}
 
 .links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.links a{padding:4px 12px;background:rgba(108,92,231,.1);border:1px solid rgba(108,92,231,.2);border-radius:6px;font-size:.78em}
+.links a{padding:4px 12px;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.15);border-radius:6px;font-size:.78em}
 
 footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;border-top:1px solid var(--border)}
 @media(max-width:768px){.community-grid{grid-template-columns:1fr}.stats-row{grid-template-columns:repeat(2,1fr)}}
@@ -192,9 +192,9 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
           六位一体全生命周期服务：要素支撑 · 中试验证 · 场景对接 · 资本赋能 · 人才服务 · 生态营造。
         </div>
         <div class="tags">
-          <span style="background:rgba(0,229,255,.1);color:var(--cyan)">24000P 算力</span>
-          <span style="background:rgba(108,92,231,.1);color:var(--al)">全省首个大模型生态</span>
-          <span style="background:rgba(255,145,0,.1);color:var(--orange)">AI+制造</span>
+          <span style="background:rgba(15,118,110,.1);color:var(--cyan)">24000P 算力</span>
+          <span style="background:rgba(37,99,235,.08);color:var(--al)">全省首个大模型生态</span>
+          <span style="background:rgba(180,83,9,.1);color:var(--orange)">AI+制造</span>
         </div>
         <div class="src">
           来源：
@@ -212,9 +212,9 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
           面向毕业 5 年内青年创业者。"<strong>慧湖小领军政策</strong>"每个立项项目 2 年全程跟踪服务，差异化支持。
         </div>
         <div class="tags">
-          <span style="background:rgba(0,230,118,.1);color:var(--green)">3年免租</span>
-          <span style="background:rgba(108,92,231,.1);color:var(--al)">青年全赛道</span>
-          <span style="background:rgba(0,229,255,.1);color:var(--cyan)">慧湖小领军</span>
+          <span style="background:rgba(21,128,61,.1);color:var(--green)">3年免租</span>
+          <span style="background:rgba(37,99,235,.08);color:var(--al)">青年全赛道</span>
+          <span style="background:rgba(15,118,110,.1);color:var(--cyan)">慧湖小领军</span>
         </div>
         <div class="src">
           来源：
@@ -230,9 +230,9 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
           数字孪生 + 算力赋能模式，围绕 OPC 创业者和领军人才孵化需求构建全链条服务体系。
         </div>
         <div class="tags">
-          <span style="background:rgba(108,92,231,.1);color:var(--al)">三赛道综合</span>
-          <span style="background:rgba(0,229,255,.1);color:var(--cyan)">数字孪生</span>
-          <span style="background:rgba(255,82,82,.1);color:var(--red)">生物医药</span>
+          <span style="background:rgba(37,99,235,.08);color:var(--al)">三赛道综合</span>
+          <span style="background:rgba(15,118,110,.1);color:var(--cyan)">数字孪生</span>
+          <span style="background:rgba(185,28,28,.1);color:var(--red)">生物医药</span>
         </div>
         <div class="src">
           来源：
@@ -251,7 +251,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
         </div>
         <div class="tags">
           <span style="background:rgba(255,214,0,.1);color:var(--yellow)">百度飞桨联动</span>
-          <span style="background:rgba(0,229,255,.1);color:var(--cyan)">大模型+智能体</span>
+          <span style="background:rgba(15,118,110,.1);color:var(--cyan)">大模型+智能体</span>
         </div>
         <div class="src">
           来源：
@@ -269,7 +269,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
         </div>
         <div class="tags">
           <span style="background:rgba(68,138,255,.1);color:var(--blue)">产学研</span>
-          <span style="background:rgba(108,92,231,.1);color:var(--al)">高校孵化</span>
+          <span style="background:rgba(37,99,235,.08);color:var(--al)">高校孵化</span>
         </div>
         <div class="src">
           来源：
@@ -411,23 +411,23 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
     <h3>官方来源</h3>
     <ul style="list-style:none;padding:0">
-      <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03)"><a href="https://www.sipac.gov.cn/szgyyq/mtjj/202604/95511453cc5e4173ba78ee0c3e79b0d3.shtml" target="_blank">首批 20 家标杆 OPC 社区授牌 — 苏州工业园区管委会</a></li>
-      <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03)"><a href="https://www.sipac.gov.cn/szgyyq/mtjj/202601/dbc23caa9d1d45f28ef9de6ccaf0409f.shtml" target="_blank">单人成军 产业加速"聚变" — 苏州工业园区管委会</a></li>
-      <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03)"><a href="https://www.sipac.gov.cn/kjhxxhj/kjzc/202511/100fff909fb44586882b0a90d04c5f0b.shtml" target="_blank">OPC 十条政策原文 — 苏州工业园区科创委</a></li>
-      <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03)"><a href="https://ywtk.sipac.gov.cn/gkxqGov-101364" target="_blank">一网通办·OPC 政策入口</a></li>
-      <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03)"><a href="https://www.suzhou.gov.cn/szsrmzf/szyw/202511/a15dda460f15439cb4b8c710835315cf.shtml" target="_blank">苏州市倾力打造 OPC 创业首选城市 — 苏州市政府</a></li>
-      <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03)"><a href="https://www.suzhou.gov.cn/szsrmzf/szyw/202511/2b12e80fc22140018b617cb2bd9eb89f.shtml" target="_blank">苏州工业园区打造 OPC 梦想"最强后援团" — 苏州市政府</a></li>
+      <li style="padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)"><a href="https://www.sipac.gov.cn/szgyyq/mtjj/202604/95511453cc5e4173ba78ee0c3e79b0d3.shtml" target="_blank">首批 20 家标杆 OPC 社区授牌 — 苏州工业园区管委会</a></li>
+      <li style="padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)"><a href="https://www.sipac.gov.cn/szgyyq/mtjj/202601/dbc23caa9d1d45f28ef9de6ccaf0409f.shtml" target="_blank">单人成军 产业加速"聚变" — 苏州工业园区管委会</a></li>
+      <li style="padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)"><a href="https://www.sipac.gov.cn/kjhxxhj/kjzc/202511/100fff909fb44586882b0a90d04c5f0b.shtml" target="_blank">OPC 十条政策原文 — 苏州工业园区科创委</a></li>
+      <li style="padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)"><a href="https://ywtk.sipac.gov.cn/gkxqGov-101364" target="_blank">一网通办·OPC 政策入口</a></li>
+      <li style="padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)"><a href="https://www.suzhou.gov.cn/szsrmzf/szyw/202511/a15dda460f15439cb4b8c710835315cf.shtml" target="_blank">苏州市倾力打造 OPC 创业首选城市 — 苏州市政府</a></li>
+      <li style="padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)"><a href="https://www.suzhou.gov.cn/szsrmzf/szyw/202511/2b12e80fc22140018b617cb2bd9eb89f.shtml" target="_blank">苏州工业园区打造 OPC 梦想"最强后援团" — 苏州市政府</a></li>
       <li style="padding:6px 0"><a href="https://tsc.sipac.gov.cn/epservice/techsub/apps/kernel/index.php?s=/Upload/downFileEx/id/-rocmd6AShdyr5DweNrg5g" target="_blank">苏州工业园区众创空间情况汇总表（官方）</a></li>
     </ul>
 
     <h3>权威媒体</h3>
     <ul style="list-style:none;padding:0">
-      <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03)"><a href="https://www.zgjssw.gov.cn/yaowen/202604/t20260412_8567875.shtml" target="_blank">OPC 社区日活动 — 中共江苏省委新闻网</a></li>
-      <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03)"><a href="https://js.cnr.cn/kjjr/20260413/t20260413_527583418.shtml" target="_blank">苏州工业园区以生态思维打造 OPC 发展高地 — 央广网江苏</a></li>
-      <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03)"><a href="https://www.yangtse.com/news/jiangsu/suzhou/202604/t20260411_341127.html" target="_blank">目标三年 500 个 OPC 社区 — 扬子晚报</a></li>
-      <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03)"><a href="https://news.2500sz.com/doc/2026/04/11/1205116.shtml" target="_blank">苏州将个体活力与千亿级产业集群深度绑定 — 名城苏州</a></li>
-      <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03)"><a href="https://news.2500sz.com/doc/2025/11/30/1183737.shtml" target="_blank">苏州工业园区发布 OPC 十条支持措施 — 名城苏州</a></li>
-      <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.03)"><a href="https://c.m.163.com/news/a/KHCADSU90534I0NW.html" target="_blank">一人成军 苏州全域总动员 — 网易订阅</a></li>
+      <li style="padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)"><a href="https://www.zgjssw.gov.cn/yaowen/202604/t20260412_8567875.shtml" target="_blank">OPC 社区日活动 — 中共江苏省委新闻网</a></li>
+      <li style="padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)"><a href="https://js.cnr.cn/kjjr/20260413/t20260413_527583418.shtml" target="_blank">苏州工业园区以生态思维打造 OPC 发展高地 — 央广网江苏</a></li>
+      <li style="padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)"><a href="https://www.yangtse.com/news/jiangsu/suzhou/202604/t20260411_341127.html" target="_blank">目标三年 500 个 OPC 社区 — 扬子晚报</a></li>
+      <li style="padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)"><a href="https://news.2500sz.com/doc/2026/04/11/1205116.shtml" target="_blank">苏州将个体活力与千亿级产业集群深度绑定 — 名城苏州</a></li>
+      <li style="padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)"><a href="https://news.2500sz.com/doc/2025/11/30/1183737.shtml" target="_blank">苏州工业园区发布 OPC 十条支持措施 — 名城苏州</a></li>
+      <li style="padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)"><a href="https://c.m.163.com/news/a/KHCADSU90534I0NW.html" target="_blank">一人成军 苏州全域总动员 — 网易订阅</a></li>
       <li style="padding:6px 0"><a href="https://www.parkworld.net/Post/8de318f8d1ff44b" target="_blank">一图读懂 OPC 十条 — 园区世界</a></li>
     </ul>
   </div>
@@ -436,7 +436,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
 <!-- CTA -->
 <div style="max-width:1000px;margin:0 auto;padding:0 20px 30px">
-  <div style="background:linear-gradient(135deg,rgba(0,229,255,.08),rgba(108,92,231,.08));border:1px solid rgba(0,229,255,.2);border-radius:16px;padding:28px;text-align:center">
+  <div style="background:linear-gradient(135deg,rgba(15,118,110,.08),rgba(37,99,235,.06));border:1px solid rgba(15,118,110,.2);border-radius:16px;padding:28px;text-align:center">
     <h3 style="font-size:1.2em;margin-bottom:6px">需要苏州 OPC 创业对接？</h3>
     <p style="color:var(--dim);font-size:.88em;margin-bottom:14px">政策匹配 · 社区入驻对接 · AI 语音机器人方案 · 工业园区资源对接</p>
     <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">

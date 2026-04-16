@@ -7,12 +7,12 @@
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>">
 <style>
-:root{--bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--dim:#8888a0;
-  --accent:#6c5ce7;--al:#a29bfe;--green:#00e676;--gd:#1b5e20;--yellow:#ffd600;--yd:#5d4e00;
-  --red:#ff5252;--rd:#4a1515;--cyan:#00e5ff;--blue:#448aff;--orange:#ff9100}
+:root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
+  --accent:#2563EB;--al:#3B82F6;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
+  --red:#B91C1C;--rd:#FEE2E2;--cyan:#0F766E;--blue:#2563EB;--orange:#B45309}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-a{color:var(--al);text-decoration:none}a:hover{color:#fff}
+a{color:var(--al);text-decoration:none}a:hover{color:var(--accent)}
 
 #lockScreen{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center}
 #lockScreen .lock-box{text-align:center;max-width:360px;padding:40px}
@@ -24,26 +24,26 @@ a{color:var(--al);text-decoration:none}a:hover{color:#fff}
 
 #mainContent{display:none}
 .container{max-width:900px;margin:0 auto;padding:30px 20px}
-.hero{padding:50px 20px 30px;text-align:center;background:linear-gradient(135deg,#0a0a1a 0%,#2a0a1e 50%,#0a1a2e 100%)}
-.hero h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,#fff,var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero{padding:50px 20px 30px;text-align:center;background:linear-gradient(135deg,#EFF6FF 0%,#F0FDF4 50%,#F0FDFA 100%)}
+.hero h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,var(--text),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero .sub{color:var(--dim);font-size:.95em;margin:8px 0}
-.hero .badge{display:inline-block;padding:4px 14px;border-radius:14px;font-size:.78em;background:rgba(255,82,82,.12);border:1px solid rgba(255,82,82,.25);color:var(--red)}
+.hero .badge{display:inline-block;padding:4px 14px;border-radius:14px;font-size:.78em;background:rgba(185,28,28,.12);border:1px solid rgba(185,28,28,.25);color:var(--red)}
 
 .panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px}
 .panel h2{font-size:1.25em;margin-bottom:8px}
 .panel h3{font-size:1.05em;margin:16px 0 6px;color:var(--al)}
 .panel .desc{color:var(--dim);font-size:.85em;margin-bottom:12px}
 
-.warn-box{background:linear-gradient(135deg,rgba(255,82,82,.08),rgba(255,145,0,.06));border:1px solid rgba(255,82,82,.2);border-radius:12px;padding:20px;margin-bottom:20px}
+.warn-box{background:linear-gradient(135deg,rgba(185,28,28,.08),rgba(180,83,9,.06));border:1px solid rgba(185,28,28,.2);border-radius:12px;padding:20px;margin-bottom:20px}
 .warn-box h2{color:var(--red);margin-bottom:8px}
 
-.go-box{background:linear-gradient(135deg,rgba(0,230,118,.06),rgba(0,229,255,.04));border:1px solid rgba(0,230,118,.15);border-radius:12px;padding:20px;margin-bottom:20px}
+.go-box{background:linear-gradient(135deg,rgba(21,128,61,.06),rgba(15,118,110,.04));border:1px solid rgba(21,128,61,.15);border-radius:12px;padding:20px;margin-bottom:20px}
 .go-box h2{color:var(--green);margin-bottom:8px}
 
 table{width:100%;border-collapse:collapse;font-size:.85em;margin:12px 0}
-thead{background:rgba(108,92,231,.08)}
+thead{background:rgba(37,99,235,.06)}
 th{padding:10px 12px;text-align:left;font-weight:600;color:var(--al);border-bottom:1px solid var(--border)}
-td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.03)}
+td{padding:10px 12px;border-bottom:1px solid rgba(0,0,0,.03)}
 .hl{color:var(--cyan);font-weight:700}
 .good{color:var(--green);font-weight:600}
 .bad{color:var(--red);font-weight:600}
@@ -231,7 +231,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   </div>
 
   <!-- 立即行动 -->
-  <div class="panel" style="border:1px solid rgba(0,230,118,.2)">
+  <div class="panel" style="border:1px solid rgba(21,128,61,.2)">
     <h2 style="color:var(--green)">立即行动清单</h2>
     <div style="font-size:.9em">
       <p>☐ <strong>本周</strong>：打电话 028-86031523 咨询π立方入驻，或扫码报名蓉数社区</p>
