@@ -7,7 +7,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
 <style>
 :root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
-  --accent:#2563EB;--al:#3B82F6;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
+  --accent:#2563EB;--al:#2563EB;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
   --red:#B91C1C;--cyan:#0F766E;--blue:#2563EB;--orange:#B45309}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
@@ -236,7 +236,7 @@ async function loadCity() {
         html += `<p style="font-size:.82em;color:var(--dim);margin-top:4px"><strong style="color:var(--al)">申请方式：</strong>${p.application.method}</p>`;
       }
       if (p.application_url) {
-        html += `<p style="margin-top:4px"><a href="${p.application_url}" target="_blank" style="font-size:.82em;padding:4px 12px;background:rgba(37,99,235,.1);border:1px solid rgba(108,92,231,.25);border-radius:6px;display:inline-block">在线申请入口 →</a></p>`;
+        html += `<p style="margin-top:4px"><a href="${p.application_url}" target="_blank" style="font-size:.82em;padding:4px 12px;background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.25);border-radius:6px;display:inline-block">在线申请入口 →</a></p>`;
       }
       if (p.application?.deadline) {
         html += `<p style="font-size:.82em;color:var(--red);margin-top:4px"><strong>截止日期：</strong>${p.application.deadline}</p>`;

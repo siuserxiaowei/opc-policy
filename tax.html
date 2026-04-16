@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 <style>
 :root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
-  --accent:#2563EB;--al:#3B82F6;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
+  --accent:#2563EB;--al:#2563EB;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
   --red:#B91C1C;--cyan:#0F766E;--blue:#2563EB;--orange:#B45309}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
@@ -20,7 +20,7 @@ a{color:var(--al);text-decoration:none}a:hover{color:var(--accent)}
 .topnav .spacer{flex:1}
 .container{max-width:1000px;margin:0 auto;padding:30px 20px}
 .hero{padding:50px 20px 30px;text-align:center;background:linear-gradient(135deg,#EFF6FF 0%,#F0FDF4 50%,#F0FDFA 100%)}
-.hero h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,var(--text),var(--al),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero h1{font-size:2em;font-weight:800;color:var(--text)}
 .hero .sub{color:var(--dim);font-size:.95em;margin:6px 0}
 .panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px}
 .panel h2{font-size:1.3em;margin-bottom:12px}
@@ -32,7 +32,7 @@ table{width:100%;border-collapse:collapse;font-size:.88em;margin:12px 0}
 thead{background:rgba(37,99,235,.06)}
 th{padding:10px 14px;text-align:left;font-weight:600;color:var(--al);border-bottom:1px solid var(--border)}
 td{padding:10px 14px;border-bottom:1px solid rgba(0,0,0,.03)}
-tr:hover td{background:rgba(108,92,231,.03)}
+tr:hover td{background:rgba(37,99,235,.03)}
 .highlight{color:var(--cyan);font-weight:700}
 .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.72em;font-weight:600}
 .tag-best{background:var(--gd);color:var(--green)}
@@ -44,7 +44,7 @@ tr:hover td{background:rgba(108,92,231,.03)}
 .calc-row input,.calc-row select{width:100%;padding:8px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:.88em}
 .calc-result{padding:16px;background:rgba(15,118,110,.05);border:1px solid rgba(15,118,110,.15);border-radius:10px;margin-top:12px}
 .btn{padding:10px 24px;border-radius:8px;font-size:.9em;font-weight:600;cursor:pointer;border:none;background:var(--accent);color:#fff;transition:all .2s}
-.btn:hover{background:#7c6ef0}
+.btn:hover{background:#1D4ED8}
 .region-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0}
 .region-card{padding:16px;border:1px solid var(--border);border-radius:10px;background:var(--bg);text-align:center;transition:all .3s}
 .region-card:hover{border-color:var(--accent);transform:translateY(-2px)}
@@ -256,7 +256,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   </div>
 
   <!-- Advisor Card -->
-  <div class="panel" style="background:linear-gradient(135deg,rgba(37,99,235,.06) 0%,rgba(15,118,110,.05) 100%);border:1px solid rgba(108,92,231,.25)">
+  <div class="panel" style="background:linear-gradient(135deg,rgba(37,99,235,.06) 0%,rgba(15,118,110,.05) 100%);border:1px solid rgba(37,99,235,.25)">
     <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
       <div style="flex-shrink:0;text-align:center">
         <img src="assets/zhang-qr.png" style="width:160px;border-radius:12px;border:1px solid var(--border);cursor:pointer" onclick="showZhangQR()" title="扫码添加张总微信">
@@ -268,7 +268,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
         <p style="font-size:.88em;color:var(--cyan);margin-bottom:8px">盈丰税务规划 · 广州</p>
         <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px">
           <span style="padding:2px 8px;border-radius:4px;font-size:.72em;background:rgba(15,118,110,.08);color:var(--cyan);border:1px solid rgba(15,118,110,.12)">OPC财税合规</span>
-          <span style="padding:2px 8px;border-radius:4px;font-size:.72em;background:rgba(37,99,235,.08);color:var(--al);border:1px solid rgba(108,92,231,.18)">企业税务架构</span>
+          <span style="padding:2px 8px;border-radius:4px;font-size:.72em;background:rgba(37,99,235,.08);color:var(--al);border:1px solid rgba(37,99,235,.18)">企业税务架构</span>
           <span style="padding:2px 8px;border-radius:4px;font-size:.72em;background:rgba(21,128,61,.08);color:var(--green);border:1px solid rgba(21,128,61,.12)">核定征收</span>
           <span style="padding:2px 8px;border-radius:4px;font-size:.72em;background:rgba(255,214,0,.08);color:var(--yellow);border:1px solid rgba(255,214,0,.12)">税收优惠申报</span>
         </div>

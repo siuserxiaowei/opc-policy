@@ -13,26 +13,26 @@
 <link rel="canonical" href="https://opcgate.com/changelog.html">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
 <style>
-:root{--bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--dim:#8888a0;
-  --accent:#6c5ce7;--al:#a29bfe;--green:#00e676;--gd:#1b5e20;--yellow:#ffd600;--yd:#5d4e00;
-  --red:#ff5252;--rd:#4a1515;--cyan:#00e5ff;--blue:#448aff;--orange:#ff9100}
+:root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
+  --accent:#2563EB;--al:#3B82F6;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
+  --red:#B91C1C;--rd:#FEE2E2;--cyan:#0F766E;--blue:#2563EB;--orange:#B45309}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-a{color:var(--al);text-decoration:none}a:hover{color:#fff}
+a{color:var(--al);text-decoration:none}a:hover{color:var(--accent)}
 
-.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(10,10,15,.9);
+.topnav{display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(255,255,255,.95);
   border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);overflow-x:auto}
 .topnav .logo{font-weight:800;font-size:1em;color:var(--al)}
 .topnav a{padding:6px 14px;border-radius:6px;font-size:.82em;color:var(--dim);transition:all .2s;white-space:nowrap}
-.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(108,92,231,.1)}
+.topnav a:hover,.topnav a.active{color:var(--al);background:rgba(37,99,235,.1)}
 
 .trust-slogan{display:flex;align-items:center;justify-content:center;gap:10px;
-  padding:8px 16px;background:linear-gradient(90deg,rgba(0,229,255,.06),rgba(108,92,231,.06),rgba(0,229,255,.06));
-  border-bottom:1px solid rgba(0,229,255,.15);font-size:.78em;color:var(--cyan);font-weight:500}
+  padding:8px 16px;background:linear-gradient(90deg,rgba(15,118,110,.06),rgba(37,99,235,.06),rgba(15,118,110,.06));
+  border-bottom:1px solid rgba(15,118,110,.15);font-size:.78em;color:var(--cyan);font-weight:500}
 .trust-slogan .dot{color:var(--dim);margin:0 4px}
 
-.hero{padding:50px 20px 20px;text-align:center;background:linear-gradient(135deg,#0a0a1a,#1a0a2e,#0a1a3a)}
-.hero h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,#fff,var(--cyan),var(--al));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.hero{padding:50px 20px 20px;text-align:center;background:linear-gradient(135deg,#EFF6FF,#F0FDF4,#EFF6FF)}
+.hero h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,var(--text),var(--cyan),var(--al));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
 .hero p{color:var(--dim);font-size:.92em;max-width:720px;margin:0 auto 16px}
 
 .stats{display:flex;justify-content:center;gap:12px;margin-top:16px;flex-wrap:wrap}
@@ -44,11 +44,11 @@ a{color:var(--al);text-decoration:none}a:hover{color:#fff}
 
 .months{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;padding:14px 18px;background:var(--card);border:1px solid var(--border);border-radius:10px}
 .months .ml{font-size:.82em;color:var(--dim);margin-right:4px}
-.m-chip{padding:4px 10px;background:rgba(108,92,231,.08);border:1px solid rgba(108,92,231,.2);border-radius:14px;font-size:.76em;color:var(--al)}
+.m-chip{padding:4px 10px;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.2);border-radius:14px;font-size:.76em;color:var(--al)}
 
 .cm-item{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--border);
   border-radius:10px;padding:16px 20px;margin-bottom:12px;transition:all .2s}
-.cm-item:hover{border-color:rgba(108,92,231,.3);transform:translateX(2px)}
+.cm-item:hover{border-color:rgba(37,99,235,.3);transform:translateX(2px)}
 .cm-item.cat-city{border-left-color:var(--cyan)}
 .cm-item.cat-verify{border-left-color:var(--green)}
 .cm-item.cat-feat{border-left-color:var(--orange)}
@@ -59,18 +59,18 @@ a{color:var(--al);text-decoration:none}a:hover{color:#fff}
 
 .cm-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
 .cm-icon{font-size:1em}
-.cm-label{font-size:.7em;font-weight:700;padding:2px 8px;background:rgba(255,255,255,.04);
+.cm-label{font-size:.7em;font-weight:700;padding:2px 8px;background:rgba(0,0,0,.04);
   border:1px solid var(--border);border-radius:4px;color:var(--al);letter-spacing:.4px}
 .cm-date{font-size:.78em;color:var(--dim);font-family:'JetBrains Mono',monospace}
 .cm-sha{font-size:.72em;color:var(--cyan);font-family:'JetBrains Mono',monospace;
-  background:rgba(0,229,255,.05);padding:1px 6px;border-radius:3px;border:1px solid rgba(0,229,255,.12)}
-.cm-sha:hover{background:rgba(0,229,255,.12)}
+  background:rgba(15,118,110,.05);padding:1px 6px;border-radius:3px;border:1px solid rgba(15,118,110,.12)}
+.cm-sha:hover{background:rgba(15,118,110,.12)}
 .cm-stats{font-size:.72em;color:var(--dim);margin-left:auto}
 .st-plus{color:var(--green);font-weight:600}
 .st-minus{color:var(--red);font-weight:600}
 
 .cm-subject{font-size:.95em;font-weight:600;color:var(--text);margin-bottom:6px}
-.cm-body{font-size:.82em;color:var(--dim);line-height:1.7;padding:10px 12px;background:rgba(0,0,0,.2);border-radius:6px;margin-top:8px;border-left:2px solid rgba(108,92,231,.2);white-space:pre-wrap}
+.cm-body{font-size:.82em;color:var(--dim);line-height:1.7;padding:10px 12px;background:rgba(0,0,0,.2);border-radius:6px;margin-top:8px;border-left:2px solid rgba(37,99,235,.2);white-space:pre-wrap}
 
 footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;border-top:1px solid var(--border)}
 @media(max-width:640px){.hero h1{font-size:1.5em}.stats .s{min-width:calc(50% - 6px)}.cm-head{font-size:.88em}.cm-stats{margin-left:0}}
@@ -107,7 +107,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   <h1>维护日志 · 核实记录</h1>
   <p>本页记录 opcgate.com 的所有数据核验、更新、修复动作。每条都可追溯到具体的 git commit，拒绝 AI 编造，每次改动都公开透明。</p>
   <div class="stats">
-    <div class="s"><div class="n">73</div><div class="l">总维护次数</div></div>
+    <div class="s"><div class="n">75</div><div class="l">总维护次数</div></div>
     <div class="s"><div class="n">5</div><div class="l">数据核验动作</div></div>
     <div class="s"><div class="n">1</div><div class="l">活跃月份</div></div>
     <div class="s"><div class="n" style="color:var(--green)">LIVE</div><div class="l">持续维护中</div></div>
@@ -118,10 +118,32 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
   <div class="months">
     <span class="ml">按月分布：</span>
-    <span class="m-chip">2026-04 · 73 次</span>
+    <span class="m-chip">2026-04 · 75 次</span>
   </div>
 
   
+    <div class="cm-item cat-other">
+      <div class="cm-head">
+        <span class="cm-icon">📌</span>
+        <span class="cm-label">其他</span>
+        <span class="cm-date">2026-04-16 18:42</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/35517c3f71921e867dcf85ed3add0305b3f41f2f" target="_blank" rel="noopener" class="cm-sha">35517c3</a>
+        <span class="cm-stats">1 文件 <span class="st-plus">+156</span> <span class="st-minus">−53</span></span>
+      </div>
+      <div class="cm-subject">数据更新: +4条新政策 + 武汉详细化 (v5.1.2)</div>
+      <div class="cm-body">新增:<br>- 北京海淀 OPC 八条（4/10·模型券500万·新创10万·社区200万）<br>- 深圳龙岗 龙虾十条（3/7·1000万股权·400万社区·免费算力3月）<br>- 四川省 算力券年发放总额提至1亿元（4/15）<br>- 重庆 西部OPC首选地十条（4/15·零租金零审批·满天星资金）<br>更新:<br>- 武汉十条 补充详细数据（初创100万·算力20万/年·2000卡时免费）<br>来源: beijing.gov.cn / people.com.cn / cq.gov.cn / wuhan.gov.cn<br>policies.json 90 → 94 条 · v5.1.1 → v5.1.2</div>
+    </div>
+    <div class="cm-item cat-fix">
+      <div class="cm-head">
+        <span class="cm-icon">🔧</span>
+        <span class="cm-label">修复</span>
+        <span class="cm-date">2026-04-16 18:35</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/0a0e9e6df1e9fe952df0eb39200d7fd29ece0a9b" target="_blank" rel="noopener" class="cm-sha">0a0e9e6</a>
+        <span class="cm-stats">37 文件 <span class="st-plus">+470</span> <span class="st-minus">−448</span></span>
+      </div>
+      <div class="cm-subject">fix: 修复首页hero/广州专版/维护日志等页面残留深色主题</div>
+      <div class="cm-body">- index.html hero 渐变从 #0a0a1a → #EFF6FF 浅蓝<br>- guangzhou.html 129处硬编码色值修复<br>- yuexiu/tax/dashboard/private/city/admin 残留色值修复<br>- changelog.html 重新生成（generate_changelog.py 模板换浅色）<br>- 全部 #0a0a0f/#12121a/#6c5ce7/#a29bfe/#00e5ff/#00e676/#ff5252 → 新色值</div>
+    </div>
     <div class="cm-item cat-other">
       <div class="cm-head">
         <span class="cm-icon">📌</span>
@@ -929,7 +951,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 </div>
 
 <footer>
-  <p>opcgate.com · 维护日志自动生成于 2026-04-16 18:31</p>
+  <p>opcgate.com · 维护日志自动生成于 2026-04-16 18:43</p>
   <p style="margin-top:4px"><a href="https://github.com/siuserxiaowei/opc-policy">在 GitHub 上查看完整提交历史 ↗</a></p>
 </footer>
 

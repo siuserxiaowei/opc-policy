@@ -24,7 +24,7 @@
 <style>
 :root {
   --bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;
-  --text:#0F172A;--dim:#64748B;--accent:#2563EB;--al:#3B82F6;
+  --text:#0F172A;--dim:#64748B;--accent:#2563EB;--al:#2563EB;
   --green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
   --red:#B91C1C;--rd:#FEE2E2;--blue:#2563EB;--cyan:#0F766E;--orange:#B45309;
 }
@@ -53,9 +53,8 @@ a{color:var(--al);text-decoration:none;transition:color .2s}a:hover{color:var(--
 .hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;
   background:radial-gradient(circle at 30% 50%,rgba(37,99,235,.08) 0%,transparent 50%),
   radial-gradient(circle at 70% 80%,rgba(21,128,61,.06) 0%,transparent 50%);
-  animation:gradientMove 15s ease infinite}
+  }
 .hero h1{font-size:2.4em;font-weight:800;background:linear-gradient(135deg,var(--text),var(--accent),var(--cyan));
-  background-size:200% 200%;animation:gradientMove 4s ease infinite;
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative}
 .hero .sub{font-size:1em;color:var(--dim);position:relative;margin:6px 0 16px}
 .hero .version{display:inline-block;padding:4px 14px;border-radius:16px;background:rgba(37,99,235,.1);
@@ -74,7 +73,7 @@ a{color:var(--al);text-decoration:none;transition:color .2s}a:hover{color:var(--
 .step::before{content:attr(data-num);display:flex;width:32px;height:32px;border-radius:50%;
   align-items:center;justify-content:center;margin:0 auto 6px;font-weight:700;font-size:.85em;
   background:var(--card);border:2px solid var(--border);color:var(--dim);transition:all .4s}
-.step.active::before{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 0 15px rgba(108,92,231,.4)}
+.step.active::before{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 0 15px rgba(37,99,235,.4)}
 .step.done::before{background:var(--gd);border-color:var(--green);color:var(--green);content:'✓'}
 .step .step-label{font-size:.75em;color:var(--dim);transition:color .3s}
 .step.active .step-label{color:var(--al);font-weight:600}
@@ -118,7 +117,7 @@ select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%
 .btn{padding:11px 28px;border-radius:9px;font-size:.92em;font-weight:600;cursor:pointer;
   border:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
 .btn-primary{background:var(--accent);color:#fff;box-shadow:0 4px 15px rgba(37,99,235,.2)}
-.btn-primary:hover{background:#7c6ef0;transform:translateY(-2px);box-shadow:0 6px 25px rgba(108,92,231,.4)}
+.btn-primary:hover{background:#1D4ED8;transform:translateY(-2px);box-shadow:0 6px 25px rgba(37,99,235,.4)}
 .btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .btn-outline{background:transparent;border:1px solid var(--border);color:var(--dim)}
 .btn-outline:hover{border-color:var(--accent);color:var(--al)}
@@ -160,7 +159,7 @@ select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%
 .city-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px;margin:16px 0}
 .city-card{padding:16px;border-radius:10px;border:1px solid var(--border);background:var(--card);
   text-align:center;transition:all .3s;cursor:pointer;position:relative;overflow:hidden}
-.city-card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.08);border-color:var(--accent)}
+.city-card:hover{transform:translateY(-3px);background:var(--card2);border-color:var(--accent)}
 .city-card .city-name{font-size:1.2em;font-weight:700;margin-bottom:2px}
 .city-card .city-count{font-size:.78em;color:var(--dim)}
 .city-card .city-hl{font-size:.68em;color:var(--dim);margin-top:3px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -180,8 +179,8 @@ select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%
 .detail-content ul{list-style:none;padding:6px 0}
 .detail-content li{padding:3px 0;font-size:.85em}
 .detail-content li::before{content:'>';color:var(--accent);margin-right:8px;font-weight:700}
-.link-btn{display:inline-block;padding:6px 14px;background:rgba(37,99,235,.08);border:1px solid rgba(108,92,231,.25);border-radius:7px;font-size:.82em;margin:4px 4px 0 0;transition:all .2s}
-.link-btn:hover{background:rgba(108,92,231,.25);transform:translateY(-1px)}
+.link-btn{display:inline-block;padding:6px 14px;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.25);border-radius:7px;font-size:.82em;margin:4px 4px 0 0;transition:all .2s}
+.link-btn:hover{background:rgba(37,99,235,.25);transform:translateY(-1px)}
 
 /* AI Advisor */
 .advisor-panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-top:20px}
@@ -194,7 +193,7 @@ select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%
 .chat-input-row input{flex:1;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:.9em;outline:none}
 .chat-input-row input:focus{border-color:var(--accent)}
 .chat-input-row button{padding:10px 20px;background:var(--accent);color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:600;transition:all .2s}
-.chat-input-row button:hover{background:#7c6ef0}
+.chat-input-row button:hover{background:#1D4ED8}
 
 /* Browse mode */
 .browse-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
@@ -287,7 +286,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 .correction-btn{display:inline-flex;align-items:center;gap:4px;padding:6px 14px;border-radius:6px;
   background:rgba(37,99,235,.06);border:1px solid rgba(37,99,235,.15);
   font-size:.78em;color:var(--al);transition:all .2s;text-decoration:none}
-.correction-btn:hover{background:rgba(108,92,231,.18);color:#fff;border-color:var(--accent)}
+.correction-btn:hover{background:rgba(37,99,235,.18);color:#fff;border-color:var(--accent)}
 
 /* Source section in detail - 已核验·官方来源区块 */
 .src-section{margin-top:10px;padding-top:10px;border-top:1px solid rgba(0,0,0,.04)}
@@ -336,13 +335,13 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
 <!-- Hero：单一主叙事 -->
 <div class="hero">
-  <h1>OPC 选址决策工具</h1>
+  <h1 style="color:var(--text);font-size:2.4em;font-weight:800">OPC 选址决策工具</h1>
   <p class="sub">帮你快速排除不合适的城市和社区，做出 OPC 落地决策</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px 0 14px">
-    <button onclick="switchMode('match');document.getElementById('fProvince').focus()" style="padding:14px 32px;background:var(--accent);border:none;border-radius:10px;color:#fff;font-size:1em;font-weight:700;cursor:pointer;transition:all .2s;letter-spacing:.5px" onmouseover="this.style.filter='brightness(1.15)'" onmouseout="this.style.filter=''">开始匹配</button>
-    <button onclick="switchMode('browse')" style="padding:14px 32px;background:rgba(15,118,110,.1);border:1px solid rgba(15,118,110,.3);border-radius:10px;color:var(--cyan);font-size:1em;font-weight:700;cursor:pointer;transition:all .2s" onmouseover="this.style.background='rgba(15,118,110,.2)'" onmouseout="this.style.background='rgba(15,118,110,.1)'">对比城市 · 社区</button>
+    <button onclick="switchMode('match');document.getElementById('fProvince').focus()" style="padding:16px 40px;background:#2563EB;border:none;border-radius:10px;color:#fff;font-size:1.05em;font-weight:700;cursor:pointer;transition:all .2s;letter-spacing:.5px" onmouseover="this.style.background='#1D4ED8'" onmouseout="this.style.background='#2563EB'">开始匹配</button>
+    <a href="compare.html" style="padding:16px 28px;background:#fff;border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:1em;font-weight:600;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center" onmouseover="this.style.background='#F1F5F9'" onmouseout="this.style.background='#fff'">对比城市 · 社区 →</a>
   </div>
-  <span class="version">38 城 · 85 条政策 · 130+ OPC 社区 · 每条带官方来源</span>
+  <span class="version" style="color:var(--dim)">38 城 · 94 条政策 · 130+ OPC 社区 · 每条带官方来源</span>
 </div>
 
 <!-- 时效公告 -->
@@ -1055,7 +1054,7 @@ function buildVerdict(results, profile){
 
     <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
       <button onclick="exportVerdict()" style="padding:8px 16px;background:rgba(15,118,110,.1);border:1px solid rgba(15,118,110,.25);border-radius:8px;color:var(--cyan);font-size:.82em;font-weight:600;cursor:pointer">📄 导出决策报告</button>
-      <a href="rss.xml" style="padding:8px 16px;background:rgba(37,99,235,.08);border:1px solid rgba(108,92,231,.25);border-radius:8px;color:var(--al);font-size:.82em;font-weight:600;display:inline-flex;align-items:center">📡 订阅政策更新</a>
+      <a href="rss.xml" style="padding:8px 16px;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.25);border-radius:8px;color:var(--al);font-size:.82em;font-weight:600;display:inline-flex;align-items:center">📡 订阅政策更新</a>
       ${bestCity ? `<a href="compare.html" style="padding:8px 16px;background:rgba(180,83,9,.1);border:1px solid rgba(180,83,9,.25);border-radius:8px;color:var(--orange);font-size:.82em;font-weight:600;display:inline-flex;align-items:center">⚖️ 对比更多城市</a>` : ''}
     </div>
   </div>`;

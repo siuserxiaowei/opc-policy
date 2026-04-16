@@ -41,7 +41,7 @@
   @keyframes fadeInUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
   @keyframes fadeIn { from{opacity:0} to{opacity:1} }
   @keyframes slideInLeft { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
-  @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(255,82,82,0.4)} 50%{box-shadow:0 0 0 12px rgba(255,82,82,0)} }
+  @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(185,28,28,0.2)} 50%{box-shadow:0 0 0 4px rgba(185,28,28,0)} }
   @keyframes countPulse { 0%{transform:scale(1)} 50%{transform:scale(1.05)} 100%{transform:scale(1)} }
   @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
   @keyframes gradientMove { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
@@ -68,11 +68,11 @@
     position: absolute;
     top: -50%; left: -50%;
     width: 200%; height: 200%;
-    background: radial-gradient(circle at 30% 50%, rgba(108,92,231,0.08) 0%, transparent 50%),
+    background: radial-gradient(circle at 30% 50%, rgba(37,99,235,0.08) 0%, transparent 50%),
                 radial-gradient(circle at 70% 80%, rgba(0,230,118,0.06) 0%, transparent 50%);
     animation: float 20s ease-in-out infinite;
   }
-  .hero-particles {
+  .hero-particles { display:none!important;
     position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden;
   }
   .hero-particles .p {
@@ -86,14 +86,14 @@
     font-size: 2.8em; font-weight: 800;
     background: linear-gradient(135deg, #fff 0%, var(--accent-light) 50%, var(--cyan) 100%);
     background-size: 200% 200%;
-    animation: gradientMove 4s ease infinite;
+    
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     position: relative; margin-bottom: 12px;
   }
   .hero .subtitle { font-size: 1.1em; color: var(--text-dim); position: relative; margin-bottom: 24px; }
   .hero .update-badge {
     display: inline-block; padding: 4px 16px; border-radius: 20px;
-    background: rgba(108,92,231,0.15); border: 1px solid rgba(108,92,231,0.3);
+    background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.3);
     color: var(--accent-light); font-size: 0.85em; position: relative;
   }
 
@@ -104,7 +104,7 @@
     background: linear-gradient(135deg, rgba(255,82,82,0.12) 0%, rgba(255,145,0,0.08) 100%);
     border: 1px solid rgba(255,82,82,0.25); border-radius: 12px;
     display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;
-    animation: pulse 2s infinite;
+    animation: pulse 3s ease-in-out infinite;
   }
   .countdown-bar .urgent-icon {
     width: 36px; height: 36px; border-radius: 50%;
@@ -129,7 +129,7 @@
   .profile-card {
     max-width: 900px; margin: 16px auto 0;
     padding: 24px 32px;
-    background: linear-gradient(135deg, rgba(108,92,231,0.1) 0%, rgba(0,230,118,0.05) 100%);
+    background: linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(0,230,118,0.05) 100%);
     border: 1px solid var(--border); border-radius: 16px;
     position: relative; z-index: 1;
   }
@@ -140,7 +140,7 @@
     background: rgba(255,255,255,0.05); border: 1px solid var(--border);
     color: var(--text); cursor: default; transition: all 0.3s;
   }
-  .profile-tags span:hover { background: rgba(108,92,231,0.15); border-color: var(--accent); transform: translateY(-2px); }
+  .profile-tags span:hover { background: rgba(37,99,235,0.15); border-color: var(--accent); transform: translateY(-2px); }
 
   /* Search */
   .search-bar {
@@ -152,7 +152,7 @@
     color: var(--text); font-size: 0.95em; outline: none;
     transition: all 0.3s;
   }
-  .search-bar input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(108,92,231,0.15); }
+  .search-bar input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.15); }
   .search-bar input::placeholder { color: var(--text-dim); }
   .search-bar .search-icon {
     position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
@@ -197,7 +197,7 @@
     cursor: pointer; transition: all 0.3s; white-space: nowrap;
   }
   .filter-btn:hover { border-color: var(--accent); color: var(--accent-light); }
-  .filter-btn.active { background: rgba(108,92,231,0.2); border-color: var(--accent); color: var(--accent-light); }
+  .filter-btn.active { background: rgba(37,99,235,0.2); border-color: var(--accent); color: var(--accent-light); }
   .filter-btn .count {
     display: inline-block; background: rgba(255,255,255,0.1); padding: 1px 6px;
     border-radius: 4px; font-size: 0.8em; margin-left: 4px;
@@ -253,7 +253,7 @@
     background: var(--card); border: 1px solid var(--border); border-radius: 14px;
     padding: 28px; margin-bottom: 20px; transition: all 0.3s;
   }
-  .card:hover { background: var(--card-hover); border-color: rgba(108,92,231,0.3); }
+  .card:hover { background: var(--card-hover); border-color: rgba(37,99,235,0.3); }
   .card h3 { font-size: 1.2em; margin-bottom: 6px; }
   .card .card-meta { font-size: 0.82em; color: var(--text-dim); margin-bottom: 14px; display: flex; flex-wrap: wrap; gap: 16px; }
   .card .card-meta span { display: flex; align-items: center; gap: 4px; }
@@ -269,10 +269,10 @@
   /* Table */
   .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
   table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
-  thead { background: rgba(108,92,231,0.08); }
+  thead { background: rgba(37,99,235,0.08); }
   th { padding: 12px 16px; text-align: left; font-weight: 600; color: var(--accent-light); white-space: nowrap; border-bottom: 1px solid var(--border); }
   td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.03); vertical-align: top; }
-  tr:hover td { background: rgba(108,92,231,0.03); }
+  tr:hover td { background: rgba(37,99,235,0.03); }
   .match { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 6px; font-size: 0.78em; font-weight: 600; }
   .match-high { background: var(--green-dim); color: var(--green); }
   .match-mid { background: var(--yellow-dim); color: var(--yellow); }
@@ -294,11 +294,11 @@
   a:hover { color: #fff; }
   .link-btn {
     display: inline-block; padding: 8px 20px; border-radius: 8px;
-    background: rgba(108,92,231,0.15); border: 1px solid rgba(108,92,231,0.3);
+    background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.3);
     color: var(--accent-light); font-size: 0.85em; font-weight: 500; margin: 4px;
     transition: all 0.3s; cursor: pointer;
   }
-  .link-btn:hover { background: rgba(108,92,231,0.3); color: #fff; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(108,92,231,0.2); }
+  .link-btn:hover { background: rgba(37,99,235,0.3); color: #fff; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(37,99,235,0.2); }
 
   .district-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; }
 
@@ -339,7 +339,7 @@
     transition: transform 0.3s;
   }
   .timeline-item:hover::before { transform: scale(1.4); }
-  .timeline-item.urgent::before { background: var(--red); animation: pulse 2s infinite; }
+  .timeline-item.urgent::before { background: var(--red); animation: pulse 3s ease-in-out infinite; }
   .timeline-date { font-size: 0.8em; color: var(--accent-light); font-weight: 600; }
 
   /* Back to top */
@@ -347,17 +347,17 @@
     position: fixed; bottom: 30px; right: 30px; width: 48px; height: 48px;
     border-radius: 50%; background: var(--accent); color: #fff; border: none;
     font-size: 1.2em; cursor: pointer; opacity: 0; visibility: hidden;
-    transition: all 0.3s; z-index: 200; box-shadow: 0 4px 20px rgba(108,92,231,0.4);
+    transition: all 0.3s; z-index: 200; box-shadow: 0 4px 20px rgba(37,99,235,0.4);
   }
   .back-to-top.show { opacity: 1; visibility: visible; }
-  .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 25px rgba(108,92,231,0.5); }
+  .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 25px rgba(37,99,235,0.5); }
 
   /* Progress bar */
   .reading-progress {
     position: fixed; top: 0; left: 0; height: 3px; z-index: 1000;
     background: linear-gradient(90deg, var(--accent), var(--cyan));
     transition: width 0.1s;
-    box-shadow: 0 0 10px rgba(108,92,231,0.5);
+    box-shadow: 0 0 10px rgba(37,99,235,0.5);
   }
 
   /* Tooltip */
@@ -485,7 +485,7 @@
 
 <!-- Hero -->
 <div class="hero">
-  <div class="hero-particles" id="heroParticles"></div>
+  <!-- 粒子效果已移除 -->
   <h1>广州 OPC 政策导航</h1>
   <p class="subtitle" id="heroSubtitle">你的广州 OPC 政策申报指南</p>
   <span class="update-badge">更新于 2026-04-09</span>
@@ -1192,7 +1192,7 @@
           HuggingFace语音合成<strong style="color:var(--yellow)">全球第一</strong>，3个月用户<strong style="color:var(--cyan)">破百万</strong>，估值<strong style="color:var(--green)">2亿元</strong>
         </p>
         <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <span style="background:rgba(108,92,231,0.15);color:var(--accent-light);font-size:.78em;padding:4px 12px;border-radius:20px">AI语音</span>
+          <span style="background:rgba(37,99,235,0.15);color:var(--accent-light);font-size:.78em;padding:4px 12px;border-radius:20px">AI语音</span>
           <span style="background:rgba(255,214,0,0.12);color:var(--yellow);font-size:.78em;padding:4px 12px;border-radius:20px">全球第一</span>
         </div>
       </div>
@@ -1328,7 +1328,7 @@
 
 <!-- Contact & CTA -->
 <div style="max-width:1200px;margin:0 auto;padding:0 20px 30px">
-  <div style="background:linear-gradient(135deg,rgba(37,99,235,.08),rgba(21,128,61,.08));border:1px solid rgba(108,92,231,.25);border-radius:16px;padding:28px;text-align:center">
+  <div style="background:linear-gradient(135deg,rgba(37,99,235,.08),rgba(21,128,61,.08));border:1px solid rgba(37,99,235,.25);border-radius:16px;padding:28px;text-align:center">
     <h3 style="font-size:1.2em;margin-bottom:6px">需要 OPC 创业咨询？</h3>
     <p style="color:#64748B;font-size:.88em;margin-bottom:14px">AI语音对话机器人方案 · OPC政策申报指导 · 创业资源对接</p>
     <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
@@ -1405,7 +1405,7 @@ setInterval(updateCountdown, 1000);
 
 // ===== Particles =====
 (function() {
-  const c = document.getElementById('heroParticles');
+  const c = null // 粒子已移除: document.getElementById('heroParticles');
   for (let i = 0; i < 20; i++) {
     const p = document.createElement('div');
     p.className = 'p';

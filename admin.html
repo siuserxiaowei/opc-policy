@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕷️</text></svg>">
 <style>
 :root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
-  --accent:#2563EB;--al:#3B82F6;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
+  --accent:#2563EB;--al:#2563EB;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
   --cyan:#0F766E;--red:#B91C1C;--rd:#4a1515;--orange:#B45309;--blue:#2563EB}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
@@ -36,7 +36,7 @@ button{font-family:inherit;cursor:pointer}
 
 /* Hero */
 .hero{padding:30px 20px 20px;text-align:center;background:linear-gradient(135deg,#EFF6FF,#F0FDFA,#EFF6FF)}
-.hero h1{font-size:1.7em;font-weight:800;background:linear-gradient(135deg,var(--text),var(--cyan),var(--al));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero h1{font-size:1.7em;font-weight:800;color:var(--text)}
 .hero .sub{color:var(--dim);font-size:.88em;margin:6px 0}
 
 /* Stats row */
@@ -54,7 +54,7 @@ button{font-family:inherit;cursor:pointer}
 .btn{padding:8px 16px;border:1px solid var(--border);border-radius:8px;background:var(--card2);color:var(--text);font-size:.85em;font-weight:600;transition:all .2s}
 .btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-.btn.primary:hover{filter:brightness(1.1)}
+.btn.primary:hover{background:#1D4ED8}
 .btn.danger{border-color:rgba(185,28,28,.4);color:var(--red)}
 .btn.danger:hover{background:var(--red);color:#fff}
 .btn.small{padding:4px 10px;font-size:.72em}
@@ -96,7 +96,7 @@ button{font-family:inherit;cursor:pointer}
 .src-table{width:100%;border-collapse:collapse;font-size:.82em}
 .src-table th{text-align:left;padding:10px 12px;color:var(--al);border-bottom:1px solid var(--border);background:rgba(37,99,235,.04);font-weight:600}
 .src-table td{padding:8px 12px;border-bottom:1px solid rgba(0,0,0,.03)}
-.src-table tr:hover td{background:rgba(108,92,231,.03)}
+.src-table tr:hover td{background:rgba(37,99,235,.03)}
 .status-ok{color:var(--green);font-weight:700}
 .status-error{color:var(--red);font-weight:700}
 

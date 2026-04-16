@@ -7,7 +7,7 @@
 <meta name="description" content="全国OPC政策数据看板 - 城市对比、补贴排行、社区统计">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 <style>
-:root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;--accent:#2563EB;--al:#3B82F6;--green:#00e676;--yellow:#ffd600;--red:#ff5252;--cyan:#00e5ff;--blue:#448aff;--orange:#ff9100}
+:root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;--accent:#2563EB;--al:#3B82F6;--green:#15803D;--yellow:#B45309;--red:#B91C1C;--cyan:#0F766E;--blue:#2563EB;--orange:#B45309}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,'PingFang SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 a{color:var(--al);text-decoration:none}
@@ -280,7 +280,7 @@ function renderDashboard(d) {
   // City bars
   const cities = Object.entries(d.city_stats).sort((a,b) => b[1].count - a[1].count);
   const maxCount = Math.max(...cities.map(c => c[1].count));
-  const colors = ['#00e676','#448aff','#ff5252','#ffd600','#00e5ff','#ff9100','#e040fb','#76ff03','#64b5f6','#ffab40','#ff6e40'];
+  const colors = ['#15803D','#2563EB','#B91C1C','#B45309','#0F766E','#B45309','#e040fb','#76ff03','#64b5f6','#ffab40','#ff6e40'];
   document.getElementById('cityBars').innerHTML = cities.map(([city, s], i) => `
     <a href="city.html?name=${encodeURIComponent(city)}" class="bar-row" style="text-decoration:none;color:inherit">
       <div class="bar-label">${city}</div>
@@ -294,7 +294,7 @@ function renderDashboard(d) {
 
   // Category donut
   const catMap = {comprehensive:'综合',subsidy:'补贴',space:'空间',computing:'算力',scenario:'场景',competition:'赛事',registration:'注册',talent:'人才',tax:'税优',loan:'贷款'};
-  const catColors = ['#6c5ce7','#00e676','#448aff','#00e5ff','#ffd600','#ff9100','#ff5252','#e040fb','#76ff03','#64b5f6'];
+  const catColors = ['#2563EB','#15803D','#2563EB','#0F766E','#B45309','#B45309','#B91C1C','#e040fb','#76ff03','#64b5f6'];
   const catEntries = Object.entries(d.categories).sort((a,b) => b[1]-a[1]);
   const catTotal = catEntries.reduce((s,e) => s+e[1], 0);
   let catOffset = 0;
@@ -364,14 +364,14 @@ function renderDashboard(d) {
     <div class="donut-center"><div class="n">${Math.round(vPct*100)}%</div><div class="l">已验证</div></div>
   `;
   document.getElementById('verifyLegend').innerHTML = `
-    <div class="legend-item"><div class="legend-dot" style="background:#00e676"></div>已验证 (${d.verified})</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#ff5252"></div>待验证 (${d.unverified})</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#15803D"></div>已验证 (${d.verified})</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#B91C1C"></div>待验证 (${d.unverified})</div>
   `;
 
   // Province bars
   const provinces = Object.entries(d.province_stats).sort((a,b) => b[1]-a[1]);
   const maxProv = Math.max(...provinces.map(p => p[1]), 1);
-  const provColors = ['#6c5ce7','#00e676','#448aff','#00e5ff','#ffd600','#ff9100','#ff5252','#e040fb','#76ff03','#64b5f6','#ffab40','#ff6e40','#a29bfe','#69f0ae','#82b1ff'];
+  const provColors = ['#2563EB','#15803D','#2563EB','#0F766E','#B45309','#B45309','#B91C1C','#e040fb','#76ff03','#64b5f6','#ffab40','#ff6e40','#3B82F6','#69f0ae','#82b1ff'];
   document.getElementById('provinceBars').innerHTML = provinces.map(([prov, count], i) => `
     <div class="bar-row">
       <div class="bar-label">${prov}</div>
@@ -385,7 +385,7 @@ function renderDashboard(d) {
 
   // Benefit type donut
   const btMap = {rent_free:'免租',cash:'现金补贴',voucher:'代金券',loan:'贷款',tax:'税收优惠',other:'其他'};
-  const btColors = ['#00e676','#448aff','#ffd600','#ff9100','#6c5ce7','#ff5252','#00e5ff','#e040fb'];
+  const btColors = ['#15803D','#2563EB','#B45309','#B45309','#2563EB','#B91C1C','#0F766E','#e040fb'];
   const btEntries = Object.entries(d.benefit_types).sort((a,b) => b[1]-a[1]);
   const btTotal = btEntries.reduce((s,e) => s+e[1], 0);
   let btOffset = 0;

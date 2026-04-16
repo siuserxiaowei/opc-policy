@@ -1,6 +1,6 @@
 {
-  "version": "5.1.1",
-  "updated_at": "2026-04-15",
+  "version": "5.1.2",
+  "updated_at": "2026-04-16",
   "policies": [
     {
       "id": "guangdong-province-001",
@@ -1900,7 +1900,7 @@
       "expire_date": "2028-12-31",
       "status": "active",
       "category": "comprehensive",
-      "summary": "十条：初创最高100万/垂直模型30%最高500万/API采购50%最高100万/算力50%最高20万/算力贷1000万/创业贷500万/购房最高10万/社区最高500万",
+      "summary": "武汉十条：初创OPC最高100万资助/算力补助20万年连续3年/社区每家2000卡时免费算力/2028年目标10个社区5000人才500家企业",
       "benefits": [
         {
           "item": "初创OPC资助",
@@ -1909,58 +1909,34 @@
           "type": "cash"
         },
         {
-          "item": "垂直模型研发(30%)",
-          "amount": "最高500万",
-          "amount_max": 5000000,
-          "type": "cash"
-        },
-        {
-          "item": "大模型API采购(50%)",
-          "amount": "最高100万",
-          "amount_max": 1000000,
-          "type": "cash"
-        },
-        {
-          "item": "算力补助(50%)",
-          "amount": "最高20万/年x3年",
+          "item": "算力补助",
+          "amount": "最高20万/年，连续3年",
           "amount_max": 200000,
           "type": "voucher"
         },
         {
-          "item": "算力贷",
-          "amount": "单笔最高1000万",
-          "amount_max": 10000000,
-          "type": "loan"
+          "item": "社区免费算力",
+          "amount": "每家每年2000卡时",
+          "amount_max": 0,
+          "type": "service"
         },
         {
-          "item": "创业担保贷款",
-          "amount": "个人30万/企业500万",
-          "amount_max": 5000000,
-          "type": "loan"
+          "item": "OPC社区建设",
+          "amount": "到2028年超10个",
+          "amount_max": 0,
+          "type": "space"
         },
         {
-          "item": "购房补贴",
-          "amount": "最高10万(每㎡1000元)",
-          "amount_max": 100000,
-          "type": "cash"
+          "item": "人才集聚目标",
+          "amount": "5000人",
+          "amount_max": 0,
+          "type": "other"
         },
         {
-          "item": "人才住房",
-          "amount": "博士2年免租(月最高2000元)",
-          "amount_max": 48000,
-          "type": "rent_free"
-        },
-        {
-          "item": "OPC社区认定",
-          "amount": "最高500万",
-          "amount_max": 5000000,
-          "type": "cash"
-        },
-        {
-          "item": "武汉英才",
-          "amount": "20-100万",
-          "amount_max": 1000000,
-          "type": "cash"
+          "item": "企业孵化目标",
+          "amount": "500家",
+          "amount_max": 0,
+          "type": "other"
         }
       ],
       "requirements": {
@@ -1970,7 +1946,10 @@
         ]
       },
       "links": {
-        "official": "https://www.wuhan.gov.cn/zwgk/xxgk/zfwj/gfxwj/202602/t20260214_2730572.shtml"
+        "official": "https://www.wuhan.gov.cn/zwgk/xxgk/zfwj/gfxwj/202602/t20260214_2730572.shtml",
+        "news": [
+          "https://home.wuhan.gov.cn/zcfg/202602/t20260216_2730667.shtml"
+        ]
       },
       "communities": [
         {
@@ -2008,14 +1987,13 @@
         }
       ],
       "tags": [
-        "武汉十条",
-        "创业资助",
-        "算力券",
-        "英才计划",
-        "算力贷",
-        "光谷"
+        "武汉",
+        "十条",
+        "初创100万",
+        "算力20万/年",
+        "2028年目标"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-04-16",
       "verified": true
     },
     {
@@ -6348,6 +6326,131 @@
         "以赛代评"
       ],
       "updated_at": "2026-04-14",
+      "verified": true
+    },
+    {
+      "id": "sichuan-province-001",
+      "name": "四川省OPC算力券年发放总额提至1亿元",
+      "city": "成都",
+      "province": "四川",
+      "district": "",
+      "level": "province",
+      "issuer": "四川省人民政府",
+      "publish_date": "2026-04-15",
+      "status": "active",
+      "category": "computing",
+      "summary": "四川省将OPC算力券年发放总额提升至1亿元，OPC社区运营主体也纳入支持范围",
+      "benefits": [
+        {
+          "item": "算力券年发放总额",
+          "amount": "1亿元",
+          "amount_max": 100000000,
+          "type": "voucher"
+        },
+        {
+          "item": "社区运营主体支持",
+          "amount": "纳入省级支持",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "requirements": {
+        "registration_location": "四川省",
+        "industries": [
+          "人工智能",
+          "OPC"
+        ]
+      },
+      "links": {
+        "news": [
+          "http://sc.people.com.cn/n2/2026/0415/c379471-41552256.html"
+        ]
+      },
+      "communities": [],
+      "tags": [
+        "四川",
+        "省级",
+        "算力券1亿",
+        "社区运营支持"
+      ],
+      "updated_at": "2026-04-16",
+      "verified": true
+    },
+    {
+      "id": "chongqing-city-002",
+      "name": "重庆市建设西部人工智能OPC创业首选地十条扶持措施",
+      "city": "重庆",
+      "province": "重庆",
+      "district": "",
+      "level": "city",
+      "issuer": "重庆市人民政府",
+      "publish_date": "2026-04-15",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "重庆十条：构建OPC社区(两江/渝中/南岸/北碚/高新区)/零租金零等待零审批绿色通道/AIGC大模型算力平台/创业担保贷款贴息/住房一老一小保障/满天星专项资金/全周期投融资/场景对接/生态活动",
+      "benefits": [
+        {
+          "item": "OPC社区建设",
+          "amount": "首批5区域",
+          "amount_max": 0,
+          "type": "space"
+        },
+        {
+          "item": "一站式开办",
+          "amount": "零租金·零等待·零审批",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "AIGC大模型算力平台",
+          "amount": "支持建设",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "创业担保贷款",
+          "amount": "贴息",
+          "amount_max": 0,
+          "type": "loan"
+        },
+        {
+          "item": "满天星专项资金",
+          "amount": "市级统筹",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "投融资服务",
+          "amount": "全周期陪伴式",
+          "amount_max": 0,
+          "type": "loan"
+        },
+        {
+          "item": "场景对接",
+          "amount": "企业模块化开放",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "requirements": {
+        "registration_location": "重庆市",
+        "industries": [
+          "人工智能",
+          "OPC"
+        ]
+      },
+      "links": {
+        "official": "https://www.cq.gov.cn/ywdt/jrcq/202604/t20260415_15611238.html"
+      },
+      "communities": [],
+      "tags": [
+        "重庆",
+        "十条",
+        "零租金",
+        "满天星",
+        "西部首选地"
+      ],
+      "updated_at": "2026-04-16",
       "verified": true
     }
   ]
