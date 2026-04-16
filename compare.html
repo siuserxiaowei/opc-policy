@@ -93,15 +93,26 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
 <div class="container">
 
+  <!-- 模式切换 -->
+  <div style="display:flex;gap:4px;margin-bottom:12px;border-bottom:2px solid var(--border);padding-bottom:0">
+    <button id="tabCity" class="tab-btn active" onclick="switchMode('city')">🏙️ 城市对比</button>
+    <button id="tabComm" class="tab-btn" onclick="switchMode('comm')">🏢 社区/孵化器对比</button>
+  </div>
+  <style>
+  .tab-btn{padding:10px 20px;border:none;background:transparent;color:var(--dim);font-size:.9em;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s}
+  .tab-btn:hover{color:var(--accent)}
+  .tab-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
+  </style>
+
   <div class="select-bar">
     <div>
-      <label>选择城市（最多 4 个）</label>
+      <label id="selectLabel">选择城市（最多 4 个）</label>
       <select id="citySelect"><option value="">+ 添加城市</option></select>
     </div>
-    <button class="add-btn" onclick="addCity()">➕ 添加到对比</button>
+    <button class="add-btn" onclick="addItem()">➕ 添加到对比</button>
     <button class="clear-btn" onclick="clearAll()">✕ 清空</button>
     <div style="flex:1"></div>
-    <div style="font-size:.78em;color:var(--dim)" id="selectedLabel">已选 0 个城市</div>
+    <div style="font-size:.78em;color:var(--dim)" id="selectedLabel">已选 0 个</div>
   </div>
 
   <!-- 已选城市 chips -->
@@ -131,17 +142,42 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
 <script>
 let POLICIES = [];
+let COMMUNITIES = [];
 let selected = [];
+let mode = 'city'; // 'city' or 'comm'
 
 async function loadData(){
   try {
-    const resp = await fetch('data/policies.json');
-    const data = await resp.json();
-    POLICIES = data.policies || [];
-    populateCitySelect();
+    const [pResp, cResp] = await Promise.all([
+      fetch('data/policies.json'),
+      fetch('data/communities.json'),
+    ]);
+    POLICIES = (await pResp.json()).policies || [];
+    COMMUNITIES = (await cResp.json()).communities || [];
+    populateSelect();
   } catch(e) {
-    console.error('Failed to load policies:', e);
+    console.error('Failed to load data:', e);
   }
+}
+
+function switchMode(m){
+  mode = m;
+  selected = [];
+  document.getElementById('tabCity').classList.toggle('active', m === 'city');
+  document.getElementById('tabComm').classList.toggle('active', m === 'comm');
+  document.getElementById('selectLabel').textContent = m === 'city' ? '选择城市（最多 4 个）' : '选择社区/孵化器（最多 4 个）';
+  populateSelect();
+  render();
+}
+
+function populateSelect(){
+  if(mode === 'city') populateCitySelect();
+  else populateCommSelect();
+}
+
+function addItem(){
+  if(mode === 'city') addCity();
+  else addComm();
 }
 
 function getCities(){
@@ -181,8 +217,27 @@ function addCity(){
   render();
 }
 
-function removeCity(city){
-  selected = selected.filter(c => c !== city);
+function populateCommSelect(){
+  const sel = document.getElementById('citySelect');
+  sel.innerHTML = '<option value="">+ 添加社区</option>';
+  COMMUNITIES.sort((a,b) => a.city.localeCompare(b.city)).forEach(c => {
+    const loc = c.city + (c.district ? '·'+c.district : '');
+    sel.innerHTML += `<option value="${c.id}">[${loc}] ${c.name}</option>`;
+  });
+}
+
+function addComm(){
+  const sel = document.getElementById('citySelect');
+  const id = sel.value;
+  if(!id || selected.includes(id)) return;
+  if(selected.length >= 4){ alert('最多对比 4 个'); return; }
+  selected.push(id);
+  sel.value = '';
+  render();
+}
+
+function removeCity(item){
+  selected = selected.filter(c => c !== item);
   render();
 }
 
@@ -199,18 +254,27 @@ function quickCompare(cities){
 function render(){
   renderChips();
   if(selected.length < 2){
-    document.getElementById('compareArea').innerHTML = `<div class="empty"><h2>选择 2 个以上城市开始对比</h2><p>当前已选 ${selected.length} 个</p></div>`;
+    const label = mode === 'city' ? '城市' : '社区';
+    document.getElementById('compareArea').innerHTML = `<div class="empty"><h2>选择 2 个以上${label}开始对比</h2><p>当前已选 ${selected.length} 个</p></div>`;
     return;
   }
-  renderTable();
+  if(mode === 'city') renderTable();
+  else renderCommTable();
 }
 
 function renderChips(){
   const el = document.getElementById('selectedChips');
-  el.innerHTML = selected.map(c => `<span style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.2);border-radius:6px;font-size:.85em;color:var(--al)">
-    ${c} <span style="cursor:pointer;color:var(--red);margin-left:4px" onclick="removeCity('${c}')">✕</span>
-  </span>`).join('');
-  document.getElementById('selectedLabel').textContent = `已选 ${selected.length} 个城市`;
+  el.innerHTML = selected.map(item => {
+    let label = item;
+    if(mode === 'comm'){
+      const c = COMMUNITIES.find(x => x.id === item);
+      label = c ? c.name.substring(0,15) : item;
+    }
+    return `<span style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.2);border-radius:6px;font-size:.85em;color:var(--al)">
+      ${label} <span style="cursor:pointer;color:var(--red);margin-left:4px" onclick="removeCity('${item}')">✕</span>
+    </span>`;
+  }).join('');
+  document.getElementById('selectedLabel').textContent = `已选 ${selected.length} 个`;
 }
 
 function renderTable(){
@@ -345,6 +409,47 @@ function renderTable(){
   `;
 
   document.getElementById('compareArea').innerHTML = tableHtml;
+}
+
+function renderCommTable(){
+  const data = selected.map(id => COMMUNITIES.find(c => c.id === id)).filter(Boolean);
+  if(data.length < 2) return;
+
+  const dimensions = [
+    { label: '📍 城市/区', key: c => `${c.city}${c.district ? ' · '+c.district : ''}` },
+    { label: '🏛️ 运营主体', key: c => c.operator || '<span class="dim">未公开</span>' },
+    { label: '🎯 核心赛道', key: c => c.track || '<span class="dim">未标注</span>' },
+    { label: '🏠 地址', key: c => c.address || '<span class="dim">未公开</span>' },
+    { label: '✨ 特色服务', key: c => (c.features||[]).length ? c.features.map(f => `<span class="tag tag-info">${f}</span>`).join(' ') : '<span class="dim">—</span>' },
+    { label: '✅ 官方核验', key: c => c.verified ? '<span class="good">✓ 已核验</span>' : '<span class="dim">未核验</span>' },
+    { label: '🔗 来源', key: c => c.source ? `<a href="${c.source}" target="_blank" style="font-size:.82em">查看来源 ↗</a>` : '<span class="dim">—</span>' },
+  ];
+
+  let html = '<div class="compare-wrap"><table class="compare-table"><thead><tr><th>对比维度</th>';
+  data.forEach(c => { html += `<th>${c.name}</th>`; });
+  html += '</tr></thead><tbody>';
+
+  dimensions.forEach(dim => {
+    html += '<tr>';
+    html += `<td>${dim.label}</td>`;
+    data.forEach(c => { html += `<td>${dim.key(c)}</td>`; });
+    html += '</tr>';
+  });
+  html += '</tbody></table></div>';
+
+  // 简单结论
+  const verified = data.filter(c => c.verified);
+  const withTrack = data.filter(c => c.track);
+  html += `<div class="verdict">
+    <h3>⚡ 快速判断</h3>
+    <p>
+      ${verified.length ? `<span class="rec">✓ 经官方核验：${verified.map(c=>c.name).join('、')}</span><br>` : ''}
+      ${withTrack.length ? `核心赛道：${withTrack.map(c => `<strong>${c.name}</strong> → ${c.track}`).join(' · ')}<br>` : ''}
+      建议实地考察后决定入驻。<a href="index.html" style="color:var(--accent)">回首页精准匹配 →</a>
+    </p>
+  </div>`;
+
+  document.getElementById('compareArea').innerHTML = html;
 }
 
 loadData();
