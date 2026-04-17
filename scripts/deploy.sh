@@ -54,6 +54,14 @@ for f in rss.xml sitemap.xml robots.txt; do
   fi
 done
 
+# IndexNow key 文件（必须放在根路径供搜索引擎验证）
+for f in *.txt; do
+  [[ "$f" == "robots.txt" ]] && continue
+  if [[ -f "$f" ]]; then
+    cp "$f" "$DIST/"
+  fi
+done
+
 # 资源目录
 if [[ -d assets ]]; then
   cp -r assets "$DIST/"
@@ -133,3 +141,11 @@ echo ""
 echo "✓ 部署完成！"
 echo "  线上: https://opcgate.com"
 echo "  预览: https://$COMMIT.opc-policy.pages.dev"
+
+# ── IndexNow 推送（告诉 Bing/Yandex 新页面已更新） ──────────────────
+if command -v python3 >/dev/null 2>&1 && [[ -f scripts/push_indexnow.py ]]; then
+  echo ""
+  echo "→ IndexNow 推送新 sitemap"
+  sleep 5  # 给 Cloudflare Pages 几秒时间让新页面上线，避免 IndexNow 抓到旧版
+  python3 scripts/push_indexnow.py || echo "   (IndexNow 推送失败不中止部署)"
+fi

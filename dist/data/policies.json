@@ -5725,6 +5725,8 @@
         "url": "https://www.gdzwfw.gov.cn/"
       },
       "links": {
+        "official": "http://www.huizhou.gov.cn/zdlyxxgk/jycyxxgk/zczy/bszc/content/post_4678573.html",
+        "department": "http://rsj.huizhou.gov.cn/",
         "news": [
           "https://www.cnbayarea.org.cn/city/huizhou/dtxw/content/post_1281976.html"
         ]
@@ -5733,6 +5735,7 @@
         {
           "name": "仲恺AI产业园",
           "address": "仲恺高新区",
+          "website": "http://www.hzzk.gov.cn/bmpd/rgzncyfzzx/",
           "features": [
             "产值533亿",
             "511个项目",
@@ -5742,6 +5745,7 @@
         {
           "name": "润泽智算中心",
           "address": "大亚湾数据产业园",
+          "website": "https://www.rangeidc.com/",
           "features": [
             "大湾区首个超大规模智算中心",
             "2026年建成"
@@ -5818,6 +5822,8 @@
         "registration_location": "惠阳区"
       },
       "links": {
+        "official": "http://www.huiyang.gov.cn/zwgk/zfgb/content/mpost_4735131.html",
+        "detail": "http://www.huiyang.gov.cn/zwgk/gfxwjk/bmgfxwj/content/mpost_5337894.html",
         "news": [
           "https://www.eesia.cn/contents/113/5917.html"
         ]
