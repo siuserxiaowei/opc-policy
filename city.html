@@ -84,6 +84,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 @media(max-width:768px){.hero h1{font-size:1.6em}.stats-row{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.hero h1{font-size:1.3em}.policy-card{padding:16px}.container{padding:14px 12px}}
 </style>
+<script src="assets/js/schedule.js" defer></script>
 </head>
 <body>
 
@@ -312,8 +313,9 @@ async function loadCity() {
       if (p.application_url) {
         html += `<p style="margin-top:4px"><a href="${p.application_url}" target="_blank" style="font-size:.82em;padding:4px 12px;background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.25);border-radius:6px;display:inline-block">在线申请入口 →</a></p>`;
       }
-      if (p.application?.deadline) {
-        html += `<p style="font-size:.82em;color:var(--red);margin-top:4px"><strong>截止日期：</strong>${p.application.deadline}</p>`;
+      if (p.application?.schedule || p.application?.deadline) {
+        const label = window.Schedule ? window.Schedule.displayLabel(p.application.schedule || p.application.deadline) : ('截止 ' + p.application.deadline);
+        html += `<p style="font-size:.82em;color:var(--red);margin-top:4px"><strong>申报窗口：</strong>${label}</p>`;
       }
 
       // Materials

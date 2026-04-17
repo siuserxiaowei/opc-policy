@@ -97,6 +97,7 @@ h1{font-size:1.8em;margin-bottom:4px}
 
 @media(max-width:768px){.chart-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.compare-controls{flex-direction:column}}
 </style>
+<script src="assets/js/schedule.js" defer></script>
 </head>
 <body>
 <nav class="topnav">
@@ -260,14 +261,14 @@ function computeDashboard(policies) {
   const upcoming = [];
   const now = new Date();
   policies.forEach(p => {
-    const dl = p.application?.deadline;
-    if (dl) {
-      try {
-        const d = new Date(dl);
-        const days = Math.ceil((d - now) / 86400000);
-        if (days > 0 && days <= 60) upcoming.push({name:p.name, city:p.city, deadline:dl, days_left:days});
-      } catch(e){}
-    }
+    const app = p.application || {};
+    const end = window.Schedule ? window.Schedule.nextDeadline(app.schedule || app.deadline) : (app.deadline || null);
+    if (!end) return;
+    try {
+      const d = new Date(end);
+      const days = Math.ceil((d - now) / 86400000);
+      if (days > 0 && days <= 60) upcoming.push({name:p.name, city:p.city, deadline:end, days_left:days});
+    } catch(e){}
   });
   upcoming.sort((a,b) => a.days_left - b.days_left);
 

@@ -308,6 +308,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 .nav-dropdown-menu a:hover{background:rgba(37,99,235,.06);color:var(--al,var(--accent,#2563EB))}
 .nav-dropdown-menu a.active{color:var(--al,var(--accent,#2563EB));font-weight:600}
 </style>
+<script src="assets/js/schedule.js" defer></script>
 </head>
 <body>
 
@@ -1080,7 +1081,10 @@ function buildVerdict(results, profile){
   }
   if(bestCity && bestCity.comms > 0) actions.push(`考虑入驻 ${bestCity.city} 的 OPC 社区（共 ${bestCity.comms} 个可选）`);
   else actions.push('关注目标城市的 OPC 社区招募公告');
-  const deadlines = results.filter(r => r.policy.application?.deadline).map(r => ({name:r.policy.name.substring(0,20), deadline: r.policy.application.deadline})).sort((a,b)=>a.deadline.localeCompare(b.deadline));
+  const deadlines = results.map(r => {
+    const end = window.Schedule ? window.Schedule.nextDeadline(r.policy.application?.schedule || r.policy.application?.deadline) : (r.policy.application?.deadline || null);
+    return end ? {name: r.policy.name.substring(0,20), deadline: end} : null;
+  }).filter(Boolean).sort((a,b)=>a.deadline.localeCompare(b.deadline));
   if(deadlines.length) actions.push(`注意最近截止：${deadlines[0].name} (${deadlines[0].deadline})`);
   else actions.push('持续关注政策动态（<a href="rss.xml" style="color:var(--cyan)">订阅 RSS</a>）');
 
@@ -1171,10 +1175,23 @@ function exportVerdict(){
   a.click();
 }
 
-// 计算距截止日期的天数
-function calcCountdown(deadline){
-  if(!deadline) return null;
-  const d = new Date(deadline);
+// 计算距截止日期的天数 — 优先用结构化 schedule，降级到字符串 deadline
+function calcCountdown(input){
+  // 支持三种调用：policy.application 对象 / schedule 对象 / 日期字符串（向后兼容）
+  let iso = null;
+  if (input && typeof input === 'object') {
+    if (window.Schedule && (input.schedule || input.type)) {
+      const s = input.schedule || input;
+      const cd = window.Schedule.countdown(s);
+      if (cd) return {days: cd.daysLeft, cls: cd.expired ? 'countdown-expired' : cd.urgent ? 'countdown-urgent' : cd.soon ? 'countdown-warn' : 'countdown-ok',
+                      label: cd.expired ? '已过窗口' : cd.daysLeft === 0 ? '今天截止' : `${cd.daysLeft} 天后截止`};
+    }
+    iso = input.deadline || null;
+  } else {
+    iso = input;
+  }
+  if(!iso) return null;
+  const d = new Date(iso);
   if(isNaN(d.getTime())) return null;
   const now = new Date();
   now.setHours(0,0,0,0);
@@ -1249,7 +1266,7 @@ function renderResults(results){
     const lc = r.level==='high'?'var(--green)':r.level==='mid'?'var(--yellow)':'var(--red)';
     const lt = r.level==='high'?'高度匹配':r.level==='mid'?'条件匹配':'暂不匹配';
     const tc = r.level==='high'?'tag-go':r.level==='mid'?'tag-check':'tag-no';
-    const cd = calcCountdown(p.application?.deadline);
+    const cd = calcCountdown(p.application);
     const card = document.createElement('div');
     card.className='result-card'; card.dataset.level=r.level;
     card.style.animationDelay=(i*.04)+'s';
@@ -1260,7 +1277,7 @@ function renderResults(results){
         <span>${p.city}${p.district?' · '+p.district+'区':''}</span>
         <span>${{province:'省级',city:'市级',district:'区级'}[p.level]||''}政策</span>
         <span>${p.status==='active'?'生效中':'征求意见'}</span>
-        ${p.application?.deadline?`<span style="color:var(--dim)">截止 ${p.application.deadline}</span>`:''}
+        ${(p.application?.schedule || p.application?.deadline)?`<span style="color:var(--dim)">${window.Schedule ? window.Schedule.displayLabel(p.application.schedule || p.application.deadline) : ('截止 ' + p.application.deadline)}</span>`:''}
       </div>
       <p style="font-size:.88em;color:var(--dim);margin-bottom:6px">${p.summary}</p>
       <div class="benefits">${benefits.map(b=>`<span class="benefit-tag">${b.item}: ${b.amount}</span>`).join('')}</div>
@@ -1426,7 +1443,7 @@ function filterBrowse(){
   list.innerHTML='';
   filtered.forEach(p=>{
     const maxA=Math.max(0,...(p.benefits||[]).map(b=>b.amount_max||0));
-    const cd=calcCountdown(p.application?.deadline);
+    const cd=calcCountdown(p.application);
     const card=document.createElement('div');
     card.className='result-card';
     card.innerHTML=`
@@ -1436,7 +1453,7 @@ function filterBrowse(){
         <span>${{province:'省级',city:'市级',district:'区级'}[p.level]||''}</span>
         <span>${p.status==='active'?'生效中':'征求意见'}</span>
         ${maxA>0?`<span style="color:var(--cyan)">最高${maxA>=10000?Math.round(maxA/10000)+'万':maxA+'元'}</span>`:''}
-        ${p.application?.deadline?`<span style="color:var(--dim)">截止 ${p.application.deadline}</span>`:''}
+        ${(p.application?.schedule || p.application?.deadline)?`<span style="color:var(--dim)">${window.Schedule ? window.Schedule.displayLabel(p.application.schedule || p.application.deadline) : ('截止 ' + p.application.deadline)}</span>`:''}
       </div>
       <p style="font-size:.88em;color:var(--dim);margin-bottom:6px">${p.summary}</p>
       <div class="benefits">${(p.benefits||[]).map(b=>`<span class="benefit-tag">${b.item}: ${b.amount}</span>`).join('')}</div>

@@ -107,8 +107,8 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   <h1>维护日志 · 核实记录</h1>
   <p>本页记录 opcgate.com 的所有数据核验、更新、修复动作。每条都可追溯到具体的 git commit，拒绝 AI 编造，每次改动都公开透明。</p>
   <div class="stats">
-    <div class="s"><div class="n">85</div><div class="l">总维护次数</div></div>
-    <div class="s"><div class="n">5</div><div class="l">数据核验动作</div></div>
+    <div class="s"><div class="n">86</div><div class="l">总维护次数</div></div>
+    <div class="s"><div class="n">6</div><div class="l">数据核验动作</div></div>
     <div class="s"><div class="n">1</div><div class="l">活跃月份</div></div>
     <div class="s"><div class="n" style="color:var(--green)">LIVE</div><div class="l">持续维护中</div></div>
   </div>
@@ -118,10 +118,21 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
   <div class="months">
     <span class="ml">按月分布：</span>
-    <span class="m-chip">2026-04 · 85 次</span>
+    <span class="m-chip">2026-04 · 86 次</span>
   </div>
 
   
+    <div class="cm-item cat-city">
+      <div class="cm-head">
+        <span class="cm-icon">🏙️</span>
+        <span class="cm-label">城市数据</span>
+        <span class="cm-date">2026-04-17 08:39</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/81825930837cc3840ead6d69812b1ee707a2e919" target="_blank" rel="noopener" class="cm-sha">8182593</a>
+        <span class="cm-stats">78 文件 <span class="st-plus">+363</span> <span class="st-minus">−312</span></span>
+      </div>
+      <div class="cm-subject">惠州官方链接补齐 + 生成器智能降级 + IndexNow 接入</div>
+      <div class="cm-body">惠州数据<br>- 惠州市创业补贴: 加 links.official (gov.cn 政策页) + department (人社局)<br>- 惠阳区支持实体经济: 加 links.official (huiyang.gov.cn 正式发文)<br>- 仲恺AI产业园/润泽智算中心: 加 community.website<br>生成器<br>- policy 卡片: official 缺失时降级到 news/申报入口, 55/60 页自动有链接<br>- community 卡片: 渲染 website 为&quot;社区官网&quot;按钮<br>IndexNow<br>- 新增 scripts/push_indexnow.py 推送脚本 (本地)<br>- 根目录放 key 文件 &lt;key&gt;.txt 供 Bing/Yandex 验证<br>- deploy.sh 末尾自动推送新 sitemap<br>还剩 5 个城市需人工补 official: 杭州/上海/深圳/南京/梅州</div>
+    </div>
     <div class="cm-item cat-other">
       <div class="cm-head">
         <span class="cm-icon">📌</span>
@@ -1061,7 +1072,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 </div>
 
 <footer>
-  <p>opcgate.com · 维护日志自动生成于 2026-04-17 08:38</p>
+  <p>opcgate.com · 维护日志自动生成于 2026-04-17 08:43</p>
   <p style="margin-top:4px"><a href="https://github.com/siuserxiaowei/opc-policy">在 GitHub 上查看完整提交历史 ↗</a></p>
 </footer>
 
