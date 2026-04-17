@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
-  "updated_at": "2026-04-16",
-  "total": 87,
+  "version": "1.1.0",
+  "updated_at": "2026-04-17",
+  "total": 88,
   "communities": [
     {
       "id": "comm-001",
@@ -1639,6 +1639,28 @@
       "policy_ids": [
         "zhengzhou-zhengdong-001"
       ]
+    },
+    {
+      "id": "comm-088",
+      "name": "粤港澳大湾区（广东）创新创业孵化基地",
+      "city": "广州",
+      "province": "广东",
+      "district": "天河",
+      "address": "广州市天河区天慧路10、12、14号",
+      "operator": "广东省人社厅+广州市天河区人民政府 共建",
+      "track": "人工智能 / 新一代信息技术 / 节能环保 / 高端装备制造 / 新材料 / 生物医药与健康 / 新能源",
+      "features": [
+        "港澳青年创新创业龙头基地",
+        "6.65万㎡可容纳200家孵化企业",
+        "累计引入239个项目 港澳项目占90%+",
+        "入驻项目累计获融资超3.62亿元",
+        "三大服务角色：青创护航官/青创链接者/超级组局人",
+        "创业之星展区(科创型/成长型/港澳特色)",
+        "总投资超7亿 / 三大智慧系统 / 六大服务平台 / 八大功能分区"
+      ],
+      "source": "https://www.gz.gov.cn/zt/ljgaqngcwqwl/lcgz/sczx/content/post_7191005.html",
+      "verified": true,
+      "policy_ids": []
     }
   ]
 }
