@@ -1,5 +1,5 @@
 {
-  "version": "5.2.0",
+  "version": "5.3.0",
   "updated_at": "2026-04-17",
   "policies": [
     {
@@ -6952,6 +6952,142 @@
       ],
       "updated_at": "2026-04-17",
       "verified": false
+    },
+    {
+      "id": "guangzhou-tianhe-001",
+      "name": "粤港澳大湾区(广东)创新创业孵化基地入驻政策",
+      "city": "广州",
+      "province": "广东",
+      "district": "天河",
+      "level": "district",
+      "issuer": "广东省人社厅 + 广州市天河区人民政府",
+      "publish_date": "2021-03-30",
+      "status": "active",
+      "category": "space",
+      "summary": "天河区天慧路港澳青年双创龙头基地，初创企业最长免租3年+众创空间最长1年+一站式创业服务+创业之星展区，七大赛道(含AI)欢迎入驻",
+      "benefits": [
+        {
+          "item": "初创企业办公区免租",
+          "amount": "最长3年免租",
+          "amount_max": 0,
+          "type": "rent_free"
+        },
+        {
+          "item": "众创空间工位免租",
+          "amount": "最长1年免租",
+          "amount_max": 0,
+          "type": "rent_free"
+        },
+        {
+          "item": "港澳青年初创企业特殊优惠",
+          "amount": "办公场地半年全免+一年减半(仅港澳籍)",
+          "amount_max": 0,
+          "type": "rent_free"
+        },
+        {
+          "item": "一站式创业服务",
+          "amount": "工商/财税/法律/知识产权/政策兑现/银行事务免费",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "公共配套平台",
+          "amount": "路演厅/产品试制平台/公共食堂/展厅 免费使用",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "'创业之星'展区入驻",
+          "amount": "专属展位展示科创型/成长型/港澳特色项目",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "三大服务角色对接",
+          "amount": "青创护航官/青创链接者/超级组局人",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "港澳青年创业大赛获奖落户奖励(仅港澳籍)",
+          "amount": "最高20万元",
+          "amount_max": 200000,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "入驻后需迁入天河区(初创3月内/团队1年内)",
+        "operation_location": "广州市天河区天慧路10、12、14号",
+        "industries": [
+          "人工智能",
+          "新一代信息技术",
+          "节能环保",
+          "高端装备制造",
+          "新材料",
+          "生物医药与健康",
+          "新能源"
+        ],
+        "founder_identity": [
+          "港澳青年(优先)",
+          "留学归国人员",
+          "高校毕业生",
+          "高层次人才",
+          "高技能人才"
+        ],
+        "qualifications": [
+          "具有市场前景和孵化培育潜力",
+          "无知识产权/债务纠纷",
+          "无违法违规记录"
+        ],
+        "other": [
+          "团队/个人入驻众创空间：孵化期≤1年，1年内完成工商注册",
+          "初创企业入驻办公区：孵化期≤3年，3个月内完成工商变更迁入",
+          "非初创企业：通过广东省公共资源交易中心增价拍卖，租期≤5年，不免租",
+          "免评审通道：近3年在香港民政事务局/贸发局/科技园/数码港/澳门经济局/澳门青年孵化中心主办大赛总决赛获奖项目"
+        ]
+      },
+      "application": {
+        "deadline": "常态化申报",
+        "method": "材料PDF打包压缩→邮件发送→初审→公示→办理入驻",
+        "email": "dawanqu@dwq360.com",
+        "address": "广州市天河区天慧路10、12、14号",
+        "url": "https://www.gz.gov.cn/zt/ljgaqngcwqwl/lcgz/sczx/content/post_7191005.html"
+      },
+      "links": {
+        "official": "https://www.gz.gov.cn/zt/ljgaqngcwqwl/lcgz/sczx/content/post_7191005.html",
+        "department": "http://www.thnet.gov.cn/zwfw/zdfw/zcgaqnfz/",
+        "news": [
+          "http://hrss.gd.gov.cn/zwgk/xxgkml/gzdt/content/post_3253136.html",
+          "https://www.gdhmo.gov.cn/zdxm/content/post_63993.html",
+          "https://www.cnbayarea.org.cn/service/base/",
+          "https://www.gz.gov.cn/ysgz/xwdt/ysdt/content/post_7971563.html"
+        ]
+      },
+      "communities": [
+        {
+          "name": "粤港澳大湾区（广东）创新创业孵化基地",
+          "address": "广州市天河区天慧路10、12、14号",
+          "features": [
+            "6.65万㎡可容纳200家",
+            "累计239项目融资3.62亿+",
+            "港澳项目90%+",
+            "七大赛道"
+          ],
+          "contact": "dawanqu@dwq360.com"
+        }
+      ],
+      "tags": [
+        "天河",
+        "港澳青年",
+        "孵化基地",
+        "免租3年",
+        "AI",
+        "双创",
+        "空间补贴",
+        "港澳协同"
+      ],
+      "updated_at": "2026-04-17",
+      "verified": true
     }
   ]
 }

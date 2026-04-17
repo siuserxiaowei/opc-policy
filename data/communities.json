@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "updated_at": "2026-04-17",
   "total": 88,
   "communities": [
@@ -1660,7 +1660,9 @@
       ],
       "source": "https://www.gz.gov.cn/zt/ljgaqngcwqwl/lcgz/sczx/content/post_7191005.html",
       "verified": true,
-      "policy_ids": []
+      "policy_ids": [
+        "guangzhou-tianhe-001"
+      ]
     }
   ]
 }
