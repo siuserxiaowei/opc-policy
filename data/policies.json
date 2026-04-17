@@ -1,6 +1,6 @@
 {
-  "version": "5.1.2",
-  "updated_at": "2026-04-16",
+  "version": "5.2.0",
+  "updated_at": "2026-04-17",
   "policies": [
     {
       "id": "guangdong-province-001",
@@ -6501,6 +6501,457 @@
       ],
       "updated_at": "2026-04-16",
       "verified": true
+    },
+    {
+      "id": "guangzhou-huadu-001",
+      "name": "花都区支持具身智能机器人产业发展的十条措施",
+      "city": "广州",
+      "province": "广东",
+      "district": "花都",
+      "level": "district",
+      "issuer": "广州市花都区人民政府办公室",
+      "publish_date": "2025-09-01",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "具身智能机器人十条：链主企业最高5000万+应用场景500万+专精特新250万+独角兽300万+产业租金150万",
+      "benefits": [
+        {
+          "item": "链主企业招引(按固定资产投入)",
+          "amount": "每满5000万投入给100万支持，单个企业最高5000万",
+          "amount_max": 50000000,
+          "type": "cash"
+        },
+        {
+          "item": "链主企业招引(非制造类按营收)",
+          "amount": "营收每满1亿给100万，单个企业最高5000万",
+          "amount_max": 50000000,
+          "type": "cash"
+        },
+        {
+          "item": "应用场景补贴",
+          "amount": "总投入50%，单项目最高500万",
+          "amount_max": 5000000,
+          "type": "cash"
+        },
+        {
+          "item": "专精特新'小巨人'/国家级单项冠军",
+          "amount": "累计最高250万",
+          "amount_max": 2500000,
+          "type": "cash"
+        },
+        {
+          "item": "省级单项冠军/专精特新中小企业",
+          "amount": "最高30万",
+          "amount_max": 300000,
+          "type": "cash"
+        },
+        {
+          "item": "独角兽企业",
+          "amount": "单个企业最高300万",
+          "amount_max": 3000000,
+          "type": "cash"
+        },
+        {
+          "item": "产业租金补贴(第1年)",
+          "amount": "实际租金50%，单企业最高150万",
+          "amount_max": 1500000,
+          "type": "cash"
+        },
+        {
+          "item": "产业租金补贴(第2-3年)",
+          "amount": "40元/㎡以上部分50%，每年最高50万",
+          "amount_max": 500000,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "花都区",
+        "operation_location": "花都区",
+        "industries": [
+          "人形机器人",
+          "工业机器人",
+          "服务机器人",
+          "特种机器人",
+          "具身智能软件操作系统",
+          "智能终端"
+        ],
+        "qualifications": [
+          "租金补贴适用：科技型中小企业/高新技术企业/专精特新/科技领军企业"
+        ],
+        "other": [
+          "政策自印发之日起3年有效"
+        ]
+      },
+      "application": {
+        "method": "向花都区工业和信息化局申报，具体窗口待公告",
+        "url": "https://www.huadu.gov.cn/gkmlpt/content/10/10205/post_10205534.html"
+      },
+      "links": {
+        "official": "https://www.huadu.gov.cn/gkmlpt/content/10/10205/post_10205534.html",
+        "department": "https://www.huadu.gov.cn/",
+        "news": [
+          "https://www.gz.gov.cn/gzzcwjk/gzdata/content/post_10205533.html",
+          "https://www.huadu.gov.cn/gkmlpt/content/10/10205/post_10205869.html"
+        ]
+      },
+      "tags": [
+        "具身智能",
+        "机器人",
+        "花都",
+        "智能制造",
+        "专精特新",
+        "独角兽",
+        "场景补贴",
+        "AI硬件"
+      ],
+      "updated_at": "2026-04-17",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-liwan-001",
+      "name": "荔湾区就业创业补贴清单+产业人才薪酬补贴",
+      "city": "广州",
+      "province": "广东",
+      "district": "荔湾",
+      "level": "district",
+      "issuer": "广州市荔湾区人民政府",
+      "publish_date": "2024-06-01",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "荔湾区产业人才薪酬补贴每年最高10万x3年；另有10项区级就业创业补贴清单（孵化基地、妈妈岗、技能实训等，金额以区级细则为准）",
+      "benefits": [
+        {
+          "item": "产业人才薪酬补贴",
+          "amount": "每年最高10万元，最长3年",
+          "amount_max": 100000,
+          "type": "cash"
+        },
+        {
+          "item": "优秀创业项目资助",
+          "amount": "按市区联动标准，金额以当年通知为准",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "创业孵化示范基地建设扶持补贴",
+          "amount": "按区级细则执行",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "创业孵化示范基地评价补贴",
+          "amount": "按年度考核结果",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "'妈妈岗'就业基地补贴",
+          "amount": "按区级细则执行",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "技能人才培训(实训)基地建设补贴",
+          "amount": "按区级细则执行",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "技能人才培训(实训)工作室建设补贴",
+          "amount": "按区级细则执行",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "就业(创业)实训活动补贴",
+          "amount": "按场次/人数",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "校园招聘/直播招聘活动补贴",
+          "amount": "按场次",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "流动人员人事档案管理补助",
+          "amount": "按规定发放",
+          "amount_max": 0,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "荔湾区",
+        "operation_location": "荔湾区",
+        "industries": [
+          "互联网和软件信息服务业",
+          "其他区级鼓励产业"
+        ],
+        "other": [
+          "人才补贴须为产业目录内企业聘用",
+          "创业类补贴一般要求正常缴纳社保"
+        ]
+      },
+      "application": {
+        "method": "荔湾区公共就业服务机构受理；互联网软件扶持由区科工信部门受理",
+        "url": "http://www.lw.gov.cn/zwgkk/zchnz/wzjd/content/post_9961274.html"
+      },
+      "links": {
+        "official": "http://www.lw.gov.cn/zwgkk/zchnz/wzjd/content/post_9961274.html",
+        "department": "http://www.lw.gov.cn/",
+        "news": [
+          "http://www.lw.gov.cn/hdjlpt/yjzj/api/attachments/view/a67e83f39d76118c50f25b2df7f19151"
+        ]
+      },
+      "tags": [
+        "荔湾",
+        "创业补贴",
+        "人才薪酬",
+        "孵化器",
+        "互联网软件",
+        "待补细则"
+      ],
+      "updated_at": "2026-04-17",
+      "verified": false
+    },
+    {
+      "id": "guangzhou-yuexiu-001",
+      "name": "越秀区促进产业高质量发展实施意见+人工智能训练师紧缺工种补贴",
+      "city": "广州",
+      "province": "广东",
+      "district": "越秀",
+      "level": "district",
+      "issuer": "广州市越秀区人民政府办公室",
+      "publish_date": "2023-09-20",
+      "status": "active",
+      "category": "talent",
+      "summary": "越秀'3+3'核心产业扶持方向（数字经济/创新金融等）+人工智能训练师紧缺工种技能补贴上浮30%，最高4680元",
+      "benefits": [
+        {
+          "item": "人工智能训练师(高级工)技能补贴",
+          "amount": "3120元/人（上浮30%后）",
+          "amount_max": 3120,
+          "type": "cash"
+        },
+        {
+          "item": "人工智能训练师(技师)技能补贴",
+          "amount": "3900元/人",
+          "amount_max": 3900,
+          "type": "cash"
+        },
+        {
+          "item": "人工智能训练师(高级技师)补贴",
+          "amount": "4680元/人",
+          "amount_max": 4680,
+          "type": "cash"
+        },
+        {
+          "item": "科技企业孵化载体扶持",
+          "amount": "新纳入管理或获市级以上考核奖励，按区级细则",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "上市/挂牌融资支持",
+          "amount": "按区级细则执行",
+          "amount_max": 0,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "越秀区",
+        "industries": [
+          "创新金融",
+          "生命健康",
+          "现代商贸",
+          "数字经济",
+          "文化创意",
+          "高端专业服务业"
+        ],
+        "other": [
+          "技能补贴：拿证1年内申领，直发个人银行卡",
+          "企业类扶持：按《越秀区促进产业高质量发展实施意见》执行"
+        ]
+      },
+      "application": {
+        "method": "个人补贴通过越秀区个人办事中心申报；企业扶持向越秀区科工商信局申报",
+        "url": "https://www.gz.gov.cn/gfxwj/qjgfxwj/yxq/qfb/content/post_9246793.html"
+      },
+      "links": {
+        "official": "https://www.gz.gov.cn/gfxwj/qjgfxwj/yxq/qfb/content/post_9246793.html",
+        "department": "http://www.yuexiu.gov.cn/",
+        "news": [
+          "http://gz.bendibao.com/edu/2026214/edu365559.shtml",
+          "http://gz.bendibao.com/edu/2026319/edu366408.shtml"
+        ]
+      },
+      "tags": [
+        "越秀",
+        "数字经济",
+        "人工智能训练师",
+        "紧缺工种",
+        "3+3产业",
+        "技能补贴"
+      ],
+      "updated_at": "2026-04-17",
+      "verified": false
+    },
+    {
+      "id": "guangzhou-conghua-001",
+      "name": "从化区创业补贴与众创空间(市级政策叠加)",
+      "city": "广州",
+      "province": "广东",
+      "district": "从化",
+      "level": "district",
+      "issuer": "广州市从化区人力资源和社会保障局",
+      "publish_date": "2025-06-01",
+      "status": "active",
+      "category": "subsidy",
+      "summary": "从化区暂无OPC/AI专项政策，叠加广州市级通用创业补贴（一次性资助1万+租金6000/年+带动就业最高3万）+南方创新谷/夏立智汇青创社众创空间",
+      "benefits": [
+        {
+          "item": "一次性创业资助(市级通用)",
+          "amount": "10000元",
+          "amount_max": 10000,
+          "type": "cash"
+        },
+        {
+          "item": "创业租金补贴(市级通用)",
+          "amount": "每年最高6000元×3年",
+          "amount_max": 18000,
+          "type": "cash"
+        },
+        {
+          "item": "创业带动就业补贴(市级通用)",
+          "amount": "每人2000-3000元，最高3万",
+          "amount_max": 30000,
+          "type": "cash"
+        },
+        {
+          "item": "众创空间入驻服务",
+          "amount": "工位/孵化/对接(非现金)",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "requirements": {
+        "registration_location": "从化区",
+        "operation_location": "从化区",
+        "social_insurance_months": 6,
+        "other": [
+          "正常缴纳社保≥6个月",
+          "适用市级通用政策，区级无专项加码"
+        ]
+      },
+      "application": {
+        "method": "从化区人社局窗口或穗好办APP申报",
+        "url": "http://www.conghua.gov.cn/"
+      },
+      "links": {
+        "official": "http://www.conghua.gov.cn/zwgk/zdlyxxgk/czzjczzjzdjc/content/post_10358450.html",
+        "department": "http://www.conghua.gov.cn/",
+        "news": [
+          "http://www.conghua.gov.cn/zwfw/ztfw/hycybtgs/content/post_10711677.html"
+        ]
+      },
+      "communities": [
+        {
+          "name": "南方创新谷",
+          "features": [
+            "市级众创空间"
+          ],
+          "address": "从化区"
+        },
+        {
+          "name": "夏立智汇青创社",
+          "features": [
+            "争创省级/国家级众创空间"
+          ],
+          "address": "从化区"
+        }
+      ],
+      "tags": [
+        "从化",
+        "市级通用",
+        "众创空间",
+        "无专项"
+      ],
+      "updated_at": "2026-04-17",
+      "verified": true
+    },
+    {
+      "id": "guangzhou-zengcheng-001",
+      "name": "增城区'人工智能+'行动+侨梦苑+广聚英才工程(2026方向)",
+      "city": "广州",
+      "province": "广东",
+      "district": "增城",
+      "level": "district",
+      "issuer": "广州市增城区人民政府",
+      "publish_date": "2026-01-15",
+      "status": "draft",
+      "category": "comprehensive",
+      "summary": "2026政府工作报告方向：深入实施'人工智能+'行动、循环经济产业园绿电算力节点、侨梦苑1+23双创格局、广聚英才引进100+人才项目。具体资金细则待后续出台",
+      "benefits": [
+        {
+          "item": "侨梦苑双创项目入驻",
+          "amount": "项目落地支持（具体以引进协议为准）",
+          "amount_max": 0,
+          "type": "other"
+        },
+        {
+          "item": "'广聚英才'/'百万英才汇南粤'",
+          "amount": "计划引进人才项目≥100个（细则待出）",
+          "amount_max": 0,
+          "type": "other"
+        },
+        {
+          "item": "循环经济产业园算力节点",
+          "amount": "算力配套支持（细则待出）",
+          "amount_max": 0,
+          "type": "voucher"
+        },
+        {
+          "item": "企业技术改造项目",
+          "amount": "省市专项资金项目库申报",
+          "amount_max": 0,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "增城区",
+        "industries": [
+          "人工智能+",
+          "汽车制造",
+          "新型显示",
+          "智能家居",
+          "海洋经济",
+          "未来健康"
+        ],
+        "other": [
+          "方向性政策，具体资金细则待增城区工信/发改后续出台"
+        ]
+      },
+      "application": {
+        "method": "增城区工信局/发改局/人社局按口径分别受理",
+        "url": "https://www.zc.gov.cn/"
+      },
+      "links": {
+        "official": "https://www.zc.gov.cn/gkmlpt/content/10/10676/post_10676659.html",
+        "department": "https://www.zc.gov.cn/",
+        "news": []
+      },
+      "tags": [
+        "增城",
+        "侨梦苑",
+        "广聚英才",
+        "算力节点",
+        "2026方向",
+        "智能制造",
+        "待细则"
+      ],
+      "updated_at": "2026-04-17",
+      "verified": false
     }
   ]
 }
