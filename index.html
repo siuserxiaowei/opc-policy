@@ -4,23 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OPC 选址决策工具 | 帮你判断哪个城市最适合做 OPC - opcgate.com</title>
-<meta name="description" content="不是帮你看政策，是帮你做出 OPC 落地决策。38 城 85 条政策 130+ 社区并排对比，每条带官方来源。快速排除不合适的城市和社区，找到最适合你的。">
+<meta name="description" content="不是帮你看政策，是帮你做出 OPC 落地决策。38 城 106 条政策、96 条社区/载体记录并排对比，优先展示官方原文，缺失官链会明示参考来源。">
 <meta name="keywords" content="OPC,一人公司,OPC政策,OPC补贴,OPC社区,超级个体,AI创业,算力券,创业补贴,OPC创业,一人公司注册,OPC孵化器,opcgate">
 <meta property="og:title" content="OPC 选址决策工具 | 帮你判断哪个城市最适合做 OPC">
-<meta property="og:description" content="覆盖36城79条政策130+OPC社区。苏州/广州/深圳/北京/上海/杭州/青岛/武汉/成都。算力券、免租空间、创业资助一键查询匹配。">
+<meta property="og:description" content="覆盖38城106条政策、96条OPC社区/载体记录。苏州/广州/深圳/北京/上海/杭州/青岛/武汉/成都。算力券、免租空间、创业资助一键查询匹配。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://opcgate.com">
 <meta property="og:image" content="https://opcgate.com/assets/avatar.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OPC 选址决策工具 | 帮你做出 OPC 落地决策">
-<meta name="twitter:description" content="不是帮你看政策，是帮你做出落地决策。38 城 85 条政策 130+ 社区，每条带官方来源。">
+<meta name="twitter:description" content="不是帮你看政策，是帮你做出落地决策。38 城 106 条政策、96 条社区/载体记录，优先展示官方原文，缺失官链会明示参考来源。">
 <meta name="author" content="siuser小伟">
 <link rel="canonical" href="https://opcgate.com">
 <link rel="alternate" type="application/rss+xml" title="opcgate.com · 全国 OPC 政策更新" href="https://opcgate.com/rss.xml">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"OPC 选址决策工具","description":"帮你快速排除不合适的城市和社区，做出 OPC 落地决策。38 城 85 条政策 130+ 社区，每条带官方来源。","url":"https://opcgate.com","author":{"@type":"Person","name":"siuser小伟"},"applicationCategory":"BusinessApplication","operatingSystem":"Web"}
+{"@context":"https://schema.org","@type":"WebApplication","name":"OPC 选址决策工具","description":"帮你快速排除不合适的城市和社区，做出 OPC 落地决策。38 城 106 条政策、96 条社区/载体记录，优先展示官方原文，缺失官链会明示参考来源。","url":"https://opcgate.com","author":{"@type":"Person","name":"siuser小伟"},"applicationCategory":"BusinessApplication","operatingSystem":"Web"}
 </script>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <style>
 :root {
   --bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;
@@ -262,6 +262,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 .verified-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:4px;
   font-size:.65em;font-weight:700;background:rgba(15,118,110,.1);color:var(--cyan);
   border:1px solid rgba(15,118,110,.25);margin-left:6px;vertical-align:middle;letter-spacing:.3px}
+.verified-badge-warn{background:rgba(180,83,9,.12);color:var(--orange);border-color:rgba(180,83,9,.25)}
 
 /* Source link - 来源跳转按钮 */
 .source-link{display:inline-flex;align-items:center;gap:3px;padding:3px 8px;margin:4px 4px 0 0;
@@ -309,6 +310,11 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 .nav-dropdown-menu a.active{color:var(--al,var(--accent,#2563EB));font-weight:600}
 </style>
 <script src="assets/js/schedule.js" defer></script>
+<!-- OPC-JSONLD-START -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://opcgate.com/#website","url":"https://opcgate.com/","name":"OPC 政策导航","description":"全国 OPC（一人公司 / 独立开发者）城市政策与社区导航。优先官方原文，缺失会明示参考来源。","inLanguage":"zh-CN","publisher":{"@type":"Person","name":"siuser小伟"}},{"@type":"Dataset","@id":"https://opcgate.com/#dataset","name":"全国 OPC 政策数据集","description":"覆盖 38 城共 106 条 OPC 相关政策的结构化数据，含金额、申报口径、官方原文或参考来源链接。","creator":{"@type":"Organization","name":"OPC 政策导航"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"keywords":["OPC","一人公司","独立开发者","政府补贴","创业政策","全国政策导航"],"distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://opcgate.com/data/policies.json"}]},{"@type":"ItemList","@id":"https://opcgate.com/#cities","name":"全国 OPC 城市政策列表","numberOfItems":38,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://opcgate.com/guangzhou.html","name":"广州 OPC 政策"},{"@type":"ListItem","position":2,"url":"https://opcgate.com/chengdu.html","name":"成都 OPC 政策"},{"@type":"ListItem","position":3,"url":"https://opcgate.com/suzhou.html","name":"苏州 OPC 政策"},{"@type":"ListItem","position":4,"url":"https://opcgate.com/seo/cities/%E4%B8%8A%E6%B5%B7.html","name":"上海 OPC 政策"},{"@type":"ListItem","position":5,"url":"https://opcgate.com/seo/cities/%E4%B8%9C%E8%8E%9E.html","name":"东莞 OPC 政策"},{"@type":"ListItem","position":6,"url":"https://opcgate.com/seo/cities/%E4%B8%AD%E5%B1%B1.html","name":"中山 OPC 政策"},{"@type":"ListItem","position":7,"url":"https://opcgate.com/seo/cities/%E4%BD%9B%E5%B1%B1.html","name":"佛山 OPC 政策"},{"@type":"ListItem","position":8,"url":"https://opcgate.com/seo/cities/%E5%8C%97%E4%BA%AC.html","name":"北京 OPC 政策"},{"@type":"ListItem","position":9,"url":"https://opcgate.com/seo/cities/%E5%8D%97%E4%BA%AC.html","name":"南京 OPC 政策"},{"@type":"ListItem","position":10,"url":"https://opcgate.com/seo/cities/%E5%8D%97%E9%80%9A.html","name":"南通 OPC 政策"},{"@type":"ListItem","position":11,"url":"https://opcgate.com/seo/cities/%E5%8E%A6%E9%97%A8.html","name":"厦门 OPC 政策"},{"@type":"ListItem","position":12,"url":"https://opcgate.com/seo/cities/%E5%90%88%E8%82%A5.html","name":"合肥 OPC 政策"},{"@type":"ListItem","position":13,"url":"https://opcgate.com/seo/cities/%E5%A4%A9%E6%B4%A5.html","name":"天津 OPC 政策"},{"@type":"ListItem","position":14,"url":"https://opcgate.com/seo/cities/%E5%AE%81%E6%B3%A2.html","name":"宁波 OPC 政策"},{"@type":"ListItem","position":15,"url":"https://opcgate.com/seo/cities/%E5%AE%BF%E8%BF%81.html","name":"宿迁 OPC 政策"},{"@type":"ListItem","position":16,"url":"https://opcgate.com/seo/cities/%E5%B8%B8%E5%B7%9E.html","name":"常州 OPC 政策"},{"@type":"ListItem","position":17,"url":"https://opcgate.com/seo/cities/%E5%BE%90%E5%B7%9E.html","name":"徐州 OPC 政策"},{"@type":"ListItem","position":18,"url":"https://opcgate.com/seo/cities/%E6%83%A0%E5%B7%9E.html","name":"惠州 OPC 政策"},{"@type":"ListItem","position":19,"url":"https://opcgate.com/seo/cities/%E6%89%AC%E5%B7%9E.html","name":"扬州 OPC 政策"},{"@type":"ListItem","position":20,"url":"https://opcgate.com/seo/cities/%E6%97%A0%E9%94%A1.html","name":"无锡 OPC 政策"},{"@type":"ListItem","position":21,"url":"https://opcgate.com/seo/cities/%E6%98%86%E6%98%8E.html","name":"昆明 OPC 政策"},{"@type":"ListItem","position":22,"url":"https://opcgate.com/seo/cities/%E6%9D%AD%E5%B7%9E.html","name":"杭州 OPC 政策"},{"@type":"ListItem","position":23,"url":"https://opcgate.com/seo/cities/%E6%A2%85%E5%B7%9E.html","name":"梅州 OPC 政策"},{"@type":"ListItem","position":24,"url":"https://opcgate.com/seo/cities/%E6%AD%A6%E6%B1%89.html","name":"武汉 OPC 政策"},{"@type":"ListItem","position":25,"url":"https://opcgate.com/seo/cities/%E6%B5%8E%E5%8D%97.html","name":"济南 OPC 政策"},{"@type":"ListItem","position":26,"url":"https://opcgate.com/seo/cities/%E6%B5%B7%E5%8F%A3.html","name":"海口 OPC 政策"},{"@type":"ListItem","position":27,"url":"https://opcgate.com/seo/cities/%E6%B7%B1%E5%9C%B3.html","name":"深圳 OPC 政策"},{"@type":"ListItem","position":28,"url":"https://opcgate.com/seo/cities/%E6%B8%A9%E5%B7%9E.html","name":"温州 OPC 政策"},{"@type":"ListItem","position":29,"url":"https://opcgate.com/seo/cities/%E7%8F%A0%E6%B5%B7.html","name":"珠海 OPC 政策"},{"@type":"ListItem","position":30,"url":"https://opcgate.com/seo/cities/%E7%9B%90%E5%9F%8E.html","name":"盐城 OPC 政策"},{"@type":"ListItem","position":31,"url":"https://opcgate.com/seo/cities/%E7%9F%B3%E5%AE%B6%E5%BA%84.html","name":"石家庄 OPC 政策"},{"@type":"ListItem","position":32,"url":"https://opcgate.com/seo/cities/%E7%A6%8F%E5%B7%9E.html","name":"福州 OPC 政策"},{"@type":"ListItem","position":33,"url":"https://opcgate.com/seo/cities/%E8%A5%BF%E5%AE%89.html","name":"西安 OPC 政策"},{"@type":"ListItem","position":34,"url":"https://opcgate.com/seo/cities/%E8%BF%9E%E4%BA%91%E6%B8%AF.html","name":"连云港 OPC 政策"},{"@type":"ListItem","position":35,"url":"https://opcgate.com/seo/cities/%E9%83%91%E5%B7%9E.html","name":"郑州 OPC 政策"},{"@type":"ListItem","position":36,"url":"https://opcgate.com/seo/cities/%E9%87%8D%E5%BA%86.html","name":"重庆 OPC 政策"},{"@type":"ListItem","position":37,"url":"https://opcgate.com/seo/cities/%E9%95%BF%E6%B2%99.html","name":"长沙 OPC 政策"},{"@type":"ListItem","position":38,"url":"https://opcgate.com/seo/cities/%E9%9D%92%E5%B2%9B.html","name":"青岛 OPC 政策"}]}]}
+</script>
+<!-- OPC-JSONLD-END -->
 </head>
 <body>
 
@@ -333,7 +339,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 <!-- Trust banner：反 AI 编造定位条 -->
 <div class="trust-slogan">
   <span class="icon">🛡️</span>
-  <span><strong>每条政策附官方链接</strong></span>
+  <span><strong>优先展示官方原文</strong></span>
   <span class="dot">·</span>
   <span>拒绝 AI 编造</span>
   <span class="dot">·</span>
@@ -352,12 +358,12 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
     <button onclick="switchMode('match');document.getElementById('fProvince').focus()" style="padding:16px 40px;background:#2563EB;border:none;border-radius:10px;color:#fff;font-size:1.05em;font-weight:700;cursor:pointer;transition:all .2s;letter-spacing:.5px" onmouseover="this.style.background='#1D4ED8'" onmouseout="this.style.background='#2563EB'">开始匹配</button>
     <a href="compare.html" style="padding:16px 28px;background:#fff;border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:1em;font-weight:600;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center" onmouseover="this.style.background='#F1F5F9'" onmouseout="this.style.background='#fff'">对比城市 · 社区 →</a>
   </div>
-  <span class="version" style="color:var(--dim)">38 城 · 94 条政策 · 130+ OPC 社区 · 每条带官方来源</span>
+  <span class="version" style="color:var(--dim)">38 城 · 106 条政策 · 96 条社区/载体记录 · 缺失官链会明示</span>
 </div>
 
 <!-- 时效公告（可关闭 + 过期自动隐藏） -->
 <div id="announcement" style="display:none;max-width:900px;margin:12px auto;padding:10px 40px 10px 16px;background:var(--card);border:1px solid var(--border);border-radius:8px;position:relative;z-index:1;font-size:.85em;color:var(--dim)">
-  🏆 <strong style="color:var(--al)">众创杯OPC专项赛</strong> 报名截止 <strong style="color:#B91C1C">5月10日</strong> · 特等奖 50万 · <a href="https://finance.sina.com.cn/roll/2026-03-27/doc-inhskwec8395999.shtml" target="_blank" style="color:var(--al)">详情 →</a>
+  🏆 <strong style="color:var(--al)">众创杯OPC专项赛</strong> 报名截止 <strong style="color:#B91C1C">5月10日</strong> · 特等奖 50万 · <a href="https://finance.sina.com.cn/roll/2026-03-27/doc-inhskwec8395999.shtml" target="_blank" style="color:var(--al)">媒体报道 →</a>
   <button onclick="this.parentElement.style.display='none';localStorage.setItem('ann-dismiss','zhcc-0510')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--dim);font-size:1.1em;cursor:pointer;padding:4px">&times;</button>
 </div>
 <script>
@@ -696,7 +702,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
     <a href="rss.xml">RSS 订阅</a> · <a href="https://github.com/siuserxiaowei/opc-policy" target="_blank">GitHub</a>
   </p>
   <p style="font-size:.78em;color:var(--dim)">
-    数据来源：政府官网 · 每条带官方链接 · 拒绝 AI 编造<br>
+    数据来源：优先展示官方原文，缺失官链会明示参考来源 · 拒绝 AI 编造<br>
     有业务需求或数据纠错：微信 siuserxiaowei（备注 OPC）
   </p>
 </footer>
@@ -710,6 +716,7 @@ const SPECIAL_CITY_PAGES = {
   '成都': 'chengdu.html',
   '苏州': 'suzhou.html',
 };
+const OFFICIAL_SOURCE_SUFFIXES = ['.gov.cn', '.cnbayarea.org.cn', '.ccpit.org'];
 
 function getCityDetailHref(city){
   return SPECIAL_CITY_PAGES[city] || `seo/cities/${encodeURIComponent(city)}.html`;
@@ -732,13 +739,22 @@ async function loadData() {
   populateBrowseFilters();
   filterBrowse();
 
-  // 异步合并爬虫发现的新政策（不阻塞页面渲染）
+  // 仅在爬虫暴露结构化端点时合并候选政策（不阻塞页面渲染）
   mergeCrawlerData();
 }
 
 async function mergeCrawlerData() {
   try {
-    const resp = await fetch('https://opc-crawler.siuserxy.workers.dev/extracted', {
+    const api = 'https://opc-crawler.siuserxy.workers.dev';
+    const statusResp = await fetch(`${api}/`, {
+      signal: AbortSignal.timeout(5000)
+    });
+    if (!statusResp.ok) return;
+    const status = await statusResp.json();
+    const endpoints = Object.keys(status.endpoints || {});
+    if (status.mode === 'link-discovery-only' || !endpoints.some(e => e.includes('/extracted'))) return;
+
+    const resp = await fetch(`${api}/extracted`, {
       signal: AbortSignal.timeout(5000)
     });
     if (!resp.ok) return;
@@ -753,7 +769,7 @@ async function mergeCrawlerData() {
 
     for (const p of newPolicies) {
       if (existingIds.has(p.id) || existingNames.has(p.name)) continue;
-      p.auto_extracted = true; // 标记为爬虫自动提取
+      p.auto_extracted = true; // 标记为爬虫候选
       POLICIES.push(p);
       existingIds.add(p.id);
       existingNames.add(p.name);
@@ -1142,7 +1158,7 @@ function exportVerdict(){
 
   let txt = '# OPC 选址决策报告\n';
   txt += `生成时间: ${new Date().toLocaleString('zh-CN')}\n`;
-  txt += `来源: opcgate.com · 每条带官方链接 · 拒绝AI编造\n\n`;
+  txt += `来源: opcgate.com · 优先展示官方原文，缺失官链会明示参考来源\n\n`;
   txt += '## 你的情况\n';
   txt += `城市: ${p.city}${p.district?' '+p.district+'区':''}\n`;
   txt += `社保人数: ${p.employees||'未填'}\n`;
@@ -1154,7 +1170,9 @@ function exportVerdict(){
   results.slice(0,3).forEach((r,i) => {
     txt += `${i+1}. ${r.policy.name} (${r.policy.city}) - ${r.score}%\n`;
     txt += `   ${r.policy.summary}\n`;
-    if(r.policy.links?.official) txt += `   来源: ${r.policy.links.official}\n`;
+    const sourceInfo = classifyPolicyLinks(r.policy);
+    const primarySource = sourceInfo.official || sourceInfo.application || sourceInfo.references[0];
+    if(primarySource) txt += `   来源: ${primarySource}${sourceInfo.official ? '' : ' (参考来源)'}\n`;
     txt += '\n';
   });
   if(high.length){
@@ -1208,23 +1226,64 @@ function extractDomain(url){
   catch(e){ return ''; }
 }
 
+function isOfficialUrl(url){
+  if(!url) return false;
+  try {
+    const host = new URL(url).hostname.toLowerCase();
+    return OFFICIAL_SOURCE_SUFFIXES.some(suffix => host.endsWith(suffix) || host === suffix.slice(1));
+  } catch(e) {
+    return false;
+  }
+}
+
+function uniqueUrls(urls){
+  return [...new Set((urls || []).filter(Boolean))];
+}
+
+function classifyPolicyLinks(p){
+  const links = p.links || {};
+  const official = isOfficialUrl(links.official) ? links.official : '';
+  const references = [];
+  if(links.official && !official) references.push(links.official);
+  references.push(...(links.news || []));
+  const application = p.application?.url || '';
+  return {
+    official,
+    application,
+    references: uniqueUrls(references).filter(url => url !== official && url !== application),
+  };
+}
+
 // 生成 verified badge（如果政策有 verified 和 official source）
 function verifiedBadgeHtml(p){
   if(!p.verified) return '';
-  const src = p.links?.official || (p.links?.news||[])[0];
-  const domain = extractDomain(src);
-  return `<span class="verified-badge" title="${domain?'来源：'+domain:'已核验'}">✓ 已核验${domain?' · '+domain:''}</span>`;
+  const { official, application } = classifyPolicyLinks(p);
+  if(official){
+    const domain = extractDomain(official);
+    return `<span class="verified-badge" title="${domain ? '官方原文：' + domain : '已核验'}">✓ 已核验${domain ? ' · ' + domain : ''}</span>`;
+  }
+  if(application && isOfficialUrl(application)){
+    const domain = extractDomain(application);
+    return `<span class="verified-badge" title="未找到公开政策原文，当前展示的是官方申报入口">✓ 已核验 · ${domain}</span>`;
+  }
+  return '<span class="verified-badge verified-badge-warn" title="已人工核验，但当前缺少可公开官方原文链接">⚠ 已核验 · 缺官链</span>';
 }
 
 // 生成来源跳转区块（官方来源 + 新闻 + 众创汇总）
 function sourceSectionHtml(p){
+  const { official, application, references } = classifyPolicyLinks(p);
   const links = [];
-  if(p.links?.official) links.push(`<a class="source-link" href="${p.links.official}" target="_blank" rel="noopener">🏛️ 政策原文 · ${extractDomain(p.links.official)}</a>`);
-  (p.links?.news||[]).forEach(n => links.push(`<a class="source-link" href="${n}" target="_blank" rel="noopener">📰 ${extractDomain(n)}</a>`));
-  if(p.application?.url) links.push(`<a class="source-link" href="${p.application.url}" target="_blank" rel="noopener">📝 申报入口</a>`);
+  if(official) links.push(`<a class="source-link" href="${official}" target="_blank" rel="noopener">🏛️ 官方原文 · ${extractDomain(official)}</a>`);
+  if(application) links.push(`<a class="source-link" href="${application}" target="_blank" rel="noopener">${isOfficialUrl(application) ? '📝 官方申报入口' : '📝 申报入口'}</a>`);
+  references.forEach(n => links.push(`<a class="source-link" href="${n}" target="_blank" rel="noopener">📰 参考来源 · ${extractDomain(n)}</a>`));
   if(!links.length) return '';
+  const label = official
+    ? '核验链接：'
+    : application
+      ? '申报 / 参考链接：'
+      : '参考链接（未找到公开官链）：';
   return `<div class="src-section">
-    <div class="src-section-label">官方来源（可点击验证）：</div>
+    <div class="src-section-label">${label}</div>
     ${links.join('')}
   </div>`;
 }
@@ -1373,11 +1432,13 @@ function quickRematch(){
 function exportResults(format){
   if(!window._allResults) return;
   if(format==='csv'){
-    let csv='政策名称,城市,区域,匹配度,匹配等级,摘要,最高金额,官方链接\n';
+    let csv='政策名称,城市,区域,匹配度,匹配等级,摘要,最高金额,官方原文/参考链接\n';
     window._allResults.forEach(r=>{
       const p=r.policy;
       const maxA=Math.max(0,...(p.benefits||[]).map(b=>b.amount_max||0));
-      csv+=`"${p.name}","${p.city}","${p.district||''}",${r.score}%,"${r.level==='high'?'高度匹配':r.level==='mid'?'条件匹配':'暂不匹配'}","${p.summary}",${maxA},"${p.links?.official||''}"\n`;
+      const sourceInfo = classifyPolicyLinks(p);
+      const exportSource = sourceInfo.official || sourceInfo.application || sourceInfo.references[0] || '';
+      csv+=`"${p.name}","${p.city}","${p.district||''}",${r.score}%,"${r.level==='high'?'高度匹配':r.level==='mid'?'条件匹配':'暂不匹配'}","${p.summary}",${maxA},"${exportSource}"\n`;
     });
     download(csv,'OPC政策匹配结果.csv','text/csv;charset=utf-8');
   } else {
@@ -1387,7 +1448,9 @@ function exportResults(format){
       txt+=`  ${r.policy.summary}\n`;
       if(r.reasons.length) txt+=`  ✓ ${r.reasons.join('; ')}\n`;
       if(r.blockers.length) txt+=`  ✗ ${r.blockers.join('; ')}\n`;
-      if(r.policy.links?.official) txt+=`  链接: ${r.policy.links.official}\n`;
+      const sourceInfo = classifyPolicyLinks(r.policy);
+      const exportSource = sourceInfo.official || sourceInfo.application || sourceInfo.references[0];
+      if(exportSource) txt+=`  链接: ${exportSource}${sourceInfo.official ? '' : ' (参考来源)'}\n`;
       txt+='\n';
     });
     download(txt,'OPC政策匹配结果.txt','text/plain;charset=utf-8');
@@ -1750,7 +1813,9 @@ function localAdvisor(question){
       if(target.requirements?.qualifications?.length) html+='· 知识产权/软著证明<br>';
       if(target.requirements?.social_insurance_months) html+=`· 连续${target.requirements.social_insurance_months}个月社保缴费记录<br>`;
       html+='· 已落地案例或合同清单<br>· 项目实施方案<br>';
-      if(target.links?.official) html+=`<br><a href="${target.links.official}" target="_blank">查看官方要求 →</a>`;
+      const sourceInfo = classifyPolicyLinks(target);
+      const sourceUrl = sourceInfo.official || sourceInfo.application || sourceInfo.references[0];
+      if(sourceUrl) html+=`<br><a href="${sourceUrl}" target="_blank">${sourceInfo.official ? '查看官方要求' : '查看参考链接'} →</a>`;
       return html;
     }
   }
@@ -1791,7 +1856,9 @@ function localAdvisor(question){
     html+=`<b>${p.name}</b>`;
     if(maxA>0) html+=` · <span style="color:var(--cyan)">${maxA>=10000?Math.round(maxA/10000)+'万':maxA+'元'}</span>`;
     html+=`<br><span style="color:var(--dim);font-size:.9em">${p.summary}</span><br>`;
-    if(p.links?.official) html+=`<a href="${p.links.official}" target="_blank" style="font-size:.85em">查看原文</a><br>`;
+    const sourceInfo = classifyPolicyLinks(p);
+    const sourceUrl = sourceInfo.official || sourceInfo.application || sourceInfo.references[0];
+    if(sourceUrl) html+=`<a href="${sourceUrl}" target="_blank" style="font-size:.85em">${sourceInfo.official ? '查看原文' : '查看参考链接'}</a><br>`;
     html+='<br>';
   });
 

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>爬虫 Review 面板 | opcgate.com</title>
 <meta name="robots" content="noindex,nofollow">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕷️</text></svg>">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <style>
 :root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
   --accent:#2563EB;--al:#2563EB;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
@@ -173,7 +173,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
 <div class="hero">
   <h1>🕷️ 爬虫 Review 面板</h1>
-  <p class="sub">每 12 小时自动抓取 44 个政府网站，发现新的 OPC 政策链接。人工确认后才能进入 <code>policies.json</code>。</p>
+  <p class="sub">每 12 小时自动抓取 44 个政府网站，发现新的 OPC 政策链接。人工确认后才能进入 <code>policies.json</code>；无官链的条目必须明确标注为参考来源，不能塞进 <code>official</code>。</p>
 </div>
 
 <div class="stats-row">
@@ -237,12 +237,12 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 <!-- JSON 模板弹窗 -->
 <div class="modal" id="jsonModal">
   <div class="modal-box">
-    <h3>📋 policies.json 模板</h3>
-    <p>复制下面的 JSON，填完具体数据后加入 <code>data/policies.json</code> 的 <code>policies</code> 数组里。</p>
+    <h3>📋 人工录入 JSON 草稿</h3>
+    <p>草稿只带入链接发现的标题、来源和 URL。请人工核对金额、有效期、官链/参考来源后，再加入 <code>data/policies.json</code> 的 <code>policies</code> 数组。</p>
     <textarea id="jsonTemplate" readonly></textarea>
     <div class="modal-actions">
-      <button class="btn" onclick="copyJson()">📋 复制 JSON</button>
-      <button class="btn primary" onclick="markReviewedFromModal()">✓ 已录入（标记完成）</button>
+      <button class="btn" onclick="copyJson()">📋 复制录入草稿</button>
+      <button class="btn primary" onclick="markReviewedFromModal()">✓ 已人工录入（标记完成）</button>
       <button class="btn danger" onclick="closeModal()">关闭</button>
     </div>
   </div>
@@ -410,8 +410,8 @@ function renderItem(f){
       </div>
       <div class="url"><a href="${url}" target="_blank" rel="noopener">${url}</a></div>
       <div class="actions">
-        <button class="btn small primary" onclick="openJsonModal('${dataKey}')">📋 生成 JSON 模板</button>
-        <button class="btn small" onclick="markReviewed('${dataKey}')">✓ 已录入</button>
+        <button class="btn small primary" onclick="openJsonModal('${dataKey}')">📋 生成录入草稿</button>
+        <button class="btn small" onclick="markReviewed('${dataKey}')">✓ 已人工录入</button>
         <button class="btn small danger" onclick="ignoreUrl('${dataKey}')">✗ 忽略</button>
       </div>
     </div>
@@ -505,12 +505,13 @@ function openJsonModal(key){
       deadline: null
     },
     links: {
-      official: f.url
+      official: '',
+      news: [f.url]
     },
     communities: [],
     tags: [],
     updated_at: new Date().toISOString().slice(0,10),
-    verified: true
+    verified: false
   };
   document.getElementById('jsonTemplate').value = JSON.stringify(tmpl, null, 2);
   document.getElementById('jsonModal').classList.add('show');
@@ -525,7 +526,7 @@ function copyJson(){
   const textarea = document.getElementById('jsonTemplate');
   textarea.select();
   document.execCommand('copy');
-  showToast('✓ JSON 已复制，粘贴到 data/policies.json', 'ok');
+  showToast('✓ 录入草稿已复制，请人工核对后再写入 data/policies.json', 'ok');
 }
 
 function markReviewedFromModal(){

@@ -19,10 +19,18 @@ crawler/
 spider/
 scrapy.cfg
 
-# 工具脚本默认不入库，但 deploy.sh / check_links.py 例外（公开部署+监控流程方便他人 fork 复用）
+# 工具脚本默认不入库，但公开构建 / 部署 / 监控链路例外（方便他人 fork 复用）
 scripts/*
 !scripts/deploy.sh
 !scripts/check_links.py
+!scripts/validate_data.py
+!scripts/generate_changelog.py
+!scripts/generate_rss.py
+!scripts/generate_seo_pages.py
+!scripts/generate_city_seo.py
+!scripts/inject_jsonld.py
+!scripts/generate_sitemap.py
+!scripts/push_indexnow.py
 
 # Python
 __pycache__/
@@ -30,6 +38,11 @@ __pycache__/
 *.pyo
 .venv/
 venv/
+
+# Node / Playwright
+node_modules/
+test-results/
+playwright-report/
 
 # Cloudflare
 .wrangler/

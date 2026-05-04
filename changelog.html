@@ -113,7 +113,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   <h1>维护日志 · 核实记录</h1>
   <p>本页记录 opcgate.com 的所有数据核验、更新、修复动作。每条都可追溯到具体的 git commit，拒绝 AI 编造，每次改动都公开透明。</p>
   <div class="stats">
-    <div class="s"><div class="n">97</div><div class="l">总维护次数</div></div>
+    <div class="s"><div class="n">98</div><div class="l">总维护次数</div></div>
     <div class="s"><div class="n">6</div><div class="l">数据核验动作</div></div>
     <div class="s"><div class="n">1</div><div class="l">活跃月份</div></div>
     <div class="s"><div class="n" style="color:var(--green)">LIVE</div><div class="l">持续维护中</div></div>
@@ -124,10 +124,21 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
   <div class="months">
     <span class="ml">按月分布：</span>
-    <span class="m-chip">2026-04 · 97 次</span>
+    <span class="m-chip">2026-04 · 98 次</span>
   </div>
 
   
+    <div class="cm-item cat-other">
+      <div class="cm-head">
+        <span class="cm-icon">📌</span>
+        <span class="cm-label">其他</span>
+        <span class="cm-date">2026-04-19 14:05</span>
+        <a href="https://github.com/siuserxiaowei/opc-policy/commit/817b4f185b7f88a60694ce17cd062aa98f72cfcf" target="_blank" rel="noopener" class="cm-sha">817b4f1</a>
+        <span class="cm-stats">6 文件 <span class="st-plus">+182</span> <span class="st-minus">−84</span></span>
+      </div>
+      <div class="cm-subject">所有链接严格 .gov.cn 官方化 + 域名维度检测</div>
+      <div class="cm-body">- 修 5 条非官方链接为 .gov.cn 政府原文:<br>  guangzhou-city-002 → rsj.gz.gov.cn (市人社局)<br>  guangzhou-city-004 → thnet.gov.cn (天河孵化基地通知)<br>  guangzhou-haizhu-003 → haizhu.gov.cn (海珠政府第五届大赛页)<br>  shanghai-city-001 → shanghai.gov.cn (市人社局扶持通知)<br>  shanghai-lingang-001 → shanghai.gov.cn (临港288行动发布)<br>- scripts/check_links.py 加 GOV_DOMAINS 白名单<br>  (.gov.cn / cnbayarea.org.cn / ccopyright.com.cn / ccpit.org)<br>  输出 is_government 字段 + 非官方列表警告<br>当前健康度: 52 条 active 链接, 47 官方✅ / 2 第三方申报平台 / 3 失效(外地)</div>
+    </div>
     <div class="cm-item cat-other">
       <div class="cm-head">
         <span class="cm-icon">📌</span>
@@ -1199,7 +1210,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 </div>
 
 <footer>
-  <p>opcgate.com · 维护日志自动生成于 2026-04-19 14:04</p>
+  <p>opcgate.com · 维护日志自动生成于 2026-05-04 22:08</p>
   <p style="margin-top:4px"><a href="https://github.com/siuserxiaowei/opc-policy">在 GitHub 上查看完整提交历史 ↗</a></p>
   <div class="friend-links"><div class="friend-title">友情链接</div><div class="friend-grid"><a class="friend-link" href="https://www.xiaobot.net.cn" target="_blank" rel="noopener" title="收录优质小报童专栏，助你快速找到所需专栏内容。">小报童导航</a><a class="friend-link" href="https://vibcoding.cn" target="_blank" rel="noopener" title="VibeCoding（氛围编程）资源导航站，收录 VibeCoding 相关资源工具。">VibeCoding导航</a><a class="friend-link" href="https://buy.lkami.cn" target="_blank" rel="noopener" title="收录全网优惠会员卡券，折扣低价，每日更新。">省省家会员卡券</a><a class="friend-link" href="https://www.soruan.cn" target="_blank" rel="noopener" title="收录正版软件优惠渠道。">搜软正版软件</a><a class="friend-link" href="https://www.vpswa.com" target="_blank" rel="noopener" title="收集国内外最新最全的 VPS、云服务器、网络工具网址导航。">VPS导航</a><a class="friend-link" href="https://www.sofuye.com" target="_blank" rel="noopener" title="副业项目资源搜索引擎，永久免费。">搜副业</a><a class="friend-link" href="https://www.ainav.link" target="_blank" rel="noopener" title="收录国内外数百个 AI 工具。">AI导航</a><a class="friend-link" href="https://www.clawnav.cn" target="_blank" rel="noopener" title="OpenClaw 人工智能生态平台，提供排行榜、教程和技能插件内容。">Claw龙虾导航</a><a class="friend-link" href="https://www.cpsnav.com" target="_blank" rel="noopener" title="收录全网支持 CPS 分销返佣资源平台。">CPS导航</a><a class="friend-link" href="http://www.shenzhendeyang.com" target="_blank" rel="noopener" title="魔武网络科技工作室。">魔武网络科技工作室</a></div></div>
 </footer>

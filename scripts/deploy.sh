@@ -26,7 +26,7 @@ done
 if [[ "$SKIP_CHECK" -eq 0 ]] && command -v python3 >/dev/null 2>&1; then
   echo "→ 链接健康度检查 (scripts/check_links.py --only active)"
   # 死链超过 10 条则中止部署（保护公开数据质量）
-  python3 scripts/check_links.py --only active --fail-on-dead 10 2>&1 | tail -20 || {
+  python3 scripts/check_links.py --only active --fail-on-dead 10 --fail-on-fake-official 0 2>&1 | tail -20 || {
     echo "❌ 链接检查失败，部署终止。如确认要强制部署，加 --skip-check" >&2
     exit 1
   }
@@ -42,6 +42,8 @@ if command -v python3 >/dev/null 2>&1; then
   python3 scripts/generate_seo_pages.py >/dev/null
   echo "→ 重新生成城市 SEO 深页"
   python3 scripts/generate_city_seo.py >/dev/null
+  echo "→ 注入 schema.org JSON-LD（GovernmentService / MonetaryGrant / Dataset）"
+  python3 scripts/inject_jsonld.py
   echo "→ 重新生成 sitemap.xml"
   python3 scripts/generate_sitemap.py >/dev/null
 fi

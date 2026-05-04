@@ -1,14 +1,71 @@
 {
-  "generated_at": "2026-04-19T14:04:30",
-  "total_links": 52,
-  "dead_count": 3,
-  "healthy_count": 49,
-  "coverage_policies": 43,
-  "dead_policies": [
-    "beijing-city-001",
-    "suzhou-sipd-001",
-    "zhengzhou-airport-001"
+  "generated_at": "2026-05-04T22:23:30",
+  "total_links": 56,
+  "dead_count": 0,
+  "healthy_count": 56,
+  "coverage_policies": 48,
+  "fake_official_count": 0,
+  "missing_official_count": 56,
+  "fake_official_policies": [],
+  "missing_official_policies": [
+    "beijing-fengtai-001",
+    "changsha-city-001",
+    "changzhou-city-001",
+    "chengdu-chenghua-001",
+    "chengdu-city-001",
+    "chengdu-city-002",
+    "chengdu-gaoxin-001",
+    "chengdu-tianfu-001",
+    "foshan-city-001",
+    "guangdong-competition-001",
+    "guangzhou-baiyun-002",
+    "haikou-city-001",
+    "hangzhou-binjiang-001",
+    "hangzhou-xiaoshan-001",
+    "hangzhou-yuhang-001",
+    "hefei-city-001",
+    "jiangsu-province-001",
+    "kunming-city-001",
+    "lianyungang-city-001",
+    "meizhou-city-001",
+    "nanjing-city-001",
+    "nanjing-jianye-001",
+    "nantong-city-001",
+    "ningbo-haiceng-001",
+    "qingdao-chengyang-001",
+    "qingdao-laoshan-001",
+    "shanghai-pudong-002",
+    "shanghai-xuhui-001",
+    "shenzhen-baoan-001",
+    "shenzhen-futian-001",
+    "shenzhen-longgang-001",
+    "shenzhen-longhua-001",
+    "shenzhen-luohu-001",
+    "shijiazhuang-city-001",
+    "sichuan-province-001",
+    "suqian-city-001",
+    "suzhou-changshu-001",
+    "suzhou-communities-001",
+    "suzhou-competition-001",
+    "suzhou-gaoxin-001",
+    "suzhou-gusu-001",
+    "suzhou-taicang-001",
+    "suzhou-wujiang-001",
+    "suzhou-wuzhong-001",
+    "suzhou-xiangcheng-001",
+    "suzhou-zhangjiagang-001",
+    "tianjin-city-001",
+    "wenzhou-city-001",
+    "xiamen-city-001",
+    "xian-city-001",
+    "xuzhou-city-001",
+    "yancheng-city-001",
+    "yangzhou-city-001",
+    "zhengzhou-zhengdong-001",
+    "zhongshan-city-001",
+    "zhuhai-city-001"
   ],
+  "dead_policies": [],
   "results": [
     {
       "policy_id": "guangdong-province-001",
@@ -19,6 +76,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -32,6 +90,7 @@
       "content_ok": true,
       "is_binary": true,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -45,6 +104,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -58,6 +118,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -71,6 +132,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -84,6 +146,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -97,6 +160,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -110,6 +174,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -123,6 +188,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -136,6 +202,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -149,6 +216,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -162,6 +230,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -175,6 +244,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -188,6 +258,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -201,6 +272,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -214,6 +286,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -227,6 +300,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -240,6 +314,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": false,
+      "is_official": false,
       "issue": "",
       "error": "",
       "dead": false
@@ -253,6 +328,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -266,22 +342,10 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
-    },
-    {
-      "policy_id": "beijing-city-001",
-      "url": "https://zhengce.beijing.gov.cn/",
-      "kind": "application",
-      "status": 200,
-      "http_ok": true,
-      "content_ok": false,
-      "is_binary": false,
-      "is_government": true,
-      "issue": "内容过短(8字)",
-      "error": "",
-      "dead": true
     },
     {
       "policy_id": "beijing-yizhuang-001",
@@ -292,6 +356,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -305,6 +370,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -318,6 +384,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -331,6 +398,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -344,6 +412,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -357,6 +426,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -370,6 +440,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -383,6 +454,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -396,6 +468,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -409,22 +482,24 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
     },
     {
       "policy_id": "suzhou-sipd-001",
-      "url": "https://ywtk.sipac.gov.cn/gkxqGov-101364",
+      "url": "https://www.sipac.gov.cn/kjhxxhj/kjzc/202511/100fff909fb44586882b0a90d04c5f0b.shtml",
       "kind": "official",
       "status": 200,
       "http_ok": true,
-      "content_ok": false,
+      "content_ok": true,
       "is_binary": false,
       "is_government": true,
-      "issue": "内容过短(45字)",
+      "is_official": true,
+      "issue": "",
       "error": "",
-      "dead": true
+      "dead": false
     },
     {
       "policy_id": "suzhou-kunshan-001",
@@ -435,6 +510,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -448,6 +524,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -461,6 +538,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": false,
+      "is_official": false,
       "issue": "",
       "error": "",
       "dead": false
@@ -474,6 +552,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -487,6 +566,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -500,6 +580,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -513,6 +594,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -526,6 +608,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -539,6 +622,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -552,6 +636,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -565,22 +650,24 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
     },
     {
       "policy_id": "zhengzhou-airport-001",
-      "url": "https://m.zzhkgq.gov.cn/2025/01-10/3110433.html",
+      "url": "https://oss.henan.gov.cn/typtfile/20241009/10eadc1d4e994dedaee637fef8c4ad6e.pdf",
       "kind": "official",
-      "status": "ERR",
-      "http_ok": false,
-      "content_ok": false,
-      "is_binary": false,
+      "status": 200,
+      "http_ok": true,
+      "content_ok": true,
+      "is_binary": true,
       "is_government": true,
-      "issue": "GET失败",
-      "error": "HTTP Error 404: Not Found",
-      "dead": true
+      "is_official": true,
+      "issue": "",
+      "error": "",
+      "dead": false
     },
     {
       "policy_id": "guangzhou-haizhu-003",
@@ -591,6 +678,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -604,6 +692,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -617,6 +706,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -630,6 +720,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -643,6 +734,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -656,6 +748,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -669,6 +762,7 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false
@@ -682,6 +776,77 @@
       "content_ok": true,
       "is_binary": false,
       "is_government": true,
+      "is_official": true,
+      "issue": "",
+      "error": "",
+      "dead": false
+    },
+    {
+      "policy_id": "guangzhou-city-006",
+      "url": "https://www.gz.gov.cn/ysgz/xwdt/ysdt/content/post_10768346.html",
+      "kind": "official",
+      "status": 200,
+      "http_ok": true,
+      "content_ok": true,
+      "is_binary": false,
+      "is_government": true,
+      "is_official": true,
+      "issue": "",
+      "error": "",
+      "dead": false
+    },
+    {
+      "policy_id": "hangzhou-city-002",
+      "url": "https://zfgb.hangzhou.gov.cn/11/104220263/t114220263044/530378.shtml",
+      "kind": "official",
+      "status": 200,
+      "http_ok": true,
+      "content_ok": true,
+      "is_binary": false,
+      "is_government": true,
+      "is_official": true,
+      "issue": "",
+      "error": "",
+      "dead": false
+    },
+    {
+      "policy_id": "guangzhou-city-007",
+      "url": "https://scjgj.gz.gov.cn/zzzq/gzdt/content/post_10794656.html",
+      "kind": "official",
+      "status": 200,
+      "http_ok": true,
+      "content_ok": true,
+      "is_binary": false,
+      "is_government": true,
+      "is_official": true,
+      "issue": "",
+      "error": "",
+      "dead": false
+    },
+    {
+      "policy_id": "wuxi-xidong-001",
+      "url": "https://www.wuxi.gov.cn/doc/2026/03/15/4745665.shtml",
+      "kind": "official",
+      "status": 200,
+      "http_ok": true,
+      "content_ok": true,
+      "is_binary": false,
+      "is_government": true,
+      "is_official": true,
+      "issue": "",
+      "error": "",
+      "dead": false
+    },
+    {
+      "policy_id": "shenzhen-longgang-002",
+      "url": "https://www.lg.gov.cn/lgjqrs/gkmlpt/content/12/12741/post_12741116.html",
+      "kind": "official",
+      "status": 200,
+      "http_ok": true,
+      "content_ok": true,
+      "is_binary": false,
+      "is_government": true,
+      "is_official": true,
       "issue": "",
       "error": "",
       "dead": false

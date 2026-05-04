@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OPC 数据看板</title>
 <meta name="description" content="全国OPC政策数据看板 - 城市对比、补贴排行、社区统计">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <style>
 :root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;--accent:#2563EB;--al:#2563EB;--green:#15803D;--yellow:#B45309;--red:#B91C1C;--cyan:#0F766E;--blue:#2563EB;--orange:#B45309}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -209,9 +209,18 @@ async function loadDashboard() {
   const raw = await resp.json();
   let policies = raw.policies || [];
 
-  // 2. 合并爬虫新发现的政策
+  // 2. 仅在爬虫暴露结构化端点时合并候选政策
   try {
-    const crawlerResp = await fetch('https://opc-crawler.siuserxy.workers.dev/extracted', {
+    const api = 'https://opc-crawler.siuserxy.workers.dev';
+    const statusResp = await fetch(`${api}/`, {
+      signal: AbortSignal.timeout(5000)
+    });
+    if (!statusResp.ok) throw new Error('crawler status unavailable');
+    const status = await statusResp.json();
+    const endpoints = Object.keys(status.endpoints || {});
+    if (status.mode === 'link-discovery-only' || !endpoints.some(e => e.includes('/extracted'))) throw new Error('crawler extraction disabled');
+
+    const crawlerResp = await fetch(`${api}/extracted`, {
       signal: AbortSignal.timeout(5000)
     });
     if (crawlerResp.ok) {

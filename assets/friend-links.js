@@ -25,7 +25,7 @@
     footer.style.fontSize = ".78em";
     footer.style.borderTop = "1px solid var(--border, #E2E8F0)";
     footer.innerHTML =
-      '<p>opcgate.com · 每条政策附官方来源 · 拒绝 AI 编造</p><p style="margin-top:4px"><a href="index.html">首页</a> · <a href="compare.html">对比工具</a></p>';
+      '<p>opcgate.com · 优先展示官方原文，缺失官链会明示参考来源 · 拒绝 AI 编造</p><p style="margin-top:4px"><a href="index.html">首页</a> · <a href="compare.html">对比工具</a></p>';
     document.body.appendChild(footer);
     return footer;
   }

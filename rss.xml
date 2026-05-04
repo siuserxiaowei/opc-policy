@@ -6,8 +6,8 @@
     <atom:link href="https://opcgate.com/rss.xml" rel="self" type="application/rss+xml"/>
     <description>全国 OPC（一人公司）创业政策情报站。每条政策附官方来源链接，拒绝 AI 编造，多源交叉核实。覆盖 36+ 城市 79+ 条政策 130+ OPC 社区。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 19 Apr 2026 06:04:32 +0000</lastBuildDate>
-    <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+    <lastBuildDate>Mon, 04 May 2026 14:08:23 +0000</lastBuildDate>
+    <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
     <ttl>720</ttl>
     <image>
       <url>https://opcgate.com/assets/avatar.jpg</url>
@@ -16,10 +16,26 @@
     </image>
 
     <item>
+      <title>[广州 市级] 广州市人工智能OPC沙盒监管实施方案</title>
+      <link>https://opcgate.com/index.html#guangzhou-city-007</link>
+      <guid isPermaLink="false">opcgate-guangzhou-city-007</guid>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p><strong>摘要</strong>：广州以信用监管为核心推出人工智能OPC沙盒监管方案，实行无需申请、自动入盒、1年沙盒期和包容审慎监管。</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>自动入盒管理</td><td>无需申请、无需推荐，新增主体直接纳入，存量主体按信用分级准入</td></tr><tr><td>OPC登记服务专区</td><td>AI帮办、全程网办、市区协同服务</td></tr><tr><td>知识产权与数据合规护航</td><td>算法、模型、数据集确权保护与融资变现辅导</td></tr><tr><td>信易贷专属融资产品</td><td>信用变资本，轻资产主体对接融资</td></tr><tr><td>包容审慎监管</td><td>沙盒期一般1年，无事不扰、首违不罚、轻微免罚</td></tr></table><p><strong>申请条件</strong>：注册地：广州市 · 行业：人工智能, OPC</p><p><strong>官方来源</strong>：<a href="https://scjgj.gz.gov.cn/zzzq/gzdt/content/post_10794656.html">政策原文</a></p><p><em>✓ 已多源核实</em></p>]]></description>
+      <category>广州</category><category>市场监管</category><category>沙盒监管</category><category>自动入盒</category><category>信用监管</category><category>信易贷</category><category>首违不罚</category>
+    </item>
+    <item>
+      <title>[深圳 区级] 龙岗区国际机器人产业园OPC入驻标准</title>
+      <link>https://opcgate.com/index.html#shenzhen-longgang-002</link>
+      <guid isPermaLink="false">opcgate-shenzhen-longgang-002</guid>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p><strong>摘要</strong>：龙岗区国际机器人产业园发布OPC入驻标准，面向人工智能和机器人企业/团队，提供3㎡/工位、选址即开办、超长免租和全周期政策赋能。</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>OPC办公空间</td><td>OPC按3㎡/工位配置，4楼为可享用办公空间</td></tr><tr><td>超长免租期</td><td>限时入驻权益，不含管理费和服务费</td></tr><tr><td>公司注册快速通道</td><td>极简注册、快速办结、选址即开办</td></tr><tr><td>全周期政策赋能</td><td>免费算力、大模型创作、OPC股权投资、技术攻关、场景示范</td></tr><tr><td>园区配套</td><td>路演厅、多功能厅、创客公寓、商业和体育配套</td></tr></table><p><strong>申请条件</strong>：注册地：三地必须迁入龙岗区国际机器人产业园OPC社区 · 行业：人工智能, 机器人, OPC</p><p><strong>官方来源</strong>：<a href="https://www.lg.gov.cn/lgjqrs/gkmlpt/content/12/12741/post_12741116.html">政策原文</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>龙岗区国际机器人产业园OPC社区</strong> · 深圳市龙岗区坂田核心板块</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
+      <category>深圳</category><category>龙岗</category><category>国际机器人产业园</category><category>OPC社区</category><category>3㎡工位</category><category>免租</category><category>机器人</category>
+    </item>
+    <item>
       <title>[苏州 区级] 昆山市打造人工智能OPC创业首选地若干措施</title>
       <link>https://opcgate.com/index.html#suzhou-kunshan-001</link>
       <guid isPermaLink="false">opcgate-suzhou-kunshan-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：最快0.5天拿照+OPC专窗一站式办理+淀山湖AI社区</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>极速注册</td><td>最快0.5个工作日</td></tr><tr><td>OPC专窗</td><td>政务服务中心一站式</td></tr><tr><td>全生命周期服务</td><td>起步期到综合赋能期</td></tr></table><p><strong>申请条件</strong>：注册地：昆山</p><p><strong>官方来源</strong>：<a href="https://www.ks.gov.cn/kss/ttxw/202603/3a4d5a17367c4ed99ce51989eef5b073.shtml">政策原文</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>淀山湖AI OPC社区（魔滴空间）</strong> · 昆山淀山湖</li><li><strong>中新昆承OPC社区</strong> · 昆山 · <a href="https://www.yangtse.com/news/jiangsu/suzhou/202604/t20260411_341127.html">来源 ↗</a></li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>昆山</category><category>极速注册</category><category>OPC专窗</category><category>魔滴空间</category>
     </item>
@@ -27,7 +43,7 @@
       <title>[苏州 区级] 苏州高新区AI Agent OPC社区(中国移动云数和创)</title>
       <link>https://opcgate.com/index.html#suzhou-gaoxin-001</link>
       <guid isPermaLink="false">opcgate-suzhou-gaoxin-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：3000㎡/免费工位/算力1.5折</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>免费工位</td><td>3000㎡</td></tr><tr><td>算力1.5折</td><td>超低价</td></tr></table><p><strong>申请条件</strong>：注册地：高新区</p><p><strong>官方来源</strong>：<a href="https://news.2500sz.com/doc/2026/04/08/1204654.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>中国移动云数和创AI Agent OPC社区</strong> · 高新区</li><li><strong>苏州创业园OPC社区</strong> · 苏州高新区 · <a href="https://www.yangtse.com/news/jiangsu/suzhou/202604/t20260411_341127.html">来源 ↗</a></li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>高新区</category><category>算力1.5折</category><category>Agent</category>
     </item>
@@ -35,7 +51,7 @@
       <title>[苏州 区级] 相城区大数据开发者创新中心OPC生态基地</title>
       <link>https://opcgate.com/index.html#suzhou-xiangcheng-001</link>
       <guid isPermaLink="false">opcgate-suzhou-xiangcheng-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：聚焦数据+AI方向的OPC生态基地</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>OPC生态基地</td><td>数据+AI</td></tr></table><p><strong>申请条件</strong>：注册地：相城区</p><p><strong>官方来源</strong>：<a href="https://news.2500sz.com/doc/2026/04/08/1204654.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>大数据开发者创新中心OPC生态基地</strong> · 相城区</li><li><strong>高铁新城环秀湖人工智能OPC社区</strong> · 相城区苏州高铁新城环秀湖 · <a href="https://www.zgjssw.gov.cn/yaowen/202604/t20260412_8567875.shtml">来源 ↗</a></li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>相城</category><category>大数据</category>
     </item>
@@ -43,7 +59,7 @@
       <title>[苏州 区级] 姑苏区校园里青年社区</title>
       <link>https://opcgate.com/index.html#suzhou-gusu-001</link>
       <guid isPermaLink="false">opcgate-suzhou-gusu-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：姑苏区校园里青年社区</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>青年创业空间</td><td>提供</td></tr></table><p><strong>申请条件</strong>：注册地：姑苏区</p><p><strong>官方来源</strong>：<a href="https://news.2500sz.com/doc/2026/04/08/1204654.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>校园里青年社区</strong> · 姑苏区</li><li><strong>平江新城OPC社区</strong> · 姑苏区平江新城 · <a href="https://news.2500sz.com/doc/2026/04/11/1205116.shtml">来源 ↗</a></li><li><strong>城市智谷OPC社区</strong> · 姑苏区 · <a href="https://www.zgjssw.gov.cn/yaowen/202604/t20260412_8567875.shtml">来源 ↗</a></li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>姑苏</category><category>校园</category>
     </item>
@@ -64,6 +80,14 @@
       <category>重庆</category><category>十条</category><category>零租金</category><category>满天星</category><category>西部首选地</category>
     </item>
     <item>
+      <title>[杭州 市级] 杭州市市场监督管理局支持一人公司OPC创新创业发展的若干举措</title>
+      <link>https://opcgate.com/index.html#hangzhou-city-002</link>
+      <guid isPermaLink="false">opcgate-hangzhou-city-002</guid>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p><strong>摘要</strong>：杭州市场监管系统12项举措，围绕极简登记、陪伴式入市指导、知识产权保护、信用融资和包容审慎监管，降低OPC创业制度成本。</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>全程网办零成本准入</td><td>AI名称/经营范围推荐、标准文本填报、电子签名</td></tr><tr><td>一址多照与工位注册</td><td>符合条件可简化或免收住所材料</td></tr><tr><td>陪伴式成长服务</td><td>登记注册/许可审批/合规经营/标准适用全流程指导</td></tr><tr><td>知识产权快保护</td><td>专利绿色通道、海外纠纷预警、商业秘密线上体检</td></tr><tr><td>OPC信用融资行动</td><td>专属信用账户+无抵押信用贷款产品对接</td></tr><tr><td>沙盒监管观察期</td><td>纳入沙盒的OPC给予1-3年观察期</td></tr></table><p><strong>申请条件</strong>：注册地：杭州市 · 行业：人工智能, 数字经济, OPC</p><p><strong>官方来源</strong>：<a href="https://zfgb.hangzhou.gov.cn/11/104220263/t114220263044/530378.shtml">政策原文</a> · <a href="https://news.hangzhou.com.cn/zjnews/content/2026-04/17/content_9207820.htm">新闻报道</a></p><p><em>✓ 已多源核实</em></p>]]></description>
+      <category>杭州</category><category>市场监管</category><category>12项举措</category><category>工位注册</category><category>信用融资</category><category>沙盒监管</category><category>包容审慎</category>
+    </item>
+    <item>
       <title>[成都 市级] 成都市科技金融资助管理办法（OPC贷款利息100%补助）</title>
       <link>https://opcgate.com/index.html#chengdu-city-002</link>
       <guid isPermaLink="false">opcgate-chengdu-city-002</guid>
@@ -75,7 +99,7 @@
       <title>[广州 市级] 一次性创业资助</title>
       <link>https://opcgate.com/index.html#guangzhou-city-002</link>
       <guid isPermaLink="false">opcgate-guangzhou-city-002</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：符合身份条件的创业者可获1万元一次性资助</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>一次性创业资助</td><td>10000元</td></tr></table><p><strong>申请条件</strong>：注册地：广州市</p><p><strong>官方来源</strong>：<a href="https://rsj.gz.gov.cn/ywzt/jycy/gxbys/gxbysrmzc/content/post_8751147.html">政策原文</a></p><p><em>✓ 已多源核实</em></p>]]></description>
       <category>创业资助</category><category>身份限制</category>
     </item>
@@ -83,7 +107,7 @@
       <title>[广州 市级] 创业租金补贴</title>
       <link>https://opcgate.com/index.html#guangzhou-city-003</link>
       <guid isPermaLink="false">opcgate-guangzhou-city-003</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：符合条件创业者每年最高6000元租金补贴，累计3年</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>租金补贴</td><td>每年最高6000元x3年</td></tr></table><p><strong>申请条件</strong>：注册地：广州市</p><p><strong>官方来源</strong>：<a href="https://rsj.gz.gov.cn/zwdt/tzgg/content/post_9461518.html">政策原文</a></p><p><em>✓ 已多源核实</em></p>]]></description>
       <category>租金补贴</category><category>身份限制</category>
     </item>
@@ -91,7 +115,7 @@
       <title>[广州 市级] 广州OPC创新工坊</title>
       <link>https://opcgate.com/index.html#guangzhou-city-004</link>
       <guid isPermaLink="false">opcgate-guangzhou-city-004</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：免费Token流量包+AI智能体框架+一对一技术指导</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>免费Token流量包</td><td>免费</td></tr><tr><td>AI智能体框架工具</td><td>四层安全防护</td></tr><tr><td>一对一技术指导</td><td>免费</td></tr></table><p><strong>申请条件</strong>：注册地：广州市</p><p><strong>官方来源</strong>：<a href="http://www.thnet.gov.cn/zwfw/zdfw/zcgaqnfz/xgzcjjd/content/post_7802944.html">政策原文</a> · <a href="https://www.21jingji.com/article/20260320/herald/9b63ae848655867b0141f734b84f97b6.html">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>OPC创新工坊</strong> · 天河区珠江新城华利路61号五楼509室</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>免费</category><category>Token</category><category>技术指导</category><category>低门槛</category>
     </item>
@@ -99,7 +123,7 @@
       <title>[广州 区级] 黄埔区支持人工智能产业高质量发展政策</title>
       <link>https://opcgate.com/index.html#guangzhou-huangpu-001</link>
       <guid isPermaLink="false">opcgate-guangzhou-huangpu-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：算力补贴最高300万，场景示范总额1000万，小微云服务券</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>通用大模型算力补助(30%)</td><td>最高300万</td></tr><tr><td>小微企业云服务券</td><td>2000元/张x2000张</td></tr><tr><td>大模型备案奖励</td><td>最高100万</td></tr><tr><td>场景应用示范</td><td>总额1000万</td></tr></table><p><strong>申请条件</strong>：注册地：黄埔区/广州开发区</p><p><strong>官方来源</strong>：<a href="https://www.gz.gov.cn/gzzcwjk/gzdata/content/post_10330225.html">政策原文</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>鱼珠·元启 OPC社区</strong></li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>算力补贴</category><category>场景示范</category><category>云服务券</category><category>免租</category>
     </item>
@@ -107,7 +131,7 @@
       <title>[广州 区级] 南沙区OPC一站式服务</title>
       <link>https://opcgate.com/index.html#guangzhou-nansha-001</link>
       <guid isPermaLink="false">opcgate-guangzhou-nansha-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：最快0.5天注册拿照+免费5枚印章+OPC专窗一站式/初创算力补贴40%最高200万</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>极速注册</td><td>最快0.5天</td></tr><tr><td>开业礼包</td><td>执照+5枚免费印章+发票+Ukey</td></tr><tr><td>免费办公</td><td>入驻社区免费</td></tr><tr><td>自贸区税优</td><td>企业所得税优惠</td></tr><tr><td>算力补贴(初创40%)</td><td>年最高200万</td></tr></table><p><strong>申请条件</strong>：注册地：南沙区</p><p><strong>官方来源</strong>：<a href="http://www.gzns.gov.cn/zwgk/rdzt/OPC/">政策原文</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>南沙国际OPC生态社区</strong> · 南沙街道湾区数创中心</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>极速注册</category><category>免费印章</category><category>自贸区</category><category>跨境</category>
     </item>
@@ -115,7 +139,7 @@
       <title>[广州 市级] 赢在广州大赛 + 众创杯AI OPC专项赛</title>
       <link>https://opcgate.com/index.html#guangzhou-city-005</link>
       <guid isPermaLink="false">opcgate-guangzhou-city-005</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：赢在广州一等奖20万，众创杯特等奖50万</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>赢在广州一等奖</td><td>200,000元</td></tr><tr><td>众创杯特等奖</td><td>500,000元</td></tr></table><p><strong>官方来源</strong>：<a href="https://rsj.gz.gov.cn/ywzt/jycy/gxbys/cyds/">政策原文</a> · <a href="https://rsj.gz.gov.cn/ywzt/ztbd/bwyc/jy/content/post_10176395.html">新闻报道</a></p><p><em>✓ 已多源核实</em></p>]]></description>
       <category>赛事</category><category>奖金</category>
     </item>
@@ -123,7 +147,7 @@
       <title>[深圳 区级] 南山区模力营 — 大湾区最大AI孵化加速器</title>
       <link>https://opcgate.com/index.html#shenzhen-nanshan-001</link>
       <guid isPermaLink="false">opcgate-shenzhen-nanshan-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：超10万㎡AI孵化空间，近200家企业入驻，&#x27;六个券&#x27;政策体系</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>六个券政策</td><td>训力/模型/语料/数据/场景/服务</td></tr><tr><td>孵化空间</td><td>超10万㎡</td></tr></table><p><strong>申请条件</strong>：注册地：南山区 · 行业：人工智能</p><p><strong>官方来源</strong>：<a href="https://fgw.sz.gov.cn/ztzl/qtztzl/szscjmyjjfzzhfwpt/xwdt/content/post_12641545.html">政策原文</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>模力营</strong> · 南山区</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>南山</category><category>模力营</category><category>六个券</category><category>孵化器</category>
     </item>
@@ -131,7 +155,7 @@
       <title>[深圳 区级] 罗湖区OPC生态建设</title>
       <link>https://opcgate.com/index.html#shenzhen-luohu-001</link>
       <guid isPermaLink="false">opcgate-shenzhen-luohu-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：算力补贴最高100万/年，人才奖励最高100万</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>算力补贴</td><td>最高100万/年</td></tr><tr><td>人才奖励</td><td>最高100万</td></tr></table><p><strong>申请条件</strong>：注册地：罗湖区</p><p><strong>官方来源</strong>：<a href="https://finance.sina.cn/2026-03-18/detail-inhrkwsr7519079.d.html">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>π创空间</strong> · 罗湖区</li><li><strong>璞跃创新中心</strong> · 罗湖区</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>罗湖</category><category>算力</category><category>人才奖励</category>
     </item>
@@ -139,7 +163,7 @@
       <title>[深圳 区级] 龙岗区&#x27;龙虾十条&#x27; — OPC与开源AI智能体专项</title>
       <link>https://opcgate.com/index.html#shenzhen-longgang-001</link>
       <guid isPermaLink="false">opcgate-shenzhen-longgang-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：龙虾十条逐条：代码贡献200万/数字员工券40%最高200万/应用示范100万/AIGC补贴100万/示范场景400万/种子基金1000万/出海服务/赛事50万</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>OpenClaw代码贡献</td><td>最高200万</td></tr><tr><td>AI NAS龙虾盒子(30%)</td><td>按市价补贴</td></tr><tr><td>数字员工券(40%)</td><td>单企年最高200万</td></tr><tr><td>应用示范(30%)</td><td>最高100万</td></tr><tr><td>AIGC模型调用(30%)</td><td>年最高100万</td></tr><tr><td>示范场景项目</td><td>最高400万</td></tr><tr><td>种子基金</td><td>最高1000万股权投资</td></tr><tr><td>人才落户</td><td>最高10万+2月免住+18月优惠</td></tr><tr><td>赛事获奖</td><td>最高50万</td></tr><tr><td>OPC出海</td><td>服务站+出口信保</td></tr></table><p><strong>申请条件</strong>：注册地：龙岗区 · 行业：人工智能, 开源AI</p><p><strong>官方来源</strong>：<a href="https://m.jiemian.com/article/14095087.html">新闻报道</a></p><p><em>✓ 已多源核实</em></p>]]></description>
       <category>龙岗</category><category>龙虾十条</category><category>开源</category><category>智能体</category>
     </item>
@@ -147,7 +171,7 @@
       <title>[上海 区级] 静安区&#x27;视听静界&#x27;OPC创新社区</title>
       <link>https://opcgate.com/index.html#shanghai-jingan-001</link>
       <guid isPermaLink="false">opcgate-shanghai-jingan-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：专属工位+算力/模型/语料/工具券最高10万</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>专属工位</td><td>免费</td></tr><tr><td>四券合一</td><td>算力/模型/语料/工具券最高10万</td></tr></table><p><strong>申请条件</strong>：注册地：静安区</p><p><strong>官方来源</strong>：<a href="https://www.jingan.gov.cn/rmtzx/003001/20251224/228fece1-1634-4a71-b2d5-adc052a4a4b0.html">政策原文</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>视听静界OPC社区</strong> · 静安区</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>静安</category><category>视听</category><category>工具券</category>
     </item>
@@ -155,7 +179,7 @@
       <title>[南京 市级] 南京多区OPC联动政策</title>
       <link>https://opcgate.com/index.html#nanjing-city-001</link>
       <guid isPermaLink="false">opcgate-nanjing-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：江宁3年免费工位+1000万人才专项，栖霞50万创业资助+50万股权投资，江北U·CAN计划</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>江宁紫金星辰免费工位</td><td>3年免费</td></tr><tr><td>人才专项(江宁)</td><td>最高1000万</td></tr><tr><td>创业资助(栖霞)</td><td>50万</td></tr><tr><td>政策性股权投资(栖霞)</td><td>50万</td></tr><tr><td>概念验证资金池</td><td>1000万</td></tr></table><p><strong>申请条件</strong>：注册地：南京市(各区) · 行业：人工智能</p><p><strong>官方来源</strong>：<a href="https://news.pedaily.cn/202603/561595.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>紫金星辰OPC社区</strong> · 江宁区</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>南京</category><category>江宁</category><category>栖霞</category><category>紫金星辰</category><category>股权投资</category><category>U·CAN</category>
     </item>
@@ -163,7 +187,7 @@
       <title>[合肥 区级] 合肥高新区&#x27;AI模立方&#x27;OPC创业空间</title>
       <link>https://opcgate.com/index.html#hefei-city-001</link>
       <guid isPermaLink="false">opcgate-hefei-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：2000㎡OPC创业空间，算力券/语料券/模型券，目标培育100家AI企业</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>算力券</td><td>详见政策</td></tr><tr><td>语料券</td><td>详见政策</td></tr><tr><td>模型券</td><td>详见政策</td></tr><tr><td>创业空间</td><td>2000㎡</td></tr></table><p><strong>申请条件</strong>：注册地：合肥市 · 行业：人工智能, 智能语音</p><p><strong>官方来源</strong>：<a href="https://www.ah.chinanews.com.cn/news/2026/0311/339516.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>AI模立方</strong> · 合肥高新区</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>合肥</category><category>声谷</category><category>AI模立方</category><category>讯飞</category><category>语音AI</category>
     </item>
@@ -171,7 +195,7 @@
       <title>[长沙 市级] 长沙经开区智能体与OPC开源社区十条措施 + 马栏山OPC</title>
       <link>https://opcgate.com/index.html#changsha-city-001</link>
       <guid isPermaLink="false">opcgate-changsha-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：经开区十条：算力最高100万/数据补贴100万/场景累计最高500万/开源最高300万/独角兽100万/马栏山6000㎡1000PFlops</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>国产算力补贴</td><td>最高100万</td></tr><tr><td>垂类模型开发</td><td>最高50万</td></tr><tr><td>数据服务补贴(10%)</td><td>单企最高100万</td></tr><tr><td>场景示范项目</td><td>单项最高100万</td></tr><tr><td>首用场景样板</td><td>最高50万</td></tr><tr><td>场景累计</td><td>单企最高500万</td></tr><tr><td>开源社区平台(5%)</td><td>最高300万</td></tr><tr><td>高企认定</td><td>15万(3年)</td></tr><tr><td>独角兽企业</td><td>最高100万</td></tr><tr><td>马栏山OPC空间</td><td>6000㎡+1000PFlops</td></tr></table><p><strong>申请条件</strong>：注册地：长沙市 · 行业：人工智能, 数字文创</p><p><strong>官方来源</strong>：<a href="https://www.icswb.com/h/103024/20260405/972329.html">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>马栏山OPC创意社区</strong> · 马栏山视频文创产业园</li><li><strong>望城大泽河OPC创业中心</strong></li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>长沙</category><category>马栏山</category><category>文创</category><category>开源</category><category>算力</category>
     </item>
@@ -179,7 +203,7 @@
       <title>[重庆 市级] 重庆&#x27;超级个体·未来星&#x27;方案 + 两江新区OPC社区</title>
       <link>https://opcgate.com/index.html#chongqing-city-001</link>
       <guid isPermaLink="false">opcgate-chongqing-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：两江/渝中/南岸多区布局：海王星3000㎡拎包入驻/仙桃数据谷30+家/上清寺AI+OPC示范社区/免费工商财税法律服务</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>创客空间</td><td>1万㎡</td></tr><tr><td>市区两级扶持</td><td>全方位政策</td></tr></table><p><strong>申请条件</strong>：注册地：重庆市 · 行业：人工智能</p><p><strong>官方来源</strong>：<a href="https://www.cq.gov.cn/ywdt/jrcq/202603/t20260316_15530085_wap.html">政策原文</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>海王星数字文创园OPC社区</strong> · 两江新区</li><li><strong>仙桃数据谷OPC社区</strong> · 两江新区</li><li><strong>上清寺AI+OPC示范社区</strong> · 渝中区</li><li><strong>罗布乐思创新中心</strong> · 南岸区重庆软件产业园</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>重庆</category><category>两江新区</category><category>仙桃数据谷</category><category>未来星</category>
     </item>
@@ -187,7 +211,7 @@
       <title>[苏州 区级] 吴江区超级个体OPC扶持政策（力度最大）</title>
       <link>https://opcgate.com/index.html#suzhou-wujiang-001</link>
       <guid isPermaLink="false">opcgate-suzhou-wujiang-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：20+社区120万㎡最长3年免租+算力补贴20%年最高200万+20亿直投基金+100亿信贷+全国首创OPC数据保险</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>办公空间(3年免租)</td><td>20+社区，120万㎡，零租工位</td></tr><tr><td>免费住宿</td><td>头14天免费</td></tr><tr><td>租房补贴</td><td>每月最高1500元</td></tr><tr><td>公共算力补贴(20%)</td><td>每年最高200万</td></tr><tr><td>数据服务费优惠</td><td>50%优惠</td></tr><tr><td>AI Agent项目奖励(30%)</td><td>最高50万</td></tr><tr><td>AI直投基金</td><td>20亿元</td></tr><tr><td>吴优贷信贷</td><td>100亿元</td></tr><tr><td>AI产业发展基金</td><td>10亿元</td></tr><tr><td>OPC数据保险</td><td>全国首创</td></tr></table><p><strong>申请条件</strong>：注册地：吴江区 · 行业：人工智能</p><p><strong>官方来源</strong>：<a href="https://c.m.163.com/news/a/KPK462C605199NHJ.html">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>青禾创客OPC创业社区</strong> · 吴江区</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>吴江</category><category>3年免租</category><category>算力补贴200万</category><category>20亿直投</category><category>100亿信贷</category><category>数据保险</category><category>力度最大</category>
     </item>
@@ -195,7 +219,7 @@
       <title>[苏州 市级] 2026国际人工智能OPC创业大赛</title>
       <link>https://opcgate.com/index.html#suzhou-competition-001</link>
       <guid isPermaLink="false">opcgate-suzhou-competition-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：四大赛道（技术/文旅/健康/安全），最高奖金30万+配套资金+场地+资源落地</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>最高奖金</td><td>30万元</td></tr><tr><td>配套资金</td><td>落地保障</td></tr><tr><td>场地+资源</td><td>获奖项目配套</td></tr></table><p><strong>申请条件</strong>：注册地：不限</p><p><em>✓ 已多源核实</em></p>]]></description>
       <category>国际大赛</category><category>四赛道</category><category>奖金30万</category><category>落地保障</category>
     </item>
@@ -203,7 +227,7 @@
       <title>[苏州 区级] 吴中区太湖科创中心OPC青年社区</title>
       <link>https://opcgate.com/index.html#suzhou-wuzhong-001</link>
       <guid isPermaLink="false">opcgate-suzhou-wuzhong-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：太湖科创中心OPC青年社区</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>青年创业空间</td><td>提供</td></tr></table><p><strong>申请条件</strong>：注册地：吴中区</p><p><strong>官方来源</strong>：<a href="https://news.2500sz.com/doc/2026/04/08/1204654.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>太湖科创中心OPC青年社区</strong> · 吴中区</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>吴中</category><category>太湖</category>
     </item>
@@ -211,7 +235,7 @@
       <title>[苏州 区级] 张家港东渡人才港OPC社区</title>
       <link>https://opcgate.com/index.html#suzhou-zhangjiagang-001</link>
       <guid isPermaLink="false">opcgate-suzhou-zhangjiagang-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：张家港东渡人才港OPC社区</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>人才港空间</td><td>提供</td></tr></table><p><strong>申请条件</strong>：注册地：张家港</p><p><strong>官方来源</strong>：<a href="https://news.2500sz.com/doc/2026/04/08/1204654.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>东渡人才港</strong> · 张家港</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>张家港</category>
     </item>
@@ -219,7 +243,7 @@
       <title>[苏州 区级] 常熟常春藤人才港(AIGC)OPC社区</title>
       <link>https://opcgate.com/index.html#suzhou-changshu-001</link>
       <guid isPermaLink="false">opcgate-suzhou-changshu-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：聚焦AIGC方向的OPC社区</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>AIGC OPC空间</td><td>提供</td></tr></table><p><strong>申请条件</strong>：注册地：常熟</p><p><strong>官方来源</strong>：<a href="https://news.2500sz.com/doc/2026/04/08/1204654.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>常春藤人才港(AIGC)OPC社区</strong> · 常熟</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>常熟</category><category>AIGC</category>
     </item>
@@ -227,7 +251,7 @@
       <title>[苏州 区级] 太仓智汇谷科技创新园OPC社区</title>
       <link>https://opcgate.com/index.html#suzhou-taicang-001</link>
       <guid isPermaLink="false">opcgate-suzhou-taicang-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：太仓智汇谷OPC社区</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>科创园空间</td><td>提供</td></tr></table><p><strong>申请条件</strong>：注册地：太仓</p><p><strong>官方来源</strong>：<a href="https://news.2500sz.com/doc/2026/04/08/1204654.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>智汇谷科技创新园</strong> · 太仓</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>太仓</category>
     </item>
@@ -235,7 +259,7 @@
       <title>[扬州 市级] 扬州&#x27;AI人才10条&#x27;&#x27;数字人才10条&#x27;</title>
       <link>https://opcgate.com/index.html#yangzhou-city-001</link>
       <guid isPermaLink="false">opcgate-yangzhou-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：四券政策(算力+数据+人才+Token)/18个社区全国最密集/顶尖人才最高1亿/双创团队1000万/购房券200万/1000万股权+3000万低息贷</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>四券(算力+数据+人才+Token)</td><td>全链条覆盖</td></tr><tr><td>算力补贴</td><td>最高200万</td></tr><tr><td>顶尖人才团队</td><td>最高1亿元综合资助</td></tr><tr><td>双创团队</td><td>最高1000万</td></tr><tr><td>领军人才</td><td>最高500万(3年)</td></tr><tr><td>购房安家券</td><td>最高200万</td></tr><tr><td>股权投资</td><td>最高1000万</td></tr><tr><td>低息贷款</td><td>最高3000万</td></tr><tr><td>18个OPC社区</td><td>全国最密集(含县级)</td></tr></table><p><strong>申请条件</strong>：注册地：扬州市 · 行业：人工智能, 数字经济</p><p><strong>官方来源</strong>：<a href="https://finance.sina.com.cn/jjxw/2026-01-03/doc-inheyhwc4094325.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>星模湾OPC社区</strong> · 扬州</li><li><strong>光点π OPC社区</strong> · 扬州</li><li><strong>数智OPC社区</strong> · 扬州</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>扬州</category><category>单项最高1000万</category><category>18个社区</category><category>最优OPC创业之城</category><category>11.6万户一人公司</category>
     </item>
@@ -243,7 +267,7 @@
       <title>[宁波 区级] 宁波海曙区AiOPC社区</title>
       <link>https://opcgate.com/index.html#ningbo-haiceng-001</link>
       <guid isPermaLink="false">opcgate-ningbo-haiceng-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：算力补贴50%最高30万/工位免租/已建5个社区/2026年底10+个500+工位</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>算力补贴(50%)</td><td>上限30万</td></tr><tr><td>工位免租</td><td>免费</td></tr></table><p><strong>申请条件</strong>：注册地：海曙区</p><p><strong>官方来源</strong>：<a href="https://finance.sina.cn/2026-03-22/detail-inhrvnnz9081997.d.html">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>海曙AiOPC社区(5个)</strong> · 白云街道/鼓楼街道/月湖街道等</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>宁波</category><category>海曙</category><category>算力50%</category><category>免租</category>
     </item>
@@ -251,7 +275,7 @@
       <title>[宿迁 市级] 宿迁市加快建设OPC创业之城实施方案(十项措施)</title>
       <link>https://opcgate.com/index.html#suqian-city-001</link>
       <guid isPermaLink="false">opcgate-suqian-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：零租工位/人才公寓/百余种免费AI工具/首批10个OPC空间/73户入驻</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>零租工位</td><td>免费</td></tr><tr><td>人才公寓</td><td>提供</td></tr><tr><td>AI工具栈</td><td>百余种免费</td></tr></table><p><strong>申请条件</strong>：注册地：宿迁市</p><p><strong>官方来源</strong>：<a href="https://jsnews.jschina.com.cn/jsyw/202601/t20260118_s696ca569e4b093d9f5c77e63.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>宿迁OPC创业空间(10个)</strong></li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>宿迁</category><category>零租</category><category>免费AI工具</category><category>OPC创业之城</category>
     </item>
@@ -259,7 +283,7 @@
       <title>[常州 市级] 常州OPC国际化战略</title>
       <link>https://opcgate.com/index.html#changzhou-city-001</link>
       <guid isPermaLink="false">opcgate-changzhou-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：联合Plug and Play的GOAL出海计划(硅谷孵化+顶级VC)/首个OPC国际社区</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>GOAL出海计划</td><td>硅谷孵化+VC对接</td></tr><tr><td>OPC国际社区</td><td>首个海外</td></tr></table><p><strong>申请条件</strong>：注册地：常州市</p><p><strong>官方来源</strong>：<a href="https://xinwen.bjd.com.cn/content/s6947702ae4b0cd719e9af473.html">新闻报道</a></p><p><em>✓ 已多源核实</em></p>]]></description>
       <category>常州</category><category>国际化</category><category>硅谷</category><category>Plug and Play</category><category>出海</category>
     </item>
@@ -267,7 +291,7 @@
       <title>[温州 市级] 温州市加快打造人工智能OPC创业高地若干举措(17条)</title>
       <link>https://opcgate.com/index.html#wenzhou-city-001</link>
       <guid isPermaLink="false">opcgate-wenzhou-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：浙江省首个市级系统OPC政策/17条/首副公章免费/一日办结/2028年引育2万人孵化1万家</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>首副公章免费</td><td>免费</td></tr><tr><td>证照免费寄递</td><td>免费</td></tr><tr><td>首年免费法务</td><td>免费</td></tr><tr><td>OPC服务专窗</td><td>一日办结</td></tr><tr><td>10+主题社区</td><td>规划建设</td></tr></table><p><strong>申请条件</strong>：注册地：温州市</p><p><strong>官方来源</strong>：<a href="https://wap.wendu.cn/article/id/611161">新闻报道</a></p><p><em>✓ 已多源核实</em></p>]]></description>
       <category>温州</category><category>17条</category><category>省首个市级</category><category>公章免费</category><category>一日办结</category><category>2万人才1万家</category>
     </item>
@@ -275,7 +299,7 @@
       <title>[佛山 市级] 佛山OPC创业扶持(佛深OPC联盟)</title>
       <link>https://opcgate.com/index.html#foshan-city-001</link>
       <guid isPermaLink="false">opcgate-foshan-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：佛深OPC联盟/孵化基地三年三免(租金/物业/设备)/30+独立工位</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>三年三免</td><td>免租金/物业/设备</td></tr><tr><td>独立工位</td><td>30+个</td></tr></table><p><strong>申请条件</strong>：注册地：佛山市</p><p><strong>官方来源</strong>：<a href="https://m.fs.bendibao.com/live/137034.shtm">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>佛深OPC联盟孵化基地</strong></li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>佛山</category><category>佛深联盟</category><category>三年三免</category>
     </item>
@@ -283,7 +307,7 @@
       <title>[中山 市级] 中山OPC创业扶持(粤港澳青创平台)</title>
       <link>https://opcgate.com/index.html#zhongshan-city-001</link>
       <guid isPermaLink="false">opcgate-zhongshan-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：三年免租免物管免服务/创业担保贷款最高500万(50%贴息)/300万天使基金/交通+公寓+教育</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>三年三免</td><td>免租/物管/服务费</td></tr><tr><td>创业担保贷款</td><td>最高500万(50%贴息)</td></tr><tr><td>天使基金</td><td>300万</td></tr><tr><td>人才公寓</td><td>提供</td></tr><tr><td>子女入学</td><td>优先</td></tr></table><p><strong>申请条件</strong>：注册地：中山市</p><p><strong>官方来源</strong>：<a href="https://zsrbapp.zsnews.cn/home/content/newsContent/94/708187">新闻报道</a></p><p><em>✓ 已多源核实</em></p>]]></description>
       <category>中山</category><category>粤港澳</category><category>三年三免</category><category>500万贷款</category><category>天使基金</category>
     </item>
@@ -291,7 +315,7 @@
       <title>[海口 区级] 海口国家高新区OPC国际社区</title>
       <link>https://opcgate.com/index.html#haikou-city-001</link>
       <guid isPermaLink="false">opcgate-haikou-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：载体奖励20-100万/算力补贴30%最高50万/应用项目30%最高100万/开源奖5-10万/实验室最高500万/创业资助最高30万</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>载体奖励(≥20家OPC)</td><td>20-100万</td></tr><tr><td>算力补贴(30%)</td><td>单企最高50万</td></tr><tr><td>应用项目(30%)</td><td>单项最高100万</td></tr><tr><td>开源奖励</td><td>5-10万</td></tr><tr><td>实验室补贴</td><td>分档50/100/500万</td></tr><tr><td>创业资助</td><td>最高30万</td></tr><tr><td>股权投资配套</td><td>投资额5%，最高100万</td></tr><tr><td>赛事获奖</td><td>10-50万</td></tr><tr><td>免费服务</td><td>工位+注册+税务+专利代办</td></tr><tr><td>人才保障</td><td>子女入学+人才安居</td></tr></table><p><strong>申请条件</strong>：注册地：海口高新区</p><p><strong>官方来源</strong>：<a href="https://www.hiipb.com/news/show-28186.html">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>海口高新区OPC国际社区</strong></li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>海口</category><category>海南</category><category>自贸港</category><category>实验室500��</category><category>算力</category><category>开源</category><category>国际社区</category>
     </item>
@@ -299,7 +323,7 @@
       <title>[天津 区级] 天津滨海高新区AI智能体与OPC培育措施</title>
       <link>https://opcgate.com/index.html#tianjin-city-001</link>
       <guid isPermaLink="false">opcgate-tianjin-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：&#x27;五个一&#x27;专属服务/应用示范补贴30%最高30万/OPC专项技能培训/每月双选会</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>五个一服务</td><td>注册代办/算力补贴/政策申报/订单对接/技术落地</td></tr><tr><td>应用示范补贴(30%)</td><td>最高30万</td></tr><tr><td>OPC专项培训</td><td>直播电商/短剧/小游戏</td></tr><tr><td>双选会</td><td>每月2场</td></tr></table><p><strong>申请条件</strong>：注册地：天津滨海高新区</p><p><strong>官方来源</strong>：<a href="https://epaper.tianjinwe.com/tjrb/h5/html5/2026-03/11/content_143088_3211851.htm">新闻报道</a> · <a href="http://news.enorth.com.cn/system/2026/03/27/059267146.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>天宅和平园·模式创新社区</strong> · 天津滨海高新区</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>天津</category><category>五个一</category><category>培训</category><category>双选会</category>
     </item>
@@ -307,7 +331,7 @@
       <title>[石家庄 市级] 河北省首个AI OPC成长基地</title>
       <link>https://opcgate.com/index.html#shijiazhuang-city-001</link>
       <guid isPermaLink="false">opcgate-shijiazhuang-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：河北首个OPC基地，&#x27;四免一减一供&#x27;赋能计划，零负担创业</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>四免一减一供</td><td>零��担创业生态</td></tr></table><p><strong>申请条件</strong>：注册地：石家庄市</p><p><strong>官方来源</strong>：<a href="https://c.m.163.com/news/a/KOPCI8IN05199NHJ.html">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>河北AI OPC成长基地</strong> · 石家庄</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>石家庄</category><category>河北首个</category><category>四免一减一供</category>
     </item>
@@ -315,7 +339,7 @@
       <title>[南通 市级] 南通紫琅智谷OPC创新社区</title>
       <link>https://opcgate.com/index.html#nantong-city-001</link>
       <guid isPermaLink="false">opcgate-nantong-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：全市首个OPC社区，规划2万㎡空间</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>OPC创新空间</td><td>2万㎡</td></tr></table><p><strong>申请条件</strong>：注册地：南通市</p><p><strong>官方来源</strong>：<a href="https://news.jschina.com.cn/yw/202601/t20260125_s69757ebfe4b0c7ef34f34d4b.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>紫琅智谷OPC创新社区</strong> · 南通</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>南通</category><category>紫琅智谷</category>
     </item>
@@ -323,7 +347,7 @@
       <title>[盐城 市级] 盐城盐力超体OPC创新社区</title>
       <link>https://opcgate.com/index.html#yancheng-city-001</link>
       <guid isPermaLink="false">opcgate-yancheng-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：211行动/聚焦硬核科技+跨境电商+短剧等7类业态/已入驻20家OPC</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>OPC创业空间</td><td>提供</td></tr></table><p><strong>申请条件</strong>：注册地：盐城市</p><p><strong>官方来源</strong>：<a href="https://cj.sina.com.cn/articles/view/1653603955/628ffe7302001ulpo">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>盐力超体OPC创新社区</strong> · 盐城大数据产业园</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>盐城</category><category>盐力超体</category><category>跨境电商</category><category>短剧</category>
     </item>
@@ -331,7 +355,7 @@
       <title>[杭州 区级] 杭州余杭区AGI青创共同体+梦想小镇OPC</title>
       <link>https://opcgate.com/index.html#hangzhou-yuhang-001</link>
       <guid isPermaLink="false">opcgate-hangzhou-yuhang-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：AGI青创共同体/梦想小镇OPC专区/免费办公+电商供应链/AI一人公司最高50万启动资金</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>启动资金补贴</td><td>最高50万</td></tr><tr><td>免费办公位</td><td>梦想小镇</td></tr><tr><td>电商供应链对接</td><td>提供</td></tr></table><p><strong>申请条件</strong>：注册地：余杭区 · 行业：人工智能</p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>AGI青创共同体</strong> · 余杭区</li><li><strong>梦想小镇OPC专区</strong> · 未来科技城</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>余杭</category><category>梦想小镇</category><category>AGI</category><category>启动资金50万</category>
     </item>
@@ -339,7 +363,7 @@
       <title>[深圳 区级] 深圳龙华区AI智能体与OPC协同发展十大行动</title>
       <link>https://opcgate.com/index.html#shenzhen-longhua-001</link>
       <guid isPermaLink="false">opcgate-shenzhen-longhua-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：区级独立政策：社区运营补贴最高200万/创业大赛奖金最高80万/核心技术攻关最高100万</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>社区运营补贴</td><td>最高200万</td></tr><tr><td>创业大赛奖金</td><td>最高80万</td></tr><tr><td>核心技术攻关</td><td>最高100万</td></tr></table><p><strong>申请条件</strong>：注册地：龙华区</p><p><strong>官方来源</strong>：<a href="https://m.bendibao.com/show998973.html">新闻报道</a></p><p><em>✓ 已多源核实</em></p>]]></description>
       <category>龙华</category><category>智能体</category><category>十大行动</category>
     </item>
@@ -347,7 +371,7 @@
       <title>[南京 区级] 南京建邺区OPC政策（补充）</title>
       <link>https://opcgate.com/index.html#nanjing-jianye-001</link>
       <guid isPermaLink="false">opcgate-nanjing-jianye-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：研发补贴最高500万+算力补贴200万+大模型备案奖20万+启动资金5-10万</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>研发补贴</td><td>最高500万</td></tr><tr><td>算力补贴</td><td>最高200万</td></tr><tr><td>大模型备案奖</td><td>20万</td></tr><tr><td>启动资金</td><td>5-10万</td></tr></table><p><strong>申请条件</strong>：注册地：建邺区</p>]]></description>
       <category>建邺</category><category>研发500万</category><category>算力200万</category>
     </item>
@@ -355,7 +379,7 @@
       <title>[杭州 区级] 杭州萧山区OPC-STC政策</title>
       <link>https://opcgate.com/index.html#hangzhou-xiaoshan-001</link>
       <guid isPermaLink="false">opcgate-hangzhou-xiaoshan-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：算力券50%年最高2000万！Token补贴30%/数据200万/场景100万/以赛代评450万/5000万专项基金/博士15万</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>算力券(50%)</td><td>年最高2000万</td></tr><tr><td>Token调用补贴(30%)</td><td>年最高10万</td></tr><tr><td>数据采购(30%)</td><td>最高200万</td></tr><tr><td>场景示范</td><td>单项最高100万</td></tr><tr><td>以赛代评</td><td>单项最高450万</td></tr><tr><td>OPC专项基金</td><td>5000万</td></tr><tr><td>博士人才补贴</td><td>最高15万+租房3.6万</td></tr></table><p><strong>申请条件</strong>：注册地：萧山区</p><p><strong>官方来源</strong>：<a href="http://m.hz.bendibao.com/live/169216.shtm">新闻报道</a></p><p><em>✓ 已多源核实</em></p>]]></description>
       <category>萧山</category><category>算力券2000万</category><category>以赛代评450万</category><category>5000万基金</category>
     </item>
@@ -363,7 +387,7 @@
       <title>[杭州 区级] 杭州滨江区创业护航十条(联合阿里云)</title>
       <link>https://opcgate.com/index.html#hangzhou-binjiang-001</link>
       <guid isPermaLink="false">opcgate-hangzhou-binjiang-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：联合阿里云Token专区/算力补助最高60%每家年最高100万</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>算力补助(60%)</td><td>每家年最高100万</td></tr><tr><td>阿里云Token专区</td><td>AI创业者专属</td></tr></table><p><strong>申请条件</strong>：注册地：滨江区</p><p><strong>官方来源</strong>：<a href="https://zjnews.zjol.com.cn/zjnews/202603/t20260323_31566548.shtml">新闻报道</a></p><p><em>✓ 已多源核实</em></p>]]></description>
       <category>滨江</category><category>阿里云</category><category>算力60%</category><category>100万</category>
     </item>
@@ -371,7 +395,7 @@
       <title>[上海 区级] 上海浦东青创&quot;3年300万&quot;补贴</title>
       <link>https://opcgate.com/index.html#shanghai-pudong-002</link>
       <guid isPermaLink="false">opcgate-shanghai-pudong-002</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：青创项目每年最高100万x3年/临港零界魔方办公住宿双免/准创客月最高2500元</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>青创项目补贴</td><td>每年最高100万x3年</td></tr><tr><td>零界魔方</td><td>办公住宿双免</td></tr><tr><td>准创客补贴</td><td>月最高2500元</td></tr></table><p><strong>申请条件</strong>：注册地：浦东/临港</p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>零界魔方</strong> · 临港</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>浦东</category><category>3年300万</category><category>零界魔方</category><category>双免</category>
     </item>
@@ -379,7 +403,7 @@
       <title>[深圳 区级] 深圳宝安区AI+硬件OPC体系</title>
       <link>https://opcgate.com/index.html#shenzhen-baoan-001</link>
       <guid isPermaLink="false">opcgate-shenzhen-baoan-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：全国首个AI+硬创OPC体系/场景+金融+制造/目标培育千家AI企业万名人才</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>AI+硬件OPC支撑</td><td>场景+金融+制造全链条</td></tr></table><p><strong>申请条件</strong>：注册地：宝安区 · 行业：AI+硬件, 智能制造</p><p><em>✓ 已多源核实</em></p>]]></description>
       <category>宝安</category><category>硬件</category><category>制造</category><category>硬创</category>
     </item>
@@ -387,33 +411,9 @@
       <title>[惠州 市级] 惠州市通用创业补贴 + AI/数字经济政策</title>
       <link>https://opcgate.com/index.html#huizhou-city-001</link>
       <guid isPermaLink="false">opcgate-huizhou-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
+      <pubDate>Mon, 04 May 2026 14:08:23 +0000</pubDate>
       <description><![CDATA[<p><strong>摘要</strong>：创业资助1万+租金补贴1.8万/3年+孵化基地2年全免+算力补贴10-20%年最高200万+AI示范项目奖50万</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>一次性创业资助</td><td>1万元</td></tr><tr><td>创业租金补贴</td><td>每年最高6000元x3年</td></tr><tr><td>孵化基地入驻</td><td>全额免租2年</td></tr><tr><td>创业带动就业补贴</td><td>按招录人数</td></tr><tr><td>小微社保补贴</td><td>500元/人/月</td></tr><tr><td>算力补贴(10-20%)</td><td>年最高100-200万</td></tr><tr><td>AI示范项目奖</td><td>国家级50万/省级20万</td></tr><tr><td>软件企业奖</td><td>营收2000万+最高200万</td></tr></table><p><strong>申请条件</strong>：注册地：惠州市</p><p><strong>官方来源</strong>：<a href="http://www.huizhou.gov.cn/zdlyxxgk/jycyxxgk/zczy/bszc/content/post_4678573.html">政策原文</a> · <a href="https://www.cnbayarea.org.cn/city/huizhou/dtxw/content/post_1281976.html">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>仲恺AI产业园</strong> · 仲恺高新区</li><li><strong>润泽智算中心</strong> · 大亚湾数据产业园</li></ul><p><em>✓ 已多源核实</em></p>]]></description>
       <category>惠州</category><category>创业资助</category><category>算力补贴200万</category><category>仲恺</category><category>AI示范</category><category>润泽智算</category>
-    </item>
-    <item>
-      <title>[惠州 区级] 惠阳区支持实体经济高质量发展若干措施</title>
-      <link>https://opcgate.com/index.html#huizhou-huiyang-001</link>
-      <guid isPermaLink="false">opcgate-huizhou-huiyang-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
-      <description><![CDATA[<p><strong>摘要</strong>：领军人才最高300万/科技创业团队最高1000万/专精特新30万/小升规20万/技改50万/工程师补贴</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>领军人才奖励</td><td>最高300万</td></tr><tr><td>科技创业团队</td><td>最高1000万</td></tr><tr><td>小升规奖励</td><td>累计20万(产值大可达100万)</td></tr><tr><td>专精特新配套</td><td>小巨人30万/专精特新20万</td></tr><tr><td>工程师补贴</td><td>中级2000元/高级5000元</td></tr><tr><td>厂房租赁补贴</td><td>5元/月/㎡，最高10-30万/年</td></tr><tr><td>技改补贴</td><td>单项目最高50万</td></tr></table><p><strong>申请条件</strong>：注册地：惠阳区</p><p><strong>官方来源</strong>：<a href="http://www.huiyang.gov.cn/zwgk/zfgb/content/mpost_4735131.html">政策原文</a> · <a href="https://www.eesia.cn/contents/113/5917.html">新闻报道</a></p><p><em>✓ 已多源核实</em></p>]]></description>
-      <category>惠阳</category><category>领军人才300万</category><category>创业团队1000万</category><category>专精特新</category><category>技改</category>
-    </item>
-    <item>
-      <title>[梅州 市级] 梅州市人工智能OPC创新创业行动方案</title>
-      <link>https://opcgate.com/index.html#meizhou-city-001</link>
-      <guid isPermaLink="false">opcgate-meizhou-city-001</guid>
-      <pubDate>Sun, 19 Apr 2026 06:04:32 +0000</pubDate>
-      <description><![CDATA[<p><strong>摘要</strong>：9个OPC创新创业集聚区/低成本创业空间/投早投小产业基金/新引进人才最高3万</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>创业空间</td><td>低成本</td></tr><tr><td>产业基金</td><td>投早投小</td></tr><tr><td>人才补贴</td><td>新引进最高3万</td></tr></table><p><strong>申请条件</strong>：注册地：梅州市</p><p><em>✓ 已多源核实</em></p>]]></description>
-      <category>梅州</category><category>9个集聚区</category><category>人才补贴</category>
-    </item>
-    <item>
-      <title>[郑州 区级] 郑东新区支持人工智能OPC创新发展若干措施</title>
-      <link>https://opcgate.com/index.html#zhengzhou-zhengdong-001</link>
-      <guid isPermaLink="false">opcgate-zhengzhou-zhengdong-001</guid>
-      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[<p><strong>摘要</strong>：河南省首个OPC专项政策，构建创业孵化-技术赋能-资本对接-市场拓展全生命周期服务闭环</p><p><strong>主要补贴</strong>：</p><table border="1"><tr><td>算力服务</td><td>依托国家超算郑州中心</td></tr><tr><td>办公空间</td><td>拎脑入驻模式</td></tr><tr><td>数据交易支持</td><td>区域年数据交易额44亿元生态</td></tr></table><p><strong>申请条件</strong>：注册地：郑东新区 · 行业：人工智能, OPC</p><p><strong>官方来源</strong>：<a href="https://finance.sina.com.cn/jjxw/2026-04-11/doc-inhucmte1422501.shtml">新闻报道</a></p><p><strong>关联 OPC 社区</strong>：</p><ul><li><strong>中原科技城OPC生态联盟</strong> · 郑州中原科技城投资促进中心</li></ul>]]></description>
-      <category>OPC专项</category><category>郑东新区</category><category>中原科技城</category><category>算力</category><category>数据交易</category>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,12 @@
+{
+  "name": "opc-policy",
+  "private": true,
+  "scripts": {
+    "test:e2e": "playwright test --config tests/e2e/playwright.config.mjs",
+    "test:e2e:headed": "playwright test --config tests/e2e/playwright.config.mjs --headed",
+    "test:e2e:install": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}

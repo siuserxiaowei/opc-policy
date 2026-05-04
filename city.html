@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OPC 全国城市总览 | 各城市政策一览</title>
 <meta name="description" content="全国OPC城市政策总览：按城市查看政策数量、补贴项目、OPC社区，快速找到最适合的城市。">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <style>
 :root{--bg:#F7F8FA;--card:#FFFFFF;--card2:#F1F5F9;--border:#E2E8F0;--text:#0F172A;--dim:#64748B;
   --accent:#2563EB;--al:#2563EB;--green:#15803D;--gd:#DCFCE7;--yellow:#B45309;--yd:#FEF3C7;
@@ -124,15 +124,46 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
 
 <script>
 const params = new URLSearchParams(window.location.search);
-const cityName = params.get('name') || '';
+const cityName = params.get('name') || params.get('city') || params.get('c') || '';
 const SPECIAL_CITY_PAGES = {
   '广州': 'guangzhou.html',
   '成都': 'chengdu.html',
   '苏州': 'suzhou.html',
 };
+const OFFICIAL_SOURCE_SUFFIXES = ['.gov.cn', '.cnbayarea.org.cn', '.ccpit.org'];
 
 function getCityDetailHref(city) {
   return SPECIAL_CITY_PAGES[city] || `seo/cities/${encodeURIComponent(city)}.html`;
+}
+
+function normalizeCommunityName(name) {
+  return String(name || '')
+    .toLowerCase()
+    .replace(/[·•・\s()（）\[\]【】,.，。:：;；/\\\-_'"`]+/g, '');
+}
+
+function isOfficialUrl(url) {
+  if (!url) return false;
+  try {
+    const host = new URL(url).hostname.toLowerCase();
+    return OFFICIAL_SOURCE_SUFFIXES.some(suffix => host.endsWith(suffix) || host === suffix.slice(1));
+  } catch (e) {
+    return false;
+  }
+}
+
+function classifyPolicyLinks(policy) {
+  const links = policy.links || {};
+  const official = isOfficialUrl(links.official) ? links.official : '';
+  const references = [];
+  if (links.official && !official) references.push(links.official);
+  references.push(...(links.news || []));
+  const application = policy.application?.url || '';
+  return {
+    official,
+    application,
+    references: [...new Set(references.filter(Boolean))].filter(url => url !== official && url !== application),
+  };
 }
 
 if (cityName) {
@@ -154,7 +185,8 @@ async function loadCity() {
         if (!cityMap[p.city]) cityMap[p.city] = { policies: [], _commNames: new Set(), communities: 0, maxAmount: 0 };
         cityMap[p.city].policies.push(p);
         for (const cm of (p.communities || [])) {
-          cityMap[p.city]._commNames.add(cm.name);
+          const key = normalizeCommunityName(cm.name);
+          if (key) cityMap[p.city]._commNames.add(key);
         }
         for (const b of (p.benefits || [])) {
           if ((b.amount_max || 0) > cityMap[p.city].maxAmount) cityMap[p.city].maxAmount = b.amount_max;
@@ -202,9 +234,16 @@ async function loadCity() {
     policies = (data.policies || []).filter(p => p.city === cityName);
   } catch(e) {}
 
-  // Try merging crawler data
+  // 仅在爬虫暴露结构化端点时合并候选政策
   try {
-    const resp = await fetch('https://opc-crawler.siuserxy.workers.dev/extracted', {signal: AbortSignal.timeout(5000)});
+    const api = 'https://opc-crawler.siuserxy.workers.dev';
+    const statusResp = await fetch(`${api}/`, {signal: AbortSignal.timeout(5000)});
+    if (!statusResp.ok) throw new Error('crawler status unavailable');
+    const status = await statusResp.json();
+    const endpoints = Object.keys(status.endpoints || {});
+    if (status.mode === 'link-discovery-only' || !endpoints.some(e => e.includes('/extracted'))) throw new Error('crawler extraction disabled');
+
+    const resp = await fetch(`${api}/extracted`, {signal: AbortSignal.timeout(5000)});
     if (resp.ok) {
       const data = await resp.json();
       const ids = new Set(policies.map(p => p.id));
@@ -278,7 +317,7 @@ async function loadCity() {
       if (p.district) html += `<span>${p.district}</span>`;
       if (p.issuer) html += `<span>${p.issuer}</span>`;
       if (p.publish_date) html += `<span>${p.publish_date}</span>`;
-      if (p.auto_extracted) html += `<span class="tag" style="background:rgba(180,83,9,.1);color:var(--orange)">AI提取</span>`;
+      if (p.auto_extracted) html += `<span class="tag" style="background:rgba(180,83,9,.1);color:var(--orange)">爬虫候选</span>`;
       html += `</div>`;
 
       if (p.summary) html += `<p class="summary">${p.summary}</p>`;
@@ -357,13 +396,15 @@ async function loadCity() {
       }
 
       // Links
-      const links = p.links || {};
-      if (links.official || (links.news && links.news.length)) {
+      const sourceInfo = classifyPolicyLinks(p);
+      if (sourceInfo.official || sourceInfo.application || sourceInfo.references.length) {
         html += `<div class="links">`;
-        if (links.official) html += `<a href="${links.official}" target="_blank">查看政策原文 →</a>`;
-        for (const n of (links.news || [])) {
-          html += `<a href="${n}" target="_blank">新闻报道</a>`;
+        if (sourceInfo.official) html += `<a href="${sourceInfo.official}" target="_blank">查看官方原文 →</a>`;
+        if (sourceInfo.application) html += `<a href="${sourceInfo.application}" target="_blank">${isOfficialUrl(sourceInfo.application) ? '官方申报入口' : '申报入口'}</a>`;
+        for (const n of sourceInfo.references) {
+          html += `<a href="${n}" target="_blank">${sourceInfo.official ? '参考来源' : '参考链接'}</a>`;
         }
+        if (!sourceInfo.official) html += `<span style="font-size:.78em;color:var(--yellow);align-self:center">未找到公开官链</span>`;
         html += `</div>`;
       }
 
