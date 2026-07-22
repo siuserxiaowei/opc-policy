@@ -1,9 +1,9 @@
 import { expect, test } from '@playwright/test';
 
 const expectedCounts = {
-  policies: 106,
-  cities: 38,
-  communities: 96,
+  policies: 125,
+  cities: 42,
+  communities: 128,
 };
 
 const newPolicyNames = [
@@ -25,7 +25,7 @@ async function openHome(page) {
 }
 
 async function switchToBrowse(page) {
-  await page.getByRole('button', { name: '浏览全部政策' }).click();
+  await page.getByRole('button', { name: '查询政策信息' }).click();
   await expect(page.locator('#modeBrowse')).toBeVisible();
 }
 
@@ -38,7 +38,11 @@ test('static site starts and home data loads', async ({ page }) => {
   await openHome(page);
 
   await expect(page).toHaveTitle(/OPC/);
-  await expect(page.locator('.version')).toContainText('38 城 · 106 条政策 · 96 条社区/载体记录');
+  await expect(
+    page.getByText('42 城 · 125 条政策 · 128 个社区/载体样本 · 缺失官链会明示', {
+      exact: true,
+    }),
+  ).toBeVisible();
   await expect(page.locator('#cityGrid .city-card')).toHaveCount(expectedCounts.cities);
 });
 
@@ -70,10 +74,35 @@ test('home city cards expose key policy counts', async ({ page }) => {
   expect(cardCounts).toMatchObject({
     广州: '23 条政策',
     深圳: '8 条政策',
-    杭州: '5 条政策',
-    无锡: '2 条政策',
+    杭州: '6 条政策',
+    无锡: '3 条政策',
     青岛: '3 条政策',
   });
+});
+
+test('AI report card serializes candidates and renders streamed InfiniSynapse proof', async ({ page }) => {
+  await page.route('**/api/infinisynapse-report', async route => {
+    const request = route.request();
+    const body = request.postDataJSON();
+    expect(body.profile.city).toBe('广州');
+    expect(body.candidates.length).toBeGreaterThan(0);
+    expect(body.candidates[0]).toHaveProperty('officialUrl');
+    const stream = [
+      `event: meta\ndata: ${JSON.stringify({taskId:'task-demo-123',provider:'InfiniSynapse Server API'})}\n\n`,
+      `event: result\ndata: ${JSON.stringify({taskId:'task-demo-123',report:{executiveSummary:'广州与当前画像的证据匹配最好。',recommendedCity:'广州',cityComparison:[{city:'广州',fitScore:88,why:'同城政策与载体证据完整',risks:[]}],opportunities:[{name:'广东省支持人工智能 OPC 行动方案',city:'广州',reason:'覆盖算力与场景诉求',evidenceUrl:'https://example.gov.cn/policy',confidence:'high'}],risks:['补贴资格仍需主管部门确认'],actionPlan:[{within:'今天',action:'核验官方原文',evidence:'查看政策来源'}],limitations:['仅作路线诊断参考']}})}\n\n`,
+    ].join('');
+    await route.fulfill({status:200,contentType:'text/event-stream',body:stream});
+  });
+
+  await openHome(page);
+  await page.getByRole('button', { name: '用示例填充' }).click();
+  await expect(page.locator('#fCity')).toHaveValue('广州');
+  await page.getByRole('button', { name: '开始匹配' }).click();
+  await expect(page.locator('#panelResults')).toBeVisible();
+  await page.getByRole('button', { name: '生成 AI 深度选址报告' }).click();
+  await expect(page.locator('#aiReportResult')).toContainText('广州与当前画像的证据匹配最好');
+  await expect(page.locator('#aiReportResult')).toContainText('Task ID：task-demo-123');
+  await expect(page.locator('#aiReportResult')).toContainText('InfiniSynapse Server API');
 });
 
 test('city compare covers Guangzhou, Shenzhen, Wuxi and Wuxi additions', async ({ page }) => {

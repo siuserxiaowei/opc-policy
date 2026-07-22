@@ -1,0 +1,133 @@
+:root {
+  --opc-bg: #f7f8fa;
+  --opc-surface: #ffffff;
+  --opc-surface-subtle: #f1f5f9;
+  --opc-text: #0f172a;
+  --opc-dim: #64748b;
+  --opc-border: #dce4ee;
+  --opc-primary: #2563eb;
+  --opc-primary-hover: #1d4ed8;
+  --opc-secondary: #0f766e;
+  --opc-secondary-soft: #ccfbf1;
+  --opc-accent: #16a34a;
+  --opc-warning: #b45309;
+  --opc-danger: #b91c1c;
+}
+
+.opc-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--opc-text);
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.opc-brand:hover {
+  color: var(--opc-primary);
+  text-decoration: none;
+}
+
+.opc-brand-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  flex: 0 0 auto;
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, .04);
+}
+
+.opc-brand-text {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.opc-brand-name {
+  font-size: 1rem;
+  color: var(--opc-text);
+}
+
+.opc-brand-sub {
+  margin-top: 2px;
+  color: var(--opc-dim);
+  font-size: .68rem;
+  font-weight: 800;
+}
+
+.icon,
+.opc-icon {
+  width: 1.05em;
+  height: 1.05em;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -0.16em;
+}
+
+.opc-icon-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  color: var(--opc-primary);
+  border: 1px solid #dbeafe;
+}
+
+.opc-icon-badge.secondary {
+  background: #f0fdfa;
+  color: var(--opc-secondary);
+  border-color: #ccfbf1;
+}
+
+.opc-icon-badge.warning {
+  background: #fff7ed;
+  color: var(--opc-warning);
+  border-color: #fed7aa;
+}
+
+.opc-icon-badge.danger {
+  background: #fef2f2;
+  color: var(--opc-danger);
+  border-color: #fecaca;
+}
+
+.opc-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.opc-card-head h3 {
+  margin: 0;
+}
+
+.opc-meta-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.opc-vi-meta {
+  color: var(--opc-dim);
+  font-size: .82em;
+}
+
+@media (max-width: 640px) {
+  .opc-brand-mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  .opc-brand-sub {
+    display: none;
+  }
+}

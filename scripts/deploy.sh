@@ -8,6 +8,8 @@
 # 使用：
 #   ./scripts/deploy.sh              # 全量部署
 #   ./scripts/deploy.sh --dry-run    # 只构建 dist/ 不上传，用于检查
+#   ./scripts/deploy.sh --skip-generate --dry-run
+#                                    # 保留当前已核验页面，只打包不重新生成 SEO 文件
 #
 set -euo pipefail
 
@@ -20,8 +22,14 @@ cd "$REPO"
 
 # ── 可选：链接健康度检查（--skip-check 可跳过）─────────────────────
 SKIP_CHECK=0
+SKIP_GENERATE=0
+DRY_RUN=0
 for arg in "$@"; do
-  [[ "$arg" == "--skip-check" ]] && SKIP_CHECK=1
+  case "$arg" in
+    --skip-check) SKIP_CHECK=1 ;;
+    --skip-generate) SKIP_GENERATE=1 ;;
+    --dry-run) DRY_RUN=1 ;;
+  esac
 done
 if [[ "$SKIP_CHECK" -eq 0 ]] && command -v python3 >/dev/null 2>&1; then
   echo "→ 链接健康度检查 (scripts/check_links.py --only active)"
@@ -33,7 +41,7 @@ if [[ "$SKIP_CHECK" -eq 0 ]] && command -v python3 >/dev/null 2>&1; then
 fi
 
 # ── 可选：重新生成 changelog + rss ──────────────────────────────────
-if command -v python3 >/dev/null 2>&1; then
+if [[ "$SKIP_GENERATE" -eq 0 ]] && command -v python3 >/dev/null 2>&1; then
   echo "→ 重新生成 changelog.html"
   python3 scripts/generate_changelog.py >/dev/null
   echo "→ 重新生成 rss.xml"
@@ -59,7 +67,8 @@ echo "→ 复制白名单内容"
 # HTML 页面
 for f in index.html guangzhou.html chengdu.html suzhou.html yuexiu.html \
          tax.html tax-cases.html dashboard.html city.html \
-         changelog.html chengdu-guide.html private.html admin.html compare.html; do
+         changelog.html chengdu-guide.html private.html admin.html compare.html \
+         navigation.html learn.html now-open.html aliyun-opc.html miniprogram.html; do
   if [[ -f "$f" ]]; then
     cp "$f" "$DIST/"
   fi
@@ -93,10 +102,22 @@ fi
 if [[ -d seo ]]; then
   cp -r seo "$DIST/"
 fi
+if [[ -d functions ]]; then
+  echo "→ 编译 Cloudflare Pages Functions"
+  FUNCTIONS_BUILD_DIR="$(mktemp -d /tmp/opcgate-functions.XXXXXX)"
+  trap 'rm -rf "$FUNCTIONS_BUILD_DIR"' EXIT
+  npx wrangler pages functions build functions \
+    --outdir "$FUNCTIONS_BUILD_DIR" \
+    --project-directory "$REPO" \
+    --output-routes-path "$FUNCTIONS_BUILD_DIR/_routes.json" \
+    --minify
+  cp "$FUNCTIONS_BUILD_DIR/index.js" "$DIST/_worker.js"
+  cp "$FUNCTIONS_BUILD_DIR/_routes.json" "$DIST/_routes.json"
+fi
 
 # ── 显式黑名单校验（双重保险） ───────────────────────────────────────
 echo "→ 黑名单校验"
-FORBIDDEN=(backend crawler-worker private .wrangler .git .github scripts)
+FORBIDDEN=(backend crawler-worker private .wrangler .git .github scripts tests)
 for item in "${FORBIDDEN[@]}"; do
   if [[ -e "$DIST/$item" ]]; then
     echo "❌ 发现禁止目录/文件：$DIST/$item" >&2
@@ -127,7 +148,7 @@ find "$DIST" -type f | wc -l | xargs echo "   文件总数:"
 echo ""
 
 # ── 仅构建模式 ───────────────────────────────────────────────────────
-if [[ "${1:-}" == "--dry-run" ]]; then
+if [[ "$DRY_RUN" -eq 1 ]]; then
   echo "→ dry-run 模式，不上传 Cloudflare Pages"
   echo ""
   echo "dist/ 内容预览："

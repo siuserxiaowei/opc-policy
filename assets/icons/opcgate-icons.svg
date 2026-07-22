@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="icon-policy" viewBox="0 0 24 24">
+    <path d="M7 3.5h7l3 3V20H7z"/>
+    <path d="M14 3.5v3h3"/>
+    <path d="M9.5 10h5M9.5 13h5M9.5 16h3"/>
+  </symbol>
+  <symbol id="icon-city" viewBox="0 0 24 24">
+    <path d="M4 20h16M6 20V9h5v11M13 20V5h5v15"/>
+    <path d="M8 12h1M8 15h1M15 9h1M15 12h1M15 15h1"/>
+  </symbol>
+  <symbol id="icon-community" viewBox="0 0 24 24">
+    <path d="M5 6h6v6H5zM13 6h6v6h-6zM5 14h6v6H5zM13 14h6v6h-6z"/>
+  </symbol>
+  <symbol id="icon-route" viewBox="0 0 24 24">
+    <path d="M5 18c0-5 4-9 9-9h3"/>
+    <circle cx="5" cy="18" r="2.5"/>
+    <circle cx="17" cy="7" r="2.5"/>
+    <path d="m16 15 2 2 4-5"/>
+  </symbol>
+  <symbol id="icon-course" viewBox="0 0 24 24">
+    <path d="M4 5.5c2.5-1.1 5.4-.8 8 1v13c-2.6-1.8-5.5-2.1-8-1zM20 5.5c-2.5-1.1-5.4-.8-8 1v13c2.6-1.8 5.5-2.1 8-1z"/>
+    <path d="m10 11 4 2.4-4 2.3z"/>
+  </symbol>
+  <symbol id="icon-aliyun" viewBox="0 0 24 24">
+    <path d="M7.5 16.5H6a4 4 0 0 1 0-8 5.8 5.8 0 0 1 11.2 1.8A3.2 3.2 0 0 1 17 16.5h-1.4"/>
+    <path d="M9 13h6M9 16h6M10.5 10h3"/>
+  </symbol>
+  <symbol id="icon-token" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="7.5"/>
+    <path d="M8.5 10.5c1.9-1.6 5.1-1.6 7 0M8.5 13.5c1.9 1.6 5.1 1.6 7 0M12 7v10"/>
+  </symbol>
+  <symbol id="icon-tools" viewBox="0 0 24 24">
+    <path d="m14 6 4 4M4 20l6.5-6.5"/>
+    <path d="M13 7.5 16.5 4 20 7.5 16.5 11z"/>
+    <path d="M7 6h4M9 4v4M16 15h4M18 13v4"/>
+  </symbol>
+  <symbol id="icon-package" viewBox="0 0 24 24">
+    <path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5z"/>
+    <path d="m4 8.5 8 4.5 8-4.5M12 13v7"/>
+  </symbol>
+  <symbol id="icon-space" viewBox="0 0 24 24">
+    <path d="M5 20V7l7-3 7 3v13"/>
+    <path d="M9 20v-7h6v7M8 9.5h1M12 9.5h1M16 9.5h1"/>
+  </symbol>
+  <symbol id="icon-event" viewBox="0 0 24 24">
+    <path d="M6 4v3M18 4v3M4.5 8h15M6 6h12a2 2 0 0 1 2 2v10.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/>
+    <path d="m10 13 2.5 2.5L16 11"/>
+  </symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24">
+    <path d="m5 12 4.5 4.5L19 7"/>
+    <circle cx="12" cy="12" r="9"/>
+  </symbol>
+  <symbol id="icon-risk" viewBox="0 0 24 24">
+    <path d="M12 4 21 20H3z"/>
+    <path d="M12 9v5M12 17h.01"/>
+  </symbol>
+  <symbol id="icon-apply" viewBox="0 0 24 24">
+    <path d="M7 4h10v16H7z"/>
+    <path d="M9.5 8h5M9.5 11.5h5"/>
+    <path d="m10 16 1.5 1.5L15 14"/>
+  </symbol>
+  <symbol id="icon-link" viewBox="0 0 24 24">
+    <path d="M10 13.5a4 4 0 0 0 5.7 0l2.3-2.3a4 4 0 0 0-5.7-5.7L11 6.8"/>
+    <path d="M14 10.5a4 4 0 0 0-5.7 0L6 12.8a4 4 0 0 0 5.7 5.7L13 17.2"/>
+  </symbol>
+</svg>

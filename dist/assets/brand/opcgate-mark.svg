@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="opcgate mark">
+  <rect width="512" height="512" rx="112" fill="#F8FAFC"/>
+  <rect x="38" y="38" width="436" height="436" rx="106" fill="#FFFFFF" stroke="#D9E2EF" stroke-width="14"/>
+  <path d="M128 194c48-38 90-56 128-56s80 18 128 56" fill="none" stroke="#2563EB" stroke-width="34" stroke-linecap="round"/>
+  <circle cx="128" cy="194" r="30" fill="#2563EB"/>
+  <circle cx="256" cy="138" r="30" fill="#0F766E"/>
+  <circle cx="384" cy="194" r="30" fill="#2563EB"/>
+  <text x="256" y="316" text-anchor="middle" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="124" font-weight="900" letter-spacing="4">OPC</text>
+  <rect x="164" y="356" width="112" height="16" rx="8" fill="#2563EB"/>
+  <rect x="300" y="356" width="74" height="16" rx="8" fill="#0F766E"/>
+</svg>

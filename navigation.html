@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPC 落地指南 · 路线诊断 | 先补材料、选城市、进载体还是做申报准备参考 - opcgate.com</title>
+<meta name="description" content="OPC 落地指南 · 路线诊断：基于政策库、城市库和载体库，判断你下一步该先补材料、选城市、入驻载体、追窗口，还是做申报准备参考。">
+<meta name="keywords" content="OPC落地路线,OPC政策匹配,一人公司,城市选择,创业补贴,孵化器,申报材料,opcgate">
+<meta property="og:title" content="OPC 落地指南 · 路线诊断 | opcgate.com">
+<meta property="og:description" content="用 42 城政策、128 个载体样本和课程路径，生成 OPC 落地路线诊断报告。仅供信息查询、来源核验和申报准备参考。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://opcgate.com/navigation">
+<meta property="og:image" content="https://opcgate.com/assets/brand/opcgate-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OPC 落地指南 · 路线诊断 | opcgate.com">
+<meta name="twitter:description" content="用 42 城政策、128 个载体样本和课程路径，生成 OPC 落地路线诊断报告。">
+<meta name="twitter:image" content="https://opcgate.com/assets/brand/opcgate-og.png">
+<meta name="theme-color" content="#2563EB">
+<link rel="canonical" href="https://opcgate.com/navigation">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="stylesheet" href="/assets/css/opcgate-vi.css">
+<style>
+:root{--bg:#F7F8FA;--card:#fff;--text:#0F172A;--muted:#64748B;--line:#E2E8F0;--blue:#2563EB;--green:#0F766E;--cyan:#0891B2;--amber:#B45309;--red:#B91C1C;--soft-blue:#EFF6FF;--soft-green:#ECFDF5;--soft-amber:#FFF7ED}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.topnav{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.topnav .logo{font-weight:900;color:var(--blue)}
+.topnav a{padding:6px 12px;border-radius:6px;color:var(--muted);font-size:.84em;font-weight:700}
+.topnav a:hover,.topnav a.active{background:rgba(37,99,235,.08);color:var(--blue)}
+.topnav .spacer{flex:1}
+.hero{padding:42px 20px 24px;background:linear-gradient(180deg,#fff,#F8FAFC);border-bottom:1px solid var(--line)}
+.hero-inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:28px;align-items:end}
+.kicker{font-size:.76em;color:var(--green);font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+h1{font-size:2.35em;line-height:1.1;margin-bottom:12px;letter-spacing:0}
+.lead{color:var(--muted);font-size:1.02em;max-width:680px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.metric{padding:14px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.metric b{display:block;color:var(--blue);font-size:1.35em;line-height:1}
+.metric span{font-size:.78em;color:var(--muted)}
+.wrap{max-width:1060px;margin:0 auto;padding:24px 20px 52px;display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:18px;align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;box-shadow:0 8px 24px rgba(15,23,42,.04)}
+.panel+.panel{margin-top:14px}
+.panel h2{font-size:1.15em;margin-bottom:6px}
+.desc{color:var(--muted);font-size:.88em;margin-bottom:14px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.field{margin-bottom:16px}
+label{display:block;font-size:.82em;color:#475569;font-weight:900;margin-bottom:7px}
+select,input,textarea{width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--text);padding:10px 12px;font:inherit}
+textarea{min-height:96px;resize:vertical}
+.chip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:8px;padding:11px 12px;cursor:pointer;transition:.18s;min-height:64px}
+.chip:hover{border-color:rgba(37,99,235,.35);background:#F8FAFC}
+.chip.active{border-color:rgba(37,99,235,.7);background:var(--soft-blue);box-shadow:inset 0 0 0 1px rgba(37,99,235,.08)}
+.chip b{display:block;font-size:.9em;margin-bottom:2px}
+.chip span{display:block;color:var(--muted);font-size:.76em;line-height:1.45}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:8px;padding:11px 16px;font-weight:900;cursor:pointer;background:var(--blue);color:#fff}
+.btn.secondary{background:#fff;color:var(--blue);border-color:#BFDBFE}
+.btn:hover{filter:brightness(.98)}
+.btn:disabled{opacity:.55;cursor:not-allowed;filter:none}
+.load-status{display:none;margin-top:10px;color:var(--red);font-size:.84em;font-weight:800}
+.load-status.visible{display:block}
+.sticky{position:sticky;top:62px}
+.summary-box{border:1px solid rgba(15,118,110,.2);background:var(--soft-green);border-radius:10px;padding:16px}
+.summary-box h3{font-size:1.05em;color:var(--green);margin-bottom:8px}
+.summary-list{display:grid;gap:8px;margin-top:12px}
+.summary-list div{display:flex;justify-content:space-between;gap:10px;font-size:.84em;color:#334155;border-top:1px solid rgba(15,118,110,.12);padding-top:8px}
+.summary-list b{color:var(--text)}
+.report{display:none}
+.report.visible{display:block}
+.route-card{border:1px solid rgba(37,99,235,.18);background:linear-gradient(135deg,#EFF6FF,#F0FDFA);border-radius:12px;padding:22px;margin-bottom:14px}
+.route-card small{display:block;color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}
+.route-title{font-size:1.65em;font-weight:900;margin-bottom:8px}
+.route-summary{color:#334155;margin-bottom:12px}
+.course-pill{display:inline-flex;padding:7px 11px;border-radius:999px;background:#fff;border:1px solid #BFDBFE;color:var(--blue);font-size:.82em;font-weight:900}
+.section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:10px}
+.section-title h3{font-size:1.08em}
+.card-list{display:grid;gap:10px}
+.result-card{border:1px solid var(--line);border-radius:10px;background:#fff;padding:15px}
+.result-head{display:flex;justify-content:space-between;gap:10px;align-items:start;margin-bottom:6px}
+.result-card h4{font-size:.98em;line-height:1.38}
+.badge{display:inline-flex;white-space:nowrap;padding:3px 7px;border-radius:999px;background:var(--soft-blue);color:var(--blue);font-size:.72em;font-weight:900}
+.badge.green{background:var(--soft-green);color:var(--green)}
+.badge.warn{background:var(--soft-amber);color:var(--amber)}
+.meta{font-size:.8em;color:var(--green);font-weight:800;margin-bottom:5px}
+.body-copy{font-size:.84em;color:var(--muted)}
+.warn-line{margin-top:8px;padding:8px 10px;border-radius:8px;background:var(--soft-amber);color:#92400E;font-size:.78em}
+.gap-list,.timeline,.risk-list{display:grid;gap:8px}
+.gap-item,.time-item,.risk-item{border:1px solid var(--line);border-radius:8px;background:#fff;padding:12px;font-size:.86em}
+.gap-item b,.time-item b{color:var(--blue)}
+.empty{padding:14px;border:1px dashed var(--line);border-radius:8px;color:var(--muted);font-size:.86em;background:#fff}
+.footer-note{margin-top:16px;color:var(--muted);font-size:.8em}
+@media(max-width:860px){.hero-inner,.wrap{grid-template-columns:1fr}.sticky{position:static}.metrics{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.topnav{overflow-x:auto}.topnav a{white-space:nowrap}.hero{padding-top:30px}h1{font-size:1.8em}.grid-2,.metrics{grid-template-columns:1fr}.chip-grid{grid-template-columns:1fr}.panel{padding:16px}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="logo opc-brand" href="/" aria-label="opcgate OPC 落地指南">
+    <img class="opc-brand-mark" src="/assets/brand/opcgate-mark.svg" alt="">
+    <span class="opc-brand-text"><span class="opc-brand-name">opcgate</span><span class="opc-brand-sub">OPC 落地指南</span></span>
+  </a>
+  <a href="/">首页</a>
+  <a class="active" href="/navigation">路线诊断</a>
+  <a href="/learn">课程</a>
+  <a href="compare.html">城市对比</a>
+  <a href="now-open.html">窗口期</a>
+  <span class="spacer"></span>
+  <a href="changelog.html">更新记录</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="kicker">OPCGATE ROUTE DIAGNOSIS</div>
+      <h1>OPC 落地指南 · 路线诊断</h1>
+      <p class="lead">用 opcgate 当前政策库、城市库和社区/载体样本，判断你下一步该先补材料、选城市、入驻载体、追窗口，还是做申报准备参考。</p>
+      <p class="footer-note">信息查询与路线诊断工具，不提供政务办理、代办申报、法律税务结论或补贴承诺。</p>
+    </div>
+    <div class="metrics">
+      <div class="metric"><b id="metricPolicies">118</b><span>政策记录</span></div>
+      <div class="metric"><b id="metricCities">41</b><span>城市入口</span></div>
+      <div class="metric"><b id="metricCommunities">107</b><span>载体样本</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <form id="diagnosisForm">
+      <div class="panel">
+        <h2>1. 基础条件</h2>
+        <p class="desc">先确认主体、城市和迁移半径，避免把不符合条件的政策推到前面。</p>
+        <div class="grid-2">
+          <div class="field">
+            <label for="currentCity">所在城市</label>
+            <select id="currentCity"></select>
+          </div>
+          <div class="field">
+            <label for="employees">社保/用工人数</label>
+            <input id="employees" type="number" min="0" max="200" value="0">
+          </div>
+        </div>
+        <div class="field">
+          <label>主体状态</label>
+          <div class="chip-grid" id="subjectStatus" data-mode="single">
+            <button type="button" class="chip active" data-value="preparing"><b>还没注册</b><span>先判断城市和主体路径</span></button>
+            <button type="button" class="chip" data-value="registered_opc"><b>已注册一人公司</b><span>进入材料核验和来源核验</span></button>
+            <button type="button" class="chip" data-value="registered_company"><b>已有公司主体</b><span>确认注册地址和业务匹配</span></button>
+            <button type="button" class="chip" data-value="small_team"><b>小微团队</b><span>看工位、算力和现金组合</span></button>
+          </div>
+        </div>
+        <div class="field">
+          <label>迁移半径</label>
+          <div class="chip-grid" id="mobility" data-mode="single">
+            <button type="button" class="chip active" data-value="current"><b>只看当前城市</b><span>减少落地成本</span></button>
+            <button type="button" class="chip" data-value="province"><b>可同省迁移</b><span>同省比较政策与载体</span></button>
+            <button type="button" class="chip" data-value="national"><b>全国择优</b><span>按政策密度重新选城市</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>2. 项目与需求</h2>
+        <p class="desc">把项目阶段和支持需求转成可匹配变量。</p>
+        <div class="field">
+          <label>项目阶段</label>
+          <div class="chip-grid" id="stage" data-mode="single">
+            <button type="button" class="chip" data-value="idea"><b>想法期</b><span>还在找方向或准备 MVP</span></button>
+            <button type="button" class="chip active" data-value="mvp"><b>已有 MVP</b><span>可看算力、工位和赛事</span></button>
+            <button type="button" class="chip" data-value="customers"><b>已有客户</b><span>看场景、首单和入驻</span></button>
+            <button type="button" class="chip" data-value="revenue"><b>已有营收</b><span>看现金补贴和贷款贴息</span></button>
+            <button type="button" class="chip" data-value="scale"><b>融资/规模化</b><span>看综合政策和金融人才</span></button>
+          </div>
+        </div>
+        <div class="field">
+          <label>业务类型（可多选）</label>
+          <div class="chip-grid" id="businessTypes" data-mode="multi">
+            <button type="button" class="chip active" data-value="ai_agent"><b>AI Agent / 智能体</b><span>模型应用、Agent、AI 工具链</span></button>
+            <button type="button" class="chip" data-value="saas"><b>SaaS / 工具产品</b><span>软件、数据、自动化</span></button>
+            <button type="button" class="chip" data-value="content"><b>内容/IP/课程</b><span>内容产品、知识服务</span></button>
+            <button type="button" class="chip" data-value="consulting"><b>咨询/技术服务</b><span>方案、交付、陪跑</span></button>
+            <button type="button" class="chip" data-value="hardware"><b>硬件/机器人</b><span>机器人、智能硬件</span></button>
+            <button type="button" class="chip" data-value="crossborder"><b>跨境/出海</b><span>外贸、海外市场</span></button>
+          </div>
+        </div>
+        <div class="field">
+          <label>最想要的支持（可多选）</label>
+          <div class="chip-grid" id="needs" data-mode="multi">
+            <button type="button" class="chip active" data-value="compute"><b>算力券/API/模型</b><span>算力、模型券、云资源</span></button>
+            <button type="button" class="chip active" data-value="space"><b>免租工位/载体</b><span>社区、工位、孵化器</span></button>
+            <button type="button" class="chip" data-value="cash"><b>现金补贴/奖励</b><span>创业资助、研发奖励</span></button>
+            <button type="button" class="chip" data-value="scenario"><b>场景/首单/客户</b><span>公共场景、试点机会</span></button>
+            <button type="button" class="chip" data-value="competition"><b>赛事/曝光</b><span>创业赛、专项赛</span></button>
+            <button type="button" class="chip" data-value="loan"><b>贷款/贴息</b><span>信用贷、研发贷</span></button>
+            <button type="button" class="chip" data-value="mentor"><b>孵化/导师/运营</b><span>导师和资源对接</span></button>
+            <button type="button" class="chip" data-value="talent"><b>人才/住房</b><span>公寓、落户、生活支持</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>3. 材料与风险</h2>
+        <p class="desc">没选中的材料会进入缺口清单；风险偏好会影响候选政策范围。</p>
+        <div class="field">
+          <label>已准备材料（可多选）</label>
+          <div class="chip-grid" id="materials" data-mode="multi">
+            <button type="button" class="chip" data-value="license"><b>营业执照/主体信息</b><span>主体、地址、经营范围</span></button>
+            <button type="button" class="chip active" data-value="bp"><b>BP/项目介绍</b><span>项目简介或路演材料</span></button>
+            <button type="button" class="chip" data-value="contracts"><b>客户合同/订单</b><span>合同、订单、协议</span></button>
+            <button type="button" class="chip" data-value="invoices"><b>发票/收款记录</b><span>发票、流水、收款凭证</span></button>
+            <button type="button" class="chip" data-value="ip"><b>软著/专利/IP</b><span>知识产权证明</span></button>
+            <button type="button" class="chip" data-value="social_security"><b>社保/用工证明</b><span>社保人数和团队证明</span></button>
+            <button type="button" class="chip" data-value="finance"><b>财务报表/流水</b><span>纳税、报表、银行流水</span></button>
+            <button type="button" class="chip" data-value="site"><b>场地/入驻证明</b><span>租赁、工位、入驻协议</span></button>
+          </div>
+        </div>
+        <div class="field">
+          <label>来源风险偏好</label>
+          <div class="chip-grid" id="riskLevel" data-mode="single">
+            <button type="button" class="chip active" data-value="official"><b>只看官方已核验</b><span>最稳，候选更少</span></button>
+            <button type="button" class="chip" data-value="reference"><b>可看参考线索</b><span>官方优先，也看可信参考</span></button>
+            <button type="button" class="chip" data-value="draft"><b>愿意追窗口期/draft</b><span>关注征求意见和新窗口</span></button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="extraInfo">补充背景</label>
+          <textarea id="extraInfo" placeholder="例如：已经在广州注册，有 MVP，想找算力券和免租工位，BP 有但客户合同还没有。"></textarea>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn" id="btnGenerate" disabled>加载数据中...</button>
+          <button type="button" class="btn secondary" id="btnReset">恢复默认</button>
+        </div>
+        <p class="load-status" id="loadStatus" role="status"></p>
+      </div>
+    </form>
+  </section>
+
+  <aside class="sticky">
+    <div class="summary-box">
+      <h3>诊断原则</h3>
+      <p class="desc" style="margin-bottom:0">先事实、再路线、最后做申报准备参考。缺材料就不包装成“马上拿补贴”；缺官方来源就标风险。</p>
+      <div class="summary-list">
+        <div><span>数据来源</span><b>本站结构化库</b></div>
+        <div><span>计算方式</span><b>本地完成</b></div>
+        <div><span>输出重点</span><b>路线 + 缺口</b></div>
+      </div>
+    </div>
+  </aside>
+
+  <section class="report" id="report">
+    <div class="route-card">
+      <small>建议路线</small>
+      <div class="route-title" id="routeTitle"></div>
+      <p class="route-summary" id="routeSummary"></p>
+      <a class="course-pill" id="courseLink" href="/learn"></a>
+    </div>
+
+    <div class="panel">
+      <div class="section-title"><h3>优先政策候选</h3><span class="badge">来自政策库</span></div>
+      <div class="card-list" id="policyList"></div>
+    </div>
+
+    <div class="panel">
+      <div class="section-title"><h3>载体/社区候选</h3><span class="badge green">来自载体库</span></div>
+      <div class="card-list" id="communityList"></div>
+    </div>
+
+    <div class="panel">
+      <div class="section-title"><h3>材料缺口</h3><span class="badge warn">准备前核对</span></div>
+      <div class="gap-list" id="gapList"></div>
+    </div>
+
+    <div class="panel">
+      <div class="section-title"><h3>30/60/90 天行动</h3><span class="badge">路线拆解</span></div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+
+    <div class="panel">
+      <div class="section-title"><h3>风险提醒</h3><span class="badge warn">不替代官方答复</span></div>
+      <div class="risk-list" id="riskList"></div>
+      <div class="actions"><button type="button" class="btn secondary" id="btnCopy">复制完整报告</button></div>
+      <p class="footer-note">政策、税务、注册类判断仍以官方渠道、主管部门和专业意见为准；本页不提供政务办理、代办申报、法律税务结论或补贴承诺。</p>
+    </div>
+  </section>
+</main>
+
+<script>
+const LABELS={
+  subjectStatus:{preparing:'还没注册',registered_opc:'已注册一人公司',registered_company:'已有公司主体',small_team:'小微团队'},
+  mobility:{current:'只看当前城市',province:'可同省迁移',national:'全国择优'},
+  stage:{idea:'想法期',mvp:'已有 MVP',customers:'已有客户',revenue:'已有营收',scale:'融资/规模化'},
+  businessTypes:{ai_agent:'AI Agent / 智能体',saas:'SaaS / 工具产品',content:'内容/IP/课程',consulting:'咨询/技术服务',hardware:'硬件/机器人',crossborder:'跨境/出海'},
+  needs:{cash:'现金补贴/奖励',compute:'算力券/API/模型',space:'免租工位/载体',scenario:'场景/首单/客户',competition:'赛事/曝光',loan:'贷款/贴息',mentor:'孵化/导师/运营',talent:'人才/住房'},
+  materials:{license:'营业执照/主体信息',bp:'BP/项目介绍',contracts:'客户合同/订单',invoices:'发票/收款记录',ip:'软著/专利/IP',social_security:'社保/用工证明',finance:'财务报表/流水',site:'场地/入驻证明'},
+  riskLevel:{official:'只看官方已核验',reference:'可看参考线索',draft:'愿意追窗口期/draft'}
+};
+const ROUTES={
+  materials:{type:'先补材料型',summary:'当前不建议直接冲高额补贴，先把主体、BP、合同/发票等证据链补齐。',course:{title:'Module 04 · 材料核验与时间线',url:'/learn#module-04'}},
+  carrier:{type:'先入驻载体型',summary:'优先找能提供工位、算力、导师或场景的社区/孵化器，用载体降低启动成本。',course:{title:'Module 03 · 城市与社区对比',url:'/learn#module-03'}},
+  city:{type:'先城市对比型',summary:'你有迁移空间，先横向比较城市政策密度、载体资源和申报门槛。',course:{title:'Module 03 · 城市与社区对比',url:'/learn#module-03'}},
+  window:{type:'先赛事窗口型',summary:'优先抓赛事、场景征集或开放窗口，用低门槛机会换曝光和案例。',course:{title:'Module 04 · 材料核验与时间线',url:'/learn#module-04'}},
+  validation:{type:'先产品验证型',summary:'先把 MVP、客户访谈和交付证据跑出来，再进入政策和载体来源核验。',course:{title:'Module 01 · OPC 决策框架',url:'/learn#module-01'}},
+  hold:{type:'暂缓准备型',summary:'当前条件和风险偏好不适合直接进入申报准备，先做官方来源核验和条件补齐。',course:{title:'Module 05 · 风险核验与长期追踪',url:'/learn#module-05'}},
+  apply:{type:'申报准备参考型',summary:'主体、阶段和材料基础较完整，可以进入候选政策核验和申报准备排期。',course:{title:'Module 02 · 政策匹配实操',url:'/learn#module-02'}}
+};
+const MATERIAL_RULES={base:['license','bp'],revenue:['contracts','invoices','finance'],compute:['bp','ip'],scenario:['bp','contracts'],cash:['license','social_security','finance'],loan:['finance','invoices'],space:['license']};
+let DATA={policies:[],cities:[],communities:[]};
+let LAST_REPORT=null;
+let DATA_READY=false;
+
+function selected(id){return Array.from(document.querySelectorAll(`#${id} .chip.active`)).map(el=>el.dataset.value)}
+function first(list){return Array.isArray(list)?list[0]:''}
+function includesAny(text,words){return words.some(word=>text.includes(word.toLowerCase()))}
+function escapeHtml(value){return String(value||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
+function textOfPolicy(policy){return [policy.name,policy.summary,policy.category,policy.city,policy.district,...(policy.tags||[]),...((policy.requirements&&policy.requirements.industries)||[]),...(policy.benefits||[]).map(item=>`${item.item} ${item.type} ${item.amount}`)].join(' ').toLowerCase()}
+function hasOfficial(policy){return Boolean(policy.verified&&policy.links&&policy.links.official)}
+function todayIso(){return new Date(Date.now()+8*3600*1000).toISOString().slice(0,10)}
+function policyDeadline(policy){return String(policy.expire_date||policy.application?.schedule?.deadline||policy.application?.schedule?.end||policy.application?.deadline||'').slice(0,10)}
+function isPolicyExpired(policy){const deadline=policyDeadline(policy);return policy.status==='expired'||policy.landing_status==='expired'||(/^\d{4}-\d{2}-\d{2}$/.test(deadline)&&deadline<todayIso())}
+function isPolicyCurrent(policy){return policy.status==='active'&&!isPolicyExpired(policy)}
+function amountText(policy){const max=Math.max(0,...(policy.benefits||[]).map(item=>Number(item.amount_max||0)));if(max>0)return `最高 ${Math.round(max/10000)} 万`;const benefit=(policy.benefits||[]).find(item=>item.amount)||{};return benefit.amount||'以官方口径为准'}
+function isPolicyAllowed(policy,risk){const status=policy.status||'';if(risk==='official')return hasOfficial(policy)&&isPolicyCurrent(policy);if(risk==='reference')return isPolicyCurrent(policy)&&(hasOfficial(policy)||policy.verified||policy.links?.official||policy.links?.news?.length);return isPolicyCurrent(policy)||status==='draft'}
+function cityScope(item,answers){const mobility=first(answers.mobility);const current=DATA.cities.find(city=>city.name===answers.currentCity);if(mobility==='national')return true;if(mobility==='province')return item.province&&current&&item.province===current.province;return item.city===answers.currentCity}
+function needMatches(needs,text,category){let score=0;needs.forEach(need=>{if(need==='compute'&&(category==='computing'||includesAny(text,['算力','模型','api','数据语料'])))score+=28;if(need==='space'&&(category==='space'||includesAny(text,['免租','工位','空间','社区','孵化'])))score+=24;if(need==='cash'&&(category==='subsidy'||includesAny(text,['补贴','奖励','资助','现金'])))score+=22;if(need==='scenario'&&(category==='scenario'||includesAny(text,['场景','首单','试点','机会清单'])))score+=24;if(need==='competition'&&(category==='competition'||includesAny(text,['大赛','赛事','路演'])))score+=26;if(need==='loan'&&(category==='loan'||includesAny(text,['贷款','贴息','金融'])))score+=22;if(need==='talent'&&(category==='talent'||includesAny(text,['人才','公寓','住房'])))score+=18;if(need==='mentor'&&includesAny(text,['导师','孵化','加速','服务']))score+=16});return score}
+function businessMatches(types,text){let score=0;types.forEach(type=>{if(type==='ai_agent'&&includesAny(text,['ai','人工智能','智能体','agent','模型','算力']))score+=24;if(type==='saas'&&includesAny(text,['软件','平台','数据','工具','数字化']))score+=16;if(type==='hardware'&&includesAny(text,['机器人','智能硬件','硬件']))score+=18;if(type==='content'&&includesAny(text,['文创','内容','ip','课程']))score+=12;if(type==='consulting'&&includesAny(text,['服务','咨询','解决方案','技术服务']))score+=10;if(type==='crossborder'&&includesAny(text,['跨境','出海','外贸','海外']))score+=14});return score}
+function stageMatches(stage,category){if(stage==='idea')return ['space','competition','registration'].includes(category)?14:0;if(stage==='mvp')return ['computing','space','competition','scenario'].includes(category)?14:0;if(stage==='customers')return ['scenario','space','subsidy','comprehensive'].includes(category)?16:0;if(stage==='revenue')return ['subsidy','loan','comprehensive','talent'].includes(category)?18:0;if(stage==='scale')return ['loan','talent','comprehensive','computing'].includes(category)?18:0;return 0}
+function policyWarnings(policy,answers){const warnings=[];if(!hasOfficial(policy))warnings.push('缺少官方已核验来源，先做来源核验');if(policy.status==='draft')warnings.push('仍是 draft/征求意见或待落地口径');if(isPolicyExpired(policy))warnings.push(`窗口已截止${policyDeadline(policy)?'：'+policyDeadline(policy):''}`);if(first(answers.subjectStatus)==='preparing')warnings.push('未注册主体，暂不建议直接申报');if(!answers.materials.includes('license'))warnings.push('缺营业执照/主体信息');return warnings}
+function scorePolicies(answers){return DATA.policies.filter(policy=>isPolicyAllowed(policy,first(answers.riskLevel))).filter(policy=>cityScope(policy,answers)).map(policy=>{const text=textOfPolicy(policy);const category=policy.category||'';let score=0;if(policy.city===answers.currentCity)score+=30;if(hasOfficial(policy))score+=18;if(isPolicyCurrent(policy))score+=10;score+=needMatches(answers.needs,text,category);score+=businessMatches(answers.businessTypes,text);score+=stageMatches(first(answers.stage),category);score+=Math.min(12,Math.floor(Math.max(0,...(policy.benefits||[]).map(item=>Number(item.amount_max||0)))/100000));const warnings=policyWarnings(policy,answers);score-=warnings.length*4;return{id:policy.id,name:policy.name,city:policy.city,district:policy.district||'',category,summary:policy.summary||'',amountText:amountText(policy),officialUrl:policy.links?.official||'',verified:hasOfficial(policy),status:policy.status||'',score,warnings}}).sort((a,b)=>b.score-a.score).slice(0,6)}
+function scoreCommunities(answers,policies){const policyIds=new Set(policies.map(policy=>policy.id));return DATA.communities.filter(item=>cityScope(item,answers)).map(item=>{const text=[item.name,item.track,item.city,item.district,...(item.features||[])].join(' ').toLowerCase();let score=item.city===answers.currentCity?24:8;if(item.verified||item.source)score+=10;if((item.policy_ids||[]).some(id=>policyIds.has(id)))score+=16;answers.needs.forEach(need=>{if(need==='space'&&includesAny(text,['工位','空间','社区','孵化','办公']))score+=22;if(need==='compute'&&includesAny(text,['算力','token','ai','模型']))score+=18;if(need==='mentor'&&includesAny(text,['导师','指导','孵化','运营']))score+=16;if(need==='scenario'&&includesAny(text,['场景','客户','试点']))score+=12});return{id:item.id,name:item.name,city:item.city,district:item.district||'',features:(item.features||[]).slice(0,4),source:item.source||'',verified:Boolean(item.verified||item.source),score}}).sort((a,b)=>b.score-a.score).slice(0,4)}
+function requiredMaterials(answers){const required=new Set(MATERIAL_RULES.base);const stage=first(answers.stage);if(['revenue','scale','customers'].includes(stage))MATERIAL_RULES.revenue.forEach(item=>required.add(item));answers.needs.forEach(need=>(MATERIAL_RULES[need]||[]).forEach(item=>required.add(item)));if(Number(answers.employees)>0)required.add('social_security');return Array.from(required)}
+function materialGaps(answers){return requiredMaterials(answers).filter(key=>!answers.materials.includes(key)).map(key=>({key,label:LABELS.materials[key]||key,reason:key==='license'?'没有主体就不能进入多数申报准备':'影响政策核验或材料完整度'}))}
+function decideRoute(answers,gaps,policies,communities){const stage=first(answers.stage);if(gaps.some(item=>item.key==='license')||(first(answers.subjectStatus)==='preparing'&&gaps.length>=2))return ROUTES.materials;if(stage==='idea')return ROUTES.validation;if(['national','province'].includes(first(answers.mobility)))return ROUTES.city;if((answers.needs.includes('space')||answers.needs.includes('mentor')||answers.needs.includes('compute'))&&communities.length)return ROUTES.carrier;if((answers.needs.includes('competition')||answers.needs.includes('scenario'))&&policies.some(policy=>['competition','scenario'].includes(policy.category)))return ROUTES.window;if(first(answers.riskLevel)==='official'&&policies.length===0)return ROUTES.hold;return ROUTES.apply}
+function timeline(route){if(route.type===ROUTES.materials.type)return['30 天：补齐营业执照、BP、项目介绍和基础证明，先不承诺申报结果。','60 天：用 opcgate 选 3-5 条低门槛候选政策，逐条核验官方来源和材料要求。','90 天：完成一次城市/载体对比，确定是否迁移、入驻或等待下一轮窗口。'];if(route.type===ROUTES.city.type)return['30 天：选 3 座候选城市，对比政策数量、载体资源、生活/运营成本。','60 天：联系 2 个载体或主管部门公开联系方式，核验工位、算力、材料和窗口期。','90 天：锁定 1 座主城市和 1 条备选路径，再进入材料准备排期。'];if(route.type===ROUTES.carrier.type)return['30 天：优先约谈候选社区/孵化器，确认工位、算力、导师和入驻门槛。','60 天：用入驻证明和导师反馈补强材料，筛出最适合的政策组合。','90 天：形成“载体 + 政策 + 材料”三件套，进入官方来源核验或试点准备。'];if(route.type===ROUTES.window.type)return['30 天：整理 BP、Demo、案例和材料清单，优先追赛事/场景窗口。','60 天：完成报名或主管部门咨询，保留所有官方口径截图和链接。','90 天：把比赛/场景反馈转成客户案例，再核验更高门槛政策。'];if(route.type===ROUTES.validation.type)return['30 天：完成 MVP 或一页纸服务说明，找到 5 个目标用户访谈。','60 天：拿到首个交付案例或试用反馈，再判断是否注册和选城。','90 天：把用户证据沉淀成 BP 和材料清单，进入政策匹配。'];return['30 天：把候选政策逐条核验官方来源、申请窗口和材料要求。','60 天：补齐缺口材料，联系载体或主管部门确认是否符合条件。','90 天：按优先级进入申报准备或暂缓，保留复盘记录和下一轮窗口。']}
+function riskNotes(answers,policies,gaps){const notes=[];if(first(answers.riskLevel)==='official')notes.push('已按“只看官方已核验”过滤，候选数量会更少但更稳。');if(first(answers.riskLevel)==='draft')notes.push('你选择追 draft/窗口期，必须在提交前二次核验主管部门口径。');if(gaps.length)notes.push(`当前缺 ${gaps.length} 类关键材料，准备前先补证据链。`);if(policies.some(policy=>policy.warnings.length))notes.push('部分候选仍有来源、窗口或主体条件风险，已在卡片中标注。');if(!policies.length)notes.push('当前筛选条件下没有合适候选，建议放宽城市范围或风险偏好后再看。');if(!notes.length)notes.push('当前结果只作为路线参考，提交前仍需逐条核验官方来源、窗口期和主管部门口径。');return notes}
+function collectAnswers(){return{currentCity:document.getElementById('currentCity').value,employees:Number(document.getElementById('employees').value||0),subjectStatus:selected('subjectStatus'),mobility:selected('mobility'),stage:selected('stage'),businessTypes:selected('businessTypes'),needs:selected('needs'),materials:selected('materials'),riskLevel:selected('riskLevel'),extra:document.getElementById('extraInfo').value.trim()}}
+function labelList(key,values){return(values||[]).map(value=>LABELS[key]?.[value]||value).join('、')||'未选择'}
+function buildReport(){const answers=collectAnswers();const policies=scorePolicies(answers);const communities=scoreCommunities(answers,policies);const gaps=materialGaps(answers);const route=decideRoute(answers,gaps,policies,communities);return{answers,policies,communities,materialGaps:gaps,route,timeline:timeline(route),riskNotes:riskNotes(answers,policies,gaps)}}
+function renderPolicies(policies){const box=document.getElementById('policyList');if(!policies.length){box.innerHTML='<div class="empty">当前条件下暂无候选，建议放宽城市范围或风险偏好。</div>';return}box.innerHTML=policies.map(policy=>`<article class="result-card"><div class="result-head"><h4>${escapeHtml(policy.name)}</h4><span class="badge ${policy.verified?'green':'warn'}">${policy.verified?'官方核验':'需核验'}</span></div><div class="meta">${escapeHtml(policy.city)}${policy.district?' · '+escapeHtml(policy.district):''} · ${escapeHtml(policy.amountText)}</div><p class="body-copy">${escapeHtml(policy.summary)}</p>${policy.officialUrl?`<p class="body-copy"><a href="${escapeHtml(policy.officialUrl)}" target="_blank" rel="noopener">官方来源</a></p>`:''}${policy.warnings.length?`<div class="warn-line">${policy.warnings.map(escapeHtml).join('；')}</div>`:''}</article>`).join('')}
+function renderCommunities(items){const box=document.getElementById('communityList');if(!items.length){box.innerHTML='<div class="empty">当前城市范围内暂无强匹配载体。</div>';return}box.innerHTML=items.map(item=>`<article class="result-card"><div class="result-head"><h4>${escapeHtml(item.name)}</h4><span class="badge ${item.verified?'green':'warn'}">${item.verified?'有来源':'待核验'}</span></div><div class="meta">${escapeHtml(item.city)}${item.district?' · '+escapeHtml(item.district):''}</div><p class="body-copy">${escapeHtml(item.features.join('、')||'资源待核验')}</p></article>`).join('')}
+function renderGaps(gaps){const box=document.getElementById('gapList');box.innerHTML=gaps.length?gaps.map(item=>`<div class="gap-item"><b>${escapeHtml(item.label)}</b><br>${escapeHtml(item.reason)}</div>`).join(''):'<div class="empty">暂无明显材料缺口，下一步做官方来源和窗口核验。</div>'}
+function renderList(id,items,cls){document.getElementById(id).innerHTML=items.map((item,index)=>`<div class="${cls}"><b>${index+1}.</b> ${escapeHtml(item)}</div>`).join('')}
+function copyText(report){return['OPC 落地路线诊断报告','',`路线类型：${report.route.type}`,`路线说明：${report.route.summary}`,`所在城市：${report.answers.currentCity}`,`迁移半径：${labelList('mobility',report.answers.mobility)}`,`项目阶段：${labelList('stage',report.answers.stage)}`,`业务类型：${labelList('businessTypes',report.answers.businessTypes)}`,`需求偏好：${labelList('needs',report.answers.needs)}`,'','优先政策：',report.policies.map(item=>`- ${item.name}｜${item.city}${item.district?'·'+item.district:''}｜${item.amountText}｜${item.warnings.join('；')||'先核验官方材料口径'}${item.officialUrl?`｜官方来源：${item.officialUrl}`:''}`).join('\n')||'- 暂无候选','','优先载体：',report.communities.map(item=>`- ${item.name}｜${item.city}${item.district?'·'+item.district:''}｜${item.features.join('、')||'待核验资源'}`).join('\n')||'- 暂无候选','','材料缺口：',report.materialGaps.map(item=>`- ${item.label}：${item.reason}`).join('\n')||'- 暂无明显缺口','','30/60/90 天行动：',report.timeline.map((item,index)=>`${index+1}. ${item}`).join('\n'),'','风险提醒：',report.riskNotes.map(item=>`- ${item}`).join('\n')||'- 仍以官方渠道和主管部门答复为准','免责声明：信息查询与路线诊断工具，不提供政务办理、代办申报、法律税务结论或补贴承诺。',report.answers.extra?`\n补充背景：${report.answers.extra}`:''].filter(Boolean).join('\n')}
+function renderReport(){if(!DATA_READY)return;LAST_REPORT=buildReport();document.getElementById('routeTitle').textContent=LAST_REPORT.route.type;document.getElementById('routeSummary').textContent=LAST_REPORT.route.summary;const course=document.getElementById('courseLink');course.textContent=LAST_REPORT.route.course.title;course.href=LAST_REPORT.route.course.url;renderPolicies(LAST_REPORT.policies);renderCommunities(LAST_REPORT.communities);renderGaps(LAST_REPORT.materialGaps);renderList('timeline',LAST_REPORT.timeline,'time-item');renderList('riskList',LAST_REPORT.riskNotes,'risk-item');document.getElementById('report').classList.add('visible');document.getElementById('report').scrollIntoView({behavior:'smooth',block:'start'})}
+function bindChips(){document.querySelectorAll('.chip-grid').forEach(group=>{group.addEventListener('click',event=>{const chip=event.target.closest('.chip');if(!chip)return;if(group.dataset.mode==='single'){group.querySelectorAll('.chip').forEach(item=>item.classList.remove('active'));chip.classList.add('active')}else{chip.classList.toggle('active')}})})}
+function resetDefaults(){document.querySelectorAll('.chip').forEach(chip=>chip.classList.remove('active'));['subjectStatus:preparing','mobility:current','stage:mvp','businessTypes:ai_agent','needs:compute','needs:space','materials:bp','riskLevel:official'].forEach(pair=>{const [id,val]=pair.split(':');document.querySelector(`#${id} .chip[data-value="${val}"]`)?.classList.add('active')});document.getElementById('employees').value=0;document.getElementById('extraInfo').value='';document.getElementById('report').classList.remove('visible')}
+async function loadData(){const button=document.getElementById('btnGenerate');const status=document.getElementById('loadStatus');DATA_READY=false;button.disabled=true;button.textContent='加载数据中...';status.classList.remove('visible');status.textContent='';const [policies,cities,communities]=await Promise.all([fetch('/data/policies.json').then(r=>r.json()),fetch('/data/cities.json').then(r=>r.json()),fetch('/data/communities.json').then(r=>r.json())]);DATA={policies:policies.policies||[],cities:cities.cities||[],communities:communities.communities||[]};document.getElementById('metricPolicies').textContent=DATA.policies.length;document.getElementById('metricCities').textContent=DATA.cities.length;document.getElementById('metricCommunities').textContent=DATA.communities.length;const select=document.getElementById('currentCity');select.innerHTML=DATA.cities.map(city=>`<option value="${escapeHtml(city.name)}">${escapeHtml(city.name)} · ${escapeHtml(city.province||'')}</option>`).join('');select.value=DATA.cities.some(city=>city.name==='广州')?'广州':DATA.cities[0]?.name||'';DATA_READY=true;button.disabled=false;button.textContent='生成 OPC 路线报告'}
+function showDataError(error){console.error(error);DATA_READY=false;const button=document.getElementById('btnGenerate');const status=document.getElementById('loadStatus');button.disabled=false;button.textContent='重新加载数据';status.textContent='数据加载失败，请检查网络后重试。';status.classList.add('visible')}
+async function writeClipboard(text){if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);return}const area=document.createElement('textarea');area.value=text;area.setAttribute('readonly','');area.style.position='fixed';area.style.left='-9999px';document.body.appendChild(area);area.select();const ok=document.execCommand('copy');document.body.removeChild(area);if(!ok)throw new Error('copy command failed')}
+bindChips();
+document.getElementById('btnGenerate').addEventListener('click',()=>{if(!DATA_READY){loadData().catch(showDataError);return}renderReport()});
+document.getElementById('btnReset').addEventListener('click',resetDefaults);
+document.getElementById('btnCopy').addEventListener('click',async()=>{if(!LAST_REPORT)return;const button=document.getElementById('btnCopy');try{await writeClipboard(copyText(LAST_REPORT));button.textContent='已复制'}catch(error){console.error(error);button.textContent='复制失败，请手动选择文本'}setTimeout(()=>button.textContent='复制完整报告',1800)});
+loadData().catch(showDataError);
+</script>
+</body>
+</html>

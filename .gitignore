@@ -46,6 +46,10 @@ playwright-report/
 
 # Cloudflare
 .wrangler/
+.dev.vars
+.env
+.env.*
+!.dev.vars.example
 
 # Logs
 *.log

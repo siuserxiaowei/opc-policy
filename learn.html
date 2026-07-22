@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPC 落地指南课程 | 从政策信息查询到材料核验 - opcgate.com</title>
+<meta name="description" content="OPC 落地指南课程：15 节课、5 个模块，教独立开发者和一人公司用政策库、城市对比、社区库和数据看板完成 OPC 落地判断、来源核验和材料准备参考。">
+<meta name="keywords" content="OPC课程,一人公司课程,OPC落地,OPC政策匹配,城市选址,独立开发者创业,opcgate">
+<meta property="og:title" content="OPC 落地指南课程 | 从政策信息查询到材料核验">
+<meta property="og:description" content="15 节课课程体系，围绕 opcgate 的政策库、城市对比、社区库和数据看板，产出自己的 OPC 落地判断和材料核验清单。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://opcgate.com/learn">
+<meta property="og:image" content="https://opcgate.com/assets/brand/opcgate-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OPC 落地指南课程 | opcgate.com">
+<meta name="twitter:description" content="从信息查询到材料核验，建立一套能自己判断 OPC 城市、政策和载体的学习路径。">
+<meta name="twitter:image" content="https://opcgate.com/assets/brand/opcgate-og.png">
+<meta name="theme-color" content="#2563EB">
+<link rel="canonical" href="https://opcgate.com/learn">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="stylesheet" href="/assets/css/opcgate-vi.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Course","name":"OPC 落地指南课程","description":"面向独立开发者、AI 创业者、超级个体和小微团队的 OPC 信息查询课程，帮助用户用 opcgate 的政策库、城市对比、社区库和数据看板完成城市选择、材料准备参考和风险核验。","url":"https://opcgate.com/learn","provider":{"@type":"Organization","name":"opcgate.com","sameAs":"https://opcgate.com"},"inLanguage":"zh-CN","isAccessibleForFree":true,"hasCourseInstance":{"@type":"CourseInstance","courseMode":"online","courseWorkload":"15 lessons"}}
+</script>
+<style>
+:root{
+  --bg:#F7F8FA;--paper:#FFFFFF;--ink:#0F172A;--muted:#64748B;--border:#DCE4EE;
+  --blue:#2563EB;--green:#15803D;--cyan:#0F766E;--orange:#B45309;--soft:#EEF6FF;
+  --mint:#ECFDF5;--amber:#FFF7ED;--slate:#111827;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--ink);line-height:1.72;min-height:100vh}
+a{color:var(--blue);text-decoration:none}
+a:hover{color:#1D4ED8}
+.topnav{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
+.topnav .logo{font-weight:800;color:var(--blue)}
+.topnav a{padding:6px 12px;border-radius:6px;color:var(--muted);font-size:.84em}
+.topnav a:hover,.topnav a.active{background:rgba(37,99,235,.08);color:var(--blue)}
+.topnav .spacer{flex:1}
+.hero{background:#fff;border-bottom:1px solid var(--border)}
+.hero-inner{max-width:1120px;margin:0 auto;padding:54px 22px 34px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:28px;align-items:end}
+.kicker{font-size:.78em;font-weight:800;color:var(--green);text-transform:uppercase;margin-bottom:8px}
+h1{font-size:2.35em;line-height:1.15;margin-bottom:12px}
+.lead{font-size:1.02em;color:#475569;max-width:760px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;border-radius:7px;border:1px solid var(--border);background:#fff;font-weight:750;font-size:.88em}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.secondary{color:var(--blue)}
+.hero-panel{border:1px solid rgba(15,118,110,.2);border-left:4px solid var(--cyan);background:#F0FDFA;border-radius:8px;padding:18px}
+.hero-panel h2{font-size:1em;margin-bottom:8px;color:#134E4A}
+.hero-panel ul{list-style:none}
+.hero-panel li{font-size:.86em;color:#334155;padding:4px 0}
+.hero-panel li::before{content:'>';font-weight:800;color:var(--cyan);margin-right:7px}
+.stats{max-width:1120px;margin:0 auto;padding:0 22px 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat{border:1px solid var(--border);background:var(--bg);border-radius:8px;padding:14px}
+.stat b{display:block;font-size:1.3em;color:var(--ink)}
+.stat span{display:block;font-size:.78em;color:var(--muted)}
+.wrap{max-width:1120px;margin:0 auto;padding:26px 22px 44px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:10px 0 16px}
+.section-head h2{font-size:1.38em}
+.section-head p{font-size:.88em;color:var(--muted);max-width:620px}
+.path-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:28px}
+.path-card{display:block;border:1px solid var(--border);background:#fff;border-radius:8px;padding:14px;min-height:142px;transition:transform .2s,border-color .2s}
+.path-card:hover{transform:translateY(-2px);border-color:rgba(37,99,235,.35)}
+.path-card small{display:inline-flex;margin-bottom:7px;font-weight:800;color:var(--green);font-size:.72em}
+.path-card h3{font-size:.98em;color:var(--ink);margin-bottom:6px}
+.path-card p{font-size:.8em;color:var(--muted)}
+.module{background:#fff;border:1px solid var(--border);border-radius:8px;margin:14px 0;padding:18px}
+.module-top{display:grid;grid-template-columns:110px minmax(0,1fr) minmax(220px,.38fr);gap:16px;align-items:start;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.module-num{font-size:.82em;font-weight:800;color:var(--blue);background:var(--soft);border-radius:7px;padding:8px 10px;text-align:center}
+.module h2{font-size:1.22em;margin-bottom:4px}
+.module-desc{font-size:.88em;color:var(--muted)}
+.module-output{background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:10px 12px;font-size:.8em;color:#475569}
+.module-output b{display:block;color:var(--cyan);margin-bottom:3px}
+.lessons{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;list-style:none}
+.lesson{border:1px solid var(--border);background:var(--bg);border-radius:8px;padding:13px;min-height:222px}
+.lesson-no{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:28px;padding:0 8px;border-radius:6px;background:#fff;border:1px solid var(--border);font-weight:800;color:var(--blue);font-size:.78em;margin-bottom:10px}
+.lesson h3{font-size:.96em;line-height:1.45;margin-bottom:7px}
+.lesson p{font-size:.8em;color:#475569;margin-bottom:10px}
+.lesson dl{display:grid;gap:6px}
+.lesson dt{font-size:.72em;color:var(--green);font-weight:800}
+.lesson dd{font-size:.78em;color:var(--muted)}
+.templates{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.template-card{border:1px solid var(--border);background:#fff;border-radius:8px;padding:14px}
+.template-card h3{font-size:.96em;margin-bottom:7px}
+.template-card p{font-size:.82em;color:var(--muted)}
+.assignment-library{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
+.assignment-card{border:1px solid var(--border);background:#fff;border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:10px;min-height:286px}
+.assignment-card small{font-size:.72em;font-weight:800;color:var(--green)}
+.assignment-card h3{font-size:.98em;line-height:1.42}
+.assignment-card p{font-size:.8em;color:#475569}
+.assignment-card ol{padding-left:18px;display:grid;gap:6px}
+.assignment-card li{font-size:.78em;color:var(--muted)}
+.assignment-output{margin-top:auto;border-top:1px solid var(--border);padding-top:9px;font-size:.78em;color:#475569}
+.assignment-output b{display:block;color:var(--cyan);margin-bottom:3px}
+.tool-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:14px}
+.tool-link{border:1px solid var(--border);background:var(--slate);color:#E5E7EB;border-radius:8px;padding:14px;min-height:126px}
+.tool-link:hover{color:#fff;border-color:#60A5FA}
+.tool-link span{display:block;font-size:.72em;color:#93C5FD;font-weight:800;margin-bottom:7px}
+.tool-link b{display:block;color:#fff;margin-bottom:6px}
+.tool-link small{display:block;color:#CBD5E1;font-size:.78em}
+.guardrail{border:1px solid rgba(180,83,9,.22);border-left:4px solid var(--orange);background:var(--amber);border-radius:8px;padding:16px;margin-top:18px}
+.guardrail h2{font-size:1.05em;margin-bottom:8px;color:#7C2D12}
+.guardrail ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.guardrail li{font-size:.82em;color:#475569;background:#fff;border:1px solid rgba(180,83,9,.18);border-radius:7px;padding:10px}
+.cta{margin-top:24px;background:#0F172A;color:#E5E7EB;border-radius:8px;padding:22px;display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+.cta h2{font-size:1.2em;color:#fff;margin-bottom:4px}
+.cta p{font-size:.86em;color:#CBD5E1}
+.cta .btn{background:#2563EB;border-color:#2563EB;color:#fff}
+footer{text-align:center;padding:28px 20px;color:var(--muted);font-size:.78em;border-top:1px solid var(--border)}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .stats,.path-grid{grid-template-columns:repeat(2,1fr)}
+  .module-top{grid-template-columns:1fr}
+  .lessons,.templates,.assignment-library,.tool-strip,.guardrail ul{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .topnav{overflow-x:auto}
+  .topnav a{white-space:nowrap}
+  h1{font-size:1.65em}
+  .lead{font-size:.92em}
+  .stats,.path-grid{grid-template-columns:1fr}
+  .hero-inner,.wrap{padding-left:16px;padding-right:16px}
+}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="logo opc-brand" href="/" aria-label="opcgate OPC 落地指南">
+    <img class="opc-brand-mark" src="/assets/brand/opcgate-mark.svg" alt="">
+    <span class="opc-brand-text"><span class="opc-brand-name">opcgate</span><span class="opc-brand-sub">OPC 落地指南</span></span>
+  </a>
+  <a href="index.html">首页</a>
+  <a class="active" href="/learn">课程</a>
+  <a href="/navigation">路线诊断</a>
+  <a href="compare.html">城市对比</a>
+  <a href="now-open.html">窗口期</a>
+  <a href="dashboard.html">数据看板</a>
+  <a href="tax.html">税务边界</a>
+  <span class="spacer"></span>
+  <a href="changelog.html">更新记录</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="kicker">OPCGATE Course</div>
+      <h1>OPC 落地指南课程</h1>
+      <p class="lead">这不是“看见补贴就冲”的信息课，而是一套把政策信息查询、城市选择、社区对比、材料准备和风险核验串起来的学习路径。学完后，你应该能形成自己的 OPC 落地判断和核验清单。</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#module-01">从第 1 模块开始</a>
+        <a class="btn secondary" href="/navigation">先做路线诊断</a>
+        <a class="btn secondary" href="index.html#learning">回到首页课程入口</a>
+        <a class="btn secondary" href="compare.html">打开城市对比</a>
+      </div>
+    </div>
+    <aside class="hero-panel">
+      <h2>课程最终产出</h2>
+      <ul>
+        <li>一份 OPC 落地自评表</li>
+        <li>一组 Top 10 候选政策记录</li>
+        <li>2-4 座城市的横向评分表</li>
+        <li>材料准备、时间线和核验清单</li>
+        <li>可复盘的 OPC 落地判断书</li>
+      </ul>
+    </aside>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>15</b><span>节课课程体系</span></div>
+    <div class="stat"><b>5</b><span>个实战模块</span></div>
+    <div class="stat"><b>42 城</b><span>连接本站政策库</span></div>
+    <div class="stat"><b>15+</b><span>作业模板与清单</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="section-head">
+    <div>
+      <div class="kicker">Learning Path</div>
+      <h2>15 节课课程体系</h2>
+    </div>
+    <p>课程跟着 opcgate 的真实工具走：先判断身份和业务，再做政策信息查询、城市对比、材料准备，最后完成核验和长期追踪。</p>
+  </div>
+
+  <div class="path-grid">
+    <a class="path-card" href="#module-01"><small>Module 01</small><h3>OPC 决策框架</h3><p>先判断自己是否适合做 OPC，而不是只看补贴标题。</p></a>
+    <a class="path-card" href="#module-02"><small>Module 02</small><h3>政策匹配实操</h3><p>把身份、行业、城市偏好转成候选政策池。</p></a>
+    <a class="path-card" href="#module-03"><small>Module 03</small><h3>城市与社区对比</h3><p>用横向比较排除不适合的城市和载体。</p></a>
+    <a class="path-card" href="#module-04"><small>Module 04</small><h3>材料核验与时间线</h3><p>把政策条款反推成材料清单和 90 天行动日历。</p></a>
+    <a class="path-card" href="#module-05"><small>Module 05</small><h3>风险核验与长期追踪</h3><p>识别未核验来源、过期政策和过度承诺。</p></a>
+  </div>
+
+  <section class="module" id="module-01">
+    <div class="module-top">
+      <div class="module-num">Module 01</div>
+      <div>
+        <h2>OPC 决策框架</h2>
+        <p class="module-desc">先把“我是谁、做什么业务、是否适合一人公司、为什么需要城市政策”讲清楚。</p>
+      </div>
+      <div class="module-output"><b>模块产出</b>OPC 落地自评表、个人/团队条件盘点表、业务标签映射表。</div>
+    </div>
+    <ol class="lessons">
+      <li class="lesson"><span class="lesson-no">01</span><h3>OPC 不是补贴套利：先建立落地决策框架</h3><p>理解 OPC 决策要同时看业务、城市、政策、社区、成本和合规边界。</p><dl><dt>站内工具</dt><dd>首页匹配器、城市入口</dd><dt>交付物</dt><dd>OPC 落地自评表</dd></dl></li>
+      <li class="lesson"><span class="lesson-no">02</span><h3>你的身份画像：独立开发者、AI 创业者、小微团队怎么拆</h3><p>把身份条件转成政策匹配变量，避免盲目追逐“最高补贴”。</p><dl><dt>站内工具</dt><dd>匹配表单、政策标签</dd><dt>交付物</dt><dd>个人/团队条件盘点表</dd></dl></li>
+      <li class="lesson"><span class="lesson-no">03</span><h3>业务画像：AI、智能体、跨境、文创和技术服务如何匹配标签</h3><p>把产品阶段、客户类型和收入方式映射到可搜索的政策关键词。</p><dl><dt>站内工具</dt><dd>浏览全部政策、关键词搜索</dd><dt>交付物</dt><dd>业务标签映射表</dd></dl></li>
+    </ol>
+  </section>
+
+  <section class="module" id="module-02">
+    <div class="module-top">
+      <div class="module-num">Module 02</div>
+      <div>
+        <h2>政策匹配实操</h2>
+        <p class="module-desc">用 opcgate 的结构化政策库完成第一轮筛选，读懂政策卡片，折算真实价值。</p>
+      </div>
+      <div class="module-output"><b>模块产出</b>Top 10 候选政策记录表、政策卡片阅读清单、补贴真实价值折算表。</div>
+    </div>
+    <ol class="lessons">
+      <li class="lesson"><span class="lesson-no">04</span><h3>用 opcgate 做第一轮政策匹配</h3><p>输入城市、行业、资质和主体条件，得到可以继续核验的候选政策。</p><dl><dt>站内工具</dt><dd>首页智能匹配</dd><dt>交付物</dt><dd>Top 10 候选政策记录表</dd></dl></li>
+      <li class="lesson"><span class="lesson-no">05</span><h3>看懂政策卡片：金额、条件、状态、来源、更新时间</h3><p>区分 active、draft、expired，以及官方来源、参考来源和待核验记录。</p><dl><dt>站内工具</dt><dd>来源可信度、政策状态筛选</dd><dt>交付物</dt><dd>政策卡片阅读清单</dd></dl></li>
+      <li class="lesson"><span class="lesson-no">06</span><h3>不要只看最高金额：补贴类型怎么折算真实价值</h3><p>比较现金、算力券、模型券、免租、贷款和服务券的实际可用性。</p><dl><dt>站内工具</dt><dd>金额字段、补贴分类、政策明细</dd><dt>交付物</dt><dd>补贴真实价值折算表</dd></dl></li>
+    </ol>
+  </section>
+
+  <section class="module" id="module-03">
+    <div class="module-top">
+      <div class="module-num">Module 03</div>
+      <div>
+        <h2>城市与社区对比</h2>
+        <p class="module-desc">不要听单城宣传，用 2-4 座城市并排比较政策力度、社区资源和适配人群。</p>
+      </div>
+      <div class="module-output"><b>模块产出</b>城市对比评分表、OPC 社区筛选表、全国趋势观察表。</div>
+    </div>
+    <ol class="lessons">
+      <li class="lesson"><span class="lesson-no">07</span><h3>城市对比方法：热门城市怎么横向比较</h3><p>用补贴额、门槛、窗口期、生活成本和业务生态筛掉不合适城市。</p><dl><dt>站内工具</dt><dd>城市对比页、SEO 对比深页</dd><dt>交付物</dt><dd>城市对比评分表</dd></dl></li>
+      <li class="lesson"><span class="lesson-no">08</span><h3>社区/孵化器对比：工位、算力、基金、导师、入驻门槛</h3><p>把 107 个社区/载体样本转成可选择、可追问、可实地核验的候选列表。</p><dl><dt>站内工具</dt><dd>社区/孵化器对比</dd><dt>交付物</dt><dd>OPC 社区筛选表</dd></dl></li>
+      <li class="lesson"><span class="lesson-no">09</span><h3>数据看板入门：用全国数据判断风口和城市热度</h3><p>用政策数量、社区数量、补贴类型和到期政策辅助判断趋势。</p><dl><dt>站内工具</dt><dd>数据看板、更新记录</dd><dt>交付物</dt><dd>全国趋势观察表</dd></dl></li>
+    </ol>
+  </section>
+
+  <section class="module" id="module-04">
+    <div class="module-top">
+      <div class="module-num">Module 04</div>
+      <div>
+        <h2>材料核验与时间线</h2>
+        <p class="module-desc">把政策要求翻译成材料、证据、排期和单城研究报告，减少临门一脚的混乱。</p>
+      </div>
+      <div class="module-output"><b>模块产出</b>90 天准备行动日历、材料核验检查表、单城研究报告模板。</div>
+    </div>
+    <ol class="lessons">
+      <li class="lesson"><span class="lesson-no">10</span><h3>窗口期与倒计时：把政策变成行动日历</h3><p>识别 deadline、window、rolling、recurring 等开放节奏。</p><dl><dt>站内工具</dt><dd>倒计时、政策有效期、RSS</dd><dt>交付物</dt><dd>90 天准备行动日历</dd></dl></li>
+      <li class="lesson"><span class="lesson-no">11</span><h3>材料准备：营业执照、社保、合同、BP、发票怎么反推</h3><p>从 requirements 字段和官方原文反推真实材料缺口。</p><dl><dt>站内工具</dt><dd>政策详情、来源链接</dd><dt>交付物</dt><dd>材料核验检查表</dd></dl></li>
+      <li class="lesson"><span class="lesson-no">12</span><h3>单城深度研究：如何读一座城市的政策深页</h3><p>完成适合谁、不适合谁、关键门槛、官方来源和下一步动作判断。</p><dl><dt>站内工具</dt><dd>城市深页、城市静态入口</dd><dt>交付物</dt><dd>单城研究报告模板</dd></dl></li>
+    </ol>
+  </section>
+
+  <section class="module" id="module-05">
+    <div class="module-top">
+      <div class="module-num">Module 05</div>
+      <div>
+        <h2>风险核验与长期追踪</h2>
+        <p class="module-desc">把政策核验、财税问题清单和长期复盘串起来，形成能更新的决策资产。</p>
+      </div>
+      <div class="module-output"><b>模块产出</b>政策来源核验表、财税与注册咨询问题清单、OPC 落地判断书。</div>
+    </div>
+    <ol class="lessons">
+      <li class="lesson"><span class="lesson-no">13</span><h3>政策核验：官方原文、主管部门、新闻来源如何交叉验证</h3><p>识别征求意见稿、转述稿、缺失官链和过度包装的中介话术。</p><dl><dt>站内工具</dt><dd>来源可信度、更新日志</dd><dt>交付物</dt><dd>政策来源核验表</dd></dl></li>
+      <li class="lesson"><span class="lesson-no">14</span><h3>OPC 与税务/经营形态：只做问题清单，不做节税承诺</h3><p>知道什么时候要找专业财税、法律或主管部门确认，避免用课程替代咨询。</p><dl><dt>站内工具</dt><dd>税务边界页、税务案例页</dd><dt>交付物</dt><dd>财税与注册咨询问题清单</dd></dl></li>
+      <li class="lesson"><span class="lesson-no">15</span><h3>完成你的 OPC 落地判断书</h3><p>汇总匹配、对比、材料、时间线和风险，做出可复核的落地方案参考。</p><dl><dt>站内工具</dt><dd>匹配器、对比页、看板、RSS</dd><dt>交付物</dt><dd>OPC 落地判断书</dd></dl></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div>
+        <div class="kicker">Assignments</div>
+        <h2>课程作业 / 模板库</h2>
+      </div>
+      <p>每个模块都对应一组可交付模板。先填事实，再做判断，最后把证据和下一步动作沉淀进自己的 OPC 落地判断书。</p>
+    </div>
+    <div class="assignment-library">
+      <article class="assignment-card">
+        <small>Module 01 作业包</small>
+        <h3>自评与业务画像模板</h3>
+        <p>把个人条件、团队资源、业务阶段和收入方式写成可匹配变量，先判断是否值得进入政策筛选。</p>
+        <ol>
+          <li>填写身份、主体、城市约束和可迁移程度。</li>
+          <li>把业务拆成行业、客户、技术、收入四类标签。</li>
+          <li>标出硬性限制：社保、注册地、办公地、时间窗口。</li>
+        </ol>
+        <div class="assignment-output"><b>完成标准</b>得到一页自评结论和一组可用于检索的业务关键词。</div>
+      </article>
+      <article class="assignment-card">
+        <small>Module 02 作业包</small>
+        <h3>候选政策记录模板</h3>
+        <p>把第一轮筛选结果沉淀成可复核表格，不只记录金额，也记录条件、状态、来源和疑点。</p>
+        <ol>
+          <li>从匹配结果中选出 10 条候选政策。</li>
+          <li>逐条填写金额类型、门槛、有效期和来源可信度。</li>
+          <li>给每条政策写一句“为什么适合 / 为什么存疑”。</li>
+        </ol>
+        <div class="assignment-output"><b>完成标准</b>形成 Top 10 候选政策池，并筛出 3-5 条优先核验对象。</div>
+      </article>
+      <article class="assignment-card">
+        <small>Module 03 作业包</small>
+        <h3>城市与社区对比模板</h3>
+        <p>把城市宣传话术拆成统一评分项，比较政策力度、成本、生态、社区载体和实际落地难度。</p>
+        <ol>
+          <li>选择 2-4 座候选城市并统一评分口径。</li>
+          <li>记录每座城市的补贴、门槛、社区资源和生活成本。</li>
+          <li>把社区/孵化器按工位、算力、基金、导师、门槛排序。</li>
+        </ol>
+        <div class="assignment-output"><b>完成标准</b>得到城市排序、社区候选清单和明确的排除理由。</div>
+      </article>
+      <article class="assignment-card">
+        <small>Module 04 作业包</small>
+        <h3>材料与 90 天行动模板</h3>
+        <p>把政策要求反推成材料清单、证据缺口、负责人和日期，避免到窗口期才发现缺文件。</p>
+        <ol>
+          <li>把政策条款拆成主体、人员、场地、业务、财务五类材料。</li>
+          <li>标记已具备、待补齐、需第三方确认三种状态。</li>
+          <li>按 30/60/90 天排出核验、准备、提交和复盘节点。</li>
+        </ol>
+        <div class="assignment-output"><b>完成标准</b>得到一张材料缺口表和一份可执行的 90 天准备日历。</div>
+      </article>
+      <article class="assignment-card">
+        <small>Module 05 作业包</small>
+        <h3>核验与决策书模板</h3>
+        <p>把来源、风险、咨询问题和最终选择写进同一份文档，让决策能被复盘、更新和否决。</p>
+        <ol>
+          <li>核对官方原文、主管部门、更新时间和政策状态。</li>
+          <li>整理财税、注册、社保、合同等需要专业确认的问题。</li>
+          <li>输出选择城市、暂缓城市、放弃政策和下一步动作。</li>
+        </ol>
+        <div class="assignment-output"><b>完成标准</b>完成一份包含证据链、风险清单和行动顺序的 OPC 落地判断书。</div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div>
+        <div class="kicker">Use The Product</div>
+        <h2>配套站内工具</h2>
+      </div>
+      <p>课程不替代产品，课程教你把信息查询、路线诊断和来源核验做深。</p>
+    </div>
+    <div class="tool-strip">
+      <a class="tool-link" href="index.html"><span>Matcher</span><b>首页信息查询与匹配</b><small>把身份、行业、城市偏好转成候选政策。</small></a>
+      <a class="tool-link" href="/navigation"><span>Route</span><b>OPC 落地指南 · 路线诊断</b><small>判断该先补材料、选城市、进载体还是做申报准备参考。</small></a>
+      <a class="tool-link" href="compare.html"><span>Compare</span><b>城市与社区对比</b><small>并排比较补贴力度、门槛和载体资源。</small></a>
+      <a class="tool-link" href="dashboard.html"><span>Dashboard</span><b>数据看板</b><small>观察全国趋势、城市热度和更新节奏。</small></a>
+      <a class="tool-link" href="changelog.html"><span>Tracking</span><b>更新记录</b><small>追踪政策变动，保留核验和修订痕迹。</small></a>
+    </div>
+  </section>
+
+  <section class="guardrail">
+    <h2>课程边界</h2>
+    <ul>
+      <li>不承诺任何城市一定给补贴，也不把 draft 或参考来源包装成确定政策。</li>
+      <li>不提供法律、财税、社保、合同层面的最终结论，课程只整理问题清单和核验路径。</li>
+      <li>不做外部平台开户、咨询或报名导流，所有课程动作先回到 opcgate 的数据和官方来源。</li>
+      <li>信息查询与路线诊断工具，不提供政务办理、代办申报、法律税务结论或补贴承诺。</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <div>
+      <h2>现在开始做第一轮 OPC 落地判断</h2>
+      <p>先完成第 1 模块，再回到首页信息查询与匹配工具生成候选政策。别急着注册，先把城市、政策、社区和材料都看清楚。</p>
+    </div>
+    <a class="btn" href="index.html#modeMatch">打开首页工具</a>
+  </section>
+</main>
+
+<footer>
+  opcgate.com · OPC 落地指南课程 · 信息查询与路线诊断工具，不提供政务办理、代办申报、法律税务结论或补贴承诺；具体申报以官方渠道和专业意见为准
+</footer>
+</body>
+</html>

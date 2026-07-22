@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>opc落地指南小程序 | AppID 与审核说明 - opcgate.com</title>
+<meta name="description" content="opc落地指南小程序公开说明页，展示 AppID、服务范围、审核填写、数据与隐私、使用路径和免责声明。">
+<link rel="canonical" href="https://opcgate.com/miniprogram">
+<meta property="og:title" content="opc落地指南小程序 | opcgate.com">
+<meta property="og:description" content="公开 OPC 政策信息查询、城市与社区筛选、路线诊断参考、本地收藏和最近浏览。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://opcgate.com/miniprogram">
+<meta property="og:image" content="https://opcgate.com/assets/brand/opcgate-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://opcgate.com/assets/brand/opcgate-og.png">
+<meta name="theme-color" content="#2563EB">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="stylesheet" href="/assets/css/opcgate-vi.css">
+<style>
+:root{
+  --bg:#F6F7F2;--paper:#FFFEFA;--ink:#152018;--muted:#607064;--line:#DDE4DA;
+  --green:#176B4D;--blue:#2858A8;--gold:#A66A1F;--soft:#EAF2E6;--alert:#FFF4DE;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--ink);line-height:1.72}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:16px;padding:12px 22px;background:rgba(255,254,250,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.brand{font-weight:800;color:var(--green)}
+.topbar nav{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap;font-size:.86em}
+.topbar nav a{color:var(--muted)}
+.hero{padding:54px 22px 28px;background:linear-gradient(115deg,#F6F7F2 0%,#EAF2E6 46%,#FDF7EA 100%);border-bottom:1px solid var(--line)}
+.hero-inner{max-width:980px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:28px;align-items:center}
+.kicker{font-size:.78em;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:var(--gold);margin-bottom:8px}
+h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.05;margin:0 0 14px;font-weight:900;letter-spacing:0}
+.lead{font-size:1.05em;color:var(--muted);max-width:680px;margin:0}
+.hero-card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:18px;box-shadow:0 14px 38px rgba(21,32,24,.08)}
+.hero-card img{width:72px;height:72px;border-radius:18px;display:block;margin-bottom:14px}
+.appid{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.94em;color:var(--green);word-break:break-all}
+.wrap{max-width:980px;margin:0 auto;padding:30px 22px 54px}
+.notice{border:1px solid #E8D1A6;background:var(--alert);border-radius:8px;padding:14px 16px;color:#5F421A;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+section{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:20px}
+section.wide{grid-column:1/-1}
+h2{font-size:1.08em;margin:0 0 10px;color:var(--green)}
+p{margin:0 0 10px}
+ul{margin:0;padding:0;list-style:none}
+li{padding:7px 0;border-top:1px solid rgba(221,228,218,.72)}
+li:first-child{border-top:0}
+.label{display:inline-block;min-width:92px;color:var(--muted);font-size:.92em}
+.path{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:10px}
+.step{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:12px}
+.step b{display:block;color:var(--green);margin-bottom:4px}
+.muted{color:var(--muted);font-size:.94em}
+footer{text-align:center;color:var(--muted);font-size:.82em;border-top:1px solid var(--line);padding:26px 18px;background:var(--paper)}
+@media(max-width:760px){
+  .hero-inner{grid-template-columns:1fr}
+  .grid,.path{grid-template-columns:1fr}
+  .topbar{align-items:flex-start;flex-direction:column}
+  .topbar nav{margin-left:0}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand opc-brand" href="/" aria-label="opcgate OPC 落地指南">
+    <img class="opc-brand-mark" src="/assets/brand/opcgate-mark.svg" alt="">
+    <span class="opc-brand-text"><span class="opc-brand-name">opcgate</span><span class="opc-brand-sub">OPC 落地指南</span></span>
+  </a>
+  <nav aria-label="页面导航">
+    <a href="/">首页</a>
+    <a href="/navigation">路线诊断</a>
+    <a href="/learn">课程</a>
+    <a href="https://github.com/siuserxiaowei/opc-policy" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="kicker">Mini Program Review Note</div>
+        <h1>opc落地指南小程序</h1>
+        <p class="lead">面向 OPC（一人公司 / 独立开发者）的信息查询、城市/载体筛选、课程学习和落地路线诊断参考。公开说明 AppID、服务边界、审核填写口径、数据与隐私处理方式。</p>
+      </div>
+      <aside class="hero-card" aria-label="小程序基础信息">
+        <img src="/assets/brand/opcgate-mark.svg" alt="opcgate 标识">
+        <p class="muted">小程序 AppID</p>
+        <p class="appid">wx449b9c149d83c1e5</p>
+      </aside>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="notice">免责声明：不提供政务办理、代办申报、法律税务结论或补贴承诺。</div>
+
+    <div class="grid">
+      <section>
+        <h2>基础信息</h2>
+        <ul>
+          <li><span class="label">名称</span>opc落地指南</li>
+          <li><span class="label">AppID</span><span class="appid">wx449b9c149d83c1e5</span></li>
+          <li><span class="label">官网</span><a href="https://opcgate.com">opcgate.com</a></li>
+          <li><span class="label">版本</span>最新开发版：0.1.10</li>
+          <li><span class="label">定位</span>信息查询与路线诊断参考工具</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>服务范围</h2>
+        <ul>
+          <li>政策库：按城市、类型、关键词查看摘要和来源信息。</li>
+          <li>城市/载体筛选：对比城市、园区、社区和服务载体样本。</li>
+          <li>路线诊断：基于本地规则生成材料清单和 30/60/90 天行动参考。</li>
+          <li>课程学习：提供 OPC 落地、材料核验和来源核验课程。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>审核填写</h2>
+        <ul>
+          <li><span class="label">小程序名称</span>opc落地指南</li>
+          <li><span class="label">功能简介</span>OPC 创业落地信息查询与路线诊断参考。</li>
+          <li><span class="label">类目建议</span>按微信公众平台可选类目和主体资质如实填写。</li>
+          <li><span class="label">后台备注</span>说明仅做信息查询、课程学习、材料清单和路线诊断参考。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>数据与隐私</h2>
+        <ul>
+          <li>当前版本使用本地内置的政策、城市、载体和课程数据。</li>
+          <li>路线诊断在小程序本地完成，不上传诊断答案。</li>
+          <li>本地收藏与最近浏览仅保存在用户微信本地存储，不上传到服务器。</li>
+          <li>不要求登录，不采集手机号、身份证、营业执照、银行卡、定位、通讯录、头像昵称等信息。</li>
+          <li>复制来源、复制微信号和预览二维码仅在用户主动点击时调用微信能力。</li>
+        </ul>
+      </section>
+
+      <section class="wide">
+        <h2>使用路径</h2>
+        <div class="path">
+          <div class="step"><b>1. 首页匹配</b><span class="muted">输入关键词或选择城市，快速定位相关信息。</span></div>
+          <div class="step"><b>2. 政策与载体</b><span class="muted">查看摘要、适用条件、材料参考和来源提示。</span></div>
+          <div class="step"><b>3. 路线诊断</b><span class="muted">按主体状态、阶段、材料准备度生成落地路径。</span></div>
+          <div class="step"><b>4. 课程复盘</b><span class="muted">用课程和清单核验下一步准备事项。</span></div>
+        </div>
+      </section>
+
+      <section class="wide">
+        <h2>边界说明</h2>
+        <p>页面、小程序和数据只用于信息整理、来源提示、路线诊断和学习参考。政策、窗口和材料要求可能变化，涉及适用判断、注册登记、税务处理、材料提交等事项，请回到对应发布渠道核验，并结合主管部门或专业顾问意见判断。</p>
+        <p class="muted">如需反馈数据问题：微信 siuserxiaowei，备注「OPC 数据纠错」。</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>opcgate.com · OPC 落地指南 · 信息查询与路线诊断参考</p>
+</footer>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
-  "version": "5.3.6",
-  "updated_at": "2026-05-04",
+  "version": "5.5.0",
+  "updated_at": "2026-05-22",
   "policies": [
     {
       "id": "guangdong-province-001",
@@ -363,7 +363,8 @@
       "level": "district",
       "issuer": "海珠区人工智能发展局",
       "publish_date": "2026-03-31",
-      "status": "active",
+      "expire_date": "2026-04-18",
+      "status": "expired",
       "category": "scenario",
       "summary": "面向全国征集AI技术服务商，入库后获订单+商城上架+官方推广",
       "benefits": [
@@ -443,11 +444,11 @@
         "AI语音",
         "客服"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-20",
       "verified": true,
-      "landing_status": "draft",
+      "landing_status": "expired",
       "landing_difficulty": "hard",
-      "actual_cases": "琶洲模方：不到1年孵化45个项目，累计融资10.88亿元，2家估值超10亿。代表案例：烁谷科技'悟声VOCU'语音大模型HuggingFace全球第一，估值2亿元"
+      "actual_cases": "第一批技术服务商征集已于2026-04-18截止，保留为历史场景机会记录；如需参与需等待下一批通知。琶洲模方：不到1年孵化45个项目，累计融资10.88亿元，2家估值超10亿。代表案例：烁谷科技'悟声VOCU'语音大模型HuggingFace全球第一，估值2亿元"
     },
     {
       "id": "guangzhou-haizhu-002",
@@ -1022,14 +1023,83 @@
           "https://gxj.sz.gov.cn/gkmlpt/content/12/12602/post_12602205.html"
         ]
       },
-      "communities": [],
+      "communities": [
+        {
+          "name": "深港硬科技加速器 / 大公坊AI硬件OPC·hub",
+          "address": "宝安区宝中片区 / 大公坊iMakerbase国际加速器",
+          "features": [
+            "深圳首批OPC社区布局",
+            "约0.6万㎡",
+            "技术支持、供应链协同、资本对接",
+            "覆盖50多个国家和地区服务网络"
+          ],
+          "source": "https://gxj.sz.gov.cn/attachment/1/1672/1672469/12602272.pdf"
+        },
+        {
+          "name": "航城·领航OPC示范社区",
+          "address": "宝安区航城街道大公坊AI硬件OPC国际社区",
+          "features": [
+            "三年培育OPC硬件创业生态",
+            "到2028年建设5个OPC示范社区",
+            "集聚孵化200家以上OPC团队",
+            "OPC工商绿色专窗",
+            "低成本工位和梯度办公空间"
+          ],
+          "source": "https://static.nfnews.com/content/202604/03/c12307562.html?enterColumnId=17"
+        },
+        {
+          "name": "光引粒·人工智能创想空间",
+          "address": "光明区华强科技生态园9栋15-18层 / 凤凰城片区",
+          "features": [
+            "深圳首批OPC社区布局",
+            "首期超1万㎡",
+            "拎包入驻",
+            "最高3年租金减免",
+            "技术研发、场景对接、融资对接"
+          ],
+          "source": "https://gxj.sz.gov.cn/attachment/1/1672/1672469/12602272.pdf"
+        },
+        {
+          "name": "南太人工智能众创空间",
+          "address": "光明区凤凰街道云创谷园区1栋7楼",
+          "features": [
+            "2200㎡孵化面积",
+            "12个月租金及水电减免",
+            "共享会议室、洽谈区、路演区",
+            "产业资源支持、资本对接和应用场景开放"
+          ],
+          "source": "https://www.baoanone.com/content216630.html"
+        },
+        {
+          "name": "锦绣科学园OPC共智人才创新创业园区",
+          "address": "龙华区锦绣科学园",
+          "features": [
+            "首期2500㎡空间",
+            "已接待企业咨询超10批",
+            "吸引AI外贸选品、AI机器人数据采集等项目意向入驻",
+            "龙华OPC核心载体"
+          ],
+          "source": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12757158.html"
+        },
+        {
+          "name": "盛荟城大浪OPC人才服务产业园",
+          "address": "龙华区大浪街道盛荟城",
+          "features": [
+            "大浪街道首个OPC园区",
+            "已投用产业空间约20万㎡",
+            "集聚70余家优质企业",
+            "2025年园区年产值超160亿元"
+          ],
+          "source": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12757158.html"
+        }
+      ],
       "tags": [
         "深圳市级",
         "行动计划",
         "2026-2027",
         "10个社区"
       ],
-      "updated_at": "2026-05-04",
+      "updated_at": "2026-05-06",
       "verified": true,
       "landing_status": "active",
       "landing_difficulty": "medium"
@@ -2108,11 +2178,12 @@
         }
       },
       "links": {
-        "official": "",
+        "official": "https://cds.sczwfw.gov.cn/art/2025/11/4/art_15397_300318.html",
         "news": [
           "https://finance.sina.com.cn/wm/2026-03-27/doc-inhsmnzs5305545.shtml",
           "https://news.qq.com/rain/a/20260324A04C7200"
-        ]
+        ],
+        "official_note": "成都市政务服务网（cds.sczwfw.gov.cn）刊发的同体系框架性政策《成都市打造人工智能产业发展新高地若干政策》解读。13 条 OPC 行动计划在此框架下专项延伸；行动计划独立 URL 在政府门户尚未挂出。"
       },
       "communities": [],
       "tags": [
@@ -2122,7 +2193,7 @@
         "模型券",
         "2500万"
       ],
-      "updated_at": "2026-04-14",
+      "updated_at": "2026-05-05",
       "verified": true
     },
     {
@@ -2169,10 +2240,11 @@
         "method": "成都市科技局"
       },
       "links": {
-        "official": "",
+        "official": "https://www.cdsgsl.gov.cn/policy/00000027/00001725",
         "news": [
           "https://finance.sina.com.cn/jjxw/2026-04-14/doc-inhukvar9444941.shtml"
-        ]
+        ],
+        "official_note": "成都市工商联（cdsgsl.gov.cn）转发的成都市科技局原文。市科技局 cdst.chengdu.gov.cn 站内未挂出独立 URL。"
       },
       "communities": [],
       "tags": [
@@ -2180,7 +2252,7 @@
         "贷款利息全补",
         "天使投资"
       ],
-      "updated_at": "2026-04-14",
+      "updated_at": "2026-05-05",
       "verified": true
     },
     {
@@ -2219,7 +2291,8 @@
         "official": "",
         "news": [
           "https://www.nbd.com.cn/articles/2026-03-30/4315111.html"
-        ]
+        ],
+        "official_note": "成都商报、每经报道成华区 AI+机器人 10亿基金启动；chenghua.chengdu.gov.cn 站内独立 URL 暂未检索到。"
       },
       "communities": [
         {
@@ -2239,7 +2312,7 @@
         "机器人",
         "智算实验室"
       ],
-      "updated_at": "2026-04-14",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -2365,7 +2438,8 @@
       "links": {
         "news": [
           "https://www.ah.chinanews.com.cn/news/2026/0311/339516.shtml"
-        ]
+        ],
+        "official_note": "新华网、安徽日报报道合肥高新区 AI 模立方；cdgxq.hefei.gov.cn 独立 OPC 专项 URL 暂未检索到。"
       },
       "communities": [
         {
@@ -2386,7 +2460,7 @@
         "讯飞",
         "语音AI"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -2472,7 +2546,8 @@
       "links": {
         "news": [
           "https://www.icswb.com/h/103024/20260405/972329.html"
-        ]
+        ],
+        "official_note": "湖南日报、马栏山管委会公众号报道；cetz.changsha.gov.cn 独立 OPC 政策原文暂未挂出。"
       },
       "communities": [
         {
@@ -2497,7 +2572,7 @@
         "开源",
         "算力"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -2827,7 +2902,7 @@
       "province": "江苏",
       "district": "吴江",
       "level": "district",
-      "issuer": "吴江区政府",
+      "issuer": "苏州市吴江区人民政府办公室",
       "status": "active",
       "category": "comprehensive",
       "summary": "20+社区120万㎡最长3年免租+算力补贴20%年最高200万+20亿直投基金+100亿信贷+全国首创OPC数据保险",
@@ -2901,9 +2976,10 @@
       },
       "links": {
         "news": [
-          "https://c.m.163.com/news/a/KPK462C605199NHJ.html"
+          "https://c.m.163.com/news/a/KPK462C605199NHJ.html",
+          "https://www.suzhou.gov.cn/szsrmzf/szyw/202604/b643f5b23f0b4deb89e009d46c75c2a0.shtml"
         ],
-        "official": "https://www.suzhou.gov.cn/szsrmzf/szyw/202604/b643f5b23f0b4deb89e009d46c75c2a0.shtml"
+        "official": "https://www.wujiang.gov.cn/zgwj/c110507/202604/9b82aacf2956420fb8230383017927d2.shtml"
       },
       "communities": [
         {
@@ -2925,8 +3001,9 @@
         "数据保险",
         "力度最大"
       ],
-      "updated_at": "2026-05-04",
-      "verified": true
+      "updated_at": "2026-05-06",
+      "verified": true,
+      "publish_date": "2026-03-24"
     },
     {
       "id": "suzhou-kunshan-001",
@@ -3844,7 +3921,9 @@
       "links": {
         "news": [
           "https://finance.sina.com.cn/jjxw/2026-01-03/doc-inheyhwc4094325.shtml"
-        ]
+        ],
+        "official": "http://jswx.gov.cn/xinxi/qiangsheng/202505/t20250528_3564155.shtml",
+        "official_note": "江苏网信网（jswx.gov.cn）首发报道。扬州市级 AI 人才十条原文以扬州人社局发布渠道为准"
       },
       "communities": [
         {
@@ -3867,7 +3946,7 @@
         "最优OPC创业之城",
         "11.6万户一人公司"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-05",
       "verified": true
     },
     {
@@ -3997,7 +4076,9 @@
         "registration_location": "无锡高新区"
       },
       "links": {
-        "official": "https://www.wuxi.gov.cn/doc/2025/12/11/4700182.shtml"
+        "official": "https://www.wuxi.gov.cn/doc/2025/12/11/4700182.shtml",
+        "draft": "https://www.wnd.gov.cn/doc/2026/03/18/4747194.shtml",
+        "official_note": "2026-03-18 无锡高新区同步公开征求 OpenClaw 等开源社区项目与 OPC 社区融合发展措施意见，作为原 OPC 十条的 OpenClaw 方向补充。"
       },
       "communities": [
         {
@@ -4019,7 +4100,7 @@
         "魔法空间",
         "数字游民"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-06",
       "verified": true
     },
     {
@@ -4059,7 +4140,8 @@
       "links": {
         "news": [
           "https://jsnews.jschina.com.cn/jsyw/202601/t20260118_s696ca569e4b093d9f5c77e63.shtml"
-        ]
+        ],
+        "official_note": "江苏省委新闻网、宿迁市政府动态报道；suqian.gov.cn 独立 OPC 实施方案 URL 暂未挂出。"
       },
       "communities": [
         {
@@ -4077,7 +4159,7 @@
         "免费AI工具",
         "OPC创业之城"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -4316,7 +4398,8 @@
       "links": {
         "news": [
           "https://www.21jingji.com/article/20260325/herald/72327f14552da9fe1d3ad8a7d4b90452.html"
-        ]
+        ],
+        "official_note": "东莞市发改局 2026-03-23 启动 OPC 十条征求意见，21 经济网首发；dgdp.dg.gov.cn 站内独立 URL 暂未检索到。"
       },
       "communities": [
         {
@@ -4337,7 +4420,7 @@
         "1亿创投",
         "松山湖"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -4371,7 +4454,8 @@
       "links": {
         "news": [
           "https://m.fs.bendibao.com/live/137034.shtm"
-        ]
+        ],
+        "official_note": "佛山本地宝转载佛深 OPC 联盟动态；佛山 / 顺德区政府门户独立政策 URL 暂未检索到。"
       },
       "communities": [
         {
@@ -4387,7 +4471,7 @@
         "佛深联盟",
         "三年三免"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -4439,7 +4523,8 @@
       "links": {
         "news": [
           "https://zsrbapp.zsnews.cn/home/content/newsContent/94/708187"
-        ]
+        ],
+        "official_note": "中山日报 zsnews.cn 报道翠亨新区 OPC 平台动态；zs.gov.cn 独立政策 URL 暂未检索到，最新政策文件参考翠亨新区粤港澳青创实施办法。"
       },
       "communities": [],
       "tags": [
@@ -4449,7 +4534,7 @@
         "500万贷款",
         "天使基金"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -4559,7 +4644,8 @@
       "links": {
         "news": [
           "https://news.xmnn.cn/xmxw/202601/t20260123_390225.html"
-        ]
+        ],
+        "official_note": "厦门日报、福建发改委市县动态报道；xm.gov.cn / fujian.gov.cn 独立 OPC 政策 URL 暂未检索到。"
       },
       "communities": [
         {
@@ -4581,7 +4667,7 @@
         "算力券",
         "共生社区"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -4704,7 +4790,8 @@
       "links": {
         "news": [
           "https://www.kunming.cn/news/c/2026-04-08/14032174.shtml"
-        ]
+        ],
+        "official_note": "新华网、云南网报道庾园 AI 青创空间；km.gov.cn / yn.gov.cn 独立 URL 暂未检索到。"
       },
       "communities": [
         {
@@ -4726,7 +4813,7 @@
         "AI Token",
         "青创"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -4791,7 +4878,8 @@
       "links": {
         "news": [
           "https://epaper.nfnews.com/nfdaily/html/202604/02/content_10166948.html"
-        ]
+        ],
+        "official_note": "南方日报报道香洲 OPC 三年培育目标；zhuhai.gov.cn 独立 OPC 专项政策 URL 暂未检索到。"
       },
       "communities": [
         {
@@ -4813,7 +4901,7 @@
         "3年免费",
         "6110万场景"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -4895,7 +4983,8 @@
       "links": {
         "news": [
           "https://www.hiipb.com/news/show-28186.html"
-        ]
+        ],
+        "official_note": "海南日报、海南广电报道海口高新区 OPC 国际社区；haikou.gov.cn / hns.gov.cn 独立 OPC 政策 URL 暂未挂出。"
       },
       "communities": [
         {
@@ -4918,7 +5007,7 @@
         "开源",
         "国际社区"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -4965,7 +5054,9 @@
         "news": [
           "https://epaper.tianjinwe.com/tjrb/h5/html5/2026-03/11/content_143088_3211851.htm",
           "http://news.enorth.com.cn/system/2026/03/27/059267146.shtml"
-        ]
+        ],
+        "official": "https://www.tj.gov.cn/zwgk/szfwj/tjsrmzfbgt/202505/t20250517_6933197.html",
+        "official_note": "天津市《促进人工智能创新发展行动方案（2025—2027年）》— 滨海高新区 OPC 培育措施在此框架下落地；高新区独立政策原文暂未公开 URL。"
       },
       "communities": [
         {
@@ -4983,7 +5074,7 @@
         "培训",
         "双选会"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -5011,7 +5102,10 @@
       "links": {
         "news": [
           "https://c.m.163.com/news/a/KOPCI8IN05199NHJ.html"
-        ]
+        ],
+        "official": "https://gxt.hebei.gov.cn/hbgyhxxht/zcfg30/snzc/2025101509241559128/index.html",
+        "official_note": "河北省工信厅《推动\"人工智能+\"行动计划（2025—2027年）》— 河北省级框架性政策，石家庄系按此框架推进；石家庄市级独立 OPC 政策原文 sjz.gov.cn 暂未挂出。",
+        "interpretation": "https://gxt.hebei.gov.cn/hbgyhxxht/zcfg30/zcjd17/2025101509252065865/index.html"
       },
       "communities": [
         {
@@ -5029,7 +5123,7 @@
         "河北首个",
         "四免一减一供"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -5206,7 +5300,8 @@
       "links": {
         "news": [
           "https://jsnews.jschina.com.cn/xz/a/202603/t20260315_s69b67bc3e4b0a737d394ceab.shtml"
-        ]
+        ],
+        "official_note": "徐州日报、江苏省委新闻网报道；xz.gov.cn / xuzhou.gov.cn 独立 OPC 政策 URL 暂未检索到。"
       },
       "communities": [
         {
@@ -5218,7 +5313,7 @@
         "徐州",
         "孔庙"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -5258,7 +5353,13 @@
           "人工智能"
         ]
       },
-      "links": {},
+      "links": {
+        "news": [
+          "https://www.hzzx.gov.cn/cshz/content/2026-03/12/content_9190095_2.htm",
+          "https://zjnews.zjol.com.cn/202602/t20260204_31490060.shtml"
+        ],
+        "official_note": "杭州政协新闻网报道余杭区五常街道针对OPC出台12个层面31条扶持新政；未来科技城/梦想小镇官方独立政策页暂未检索到。"
+      },
       "communities": [
         {
           "name": "AGI青创共同体",
@@ -5283,7 +5384,7 @@
         "AGI",
         "启动资金50万"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-06",
       "verified": true
     },
     {
@@ -5322,17 +5423,41 @@
       },
       "links": {
         "news": [
-          "https://m.bendibao.com/show998973.html"
+          "https://m.bendibao.com/show998973.html",
+          "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12757158.html"
         ],
         "official": "https://www.szlhq.gov.cn/lhqrmzfbgswzlhzfzxgkml/lhqrmzfbgswzlhzfzxgkml/qt/gzdt/content/post_12757131.html"
       },
-      "communities": [],
+      "communities": [
+        {
+          "name": "锦绣科学园OPC共智人才创新创业园区",
+          "address": "龙华区锦绣科学园",
+          "features": [
+            "首期2500㎡空间",
+            "已接待企业咨询超10批",
+            "吸引AI外贸选品、AI机器人数据采集等项目意向入驻",
+            "龙华OPC核心载体"
+          ],
+          "source": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12757158.html"
+        },
+        {
+          "name": "盛荟城大浪OPC人才服务产业园",
+          "address": "龙华区大浪街道盛荟城",
+          "features": [
+            "大浪街道首个OPC园区",
+            "已投用产业空间约20万㎡",
+            "集聚70余家优质企业",
+            "2025年园区年产值超160亿元"
+          ],
+          "source": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12757158.html"
+        }
+      ],
       "tags": [
         "龙华",
         "智能体",
         "十大行动"
       ],
-      "updated_at": "2026-05-04",
+      "updated_at": "2026-05-06",
       "verified": true
     },
     {
@@ -5503,7 +5628,8 @@
       "links": {
         "news": [
           "http://m.hz.bendibao.com/live/169216.shtm"
-        ]
+        ],
+        "official_note": "萧山网、潮新闻报道；xiaoshan.gov.cn 独立 OPC-STC / 龙虾十条征求意见 URL 暂未检索到。"
       },
       "communities": [],
       "tags": [
@@ -5512,7 +5638,7 @@
         "以赛代评450万",
         "5000万基金"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -5546,7 +5672,9 @@
       "links": {
         "news": [
           "https://zjnews.zjol.com.cn/zjnews/202603/t20260323_31566548.shtml"
-        ]
+        ],
+        "official": "https://www.hzzx.gov.cn/cshz/content/2026-03/26/content_9197297.htm",
+        "official_note": "杭州政协网（hzzx.gov.cn）首发报道。征求意见稿正式发文以高新区（滨江）发布渠道为准"
       },
       "communities": [],
       "tags": [
@@ -5555,7 +5683,7 @@
         "算力60%",
         "100万"
       ],
-      "updated_at": "2026-04-10",
+      "updated_at": "2026-05-05",
       "verified": true
     },
     {
@@ -5691,16 +5819,46 @@
         ]
       },
       "links": {
-        "official_note": "未检索到稳定可访问的宝安区政府原文；当前保留宝安湾/深圳新闻网等公开报道，不写入 official 以避免死链"
+        "official_note": "深圳市工信局发布的《深圳市首批人工智能 OPC 社区布局》PDF — 含宝安等核心城区。宝安区独立政策原文未挂出，以市级布局文件为准。",
+        "news": [
+          "https://www.sznews.com/news/content/2026-02/08/content_31940070.htm",
+          "https://www.baoanone.com/content213134.html",
+          "https://static.nfnews.com/content/202604/03/c12307562.html?enterColumnId=17"
+        ],
+        "official": "https://gxj.sz.gov.cn/attachment/1/1672/1672469/12602272.pdf"
       },
-      "communities": [],
+      "communities": [
+        {
+          "name": "深港硬科技加速器 / 大公坊AI硬件OPC·hub",
+          "address": "宝安区宝中片区 / 大公坊iMakerbase国际加速器",
+          "features": [
+            "深圳首批OPC社区布局",
+            "约0.6万㎡",
+            "技术支持、供应链协同、资本对接",
+            "覆盖50多个国家和地区服务网络"
+          ],
+          "source": "https://gxj.sz.gov.cn/attachment/1/1672/1672469/12602272.pdf"
+        },
+        {
+          "name": "航城·领航OPC示范社区",
+          "address": "宝安区航城街道大公坊AI硬件OPC国际社区",
+          "features": [
+            "三年培育OPC硬件创业生态",
+            "到2028年建设5个OPC示范社区",
+            "集聚孵化200家以上OPC团队",
+            "OPC工商绿色专窗",
+            "低成本工位和梯度办公空间"
+          ],
+          "source": "https://static.nfnews.com/content/202604/03/c12307562.html?enterColumnId=17"
+        }
+      ],
       "tags": [
         "宝安",
         "硬件",
         "制造",
         "硬创"
       ],
-      "updated_at": "2026-05-04",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -6290,10 +6448,11 @@
       "level": "province",
       "issuer": "广东省人力资源和社会保障厅",
       "publish_date": "2026-03-27",
-      "status": "active",
+      "expire_date": "2026-05-10",
+      "status": "expired",
       "category": "competition",
-      "summary": "OPC专项赛特等奖50万元资助，5月10日截止报名，所有参赛项目纳入省级创业项目库",
-      "landing_status": "active",
+      "summary": "OPC专项赛特等奖50万元资助，报名已于2026-05-10截止；保留为历史赛事与省级创业项目库资源线索。",
+      "landing_status": "expired",
       "landing_difficulty": "hard",
       "benefits": [
         {
@@ -6328,23 +6487,26 @@
         "schedule": {
           "type": "deadline",
           "deadline": "2026-05-10",
-          "display": "截止 2026-05-10"
+          "display": "已截止 2026-05-10"
         }
       },
       "links": {
-        "official": "https://stic.sz.gov.cn/gkmlpt/content/12/12762/post_12762344.html",
+        "official": "https://www.gz.gov.cn/zwfw/zxfw/jyfw/content/post_10712271.html",
         "news": [
+          "https://stic.sz.gov.cn/gkmlpt/content/12/12762/post_12762344.html",
           "https://finance.sina.com.cn/roll/2026-03-27/doc-inhskwec8395999.shtml"
-        ]
+        ],
+        "official_note": "广州市政府就业服务专栏发布广东省众创杯创业大赛通知。原 stic.sz.gov.cn 链接 2026-05 起 404，已替换。",
+        "alt_official": "https://www.shanwei.gov.cn/swrsj/zwyw/tzgg/content/post_1235905.html"
       },
       "communities": [],
       "tags": [
         "众创杯",
         "OPC专项赛",
         "50万",
-        "5月10日截止"
+        "已截止"
       ],
-      "updated_at": "2026-05-04",
+      "updated_at": "2026-05-07",
       "verified": true
     },
     {
@@ -6435,7 +6597,12 @@
       "links": {
         "news": [
           "http://sc.people.com.cn/n2/2026/0415/c379471-41552256.html"
-        ]
+        ],
+        "official": "https://kjt.sc.gov.cn/kjt/gstz/2025/7/11/04b4ae313b26482abf0bb0b15cf001f7.shtml",
+        "framework": "https://kjt.sc.gov.cn/kjt/gstz/2025/3/19/0548de73c6314aab9b9b714b6b6f59b5.shtml",
+        "central_brief": "https://www.gov.cn/xinwen/2023-01/12/content_5736463.htm",
+        "province_brief": "https://www.sc.gov.cn/10462/10464/10465/10595/2023/1/13/7fc9d4c002c6437c93e9133fda1c3e29.shtml",
+        "official_note": "四川省科技厅算力服务购买兑付通知 — 算力券具体兑付依据。同步附上 2025 框架性政策与中央/四川省政府新闻稿"
       },
       "communities": [],
       "tags": [
@@ -6444,7 +6611,7 @@
         "算力券1亿",
         "社区运营支持"
       ],
-      "updated_at": "2026-04-16",
+      "updated_at": "2026-05-05",
       "verified": true
     },
     {
@@ -7764,6 +7931,1540 @@
       "landing_status": "active",
       "landing_difficulty": "medium",
       "actual_cases": "城阳区已注册人工智能、软件信息技术类OPC企业近100家；后续将发布首批园区、实训基地和OPC+先进制造场景。"
+    },
+    {
+      "id": "hangzhou-city-001",
+      "name": "杭州市市场监督管理局支持一人公司OPC创新创业发展若干举措",
+      "city": "杭州",
+      "province": "浙江",
+      "district": "",
+      "level": "city",
+      "issuer": "杭州市市场监督管理局",
+      "publish_date": "2026-04",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "杭州市级首个 OPC 一人公司支持举措，含市场准入、登记便利、信用扶持、知识产权保护、税务辅导等全周期举措。",
+      "benefits": [
+        {
+          "item": "OPC 市场准入便利",
+          "amount": "登记 / 变更 / 注销全流程优化",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "信用扶持",
+          "amount": "OPC 创业者信用培育",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "知识产权保护",
+          "amount": "商标 / 专利 / 著作权快速通道",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "requirements": {
+        "registration_location": "杭州市",
+        "industries": [
+          "人工智能",
+          "OPC",
+          "数字创意",
+          "独立开发"
+        ]
+      },
+      "links": {
+        "official": "https://zfgb.hangzhou.gov.cn/11/104220263/t114220263044/530378.shtml",
+        "official_note": "杭州市政府公报（zfgb.hangzhou.gov.cn）原文"
+      },
+      "communities": [],
+      "tags": [
+        "杭州市级",
+        "市场监督管理局",
+        "OPC举措",
+        "市级框架"
+      ],
+      "updated_at": "2026-05-05",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "easy"
+    },
+    {
+      "id": "beijing-haidian-002",
+      "name": "海淀区关于全面打造OPC创业生态的若干措施（八项）",
+      "city": "北京",
+      "province": "北京",
+      "district": "海淀",
+      "level": "district",
+      "issuer": "海淀区政府",
+      "publish_date": "2026-04-10",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "海淀区八条 OPC 硬核政策：科技人才创办 OPC 启动金 10万 / 模型券补贴最高200万年 / 安居补贴最高 50% 房租 / 创业贷款最高 1000万 / 知识产权奖励 / 商业化激励等，最高 200 万元综合扶持。",
+      "benefits": [
+        {
+          "item": "OPC 启动金",
+          "amount": "科技人才创办 OPC，10万",
+          "amount_max": 100000,
+          "type": "cash"
+        },
+        {
+          "item": "模型券补贴",
+          "amount": "5折，年最高200万",
+          "amount_max": 2000000,
+          "type": "voucher"
+        },
+        {
+          "item": "安居补贴",
+          "amount": "50% 房租 3 年 / 月补 2000元 2 年",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "创业贷款",
+          "amount": "最高1000万，贴息约 1.5%",
+          "amount_max": 10000000,
+          "type": "loan"
+        },
+        {
+          "item": "知识产权奖励",
+          "amount": "新IP 2000元/件，I类专利最高 3万",
+          "amount_max": 30000,
+          "type": "cash"
+        },
+        {
+          "item": "商业化激励",
+          "amount": "首单 2万 / 累计百万 10万",
+          "amount_max": 100000,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "北京市海淀区",
+        "industries": [
+          "人工智能",
+          "OPC",
+          "大模型",
+          "智能体"
+        ]
+      },
+      "links": {
+        "official": "https://www.beijing.gov.cn/fuwu/lqfw/gggs/202604/t20260412_4580107.html",
+        "draft": "https://www.beijing.gov.cn/hudong/gfxwjzj/qjfkxx/202604/t20260407_4575655.html",
+        "interpretation": "https://invest.beijing.gov.cn/zwgk/zcjd/202604/t20260420_4596582.html"
+      },
+      "communities": [],
+      "tags": [
+        "海淀",
+        "八项举措",
+        "OPC生态",
+        "中关村"
+      ],
+      "updated_at": "2026-05-05",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "medium"
+    },
+    {
+      "id": "chengdu-city-008",
+      "name": "成都市打造人工智能产业发展新高地若干政策",
+      "city": "成都",
+      "province": "四川",
+      "district": "",
+      "level": "city",
+      "issuer": "成都市经信局市新经济委 等",
+      "publish_date": "2025-11",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "成都市级 AI 产业框架性政策（2025-11 印发）：聚焦算力、算法、场景、应用、人才等核心要素，是 13 条 OPC 行动计划的母体框架。",
+      "benefits": [
+        {
+          "item": "算力配置支持",
+          "amount": "对接成都算力券（年最高 500 万 / 年总盘 1 亿）",
+          "amount_max": 5000000,
+          "type": "voucher"
+        },
+        {
+          "item": "产业创新联合体",
+          "amount": "支持企业 / 高校 / 院所组建",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "场景应用赋能",
+          "amount": "面向重点产业打造示范应用",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "requirements": {
+        "registration_location": "成都市",
+        "industries": [
+          "人工智能",
+          "OPC",
+          "大模型",
+          "智能体"
+        ]
+      },
+      "links": {
+        "official": "https://cds.sczwfw.gov.cn/art/2025/11/4/art_15397_300318.html",
+        "official_note": "成都市政务服务网刊发的政策解读，框架性政策原文（市经信局市新经济委牵头印发）"
+      },
+      "communities": [],
+      "tags": [
+        "成都市级",
+        "框架政策",
+        "AI 产业",
+        "新高地",
+        "2025-11"
+      ],
+      "updated_at": "2026-05-05",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "medium"
+    },
+    {
+      "id": "baoding-city-001",
+      "name": "保定市支持人工智能OPC创新发展的若干措施（征求意见稿）",
+      "city": "保定",
+      "province": "河北",
+      "district": "",
+      "level": "city",
+      "issuer": "保定市数据局",
+      "publish_date": "2026-04-08",
+      "status": "draft",
+      "category": "comprehensive",
+      "summary": "保定市数据局牵头公开征求人工智能OPC 11条措施意见，围绕数创港孵化载体、公共数据授权运营、数智券、人才安居、创业担保贷款和百场万人培训构建京津冀OPC创业高地。",
+      "benefits": [
+        {
+          "item": "数创港孵化载体",
+          "amount": "入驻OPC一年免费办公场地，载体最高30万元支持",
+          "amount_max": 300000,
+          "type": "rent_free"
+        },
+        {
+          "item": "数智券",
+          "amount": "采购算力/数据/大模型/智能体服务年度超30万元，按30%最高30万元",
+          "amount_max": 300000,
+          "type": "voucher"
+        },
+        {
+          "item": "人才购房/租房补贴",
+          "amount": "双一流博士/硕士/本科最高30万元购房补贴或每月3500元租房补贴",
+          "amount_max": 300000,
+          "type": "cash"
+        },
+        {
+          "item": "创业担保贷款",
+          "amount": "符合条件OPC最高30万元个人创业担保贷款",
+          "amount_max": 300000,
+          "type": "loan"
+        },
+        {
+          "item": "科技创新券",
+          "amount": "符合条件最高20万元",
+          "amount_max": 200000,
+          "type": "voucher"
+        },
+        {
+          "item": "高校毕业生创业补贴",
+          "amount": "离校2年内首次创办OPC正常运营1年以上，5000元",
+          "amount_max": 5000,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "保定市",
+        "industries": [
+          "人工智能",
+          "OPC",
+          "数据服务",
+          "智能体"
+        ],
+        "other": [
+          "征求意见稿阶段，以正式印发版本为准"
+        ]
+      },
+      "application": {
+        "method": "公开征求意见期后按正式文件与属地部门通知执行",
+        "deadline": "2026-05-08",
+        "phone": "保定市数据局数字经济科"
+      },
+      "links": {
+        "official": "https://wap.baoding.gov.cn/wap-content-159-538877.html",
+        "news": [
+          "https://www.baoding.gov.cn/content-381-538829.html",
+          "https://www.heb.chinanews.com.cn/cjzx/20260326457702.shtml",
+          "https://www.jingjiribao.cn/static/detail.jsp?id=646254"
+        ],
+        "official_note": "保定市政府移动端公开征求意见全文；市政府门户另有保定日报发布会报道，正式成文版本待继续核验。"
+      },
+      "communities": [
+        {
+          "name": "保定数创港OPC孵化载体",
+          "address": "保定市各级孵化器、数字产业园区及政务服务中心",
+          "features": [
+            "一年免费办公场地",
+            "智能体开发工具",
+            "运行测试环境",
+            "开发实训与合规指导"
+          ]
+        }
+      ],
+      "tags": [
+        "保定",
+        "征求意见稿",
+        "数创港",
+        "数智券",
+        "公共数据",
+        "京津冀"
+      ],
+      "updated_at": "2026-05-06",
+      "verified": true,
+      "landing_status": "draft",
+      "landing_difficulty": "medium"
+    },
+    {
+      "id": "nanchong-city-001",
+      "name": "南充市支持人工智能OPC创新发展行动计划（2026—2027年）（征求意见稿）",
+      "city": "南充",
+      "province": "四川",
+      "district": "",
+      "level": "city",
+      "issuer": "南充市科学技术局",
+      "publish_date": "2026-04-23",
+      "status": "draft",
+      "category": "comprehensive",
+      "summary": "南充市科技局公开征求人工智能OPC两年行动计划意见，目标到2027年底建设20个以上OPC社区、50个示范应用案例、培育150户OPC企业、集聚300名创业人才。",
+      "benefits": [
+        {
+          "item": "市级算力券",
+          "amount": "算力购买费用最高60%，每年最高500万元",
+          "amount_max": 5000000,
+          "type": "voucher"
+        },
+        {
+          "item": "OPC社区后补助",
+          "amount": "省科技厅/工信部备案认定孵化器OPC社区最高50万/200万元",
+          "amount_max": 2000000,
+          "type": "cash"
+        },
+        {
+          "item": "租金补贴",
+          "amount": "线下入驻人工智能OPC社区每年最高2万元",
+          "amount_max": 20000,
+          "type": "rent_free"
+        },
+        {
+          "item": "人才进阶资助",
+          "amount": "B-D类人才达到A-C类条件后最高500万元",
+          "amount_max": 5000000,
+          "type": "cash"
+        },
+        {
+          "item": "标杆产品奖励",
+          "amount": "人工智能OPC爆款产品最高100万元",
+          "amount_max": 1000000,
+          "type": "cash"
+        },
+        {
+          "item": "场景示范奖励",
+          "amount": "每年遴选场景项目，最高100万元",
+          "amount_max": 1000000,
+          "type": "cash"
+        },
+        {
+          "item": "投融资/入股支持",
+          "amount": "天使/风投后补助最高100万元，符合条件最高200万元入股支持",
+          "amount_max": 2000000,
+          "type": "loan"
+        }
+      ],
+      "requirements": {
+        "registration_location": "南充市",
+        "industries": [
+          "人工智能",
+          "OPC",
+          "跨境电商",
+          "数字内容",
+          "OpenClaw",
+          "数据服务"
+        ],
+        "other": [
+          "征求意见稿阶段，以南充市正式印发版本为准"
+        ]
+      },
+      "application": {
+        "method": "公开征求意见结束后，按南充市科技局及各责任部门正式申报通知执行",
+        "deadline": "2026-04-30"
+      },
+      "links": {
+        "official": "https://www.nanchong.gov.cn/kjj/xwdt/tzgg/202604/t20260423_2328194.html",
+        "news": [
+          "https://www.keceyun.com/policy/newsdetail/571926.html"
+        ],
+        "official_note": "南充市科技局原文链接由政策镜像页同步列出；若政府门户临时不可访问，保留科策云镜像作为参考来源。"
+      },
+      "communities": [
+        {
+          "name": "南充新质生产力创新产业园OPC社区",
+          "address": "南充新质生产力创新产业园",
+          "features": [
+            "共享算力节点",
+            "AI实训平台",
+            "财务法务服务点"
+          ]
+        },
+        {
+          "name": "中新成渝北部跨境电商产业园OPC社区",
+          "address": "南充跨境电商产业园",
+          "features": [
+            "跨境电商OPC",
+            "模拟运营+真实店铺实战"
+          ]
+        }
+      ],
+      "tags": [
+        "南充",
+        "征求意见稿",
+        "算力券",
+        "20个社区",
+        "跨境电商",
+        "OpenClaw"
+      ],
+      "updated_at": "2026-05-06",
+      "verified": true,
+      "landing_status": "draft",
+      "landing_difficulty": "medium"
+    },
+    {
+      "id": "sichuan-province-002",
+      "name": "四川省支持人工智能OPC创新发展行动方案（2026—2027年）",
+      "city": "成都",
+      "province": "四川",
+      "district": "",
+      "level": "province",
+      "issuer": "四川省科技厅（牵头）",
+      "publish_date": "2026-04-17",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "四川省级两年行动方案围绕链式培育、场景赋能、算数强基、人才汇聚、生态育优五大方向，到2027年底建成30个以上OPC生态社区、150个示范案例、培育1000家以上OPC企业。",
+      "benefits": [
+        {
+          "item": "OPC生态社区",
+          "amount": "到2027年底建成30个以上",
+          "amount_max": 0,
+          "type": "space"
+        },
+        {
+          "item": "示范应用案例",
+          "amount": "打造150个以上",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "省级算力调度规模",
+          "amount": "到2027年超过5000P，扩容算力券并设立Token券",
+          "amount_max": 0,
+          "type": "voucher"
+        },
+        {
+          "item": "人才计划",
+          "amount": "符合条件OPC创始人/核心技术人员纳入省级人才计划",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "专属金融产品",
+          "amount": "人才贷、研发贷、算力贷、知识产权贷",
+          "amount_max": 0,
+          "type": "loan"
+        }
+      ],
+      "requirements": {
+        "registration_location": "四川省",
+        "industries": [
+          "人工智能",
+          "OPC",
+          "数字内容出海",
+          "跨境电商",
+          "智能体"
+        ],
+        "other": [
+          "支持诸葛空间等载体提档升级"
+        ]
+      },
+      "application": {
+        "method": "按四川省科技厅及各市州配套细则执行",
+        "deadline": "2026—2027年"
+      },
+      "links": {
+        "news": [
+          "https://www.stdaily.com/web/gdxw/2026-04/17/content_504217.html"
+        ],
+        "official_note": "科技日报报道省级方案已正式印发；省科技厅公开原文暂未检索到，后续继续补官链。"
+      },
+      "communities": [
+        {
+          "name": "诸葛空间等四川OPC生态社区",
+          "address": "成都及四川省内重点载体",
+          "features": [
+            "拎脑入驻",
+            "省级算力/模型/智能体应用超市对接"
+          ]
+        }
+      ],
+      "tags": [
+        "四川省级",
+        "2026-2027",
+        "30个社区",
+        "Token券",
+        "人才贷",
+        "诸葛空间"
+      ],
+      "updated_at": "2026-05-06",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "medium"
+    },
+    {
+      "id": "suzhou-taicang-002",
+      "name": "太仓市人工智能OPC培育发展行动计划（2026—2028年）",
+      "city": "苏州",
+      "province": "江苏",
+      "district": "太仓",
+      "level": "district",
+      "issuer": "太仓市人民政府办公室",
+      "publish_date": "2026-03-26",
+      "status": "active",
+      "category": "comprehensive",
+      "summary": "太仓市政府办公室印发三年行动计划，定位长三角OPC首选“合伙人”城市，到2028年建设AI算力平台、OPC公共服务平台和共享赋能平台，培育100家以上OPC企业、集聚1000名以上OPC人才。",
+      "benefits": [
+        {
+          "item": "OPC公共服务平台",
+          "amount": "上线好物工具超20个",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "高质量行业数据集/语料库",
+          "amount": "打造40个",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "OPC企业培育",
+          "amount": "到2028年超100家",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "OPC人才集聚",
+          "amount": "到2028年超1000名",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "一核双园多区社区矩阵",
+          "amount": "娄江新城科教创新区+大学生创业园+中德双元制职业教育产业园",
+          "amount_max": 0,
+          "type": "space"
+        }
+      ],
+      "requirements": {
+        "registration_location": "太仓市",
+        "industries": [
+          "人工智能",
+          "OPC",
+          "AIGC内容创作",
+          "数字营销",
+          "文化创意",
+          "电子商务",
+          "教育培训"
+        ],
+        "other": [
+          "支持模式创新型、场景应用型、生态服务型OPC主体"
+        ]
+      },
+      "application": {
+        "method": "由太仓市人工智能+专项工作组及市发改委等部门分解推进",
+        "deadline": "2026—2028年"
+      },
+      "links": {
+        "official": "https://www.taicang.gov.cn/taicang/zfbwj/202604/2ba7cd29b1f94051b9e2bde41c58ebd7.shtml",
+        "interpretation": "https://www.taicang.gov.cn/taicang/zcjd/202604/bdedf047d49648b1b7c448a840c4d17c.shtml",
+        "meeting": "https://www.taicang.gov.cn/taicang/hyjy/202604/7e576df6ffd1434286f047d186932f69.shtml"
+      },
+      "communities": [
+        {
+          "name": "智汇谷科技创新园OPC社区",
+          "address": "太仓",
+          "features": [
+            "太仓十大OPC社区之一"
+          ]
+        },
+        {
+          "name": "太仓一核双园多区OPC社区矩阵",
+          "address": "娄江新城科教创新区 / 大学生创业园 / 中德双元制职业教育产业园",
+          "features": [
+            "AI算力平台",
+            "OPC公共服务平台",
+            "共享赋能平台"
+          ]
+        }
+      ],
+      "tags": [
+        "太仓",
+        "2026-2028",
+        "长三角",
+        "一核双园多区",
+        "100家OPC",
+        "1000名人才"
+      ],
+      "updated_at": "2026-05-06",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "medium"
+    },
+    {
+      "id": "haikou-longhua-001",
+      "name": "海口市龙华区关于打造特色OPC社区试点发展措施（征求意见稿）",
+      "city": "海口",
+      "province": "海南",
+      "district": "龙华",
+      "level": "district",
+      "issuer": "海口市龙华区科学技术和工业信息化局",
+      "publish_date": "2026-03-24",
+      "status": "draft",
+      "category": "space",
+      "summary": "龙华区公开征求特色OPC社区试点措施意见，围绕特色社区、企业发展服务券、场景池、AI短剧/动漫出海、开业奖励、人才安居和跨境数据服务支持海南自贸港OPC产业集聚。",
+      "benefits": [
+        {
+          "item": "特色OPC社区奖励",
+          "amount": "经认定社区运营主体最高50万元",
+          "amount_max": 500000,
+          "type": "cash"
+        },
+        {
+          "item": "企业发展服务券",
+          "amount": "抵扣研发投入及专业服务费最高30%，AI漫剧/短剧/动画提高至35%",
+          "amount_max": 0,
+          "type": "voucher"
+        },
+        {
+          "item": "场景应用奖励",
+          "amount": "按研发投入30%奖励，优先推荐省级以上项目",
+          "amount_max": 0,
+          "type": "cash"
+        },
+        {
+          "item": "开业奖励",
+          "amount": "首次非零税务申报5000元；连续合规经营满2年再给5000元服务券",
+          "amount_max": 5000,
+          "type": "cash"
+        },
+        {
+          "item": "技术支持",
+          "amount": "OpenClaw部署服务+1000万Tokens技术支持；AI开发工具按50%补贴",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "人才租金/创业扶持",
+          "amount": "OPC人才每月最高1000元租金补贴；超级个体创始人10万元创业扶持",
+          "amount_max": 100000,
+          "type": "cash"
+        }
+      ],
+      "requirements": {
+        "registration_location": "海口市龙华区",
+        "industries": [
+          "人工智能",
+          "OPC",
+          "AI短剧",
+          "动漫",
+          "数字内容出海",
+          "跨境服务"
+        ],
+        "other": [
+          "征求意见稿阶段，以正式文件为准"
+        ]
+      },
+      "application": {
+        "method": "龙华区科技工信部门征求意见后按正式文件执行",
+        "deadline": "征求意见稿阶段"
+      },
+      "links": {
+        "news": [
+          "https://m.hinews.cn/page?m=1&n=2810034&s=1044"
+        ],
+        "official_note": "南海网报道龙华区科工信局发布征求意见稿；区政府公开原文暂未检索到。"
+      },
+      "communities": [
+        {
+          "name": "海口龙华特色OPC社区",
+          "address": "海口市龙华区",
+          "features": [
+            "AI短剧/动漫出海",
+            "企业发展服务券",
+            "OpenClaw部署",
+            "跨境数据服务"
+          ]
+        }
+      ],
+      "tags": [
+        "海口",
+        "龙华",
+        "特色OPC社区",
+        "海南自贸港",
+        "AI短剧",
+        "跨境出海"
+      ],
+      "updated_at": "2026-05-06",
+      "verified": true,
+      "landing_status": "draft",
+      "landing_difficulty": "medium"
+    },
+    {
+      "id": "jiangsu-aigc-competition-001",
+      "name": "2026江苏生成式人工智能创新大赛OPC创新创业子赛道",
+      "city": "南京",
+      "province": "江苏",
+      "district": "",
+      "level": "province",
+      "issuer": "江苏生成式人工智能创新大赛组委会 / 江苏省人工智能学会",
+      "publish_date": "2026-03-16",
+      "status": "active",
+      "category": "competition",
+      "summary": "“中国移动杯”2026江苏生成式人工智能创新大赛在AIGC创新创业赛道下设置OPC创新创业子赛道，面向高校学生、初创企业、项目团队和个人开发者，聚焦AI时代超级个体轻量化创业。",
+      "benefits": [
+        {
+          "item": "一等奖奖金",
+          "amount": "10000元",
+          "amount_max": 10000,
+          "type": "cash"
+        },
+        {
+          "item": "二等奖奖金",
+          "amount": "5000元",
+          "amount_max": 5000,
+          "type": "cash"
+        },
+        {
+          "item": "三等奖奖金",
+          "amount": "3000元",
+          "amount_max": 3000,
+          "type": "cash"
+        },
+        {
+          "item": "OPC创新奖",
+          "amount": "获奖作品额外颁发荣誉证书",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "项目转化对接",
+          "amount": "组委会组织投融资企业对接交流",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "requirements": {
+        "registration_location": "不限，江苏赛区/大赛报名平台",
+        "industries": [
+          "AIGC",
+          "智能体",
+          "OPC",
+          "软件开发",
+          "电商运营",
+          "内容创作"
+        ],
+        "founder_identity": [
+          "高校学生",
+          "初创企业",
+          "项目团队",
+          "个人开发者"
+        ]
+      },
+      "application": {
+        "method": "登录大赛报名网站提交作品",
+        "url": "https://aigc.aicomp.cn",
+        "deadline": "2026-05-31"
+      },
+      "links": {
+        "document": "https://www.jsai.org.cn/wp-content/uploads/2026/03/%E5%85%B3%E4%BA%8E%E4%B8%BE%E5%8A%9E%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8%E6%9D%AF2026%E6%B1%9F%E8%8B%8F%E7%94%9F%E6%88%90%E5%BC%8F%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%88%9B%E6%96%B0%E5%A4%A7%E8%B5%9B%E7%9A%84%E9%80%9A%E7%9F%A5%EF%BC%88%E8%8B%8F%E6%99%BA%E4%BC%9A%E3%80%942026%E3%80%952%E5%8F%B7%EF%BC%89.pdf",
+        "news": [
+          "https://www.jsai.org.cn/events/6756.html"
+        ],
+        "official_note": "江苏省人工智能学会/大赛组委会发布通知，未检索到政务域名官方原文；因此按参考来源展示。"
+      },
+      "communities": [],
+      "tags": [
+        "江苏",
+        "AIGC大赛",
+        "OPC创新创业",
+        "个人开发者",
+        "5月31日截止"
+      ],
+      "updated_at": "2026-05-06",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "easy"
+    },
+    {
+      "id": "wuxi-city-002",
+      "name": "无锡市人工智能OPC企业登记便利化工作服务指引（试行）（征求意见稿）",
+      "city": "无锡",
+      "province": "江苏",
+      "district": "",
+      "level": "city",
+      "issuer": "无锡市市场监督管理局",
+      "publish_date": "2026-04-21",
+      "status": "draft",
+      "category": "registration",
+      "summary": "无锡市市场监管局就人工智能OPC企业登记便利化工作服务指引试行稿征求意见，服务人工智能一人公司创业生态，降低注册、导办和知识产权保护的制度成本。",
+      "benefits": [
+        {
+          "item": "OPC登记便利化服务",
+          "amount": "试行服务指引，优化登记注册和导办流程",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "知识产权协同保护",
+          "amount": "登记注册指导处联合知识产权相关处室/保护中心研究起草",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "requirements": {
+        "registration_location": "无锡市",
+        "industries": [
+          "人工智能",
+          "OPC"
+        ],
+        "other": [
+          "征求意见稿阶段"
+        ]
+      },
+      "application": {
+        "method": "向无锡市市场监管局登记注册指导处反馈意见；正式服务按后续指引执行",
+        "deadline": "2026-04-25",
+        "phone": "81009163"
+      },
+      "links": {
+        "official": "https://scjgj.wuxi.gov.cn/doc/2026/04/21/4766681.shtml"
+      },
+      "communities": [],
+      "tags": [
+        "无锡",
+        "市场监管",
+        "登记便利化",
+        "征求意见稿"
+      ],
+      "updated_at": "2026-05-06",
+      "verified": true,
+      "landing_status": "draft",
+      "landing_difficulty": "easy"
+    },
+    {
+      "id": "dalian-gaoxin-001",
+      "name": "大连高新区支持OPC发展若干措施（试行）（征求意见稿）",
+      "city": "大连",
+      "province": "辽宁",
+      "district": "高新区",
+      "level": "district",
+      "issuer": "大连高新区科技创新局",
+      "publish_date": "2026-04-20",
+      "status": "draft",
+      "category": "comprehensive",
+      "summary": "大连高新区科技创新局公开征求支持OPC发展若干措施试行稿意见，探索构建基于人工智能的一人公司创业生态，意见反馈截止2026年4月27日。",
+      "benefits": [
+        {
+          "item": "OPC创业生态试点",
+          "amount": "试行措施公开征求意见，具体补贴以附件和正式稿为准",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "高新区政策兑现通道",
+          "amount": "后续可衔接大连高新区政策兑现平台",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "requirements": {
+        "registration_location": "大连高新区",
+        "industries": [
+          "人工智能",
+          "OPC"
+        ],
+        "other": [
+          "征求意见稿阶段，正文附件为准"
+        ]
+      },
+      "application": {
+        "method": "填写反馈意见表并邮件反馈至大连高新区科技创新局",
+        "deadline": "2026-04-27",
+        "phone": "88149459"
+      },
+      "links": {
+        "official": "https://www.dlhitech.gov.cn/news/view_78871.html"
+      },
+      "communities": [
+        {
+          "name": "大连高新区OPC创业社区",
+          "address": "大连高新区",
+          "features": [
+            "人工智能创业新模式",
+            "试行措施征求意见"
+          ]
+        }
+      ],
+      "tags": [
+        "大连",
+        "高新区",
+        "征求意见稿",
+        "东北OPC"
+      ],
+      "updated_at": "2026-05-06",
+      "verified": true,
+      "landing_status": "draft",
+      "landing_difficulty": "medium"
+    },
+    {
+      "id": "chongqing-yuzhong-001",
+      "name": "渝中区人工智能OPC社区建设工作方案（征求意见稿）",
+      "city": "重庆",
+      "province": "重庆",
+      "district": "渝中",
+      "level": "district",
+      "issuer": "重庆市渝中区经济和信息化委员会",
+      "publish_date": "2026-04-03",
+      "status": "draft",
+      "category": "space",
+      "summary": "渝中区经信委公开征求人工智能OPC社区建设工作方案意见，前瞻布局软件和信息服务业OPC社区矩阵，意见反馈截止2026年4月9日。",
+      "benefits": [
+        {
+          "item": "OPC社区矩阵建设",
+          "amount": "围绕软件和信息服务业布局人工智能OPC社区",
+          "amount_max": 0,
+          "type": "space"
+        },
+        {
+          "item": "区级工作方案",
+          "amount": "区政府工作安排下推进，正式方案待发布",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "requirements": {
+        "registration_location": "重庆市渝中区",
+        "industries": [
+          "人工智能",
+          "OPC",
+          "软件和信息服务业"
+        ],
+        "other": [
+          "征求意见稿阶段"
+        ]
+      },
+      "application": {
+        "method": "向渝中区经信委反馈意见，正式建设方案待发布",
+        "deadline": "2026-04-09",
+        "phone": "023-63765803"
+      },
+      "links": {
+        "official": "https://www.cqyz.gov.cn/igixmj/gkyjzj/202604/tOpinion_7519.html"
+      },
+      "communities": [
+        {
+          "name": "渝中区人工智能OPC社区矩阵",
+          "address": "重庆市渝中区",
+          "features": [
+            "软件和信息服务业",
+            "区级社区矩阵"
+          ]
+        }
+      ],
+      "tags": [
+        "重庆",
+        "渝中",
+        "OPC社区",
+        "征求意见稿"
+      ],
+      "updated_at": "2026-05-06",
+      "verified": true,
+      "landing_status": "draft",
+      "landing_difficulty": "medium"
+    },
+    {
+      "id": "aliyun-opc-innovation-plan-001",
+      "city": "全国",
+      "province": "全国",
+      "district": "",
+      "level": "national",
+      "issuer": "阿里云",
+      "publish_date": "2026-05-20",
+      "status": "active",
+      "updated_at": "2026-05-22",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "easy",
+      "requirements": {
+        "registration_location": "不限",
+        "industries": [
+          "人工智能",
+          "AI Agent",
+          "OPC",
+          "SaaS/工具",
+          "电商",
+          "内容创作"
+        ],
+        "other": [
+          "需按阿里云活动页或表单要求提交；该类权益属于平台商业扶持，不等同于政府补贴"
+        ]
+      },
+      "links": {
+        "official": "https://opc.aliyun.com/",
+        "news": [
+          "https://developer.aliyun.com/article/1735759"
+        ]
+      },
+      "communities": [
+        {
+          "name": "Y/OUR SPACE 阿里巴巴创业社区全国网络",
+          "address": "全国24城31站（阿里云公开口径）",
+          "features": [
+            "免费畅行3次",
+            "入驻空间8折起",
+            "链接10000+创业者"
+          ],
+          "url": "https://startup.aliyun.com/info/1093722.html"
+        }
+      ],
+      "name": "阿里云 AI Native OPC 创新助力计划",
+      "category": "comprehensive",
+      "summary": "阿里云面向OPC提供Token补贴、技术专家、产品生态、流量曝光、VC路演、创业空间和全栈云套餐的综合助力计划。",
+      "benefits": [
+        {
+          "item": "单客最高100万元Token补贴",
+          "amount": "新老同享，先用后返",
+          "amount_max": 1000000,
+          "type": "voucher"
+        },
+        {
+          "item": "技术专家1V1领航",
+          "amount": "架构设计、性能调优、AI火花会与7x24响应",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "阿里产品生态接入",
+          "amount": "云市场、Qoder、JVS等生态流量池",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "品牌曝光与峰会推荐",
+          "amount": "AI生产力会客厅、品牌直播间、云栖大会等机会",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "VC/创新空间对接",
+          "amount": "DemoDay路演、天使投融资链接、Y/OUR SPACE优惠入驻",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "application": {
+        "method": "从阿里云OPC创新助力计划页选择Token权益、商业加速、资本/曝光或空间表单申请",
+        "url": "https://opc.aliyun.com/"
+      },
+      "tags": [
+        "阿里云",
+        "OPC创新助力计划",
+        "Token补贴",
+        "技术专家",
+        "产品生态",
+        "VC路演",
+        "Y/OUR SPACE"
+      ],
+      "actual_cases": "适合已经准备用阿里云百炼、通义、云市场或阿里生态做AI产品商业化的OPC；需把平台权益和政府补贴分开判断。"
+    },
+    {
+      "id": "aliyun-opc-token-subsidy-001",
+      "city": "全国",
+      "province": "全国",
+      "district": "",
+      "level": "national",
+      "issuer": "阿里云",
+      "publish_date": "2026-05-20",
+      "status": "active",
+      "updated_at": "2026-05-22",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "easy",
+      "requirements": {
+        "registration_location": "不限",
+        "industries": [
+          "人工智能",
+          "AI Agent",
+          "OPC",
+          "SaaS/工具",
+          "电商",
+          "内容创作"
+        ],
+        "other": [
+          "需按阿里云活动页或表单要求提交；该类权益属于平台商业扶持，不等同于政府补贴"
+        ]
+      },
+      "links": {
+        "official": "https://www.aliyun.com/benefit/ai/opc-b",
+        "news": [
+          "https://opc.aliyun.com/",
+          "https://www.aliyun.com/benefit/ai/opc-a"
+        ]
+      },
+      "communities": [],
+      "name": "阿里云OPC Token普惠权益与百万补贴",
+      "category": "computing",
+      "summary": "阿里云OPC权益包含无门槛Token普惠补贴和单客最高100万元等额Token升级补贴，按活动页规则先用后返。",
+      "benefits": [
+        {
+          "item": "Token普惠权益",
+          "amount": "无门槛满返，小额普惠，一键申领",
+          "amount_max": 0,
+          "type": "voucher"
+        },
+        {
+          "item": "百万Token升级补贴",
+          "amount": "单客最高100万元等额Token补贴",
+          "amount_max": 1000000,
+          "type": "voucher"
+        },
+        {
+          "item": "个企同享",
+          "amount": "个人和企业主体均可按活动规则申请",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "application": {
+        "method": "阿里云账号登录后在权益中心申领，具体返券门槛和结算口径以活动页为准",
+        "url": "https://www.aliyun.com/benefit/ai/opc-b"
+      },
+      "tags": [
+        "阿里云",
+        "Token",
+        "百炼",
+        "算力券",
+        "模型调用",
+        "100万补贴",
+        "先用后返"
+      ],
+      "actual_cases": "用于模型调优、应用试错和Token成本缓冲；不是现金补贴，需核对活动返券条件、有效期和可抵扣产品范围。"
+    },
+    {
+      "id": "aliyun-opc-acceleration-001",
+      "city": "全国",
+      "province": "全国",
+      "district": "",
+      "level": "national",
+      "issuer": "阿里云",
+      "publish_date": "2026-05-20",
+      "status": "active",
+      "updated_at": "2026-05-22",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "easy",
+      "requirements": {
+        "registration_location": "不限",
+        "industries": [
+          "人工智能",
+          "AI Agent",
+          "OPC",
+          "SaaS/工具",
+          "电商",
+          "内容创作"
+        ],
+        "other": [
+          "需按阿里云活动页或表单要求提交；该类权益属于平台商业扶持，不等同于政府补贴"
+        ]
+      },
+      "links": {
+        "official": "https://opc.aliyun.com/",
+        "news": [
+          "https://page.aliyun.com/form/act1809526299/index.htm",
+          "https://page.aliyun.com/form/act722995710/index.htm",
+          "https://page.aliyun.com/form/act341591205/index.htm"
+        ]
+      },
+      "communities": [],
+      "name": "阿里云OPC商业化加速与品牌曝光权益",
+      "category": "comprehensive",
+      "summary": "阿里云OPC加速权益覆盖产品生态引流、商业化顾问、行业洞察、路演融资、媒体宣发和大会峰会曝光。",
+      "benefits": [
+        {
+          "item": "产品生态商业助力",
+          "amount": "云市场/Qoder/JVS等生态精准获客引流",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "1V1商业化顾问",
+          "amount": "预约行业洞察报告与落地建议",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "OPC路演会",
+          "amount": "专属路演通道、融资BP辅导、创投大赛推荐",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "品牌曝光",
+          "amount": "官方媒体矩阵、AI生产力先锋案例库、峰会活动推荐",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "application": {
+        "method": "按诉求分别提交市场加速、资本加持或品牌曝光表单",
+        "url": "https://page.aliyun.com/form/act1809526299/index.htm"
+      },
+      "tags": [
+        "阿里云",
+        "商业化",
+        "云市场",
+        "Qoder",
+        "JVS",
+        "DemoDay",
+        "融资BP",
+        "品牌曝光"
+      ],
+      "actual_cases": "适合已有产品或客户验证的OPC申请；想法期项目应先补产品Demo、用户案例和BP材料。"
+    },
+    {
+      "id": "aliyun-opc-bailian-tools-001",
+      "city": "全国",
+      "province": "全国",
+      "district": "",
+      "level": "national",
+      "issuer": "阿里云",
+      "publish_date": "2026-05-20",
+      "status": "active",
+      "updated_at": "2026-05-22",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "easy",
+      "requirements": {
+        "registration_location": "不限",
+        "industries": [
+          "人工智能",
+          "AI Agent",
+          "OPC",
+          "SaaS/工具",
+          "电商",
+          "内容创作"
+        ],
+        "other": [
+          "需按阿里云活动页或表单要求提交；该类权益属于平台商业扶持，不等同于政府补贴"
+        ]
+      },
+      "links": {
+        "official": "https://opc.aliyun.com/",
+        "news": [
+          "https://bailian.console.aliyun.com/cn-beijing/&source_channel=cli_opc_key&tab=model#/api-key",
+          "https://bailian.console.aliyun.com/cli?source_channel=cli_opc",
+          "https://survey.aliyun.com/apps/zhiliao/g69nqpY0v"
+        ]
+      },
+      "communities": [],
+      "name": "阿里云百炼OPC工具链与AI即刻应用",
+      "category": "computing",
+      "summary": "阿里云OPC页提供百炼CLI、API Key、图像/视频/语音/搜索/知识库等模型能力入口，并给出电商营销等即刻应用模板。",
+      "benefits": [
+        {
+          "item": "百炼CLI",
+          "amount": "通过npm安装bailian-cli，让Agent调用百炼能力",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "百炼API Key",
+          "amount": "从控制台获取Key并接入Agent或开发环境",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "多模型应用能力",
+          "amount": "图像/视频生成编辑、语音合成识别、联网搜索、知识库、长期记忆等",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "电商应用模板",
+          "amount": "产品视频、模特姿势裂变、电商组图等模板",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "AI通用节省计划",
+          "amount": "Token Plan可抵扣百炼全量模型，按套餐节省成本",
+          "amount_max": 250,
+          "type": "voucher"
+        }
+      ],
+      "application": {
+        "method": "按页面指引安装CLI、获取API Key或进入百炼应用市场体验模板",
+        "url": "https://bailian.console.aliyun.com/cli?source_channel=cli_opc"
+      },
+      "tags": [
+        "阿里云百炼",
+        "bailian-cli",
+        "API Key",
+        "AI应用模板",
+        "电商营销",
+        "Token Plan",
+        "工具链问卷"
+      ],
+      "actual_cases": "适合AI Agent、AI电商、内容生成、智能客服和办公自动化OPC接入；页面含API Key配置示例，实际使用时不要公开泄露密钥。"
+    },
+    {
+      "id": "aliyun-opc-product-package-001",
+      "city": "全国",
+      "province": "全国",
+      "district": "",
+      "level": "national",
+      "issuer": "阿里云",
+      "publish_date": "2026-05-20",
+      "status": "active",
+      "updated_at": "2026-05-22",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "easy",
+      "requirements": {
+        "registration_location": "不限",
+        "industries": [
+          "人工智能",
+          "AI Agent",
+          "OPC",
+          "SaaS/工具",
+          "电商",
+          "内容创作"
+        ],
+        "other": [
+          "需按阿里云活动页或表单要求提交；该类权益属于平台商业扶持，不等同于政府补贴"
+        ]
+      },
+      "links": {
+        "official": "https://www.aliyun.com/opc/campaign",
+        "news": [
+          "https://developer.aliyun.com/article/1735759"
+        ]
+      },
+      "communities": [],
+      "name": "阿里云OPC Starter / Lite / Pro 全栈云产品组合",
+      "category": "computing",
+      "summary": "阿里云为OPC从MVP验证、用户增长到持续运营提供Starter、Lite、Pro三档全栈云组合，并包含域名+云服务器组合购。",
+      "benefits": [
+        {
+          "item": "Starter组合",
+          "amount": "想法验证/MVP阶段，轻量应用服务器+Token Plan+云盘企业版",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "Lite组合",
+          "amount": "增长期，ECS c9i/g9i/r9i + RDS + OSS，提升稳定性和素材承载",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "Pro组合",
+          "amount": "持续运营/全球化阶段，ESA边缘安全加速 + ALB负载均衡",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "域名+云服务器组合购",
+          "amount": "域名注册+ECS e实例首年100元/年起（以活动页为准）",
+          "amount_max": 100,
+          "type": "voucher"
+        }
+      ],
+      "application": {
+        "method": "根据项目阶段选择Starter、Lite或Pro产品组合，价格与配置以阿里云活动页为准",
+        "url": "https://www.aliyun.com/opc/campaign"
+      },
+      "tags": [
+        "阿里云",
+        "Starter",
+        "Lite",
+        "Pro",
+        "轻量应用服务器",
+        "ECS",
+        "RDS",
+        "OSS",
+        "ESA",
+        "ALB"
+      ],
+      "actual_cases": "用于把OPC基础设施采购拆成阶段：MVP先低成本试错，有用户后补数据库/对象存储，持续运营再补安全加速和负载均衡。"
+    },
+    {
+      "id": "aliyun-opc-space-001",
+      "city": "全国",
+      "province": "全国",
+      "district": "",
+      "level": "national",
+      "issuer": "阿里云",
+      "publish_date": "2026-05-20",
+      "status": "active",
+      "updated_at": "2026-05-22",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "easy",
+      "requirements": {
+        "registration_location": "不限",
+        "industries": [
+          "人工智能",
+          "AI Agent",
+          "OPC",
+          "SaaS/工具",
+          "电商",
+          "内容创作"
+        ],
+        "other": [
+          "需按阿里云活动页或表单要求提交；该类权益属于平台商业扶持，不等同于政府补贴"
+        ]
+      },
+      "links": {
+        "official": "https://startup.aliyun.com/info/1093722.html",
+        "news": [
+          "https://opc.aliyun.com/",
+          "https://page.aliyun.com/form/act479085822/index.htm"
+        ]
+      },
+      "communities": [],
+      "name": "Y/OUR SPACE 阿里巴巴创业社区全国网络",
+      "category": "space",
+      "summary": "阿里巴巴旗下Y/OUR SPACE创业社区面向AI时代OPC/超级个体/初创团队，公开口径为全国24城31站、链接10000+创业者。",
+      "benefits": [
+        {
+          "item": "全国空间网络",
+          "amount": "24城31站，部分站点公开地址与产业方向",
+          "amount_max": 0,
+          "type": "space"
+        },
+        {
+          "item": "免费畅行",
+          "amount": "全国空间免费畅行3次",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "入驻优惠",
+          "amount": "入驻空间8折起，部分站点另有开发者/跨境客户折扣",
+          "amount_max": 0,
+          "type": "rent_free"
+        },
+        {
+          "item": "创业资源",
+          "amount": "阿里生态、活力社群、资源网络和政策推荐",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "application": {
+        "method": "通过阿里云OPC页申请Y/OUR SPACE空间或查看站点介绍后联系对应运营方",
+        "url": "https://page.aliyun.com/form/act479085822/index.htm"
+      },
+      "tags": [
+        "Y/OUR SPACE",
+        "阿里巴巴创业社区",
+        "OPC空间",
+        "24城31站",
+        "免费畅行",
+        "8折入驻"
+      ],
+      "actual_cases": "站点文章仅公开部分空间详情，价格、押金、最短租期和入驻门槛需以现场或官方表单回复为准。"
+    },
+    {
+      "id": "aliyun-opc-activities-001",
+      "city": "全国",
+      "province": "全国",
+      "district": "",
+      "level": "national",
+      "issuer": "阿里云",
+      "publish_date": "2026-05-20",
+      "status": "active",
+      "updated_at": "2026-05-22",
+      "verified": true,
+      "landing_status": "active",
+      "landing_difficulty": "easy",
+      "requirements": {
+        "registration_location": "不限",
+        "industries": [
+          "人工智能",
+          "AI Agent",
+          "OPC",
+          "SaaS/工具",
+          "电商",
+          "内容创作"
+        ],
+        "other": [
+          "需按阿里云活动页或表单要求提交；该类权益属于平台商业扶持，不等同于政府补贴"
+        ]
+      },
+      "links": {
+        "official": "https://opc.aliyun.com/",
+        "news": [
+          "https://startup.aliyun.com/live/ai/class2",
+          "https://startup.aliyun.com/live/ai/class1",
+          "https://startup.aliyun.com/live/ai/novation/2026",
+          "https://startup.aliyun.com/live/ai/novation"
+        ]
+      },
+      "communities": [],
+      "name": "阿里云OPC活动专区与AI火花公开课",
+      "category": "competition",
+      "summary": "阿里云OPC页聚合AI火花公开课、智能硬件专场、2026/2025 AI创新应用火花大会和AI专家定制服务入口。",
+      "benefits": [
+        {
+          "item": "AI火花公开课",
+          "amount": "企业级Agent应用公开课、智能硬件专场",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "AI创新应用火花大会",
+          "amount": "2026/2025大会内容与行业案例",
+          "amount_max": 0,
+          "type": "service"
+        },
+        {
+          "item": "AI专家定制服务",
+          "amount": "预约AI专家、获取1V1专属优惠",
+          "amount_max": 0,
+          "type": "service"
+        }
+      ],
+      "application": {
+        "method": "打开活动页预约课程/观看直播/联系AI专家",
+        "url": "https://startup.aliyun.com/live/ai/class2"
+      },
+      "tags": [
+        "阿里云",
+        "AI火花公开课",
+        "智能硬件",
+        "AI创新应用火花大会",
+        "专家服务",
+        "直播活动"
+      ],
+      "actual_cases": "作为学习、项目曝光和生态连接入口；活动时效和报名状态变化较快，参加前需回到阿里云活动页核验。"
     }
   ]
 }
