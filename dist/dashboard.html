@@ -204,10 +204,18 @@ function getCityDetailHref(city) {
 
 // Load data from JSON directly (static mode) or API
 async function loadDashboard() {
-  // 1. 加载本地 policies.json
-  const resp = await fetch('data/policies.json');
-  const raw = await resp.json();
+  // 1. 同时加载政策与社区权威数据源
+  const [policyResp, communityResp] = await Promise.all([
+    fetch('data/policies.json'),
+    fetch('data/communities.json'),
+  ]);
+  if (!policyResp.ok || !communityResp.ok) throw new Error('看板数据加载失败');
+  const [raw, communityRaw] = await Promise.all([
+    policyResp.json(),
+    communityResp.json(),
+  ]);
   let policies = raw.policies || [];
+  const communities = Array.isArray(communityRaw.communities) ? communityRaw.communities : [];
 
   // 2. 仅在爬虫暴露结构化端点时合并候选政策
   try {
@@ -237,16 +245,22 @@ async function loadDashboard() {
     }
   } catch(e) { console.log('[Crawler] 跳过合并:', e.message); }
 
-  renderDashboard(computeDashboard(policies));
+  renderDashboard(computeDashboard(policies, communities));
 }
 
-function computeDashboard(policies) {
+function computeDashboard(policies, communities) {
   const cityStats = {};
+  const communityStats = {};
   const categories = {};
   const benefitTypes = {};
   const provinceStats = {};
   let totalMax = 0;
   let verified = 0;
+
+  communities.forEach(community => {
+    const city = community.city || '未知';
+    communityStats[city] = (communityStats[city] || 0) + 1;
+  });
 
   policies.forEach(p => {
     const city = p.city || 'unknown';
@@ -262,9 +276,12 @@ function computeDashboard(policies) {
       totalMax += b.amount_max||0;
       benefitTypes[b.type||'other'] = (benefitTypes[b.type||'other']||0)+1;
     });
-    cityStats[city].communities += (p.communities||[]).length;
     categories[p.category||'other'] = (categories[p.category||'other']||0)+1;
     if (p.verified) verified++;
+  });
+
+  Object.entries(cityStats).forEach(([city, stats]) => {
+    stats.communities = communityStats[city] || 0;
   });
 
   const upcoming = [];
@@ -285,9 +302,10 @@ function computeDashboard(policies) {
     total_policies: policies.length,
     total_cities: Object.keys(cityStats).length,
     total_provinces: Object.keys(provinceStats).length,
-    total_communities: Object.values(cityStats).reduce((s,c) => s+c.communities, 0),
+    total_communities: communities.length,
     total_max_amount: totalMax,
     city_stats: cityStats,
+    community_stats: communityStats,
     province_stats: provinceStats,
     categories,
     benefit_types: benefitTypes,
@@ -369,14 +387,14 @@ function renderDashboard(d) {
     : '<div style="color:var(--dim);padding:20px;text-align:center">暂无近期截止政策</div>';
 
   // Community bars
-  const commCities = cities.filter(c => c[1].communities > 0).sort((a,b) => b[1].communities - a[1].communities);
-  const maxComm = Math.max(...commCities.map(c => c[1].communities), 1);
-  document.getElementById('communityBars').innerHTML = commCities.map(([city, s], i) => `
+  const commCities = Object.entries(d.community_stats).sort((a,b) => b[1] - a[1]);
+  const maxComm = Math.max(...commCities.map(([, count]) => count), 1);
+  document.getElementById('communityBars').innerHTML = commCities.map(([city, count], i) => `
     <div class="bar-row">
       <div class="bar-label">${city}</div>
       <div class="bar-track">
-        <div class="bar-fill" style="width:${(s.communities/maxComm*100)}%;background:${colors[i%colors.length]}">
-          <span>${s.communities} 个</span>
+        <div class="bar-fill" style="width:${(count/maxComm*100)}%;background:${colors[i%colors.length]}">
+          <span>${count} 个</span>
         </div>
       </div>
     </div>
