@@ -53,3 +53,7 @@ playwright-report/
 
 # Logs
 *.log
+
+# Independent contest repositories live here as nested Git repositories.
+# Each one has its own remote and history; never vendor them into OPC Gate.
+contest-repos/
