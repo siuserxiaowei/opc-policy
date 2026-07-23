@@ -1,264 +1,130 @@
-# opcgate — OPC 选址决策工具
+# OPC Gate · 一人公司政策与落地路线诊断
 
-> 🏆 **InfiniSynapse × CSDN Vibe Coding 2026 参赛作品**
->
-> [立即体验](https://opcgate.com) · [参赛说明与架构](VIBE_CODING_2026.md) · [演示视频](https://github.com/siuserxiaowei/opc-policy/releases/tag/vibe-coding-2026)
+> **InfiniSynapse × CSDN Vibe Coding 2026 参赛作品**：将 42 个城市 / 适用范围、125 条政策和 128 条社区 / 载体样本转成可解释的一人公司选址建议。
 
-2026-07-23 已完成正式环境 InfiniSynapse Server API 联调：从服务端建立 SSE、创建 `newTask`、接收结构化报告并展示真实 Task ID；调用记录可在 InfiniSynapse `ALL TASKS` 后台核验。
+[**立即体验**](https://opcgate.com) · [**36 秒真实 API 演示**](https://github.com/siuserxiaowei/opc-policy/releases/tag/vibe-coding-2026) · [**参赛架构与复现**](VIBE_CODING_2026.md) · [**城市对比**](https://opcgate.com/compare) · [**数据看板**](https://opcgate.com/dashboard)
 
-<!-- SIUSER-REPO-GUIDE:START -->
-## 项目介绍 / Project Introduction
+[![Site](https://img.shields.io/badge/site-opcgate.com-2563EB)](https://opcgate.com)
+[![InfiniSynapse](https://img.shields.io/badge/InfiniSynapse-real%20SSE-0F766E)](VIBE_CODING_2026.md#真实调用证据)
+[![Data](https://img.shields.io/badge/data-42%20%7C%20125%20%7C%20128-B45309)](#数据底座与来源口径)
+[![Sitemap](https://img.shields.io/badge/sitemap-188%20URLs-15803D)](https://opcgate.com/sitemap.xml)
 
-### 中文
-全国 OPC 政策导航与 AI 落地路线诊断：整理一人公司补贴、园区和资料来源，并通过 InfiniSynapse Server API 生成证据型选址报告。
+OPC Gate 把用户画像和政策数据先交给确定性规则引擎，产生带来源的候选集；再通过服务端调用 InfiniSynapse Server API，综合成跨城市比较、机会证据、关键风险与七天行动计划。结果页展示真实 Task ID，可由赛事后台核验调用日志。
 
-### English
-OPC policy navigator for one-person company subsidies, policies, and reference lookup.
+## 评委一分钟验证
 
-## 使用方式 / Usage
+1. 打开 [opcgate.com](https://opcgate.com)，点击「一键体验示例 · 约 60 秒」。
+2. 查看规则引擎的排序理由、候选可核验上限和来源标识。
+3. 点击「生成 AI 深度选址报告」，查看 InfiniSynapse 返回的证据、风险、行动计划和 Task ID。
 
-### 中文
-1. 先克隆仓库并安装 Node 依赖。
-2. 根据 `package.json` 中的 scripts 启动开发、构建或测试命令。
-3. 如果有在线入口，先对照线上页面理解最终效果，再回到源码修改。
+已于 **2026-07-23（北京时间）**完成正式环境调用验证：服务端先建立 `GET /api/ai/events` SSE，再通过 `POST /api/ai/message` 创建 `newTask`，最后将结构化报告与 Task ID 流式返回前端。可核验 Task ID：`850b9073-e8d9-49cb-9d03-9434f1f76a68`。
 
-### English
-1. Clone the repository and install the Node dependencies.
-2. Use the scripts in `package.json` for development, build, or tests.
-3. If a live link exists, review the deployed page first, then make source changes.
+API 实现对照 [InfiniSynapse Server API Reference](https://infinisynapse.cn/zh/docs/InfiniSynapse%20Server%20API%20Reference)，文档页面标注最后更新于 2026-07-22。
 
-## 入口与元信息 / Entry Points & Metadata
+## 为什么适合泛数据分析赛题
 
-- GitHub 仓库 / Repository: https://github.com/siuserxiaowei/opc-policy
-- Live / 在线入口：https://opcgate.com/
-- 默认分支 / Default branch: `main`
-- 主要语言 / Primary language: `HTML`
-- 可见性 / Visibility: `public`
-- 仓库类型 / Repository type: `source`
-- Topics / 主题：`ai`, `china`, `one-person-company`, `opc`, `policy`, `startup`
+| 分析链路 | OPC Gate 实现 | 可核验输出 |
+| --- | --- | --- |
+| 数据建模 | 政策、城市、社区 / 载体的结构化 JSON | 42 / 125 / 128 及 schema |
+| 确定性筛选 | 按城市、阶段、行业、团队和需求组合评分 | 排序、匹配理由、申报时间 |
+| 来源约束 | 官方原文优先；官链缺失时明示参考来源 | 页面来源标签和原文链接 |
+| AI 综合 | InfiniSynapse 对候选集进行跨城比较 | 证据、置信度、风险与行动计划 |
+| 结果追溯 | Cloudflare Pages Function 代理正式 API | 前端 Task ID + InfiniSynapse `ALL TASKS` |
 
-## 本地运行 / Local Run
+## 时间口径：项目基础 vs 参赛冲刺
+
+本仓库在本次赛事前已有政策导航、规则匹配和数据集，**不是 2026-07-22 从零创建的新仓库**。本次 Vibe Coding 冲刺于 **2026-07-22 至 2026-07-23** 在现有产品上真实完成 AI 分析链路、服务端 API 代理、安全与流式输出加固、正式环境录制及参赛复现材料。
+
+| 日期 | 可核验提交 | 实际新增 / 改进 |
+| --- | --- | --- |
+| 2026-07-22 21:00 | [`6f663cc`](https://github.com/siuserxiaowei/opc-policy/commit/6f663cc) | InfiniSynapse 报告链路、Pages Function、输入约束与 fail-closed、参赛展示和自动化测试 |
+| 2026-07-23 11:07 | [`0f0abab`](https://github.com/siuserxiaowei/opc-policy/commit/0f0abab) | `newTask` 业务错误校验、SSE 增量文本合并和更完整的回归测试 |
+| 2026-07-23 11:47 | [`15f5b12`](https://github.com/siuserxiaowei/opc-policy/commit/15f5b12) | 录制脚本改为访问 `opcgate.com` 正式站并等待真实 Server API 返回 |
+| 2026-07-23 12:15 | [`83f61ad`](https://github.com/siuserxiaowei/opc-policy/commit/83f61ad) | 公开参赛架构、Task ID 证据、验证结果和复现命令 |
+
+> 日期来自 Git 提交记录；未改写旧提交时间，也不把赛前已有功能写成赛事期间新建。
+
+## 数据底座与来源口径
+
+- **数据快照日期：2026-05-22**，以 `data/policies.json` 和 `data/communities.json` 顶层 `updated_at` 为准。这与 2026-07-23 的产品 / API 构建日期是两个不同口径。
+- **42 个城市 / 适用范围**：`data/cities.json`。其中「全国」是适用范围，不会在 AI 报告中被当作城市推荐。
+- **125 条政策记录**：`data/policies.json`；其中 106 条填有 `links.official` 主来源字段，按当前前端官方域名白名单会展示 99 条「官方来源」与 26 条参考 / 缺官链记录。
+- **128 条社区 / 载体样本**：`data/communities.json`。「样本」表示数据集记录，不等同于全国完整名录。
+- **188 个 sitemap URL**：当前 `sitemap.xml` 中 `<url>` 节点数，对应主页、工具页、城市页和政策详情页。
+
+来源展示遵循「**官方原文优先，缺失必须明示**」：
+
+1. `links.official` 存在且通过前端官方域名白名单时，页面标记「官方来源」。字段名本身不被当作官方性证明。
+2. 官链缺失时，页面标记「参考来源」或「已核验 · 缺官链」，不把媒体 / 资讯链接冒充政策原文。
+3. 给 InfiniSynapse 的候选项保留来源字段；缺少官链时提示降低 `confidence` 并需人工核验。
+
+数据仅用于信息查询和路线诊断，最终申请以主管部门最新原文和书面答复为准。
+
+## 核心能力
+
+| 能力 | 入口 | 用途 |
+| --- | --- | --- |
+| 规则匹配 + AI 深度研判 | [首页](https://opcgate.com) | 生成候选排序、跨城比较、证据风险和行动计划 |
+| 城市横向对比 | [compare](https://opcgate.com/compare) | 对比补贴、社区、税务和申报门槛 |
+| 数据看板 | [dashboard](https://opcgate.com/dashboard) | 查看城市覆盖、补贴分布、申报日历和榜单 |
+| 城市深页 | [seo/cities](https://opcgate.com/seo/cities) | 查看单城政策、载体与来源 |
+| 开放申报窗口 | [now-open](https://opcgate.com/now-open) | 按 schedule 字段查看当前 / 近期机会 |
+| 变更追踪 | [changelog](https://opcgate.com/changelog) · [RSS](https://opcgate.com/rss.xml) | 追踪公开数据变更 |
+
+## 技术架构
+
+```mermaid
+flowchart LR
+    U[用户画像] --> R[确定性规则引擎]
+    D[42 / 125 / 128 数据快照] --> R
+    R --> C[带来源候选集]
+    C --> F[Cloudflare Pages Function]
+    F -->|GET events + POST newTask| I[InfiniSynapse Server API]
+    I -->|SSE 消息| F
+    F --> W[结构化报告 + Task ID]
+```
+
+浏览器只将用户画像和候选数据提交给本站后端。`INFINISYNAPSE_API_KEY` 只保存在 Cloudflare Pages Secret，不进入 HTML、JavaScript 或 Git。未配置密钥时，API 返回 `503 INFINISYNAPSE_NOT_CONFIGURED`，确定性规则匹配仍可用。
+
+关键路径：
+
+```text
+index.html                           # 首页、规则匹配与 AI 报告 UI
+functions/api/infinisynapse-report.js # InfiniSynapse 服务端代理
+data/                                # policies / cities / communities / schema
+assets/js/schedule.js                # 申报窗口计算
+tests/unit/                           # API 输入、SSE、错误处理测试
+tests/e2e/                            # 核心流程和正式站录制脚本
+scripts/validate_data.py             # 数据结构与来源校验
+VIBE_CODING_2026.md                  # 参赛架构、证据与复现
+```
+
+## 本地运行与验证
+
+需要 Node.js 18 或更高版本。
 
 ```bash
 git clone https://github.com/siuserxiaowei/opc-policy.git
 cd opc-policy
-npm install
-```
-
-## 仓库结构 / Repository Map
-
-| 路径 / Path | 中文说明 | English |
-| --- | --- | --- |
-| `README.md` | 项目入口说明，先读这里。 | Main project entry point and orientation. |
-| `package.json` | Node/前端项目配置、依赖和脚本。 | Node/frontend dependencies and scripts. |
-| `index.html` | 静态站首页或页面入口。 | Static-site homepage or entry page. |
-| `assets` | 图片、样式、数据等资源。 | Images, styles, data, and other assets. |
-| `data` | 数据、索引或结构化内容。 | Data, indexes, or structured content. |
-| `scripts` | 构建、同步、生成或维护脚本。 | Build, sync, generation, or maintenance scripts. |
-| `tests` | 测试用例与验证脚本。 | Tests and validation scripts. |
-| `.github` | GitHub Actions 和协作自动化配置。 | GitHub Actions and collaboration automation. |
-| `cities` | 项目文件或目录。 | Project file or directory. |
-| `dist` | 构建产物或可分发包。 | Build artifacts or distributable package. |
-| `seo` | 项目文件或目录。 | Project file or directory. |
-| `营销素材` | 项目文件或目录。 | Project file or directory. |
-
-## 维护备注 / Maintenance Notes
-
-- 中文：当项目目标、在线入口、运行命令或目录结构变化时，同步更新本说明。
-- English: Keep this guide updated when the project purpose, live link, run commands, or structure changes.
-- 中文：修改代码、数据或生成页面后，优先运行相关构建、测试或校验命令。
-- English: After changing code, data, or generated pages, run the relevant build, test, or validation command.
-
-## 安全与隐私 / Safety & Privacy
-
-- 中文：不要提交 API key、token、密码、cookie、私有链接或内部账号资料。
-- English: Do not commit API keys, tokens, passwords, cookies, private URLs, or internal account data.
-- 中文：公开 GitHub Pages 前，确认资料已脱敏并允许公开。
-- English: Before publishing GitHub Pages output, confirm the material is redacted and cleared for public release.
-<!-- SIUSER-REPO-GUIDE:END -->
-
-
-
-<!-- SIUSER-SEO-INTRO:START -->
-
-## 项目介绍 / Project Introduction
-
-**中文介绍**：全国 OPC（一人公司）政策导航与 AI 落地路线诊断，聚合城市、补贴、申请条件和政策信息，帮助快速匹配机会并生成证据型行动方案。
-
-**English**: A China OPC policy navigator aggregating cities, subsidies, eligibility rules, and policy information for opportunity matching.
-
-**SEO 关键词 / SEO Keywords**: OPC policy, one-person company, subsidy, policy navigator, 政策导航
-
-<!-- SIUSER-SEO-INTRO:END -->
-
-> **按条件匹配 OPC（一人公司）政策与补贴的决策工具，42 城 125 条政策、128 条社区 / 孵化器记录，优先展示官方原文，缺失官链会明示参考来源。**
-
-**官网：[https://opcgate.com](https://opcgate.com)** · **对比工具：[opcgate.com/compare](https://opcgate.com/compare)** · **城市入口大全：[opcgate.com/seo/cities](https://opcgate.com/seo/cities)**
-
-[![Site](https://img.shields.io/badge/site-opcgate.com-2563EB)](https://opcgate.com)
-[![Cloudflare Pages](https://img.shields.io/badge/host-Cloudflare%20Pages-F38020)](https://opcgate.com)
-[![Sitemap](https://img.shields.io/badge/sitemap-60%20URLs-15803D)](https://opcgate.com/sitemap.xml)
-[![RSS](https://img.shields.io/badge/RSS-policy%20updates-B45309)](https://opcgate.com/rss.xml)
-[![License](https://img.shields.io/badge/license-MIT-0F766E)](#license)
-
-## 为什么做这件事
-
-OPC（One-Person Company，一人公司）是 2026 年地方招商的核心抓手。广州、深圳、苏州、成都、杭州等 20+ 城市推出了形式各异的政策：有的给算力补贴，有的给免租工位，有的给 AI 示范项目奖。问题是：
-
-- 政府公告散落在几十个区、市、省的不同门户
-- 中介 / 孵化器口头描述的"优惠"经常货不对板
-- OPC 论坛有氛围没有结构化数据
-- Excel 横向对比做到第 5 个城市就会崩
-
-`opcgate.com` 专做结构化政策数据库 + 决策工具：输入公司情况 → 输出匹配度排序、倒计时、材料清单、官方原文链接。不做论坛、不做代办、不做软文。
-
-## 核心能力
-
-| 能力 | 入口 | 适合场景 |
-|------|------|---------|
-| **智能匹配** | [首页](https://opcgate.com) | 填身份、城市、行业，返回 top 可申政策 + 倒计时 |
-| **AI 深度研判** | [首页](https://opcgate.com) | 规则匹配后通过 InfiniSynapse Server API 生成城市对比、证据风险和行动计划 |
-| **城市对比** | [compare](https://opcgate.com/compare) | 两到四座城市并排对比补贴额、社区、税务、申报门槛 |
-| **城市深页** | [seo/cities](https://opcgate.com/seo/cities) | 单城聚合页：政策列表 + 孵化器 + 最新核验时间 |
-| **数据看板** | [dashboard](https://opcgate.com/dashboard) | 城市覆盖图、补贴分布、申报日历、Top 10 榜单 |
-| **广州专版** | [guangzhou](https://opcgate.com/guangzhou) | 各区 OPC 政策 + 琶洲模方 + 海珠十条原文 |
-| **税务对比** | [tax](https://opcgate.com/tax) + [tax-cases](https://opcgate.com/tax-cases) | OPC vs 个独 vs 有限公司 综合税负计算 |
-| **维护日志** | [changelog](https://opcgate.com/changelog) | 每条新增 / 改动 / 废止都留痕，可追溯 |
-| **RSS 订阅** | [rss.xml](https://opcgate.com/rss.xml) | 政策更新实时推送 |
-
-## 热门城市对比页
-
-每一页都是带官方来源的长文深页，直接点进去能做决策：
-
-- [广州 vs 深圳 vs 苏州 OPC 政策对比](https://opcgate.com/seo/guangzhou-vs-shenzhen-vs-suzhou)
-- [北京 vs 上海 vs 深圳 OPC 对比](https://opcgate.com/seo/beijing-vs-shanghai-vs-shenzhen)
-- [苏州 vs 杭州 vs 南京 OPC 对比](https://opcgate.com/seo/suzhou-vs-hangzhou-vs-nanjing)
-- [成都 vs 重庆 vs 武汉 OPC 对比](https://opcgate.com/seo/chengdu-vs-chongqing-vs-wuhan)
-- [合肥 vs 南京 vs 杭州 OPC 对比](https://opcgate.com/seo/hefei-vs-nanjing-vs-hangzhou)
-- [AI 语音创业：广州 vs 深圳 谁更划算](https://opcgate.com/seo/ai-voice-guangzhou-vs-shenzhen)
-- [2026 年最适合做 OPC 的城市榜](https://opcgate.com/seo/best-opc-city-2026)
-
-## 42 城城市入口
-
-目前共覆盖 42 个城市 / 适用范围，并持续补充结构化深页：
-
-[北京](https://opcgate.com/seo/cities/北京) · [上海](https://opcgate.com/seo/cities/上海) · [深圳](https://opcgate.com/seo/cities/深圳) · [杭州](https://opcgate.com/seo/cities/杭州) · [南京](https://opcgate.com/seo/cities/南京) · [武汉](https://opcgate.com/seo/cities/武汉) · [重庆](https://opcgate.com/seo/cities/重庆) · [西安](https://opcgate.com/seo/cities/西安) · [合肥](https://opcgate.com/seo/cities/合肥) · [郑州](https://opcgate.com/seo/cities/郑州) · [长沙](https://opcgate.com/seo/cities/长沙) · [济南](https://opcgate.com/seo/cities/济南) · [青岛](https://opcgate.com/seo/cities/青岛) · [天津](https://opcgate.com/seo/cities/天津) · [宁波](https://opcgate.com/seo/cities/宁波) · [无锡](https://opcgate.com/seo/cities/无锡) · [常州](https://opcgate.com/seo/cities/常州) · [南通](https://opcgate.com/seo/cities/南通) · [徐州](https://opcgate.com/seo/cities/徐州) · [扬州](https://opcgate.com/seo/cities/扬州) · [盐城](https://opcgate.com/seo/cities/盐城) · [连云港](https://opcgate.com/seo/cities/连云港) · [宿迁](https://opcgate.com/seo/cities/宿迁) · [温州](https://opcgate.com/seo/cities/温州) · [东莞](https://opcgate.com/seo/cities/东莞) · [佛山](https://opcgate.com/seo/cities/佛山) · [中山](https://opcgate.com/seo/cities/中山) · [珠海](https://opcgate.com/seo/cities/珠海) · [惠州](https://opcgate.com/seo/cities/惠州) · [梅州](https://opcgate.com/seo/cities/梅州) · [厦门](https://opcgate.com/seo/cities/厦门) · [福州](https://opcgate.com/seo/cities/福州) · [昆明](https://opcgate.com/seo/cities/昆明) · [海口](https://opcgate.com/seo/cities/海口) · [石家庄](https://opcgate.com/seo/cities/石家庄)
-
-## 和 OPC 圈 / 其他工具的差异
-
-| 维度 | opcgate.com | OPC 圈 / 论坛类 | Excel / PDF 汇总贴 |
-|---|---|---|---|
-| 数据形态 | 结构化字段（金额、截止、行业、身份） | 攻略帖 / 群聊 | 平铺文档 |
-| 匹配方式 | 条件组合 → 自动排序 | 人工爬楼 / 问群主 | Ctrl+F |
-| 官方链接 | 每条政策带 gov.cn 原文 + 主管部门 | 少数 | 零散 |
-| 政策变动 | changelog + RSS 可追溯 | 不留痕 | 不留痕 |
-| 倒计时 / 日历 | 结构化 schedule 字段自动计算 | 口头提醒 | 无 |
-| 城市覆盖 | 42 城 / 适用范围 | 大城市为主 | 1–2 个城市 |
-
-## 项目结构（公开部分）
-
-```
-├── index.html                     # 首页：规则匹配 + 浏览 + AI 深度研判
-├── functions/api/                 # Cloudflare Pages Function：InfiniSynapse 服务端代理
-├── guangzhou.html / chengdu.html  # 广州、成都、苏州专版
-├── suzhou.html                    #
-├── compare.html                   # 城市对比工具
-├── dashboard.html                 # 数据看板
-├── city.html                      # 城市总览壳页
-├── tax.html / tax-cases.html      # 税务指南与案例
-├── changelog.html / rss.xml       # 维护日志 + RSS 订阅
-├── assets/js/schedule.js          # 申报窗口计算（deadline/window/recurring）
-├── data/
-│   ├── policies.json              # 结构化政策数据库（125 条）
-│   ├── cities.json                # 城市索引
-│   ├── communities.json           # OPC 社区 / 孵化器
-│   └── schema.json                # 数据格式定义
-├── seo/
-│   ├── cities/                    # 城市 SEO 深页
-│   ├── guangzhou-vs-shenzhen-vs-suzhou.html 等对比深页
-│   └── index.html                 # 热门对比入口
-├── cities/                        # 各城市人工核验原文（markdown）
-└── sitemap.xml / robots.txt       # 搜索引擎入口
-```
-
-## InfiniSynapse Server API 接入
-
-浏览器只把用户画像和规则引擎候选结果提交给本站后端；API Key 不进入 HTML、JavaScript 或 Git。Cloudflare Pages Function 会先连接事件流，再创建 `newTask`，最后把结构化报告和 Task ID 通过 SSE 返回页面。
-
-本地开发时复制 `.dev.vars.example` 为 `.dev.vars`，填写真实密钥后使用 Wrangler 启动。线上密钥必须通过 Cloudflare Secret 配置：
-
-```bash
-npx wrangler pages secret put INFINISYNAPSE_API_KEY --project-name=opc-policy
-```
-
-未配置密钥时接口会 fail-closed 返回 `503 INFINISYNAPSE_NOT_CONFIGURED`，原有规则匹配仍然可用。正式环境已于 2026-07-23 配置服务端密钥并完成真实调用验证，核验 Task ID：`850b9073-e8d9-49cb-9d03-9434f1f76a68`。演示视频使用正式站真实调用画面，不再使用模拟 SSE。
-
-## 测试与预览构建
-
-```bash
-npm test
+npm ci
+npm run test:unit
 python3 scripts/validate_data.py
+```
+
+安装 Playwright Chromium 后可执行全部测试：
+
+```bash
+npm run test:e2e:install
+npm test
 ./scripts/deploy.sh --skip-check --skip-generate --dry-run
 ```
 
-`--skip-generate` 用于保留当前已核验的公开页面，避免旧生成器在比赛预览构建时覆盖新版内容。Pages Function 会被编译为 `_worker.js`，不会把 `functions/` 源码目录当作静态资源发布。
+本地联调 InfiniSynapse 时，复制 `.dev.vars.example` 为 `.dev.vars` 并填入自己的密钥；不要将 `.dev.vars`、API Key、token、cookie 或账号凭据提交到仓库。
 
-## 数据规范
+## 开源、反馈与联系
 
-每条政策都是一条 JSON，包含：
+- 作者：**siuser 小伟**（产品 + 开发）
+- 数据纠错 / 功能建议：[GitHub Issues](https://github.com/siuserxiaowei/opc-policy/issues)
+- 产品交流：微信 `siuserxiaowei`（备注 OPC）
 
-- **基础信息**：城市、区、发文机关、status（active / draft / expired）
-- **补贴项** `benefits[]`：拆到具体项目（一次性 / 年度 / 免租 / 补贴比例）和金额上限
-- **申请要求** `requirements`：注册地、身份、学历、行业、其他
-- **申报窗口** `application.schedule`：deadline / window / recurring / rolling 四种类型，前端可直接计算倒计时
-- **官方链接** `links.official + links.department + links.news`：优先用 gov.cn，多源互证
-- **社区** `communities[]`：关联的产业园 / 孵化器 / 智算中心
-- **标签** `tags[]`：AI / 算力 / 制造 / 跨境等，辅助匹配
-- **最近核验** `updated_at + verified`：让读者知道是哪天的数据
-
-完整 schema 见 [data/schema.json](data/schema.json)。
-
-## 运营节奏
-
-- **核验频率**：高频城市每两周、全量每季度
-- **新增渠道**：政府门户 RSS / 媒体推送 / 社群同步
-- **数据透明**：所有变更进 [changelog](https://opcgate.com/changelog)，对外可订阅 [RSS](https://opcgate.com/rss.xml)
-- **纠错入口**：每条政策卡片底下都有"发现问题"按钮直接打开 GitHub Issue 模板
-
-## 适合谁
-
-- 准备把 OPC 落到哪座城市的 **独立开发者 / AI 创业者**
-- 在对比城市补贴做决策的 **中小企业 / 咨询顾问**
-- 写"创业选址"内容需要结构化数据的 **自媒体作者**
-- 想收录 OPC 政策到自己知识库的 **孵化器 / 园区 / 服务商**
-
-## 团队
-
-| 角色 | 人 | 方向 |
-|---|---|---|
-| 产品 + 开发 | **siuser 小伟** | AI 语音机器人方案商 / 独立开发者 |
-| 税务顾问 | **张永航** | 盈丰税务规划 / OPC 财税合规 |
-
-## 合作与咨询
-
-- 对政策数据有意见 / 补充 → 直接提 [Issue](https://github.com/siuserxiaowei/opc-policy/issues)
-- 孵化器 / 服务商合作 → 站内联系按钮
-- AI 语音机器人 / OPC 落地咨询 → 微信 `siuserxiaowei`（备注 OPC）
-
-## License
-
-MIT. 数据引用请保留 `opcgate.com` 来源标注。
-
-<!-- SIUSER-CONTACT:START -->
-
-## 联系我 / Contact
-
-想交流 AI 工具、内容自动化、SEO、私域增长或项目合作，可以扫码加我微信。
-
-For collaboration on AI tools, content automation, SEO, private-domain growth, or product experiments, scan the WeChat QR code below.
-
-<img src="https://raw.githubusercontent.com/siuserxiaowei/siuserxiaowei/main/assets/contact/wechat-qrcode.jpg" width="180" alt="WeChat QR code / 微信二维码" />
-
-**关键词 / Keywords**: OPC policy, one-person company, subsidy, policy navigator, AI tools, AI automation, GitHub Pages, SEO
-
-<!-- SIUSER-CONTACT:END -->
+代码按 MIT 方式开放使用；政策和载体数据请保留 `opcgate.com` 来源标注，并回到官方原文核验。
