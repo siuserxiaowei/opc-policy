@@ -10,7 +10,7 @@ process.env.NO_PROXY = mergedNoProxy;
 process.env.no_proxy = mergedNoProxy;
 
 const repoRoot = resolve(fileURLToPath(new URL('../..', import.meta.url)));
-const port = Number(process.env.E2E_PORT || 4173);
+const port = Number(process.env.E2E_PORT || 43917);
 const externalBaseURL = process.env.E2E_BASE_URL;
 const staticDir = resolve(
   repoRoot,
@@ -32,10 +32,10 @@ export default defineConfig({
   webServer: externalBaseURL
     ? undefined
     : {
-        command: `python3 -m http.server ${port} -d ${JSON.stringify(staticDir)}`,
+        command: `python3 -m http.server ${port} --bind 127.0.0.1 -d ${JSON.stringify(staticDir)}`,
         url: baseURL,
         cwd: repoRoot,
-        reuseExistingServer: !process.env.CI,
+        reuseExistingServer: false,
         timeout: 30_000,
       },
   projects: [

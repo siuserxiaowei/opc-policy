@@ -38,12 +38,31 @@ test('static site starts and home data loads', async ({ page }) => {
   await openHome(page);
 
   await expect(page).toHaveTitle(/OPC/);
-  await expect(
-    page.getByText('42 城 · 125 条政策 · 128 个社区/载体样本 · 缺失官链会明示', {
-      exact: true,
-    }),
-  ).toBeVisible();
+  await expect(page.getByText('InfiniSynapse × CSDN Vibe Coding 2026 参赛作品', { exact: true })).toBeVisible();
+  await expect(page.getByRole('button', { name: '一键体验示例 · 约 60 秒' })).toBeVisible();
+  await expect(page.getByText('03 · AI 跨城研判', { exact: true })).toBeVisible();
+  await expect(page.getByText('Task ID：850b9073-e8d9-49cb-9d03-9434f1f76a68', { exact: true })).toBeVisible();
   await expect(page.locator('#cityGrid .city-card')).toHaveCount(expectedCounts.cities);
+});
+
+test('contest demo runs the explainable local analysis without consuming the AI API', async ({ page }) => {
+  let aiRequests = 0;
+  await page.route('**/api/infinisynapse-report', route => {
+    aiRequests += 1;
+    return route.abort();
+  });
+
+  await openHome(page);
+  await page.getByRole('button', { name: '一键体验示例 · 约 60 秒' }).click();
+
+  await expect(page.locator('#panelResults')).toBeVisible();
+  await expect(page.locator('#fCity')).toHaveValue('广州');
+  await expect(page.locator('#aiReportPanel')).toBeInViewport();
+  await expect(page.getByRole('button', { name: '生成 AI 深度选址报告' })).toBeVisible();
+  await expect(page.getByText('候选可核验上限', { exact: true })).toBeVisible();
+  const ceilingText = await page.locator('#summaryStats .summary-stat').last().locator('.num').innerText();
+  expect(Number.parseInt(ceilingText, 10)).toBeLessThanOrEqual(5000);
+  expect(aiRequests).toBe(0);
 });
 
 test('home browse can find the five newly added policies', async ({ page }) => {

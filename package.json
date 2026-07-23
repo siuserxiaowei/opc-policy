@@ -1,6 +1,29 @@
 {
   "name": "opc-policy",
+  "version": "1.0.0",
+  "description": "Explainable OPC policy matching and InfiniSynapse-powered location diagnostics across 42 city scopes.",
   "private": true,
+  "type": "module",
+  "homepage": "https://opcgate.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siuserxiaowei/opc-policy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/siuserxiaowei/opc-policy/issues"
+  },
+  "author": "siuser小伟",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "opc",
+    "policy",
+    "data-analysis",
+    "infinisynapse",
+    "vibe-coding"
+  ],
   "scripts": {
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "node --test tests/unit/*.test.mjs",
