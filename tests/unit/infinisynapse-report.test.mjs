@@ -73,7 +73,12 @@ test('endpoint connects SSE before newTask and streams a structured result', asy
       return new Response(`event: message.add\ndata: ${payload}\n\n`, { status: 200, headers: { 'content-type': 'text/event-stream' } });
     }
     if (String(url).includes('/api/ai/message')) {
-      createdTaskId = JSON.parse(options.body).taskId;
+      const requestBody = JSON.parse(options.body);
+      createdTaskId = requestBody.taskId;
+      assert.deepEqual(requestBody.chatSettings, { mode: 'act' });
+      assert.equal(requestBody.autoApprovalSettings.enableBrowser, false);
+      assert.equal(requestBody.autoApprovalSettings.enableWebSearch, false);
+      assert.equal(requestBody.autoApprovalSettings.maxRequests, 40);
       return new Response(JSON.stringify({ success: true, taskId: createdTaskId }), { status: 200 });
     }
     throw new Error(`unexpected URL ${url}`);
@@ -91,6 +96,68 @@ test('endpoint connects SSE before newTask and streams a structured result', asy
     assert.match(body, /event: meta/);
     assert.match(body, /event: result/);
     assert.match(body, /广州与当前画像/);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test('endpoint rejects a successful HTTP response when newTask reports business failure', async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async (url) => {
+    if (String(url).includes('/api/ai/events')) {
+      return new Response('event: heartbeat\ndata: "ping"\n\n', {
+        status: 200,
+        headers: { 'content-type': 'text/event-stream' },
+      });
+    }
+    if (String(url).includes('/api/ai/message')) {
+      return new Response(JSON.stringify({
+        success: false,
+        notification: { type: 'error', message: '额度不足' },
+      }), { status: 200 });
+    }
+    throw new Error(`unexpected URL ${url}`);
+  };
+  try {
+    const response = await onRequestPost({
+      env: { INFINISYNAPSE_API_KEY: 'test-only', INFINISYNAPSE_BASE_URL: 'https://provider.test' },
+      request: new Request('https://opcgate.test/api/infinisynapse-report', {
+        method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(validBody),
+      }),
+    });
+    assert.equal(response.status, 502);
+    assert.equal((await response.json()).error, '额度不足');
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test('endpoint combines incremental SSE chunks that share the same message timestamp', async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async (url) => {
+    if (String(url).includes('/api/ai/events')) {
+      const first = JSON.stringify({ message: { ts: 7, type: 'say', text: '{"executiveSummary":"增量' } });
+      const second = JSON.stringify({ message: { ts: 7, type: 'say', say: 'completion_result', text: '结果","recommendedCity":"广州"}' } });
+      return new Response(`event: message.partial\ndata: ${first}\n\nevent: message.add\ndata: ${second}\n\n`, {
+        status: 200,
+        headers: { 'content-type': 'text/event-stream' },
+      });
+    }
+    if (String(url).includes('/api/ai/message')) {
+      return new Response(JSON.stringify({ success: true }), { status: 200 });
+    }
+    throw new Error(`unexpected URL ${url}`);
+  };
+  try {
+    const response = await onRequestPost({
+      env: { INFINISYNAPSE_API_KEY: 'test-only', INFINISYNAPSE_BASE_URL: 'https://provider.test' },
+      request: new Request('https://opcgate.test/api/infinisynapse-report', {
+        method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(validBody),
+      }),
+    });
+    const body = await response.text();
+    assert.match(body, /event: result/);
+    assert.match(body, /增量结果/);
   } finally {
     globalThis.fetch = originalFetch;
   }

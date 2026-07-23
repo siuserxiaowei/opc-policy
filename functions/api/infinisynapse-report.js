@@ -3,6 +3,19 @@ const MAX_CANDIDATES = 10;
 const MAX_PROFILE_TEXT = 120;
 const MAX_RUNTIME_MS = 120_000;
 
+const TASK_APPROVAL_SETTINGS = Object.freeze({
+  maxRequests: 40,
+  maxSubAgentRequests: 5,
+  databaseReturnLimit: 50,
+  delegateMaxConcurrency: 2,
+  enableNotifications: true,
+  debugMode: false,
+  enableWebSearch: false,
+  enableReadImage: false,
+  enableBrowser: false,
+  enableNativeToolCalling: true,
+});
+
 function jsonResponse(status, body) {
   return new Response(JSON.stringify(body), {
     status,
@@ -164,6 +177,38 @@ function messageFromEvent(event) {
   return event.data.message && typeof event.data.message === 'object' ? event.data.message : null;
 }
 
+function mergeStreamText(previous, incoming) {
+  if (!previous) return incoming;
+  if (!incoming || previous === incoming) return previous;
+  if (incoming.startsWith(previous)) return incoming;
+  if (previous.startsWith(incoming)) return previous;
+
+  const maxOverlap = Math.min(previous.length, incoming.length);
+  for (let overlap = maxOverlap; overlap > 0; overlap -= 1) {
+    if (previous.endsWith(incoming.slice(0, overlap))) {
+      return previous + incoming.slice(overlap);
+    }
+  }
+  return previous + incoming;
+}
+
+function assertTaskStarted(bodyText) {
+  if (!bodyText) return;
+  let payload;
+  try {
+    payload = JSON.parse(bodyText);
+  } catch {
+    throw new Error('任务创建接口返回了无法解析的结果');
+  }
+  if (typeof payload?.code === 'number' && payload.code !== 200) {
+    throw new Error(payload.message || `任务创建失败（code ${payload.code}）`);
+  }
+  if (payload?.success === false) {
+    const notification = payload.notification || {};
+    throw new Error(payload.error || notification.message || notification.title || 'InfiniSynapse 拒绝创建任务');
+  }
+}
+
 function reportShape(report) {
   const list = value => Array.isArray(value) ? value : [];
   return {
@@ -244,21 +289,13 @@ export async function onRequestPost(context) {
         connId,
         text: buildPrompt(input),
         chatSettings: { mode: 'act' },
-        autoApprovalSettings: { enabled: true },
+        autoApprovalSettings: TASK_APPROVAL_SETTINGS,
       }),
       signal: upstreamAbort.signal,
     });
     const startBody = await started.text();
     if (!started.ok) throw new Error(`任务创建失败（HTTP ${started.status}）`);
-    if (startBody) {
-      try {
-        const parsed = JSON.parse(startBody);
-        if (typeof parsed.code === 'number' && parsed.code !== 200) throw new Error(parsed.message || `任务创建失败（code ${parsed.code}）`);
-      } catch (error) {
-        if (error instanceof SyntaxError) throw new Error('任务创建接口返回了无法解析的结果');
-        throw error;
-      }
-    }
+    assertTaskStarted(startBody);
   } catch (error) {
     clearTimeout(runtimeTimer);
     upstreamAbort.abort();
@@ -294,9 +331,9 @@ export async function onRequestPost(context) {
         if (typeof message.text === 'string' && message.text) {
           if (typeof message.ts === 'number') {
             if (!segments.has(message.ts)) order.push(message.ts);
-            segments.set(message.ts, message.text);
+            segments.set(message.ts, mergeStreamText(segments.get(message.ts) || '', message.text));
           } else {
-            fallbackText += message.text;
+            fallbackText = mergeStreamText(fallbackText, message.text);
           }
         }
         if (message.say === 'completion_result' || message.ask === 'completion_result') completed = true;
