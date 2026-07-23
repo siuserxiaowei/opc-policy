@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy static preview to GitHub Pages
 on:
   push:
     branches: ["main"]
@@ -18,10 +18,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build public whitelist artifact
+        run: ./scripts/deploy.sh --skip-check --skip-generate --dry-run
+      - name: Remove Cloudflare-only runtime files
+        run: rm -f dist/_worker.js dist/_routes.json
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: dist
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

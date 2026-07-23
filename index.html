@@ -535,10 +535,10 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   <h1>用 AI 把 125 条 OPC 政策<br>分析成一条可执行的落地路线</h1>
   <p class="sub">输入创业画像，规则引擎分析 42 城政策与 128 个载体，InfiniSynapse 综合来源证据、关键风险与 7 天行动计划。</p>
   <div class="hero-actions">
-    <button class="hero-action primary" id="btnContestDemo" onclick="runContestDemo()">一键体验示例 · 约 60 秒</button>
+    <button class="hero-action primary" id="btnContestDemo" onclick="runContestDemo()">一键生成 AI 路线 · 约 60 秒</button>
     <button class="hero-action" onclick="focusProfileForm()">自己填写创业画像</button>
     <a class="hero-action" href="dashboard.html">查看数据分析看板 →</a>
-    <a class="hero-action" href="https://github.com/siuserxiaowei/opc-policy/releases/tag/vibe-coding-2026" target="_blank" rel="noopener">观看 36 秒演示 ↗</a>
+    <a class="hero-action" href="https://github.com/siuserxiaowei/opc-policy/releases/tag/vibe-coding-2026-final" target="_blank" rel="noopener">观看 36 秒演示 ↗</a>
   </div>
   <div class="analysis-flow" aria-label="OPC Gate 数据分析流程">
     <div class="analysis-step"><b>01 · 结构化数据</b><span>政策、条件、金额、来源、载体</span></div>
@@ -1332,8 +1332,7 @@ function runContestDemo(){
   const button = document.getElementById('btnContestDemo');
   if(button){ button.disabled = true; button.textContent = '正在载入示例…'; }
   fillDemo(()=>{
-    if(button){ button.disabled = false; button.textContent = '一键体验示例 · 约 60 秒'; }
-    runMatch();
+    runMatch({autoAi:true});
   });
 }
 
@@ -1492,7 +1491,7 @@ function locationScore(profile, policy, req, reasons, blockers){
   return { score:0, max };
 }
 
-function runMatch(){
+function runMatch(options = {}){
   if(!validateForm()) return;
   const profile = {
     province: document.getElementById('fProvince').value,
@@ -1512,7 +1511,7 @@ function runMatch(){
   setStep(2);
   document.getElementById('panelForm').classList.add('hidden');
   document.getElementById('panelLoading').classList.remove('hidden');
-  setTimeout(()=>{ showResults(matchPolicies(profile), profile); }, 600);
+  setTimeout(()=>{ showResults(matchPolicies(profile), profile, options); }, 600);
 }
 
 function matchPolicies(profile){
@@ -1747,7 +1746,7 @@ function renderCommunityMatches(results){
 }
 
 // ===== RESULTS =====
-function showResults(results, profile){
+function showResults(results, profile, options = {}){
   setStep(3);
   document.getElementById('panelLoading').classList.add('hidden');
   document.getElementById('panelResults').classList.remove('hidden');
@@ -1786,6 +1785,17 @@ function showResults(results, profile){
   renderCommunityMatches(communityResults);
   renderResults(results.filter(r => r.level !== 'low'));
   document.getElementById('aiReportPanel').scrollIntoView({behavior:'smooth',block:'center'});
+  if(options.autoAi){
+    const demoButton = document.getElementById('btnContestDemo');
+    if(demoButton) demoButton.textContent = '正在生成 AI 路线…';
+    setTimeout(async()=>{
+      await generateAiReport();
+      if(demoButton){
+        demoButton.disabled = false;
+        demoButton.textContent = '一键生成 AI 路线 · 约 60 秒';
+      }
+    },250);
+  }
 }
 
 function resetAiReport(){

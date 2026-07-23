@@ -39,30 +39,34 @@ test('static site starts and home data loads', async ({ page }) => {
 
   await expect(page).toHaveTitle(/OPC/);
   await expect(page.getByText('InfiniSynapse × CSDN Vibe Coding 2026 参赛作品', { exact: true })).toBeVisible();
-  await expect(page.getByRole('button', { name: '一键体验示例 · 约 60 秒' })).toBeVisible();
+  await expect(page.getByRole('button', { name: '一键生成 AI 路线 · 约 60 秒' })).toBeVisible();
   await expect(page.getByText('03 · AI 跨城研判', { exact: true })).toBeVisible();
   await expect(page.getByText('Task ID：850b9073-e8d9-49cb-9d03-9434f1f76a68', { exact: true })).toBeVisible();
   await expect(page.locator('#cityGrid .city-card')).toHaveCount(expectedCounts.cities);
 });
 
-test('contest demo runs the explainable local analysis without consuming the AI API', async ({ page }) => {
+test('contest demo runs the explainable analysis and starts the InfiniSynapse API', async ({ page }) => {
   let aiRequests = 0;
-  await page.route('**/api/infinisynapse-report', route => {
+  await page.route('**/api/infinisynapse-report', async route => {
     aiRequests += 1;
-    return route.abort();
+    const stream = [
+      `event: meta\ndata: ${JSON.stringify({taskId:'task-one-click-123',provider:'InfiniSynapse Server API'})}\n\n`,
+      `event: result\ndata: ${JSON.stringify({taskId:'task-one-click-123',report:{executiveSummary:'一键演示已完成规则匹配与 AI 综合。',recommendedCity:'广州',cityComparison:[{city:'广州',fitScore:88,why:'同城证据完整',risks:[]}],opportunities:[],risks:[],actionPlan:[],limitations:[]}})}\n\n`,
+    ].join('');
+    await route.fulfill({status:200,contentType:'text/event-stream',body:stream});
   });
 
   await openHome(page);
-  await page.getByRole('button', { name: '一键体验示例 · 约 60 秒' }).click();
+  await page.getByRole('button', { name: '一键生成 AI 路线 · 约 60 秒' }).click();
 
   await expect(page.locator('#panelResults')).toBeVisible();
   await expect(page.locator('#fCity')).toHaveValue('广州');
   await expect(page.locator('#aiReportPanel')).toBeInViewport();
-  await expect(page.getByRole('button', { name: '生成 AI 深度选址报告' })).toBeVisible();
+  await expect(page.locator('#aiReportResult')).toContainText('Task ID：task-one-click-123');
   await expect(page.getByText('候选可核验上限', { exact: true })).toBeVisible();
   const ceilingText = await page.locator('#summaryStats .summary-stat').last().locator('.num').innerText();
   expect(Number.parseInt(ceilingText, 10)).toBeLessThanOrEqual(5000);
-  expect(aiRequests).toBe(0);
+  expect(aiRequests).toBe(1);
 });
 
 test('home browse can find the five newly added policies', async ({ page }) => {
