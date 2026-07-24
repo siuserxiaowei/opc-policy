@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>OPC 政策热点雷达｜可信解读与发布门禁 - OPC Gate</title>
+  <meta name="description" content="把公开话题文本与 OPC Gate 的 125 条政策、42 个城市范围和 128 个载体关联，生成事实、推断、待核验分层草稿，并在人工核验完成前锁定复制。">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:title" content="OPC 政策热点雷达｜OPC Gate × VibeSocial">
+  <meta property="og:description" content="不是热搜搬运，而是把公开话题变成带官方来源、城市机会与发布门禁的 OPC 内容工作台。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://opcgate.com/vibesocial">
+  <meta property="og:image" content="https://opcgate.com/assets/brand/opcgate-og.png">
+  <link rel="canonical" href="https://opcgate.com/vibesocial">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/opcgate-vi.css">
+  <link rel="stylesheet" href="/assets/css/vibesocial.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"OPC 政策热点雷达","url":"https://opcgate.com/vibesocial","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"将用户提供的公开话题文本与 OPC Gate 政策及载体数据进行可解释关联，生成分层草稿与人工核验清单。","isPartOf":{"@type":"WebSite","name":"OPC Gate","url":"https://opcgate.com"}}
+  </script>
+</head>
+<body>
+  <header class="site-nav">
+    <a class="brand opc-brand" href="/" aria-label="返回 OPC Gate 首页">
+      <img class="opc-brand-mark" src="/assets/brand/opcgate-mark.svg" alt="">
+      <span class="opc-brand-text"><span class="opc-brand-name">opcgate</span><span class="opc-brand-sub">OPC 落地指南</span></span>
+    </a>
+    <nav aria-label="主要导航">
+      <a href="/">首页</a>
+      <a href="/compare.html">城市对比</a>
+      <a href="/now-open.html">窗口期</a>
+      <a class="active" href="/vibesocial" aria-current="page">热点雷达</a>
+    </nav>
+    <a class="nav-cta" href="#workbench">开始分析</a>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> OPC Gate × VibeSocial 专项能力</div>
+          <h1>热点不是结论。<br><em>先过证据门，再发布。</em></h1>
+          <p class="hero-lead">粘贴一段公开话题文本，关联 OPC Gate 全量政策与载体数据，拆成事实、推断和待核验内容。每条机会都有理由、来源和边界。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#workbench">分析一个话题 <span>→</span></a>
+            <button class="button secondary" id="heroSampleButton" type="button">查看完整演示</button>
+          </div>
+          <ul class="boundary-list" aria-label="产品边界">
+            <li><span>✓</span> 用户手动输入或明确标注的演示场景</li>
+            <li><span>✓</span> 当前不接微博实时 API，不冒充实时热搜</li>
+            <li><span>✓</span> 只生成草稿，不自动发布</li>
+          </ul>
+        </div>
+
+        <aside class="hero-proof" aria-label="数据与门禁概览">
+          <div class="proof-topline"><span class="live-dot"></span> OPC Gate 数据底座</div>
+          <div class="data-counter-grid">
+            <div><strong id="heroPolicyCount">125</strong><span>条政策</span></div>
+            <div><strong id="heroCityCount">42</strong><span>城市范围</span></div>
+            <div><strong id="heroCommunityCount">128</strong><span>个载体</span></div>
+          </div>
+          <div class="mini-flow" aria-label="处理流程">
+            <div><b>01</b><span><strong>公开文本</strong><small>手动粘贴 / 演示</small></span></div>
+            <i></i>
+            <div><b>02</b><span><strong>证据关联</strong><small>政策 / 城市 / 载体</small></span></div>
+            <i></i>
+            <div><b>03</b><span><strong>发布门禁</strong><small>人工逐项核验</small></span></div>
+          </div>
+          <div class="proof-foot">
+            <span>数据快照</span>
+            <strong id="dataSnapshot">正在读取…</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="product-story" aria-labelledby="storyTitle">
+      <div class="section-label">不是另一个孤立 Demo</div>
+      <div class="story-heading">
+        <h2 id="storyTitle">从话题发现，走到 OPC 落地决策</h2>
+        <p>专项能力现在属于 OPC Gate 主产品。内容分析结束后，可以继续比较城市、查看窗口期，或进入原有路线诊断。</p>
+      </div>
+      <div class="story-flow">
+        <article><span>01</span><h3>读懂话题</h3><p>提取关键词、主题与用户真实意图，不制造虚假热度。</p></article>
+        <article><span>02</span><h3>寻找证据</h3><p>用全量政策库匹配城市机会、官方来源与载体线索。</p></article>
+        <article><span>03</span><h3>控制表达</h3><p>明确区分事实、推断与待核验，AI 改写后再次扫描。</p></article>
+        <article><span>04</span><h3>继续行动</h3><p>把内容线索带到城市对比、窗口期和落地路线诊断。</p></article>
+      </div>
+    </section>
+
+    <section class="workbench-section" id="workbench" aria-labelledby="workbenchTitle">
+      <div class="workbench-heading">
+        <div>
+          <div class="section-label light">可信解读工作台</div>
+          <h2 id="workbenchTitle">输入公开话题，先做规则分析</h2>
+        </div>
+        <div class="privacy-note"><span>🔒</span><div><strong>不保存输入</strong><small>文本仅用于当前页面分析和本次 AI 请求</small></div></div>
+      </div>
+
+      <div class="workbench-grid">
+        <form class="input-panel" id="topicForm">
+          <div class="panel-kicker">STEP 1 · INPUT</div>
+          <div class="mode-switch" role="radiogroup" aria-label="输入类型">
+            <label><input type="radio" name="inputMode" value="manual" checked><span>手动输入公开文本</span></label>
+            <label><input type="radio" name="inputMode" value="sample"><span>非实时演示场景</span></label>
+          </div>
+          <label class="field-label" for="topicTitle">话题标题 <span>必填</span></label>
+          <input id="topicTitle" maxlength="120" placeholder="例如：AI 智能体创业者开始寻找 OPC 落地资源" autocomplete="off">
+
+          <label class="field-label" for="topicText">公开话题文本 <span>必填 · 最多 1800 字</span></label>
+          <textarea id="topicText" maxlength="1800" rows="9" placeholder="粘贴公开可见的正文或自己整理的话题摘要。请勿输入私信、Cookie、账号凭证或未授权个人信息。"></textarea>
+          <div class="field-meta"><span id="topicCount">0 / 1800</span><button id="fillSampleButton" type="button">填入演示场景</button></div>
+
+          <div class="two-fields">
+            <div>
+              <label class="field-label" for="topicSource">原始来源链接 <span>推荐</span></label>
+              <input id="topicSource" type="url" placeholder="https://weibo.com/…">
+            </div>
+            <div>
+              <label class="field-label" for="observedAt">记录日期 <span>用于时效说明</span></label>
+              <input id="observedAt" type="date">
+            </div>
+          </div>
+          <div class="form-error" id="formError" role="alert" hidden></div>
+          <button class="analyze-button" id="analyzeButton" type="submit"><span>开始关联 OPC Gate 全量数据</span><b>→</b></button>
+          <p class="input-boundary">提交即表示你确认文本来自公开页面或由你自行整理。本工具不会把该输入描述成实时热搜。</p>
+        </form>
+
+        <aside class="method-panel">
+          <div class="panel-kicker">HOW IT WORKS</div>
+          <h3>每个结果都回答三个问题</h3>
+          <ol>
+            <li><b>为什么相关？</b><span>展示命中的关键词、主题和地区，不只给一个神秘分数。</span></li>
+            <li><b>证据在哪里？</b><span>优先给官方原文和数据快照；缺官链时明确降级。</span></li>
+            <li><b>哪里不能下结论？</b><span>政策关联不是资格判断，载体信息也需向运营方确认。</span></li>
+          </ol>
+          <div class="method-guard">
+            <span>门禁规则</span>
+            <strong>修改草稿后，核验状态自动清零</strong>
+          </div>
+          <a class="technical-link" href="https://opc-vibesocial-trust-agent.siuserxy.workers.dev/" target="_blank" rel="noopener">查看原专项技术 Demo <span>↗</span></a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="results-section" id="results" hidden aria-live="polite">
+      <div class="result-header">
+        <div><div class="section-label">规则引擎结果</div><h2>话题与 OPC 机会的证据地图</h2></div>
+        <button class="button secondary compact" id="resetButton" type="button">分析新话题</button>
+      </div>
+
+      <div class="scope-strip">
+        <div><span>分析范围</span><strong id="scopePolicies">—</strong><small>政策</small></div>
+        <div><span>命中</span><strong id="scopeMatches">—</strong><small>相关线索</small></div>
+        <div><span>覆盖</span><strong id="scopeCities">—</strong><small>城市/范围</small></div>
+        <div><span>载体候选</span><strong id="scopeCommunities">—</strong><small>继续核验</small></div>
+      </div>
+
+      <div class="insight-grid">
+        <article class="insight-card intent-card">
+          <div class="card-label">话题意图</div>
+          <h3 id="intentText">—</h3>
+          <div class="tag-list" id="keywordList"></div>
+          <div class="theme-list" id="themeList"></div>
+        </article>
+        <article class="insight-card city-card">
+          <div class="card-label">城市机会分布 <span>相关性排序，不是推荐落地结论</span></div>
+          <div id="cityInsights" class="city-bars"></div>
+        </article>
+      </div>
+
+      <section class="evidence-section" aria-labelledby="evidenceTitle">
+        <div class="subsection-heading"><div><span>STEP 2 · EVIDENCE</span><h3 id="evidenceTitle">政策证据与适用边界</h3></div><p>优先显示高相关、有官链、快照较新的条目</p></div>
+        <div class="policy-grid" id="policyGrid"></div>
+      </section>
+
+      <section class="community-section" id="communitySection" aria-labelledby="communityTitle">
+        <div class="subsection-heading"><div><span>NEXT · PLACES</span><h3 id="communityTitle">可继续询问的载体线索</h3></div><p>权益、地址与入驻状态均需向运营方确认</p></div>
+        <div class="community-row" id="communityGrid"></div>
+      </section>
+
+      <section class="draft-section" aria-labelledby="draftTitle">
+        <div class="draft-main">
+          <div class="subsection-heading draft-heading"><div><span>STEP 3 · DRAFT</span><h3 id="draftTitle">事实 / 推断 / 待核验草稿</h3></div><div class="draft-state" id="draftState">规则草稿</div></div>
+          <textarea id="draftText" rows="20" aria-label="待发布草稿"></textarea>
+          <div class="draft-meta"><span id="draftCount">0 字</span><span id="scanStatus" class="scan-pass">规则扫描通过</span></div>
+          <div class="ai-box">
+            <div><span class="ai-mark">AI</span><div><strong>让 InfiniSynapse 在证据范围内改写</strong><small>服务端调用；不搜索、不补充新政策。返回后仍需经过规则扫描。</small></div></div>
+            <button id="aiButton" type="button">生成 AI 可信解读</button>
+          </div>
+          <div class="ai-status" id="aiStatus" hidden></div>
+        </div>
+
+        <aside class="gate-panel">
+          <div class="gate-head">
+            <div class="lock-icon" id="lockIcon">🔒</div>
+            <div><span>发布门禁</span><strong id="gateStatus">复制已锁定</strong></div>
+            <b id="gateCount">0 / 0</b>
+          </div>
+          <p>下面每一项都需要由你亲自确认。勾选不代表 OPC Gate 已替你核实事实。</p>
+          <div class="checklist" id="verificationChecklist"></div>
+          <button class="copy-button" id="copyButton" type="button" disabled>完成全部核验后复制</button>
+          <button class="export-button" id="exportButton" type="button">导出完整 Markdown 报告</button>
+          <small class="gate-foot">复制只是把草稿放入剪贴板，本站不会代你发送微博。</small>
+        </aside>
+      </section>
+
+      <section class="next-step-section" aria-labelledby="nextStepTitle">
+        <div><div class="section-label light">从内容走向行动</div><h2 id="nextStepTitle">别停在一条微博，继续完成 OPC 落地判断</h2></div>
+        <div class="next-links">
+          <a id="compareCitiesLink" href="/compare.html"><span>01</span><strong>对比关联城市</strong><small>横向看政策与载体差异</small><b>→</b></a>
+          <a href="/now-open.html"><span>02</span><strong>查看当前窗口期</strong><small>核验仍在开放的申报与活动</small><b>→</b></a>
+          <a href="/#modeMatch"><span>03</span><strong>进入落地路线诊断</strong><small>结合自身画像，而不是只看热点</small><b>→</b></a>
+        </div>
+      </section>
+    </section>
+
+    <section class="architecture-section" aria-labelledby="architectureTitle">
+      <div class="section-label">主产品与专项能力</div>
+      <h2 id="architectureTitle">一条清晰的产品关系</h2>
+      <div class="architecture-grid">
+        <article class="primary-product"><span>主产品</span><h3>OPC Gate</h3><p>政策查询、城市比较、载体筛选与落地路线诊断。热点雷达使用同一份主站数据，并把结果继续送回这些决策工具。</p><a href="/">进入主站 →</a></article>
+        <div class="architecture-join">＋</div>
+        <article><span>专项能力</span><h3>VibeSocial 热点雷达</h3><p>负责公开话题理解、政策证据关联、可信草稿和发布门禁。</p><a href="#workbench">立即使用 →</a></article>
+        <div class="architecture-join">＋</div>
+        <article><span>技术证明</span><h3>Trust Agent Demo</h3><p>保留最初的风险扫描与门禁原型，作为独立技术实现证明，不再承担主产品叙事。</p><a href="https://opc-vibesocial-trust-agent.siuserxy.workers.dev/" target="_blank" rel="noopener">打开 Demo ↗</a></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand opc-brand" href="/">
+      <img class="opc-brand-mark" src="/assets/brand/opcgate-mark.svg" alt="">
+      <span class="opc-brand-text"><span class="opc-brand-name">opcgate</span><span class="opc-brand-sub">让 OPC 信息可查、可核验、可行动</span></span>
+    </a>
+    <p>本站只提供信息查询、内容研究与路线诊断参考，不提供政务办理、补贴承诺或自动发布。</p>
+    <div><a href="/changelog.html">维护日志</a><a href="/#business">合作与联系</a><a href="https://github.com/siuserxiaowei/opc-policy" target="_blank" rel="noopener">GitHub ↗</a></div>
+  </footer>
+
+  <div class="toast" id="toast" hidden role="status"></div>
+  <script type="module" src="/assets/js/vibesocial.js"></script>
+</body>
+</html>

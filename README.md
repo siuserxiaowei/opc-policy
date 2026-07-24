@@ -2,12 +2,12 @@
 
 > **InfiniSynapse × CSDN Vibe Coding 2026 参赛作品**：将 42 个城市 / 适用范围、125 条政策和 128 条社区 / 载体样本转成可解释的一人公司选址建议。
 
-[**立即体验**](https://opcgate.com) · [**36 秒真实 API 演示 / 最终参赛快照**](https://github.com/siuserxiaowei/opc-policy/releases/tag/vibe-coding-2026-final) · [**参赛架构与复现**](VIBE_CODING_2026.md) · [**城市对比**](https://opcgate.com/compare) · [**数据看板**](https://opcgate.com/dashboard)
+[**立即体验**](https://opcgate.com) · [**VibeSocial 政策热点雷达**](https://opcgate.com/vibesocial) · [**36 秒真实 API 演示 / 最终参赛快照**](https://github.com/siuserxiaowei/opc-policy/releases/tag/vibe-coding-2026-final) · [**参赛架构与复现**](VIBE_CODING_2026.md) · [**城市对比**](https://opcgate.com/compare) · [**数据看板**](https://opcgate.com/dashboard)
 
 [![Site](https://img.shields.io/badge/site-opcgate.com-2563EB)](https://opcgate.com)
 [![InfiniSynapse](https://img.shields.io/badge/InfiniSynapse-real%20SSE-0F766E)](VIBE_CODING_2026.md#真实调用证据)
 [![Data](https://img.shields.io/badge/data-42%20%7C%20125%20%7C%20128-B45309)](#数据底座与来源口径)
-[![Sitemap](https://img.shields.io/badge/sitemap-188%20URLs-15803D)](https://opcgate.com/sitemap.xml)
+[![Sitemap](https://img.shields.io/badge/sitemap-185%20URLs-15803D)](https://opcgate.com/sitemap.xml)
 
 OPC Gate 把用户画像和政策数据先交给确定性规则引擎，产生带来源的候选集；再通过服务端调用 InfiniSynapse Server API，综合成跨城市比较、机会证据、关键风险与七天行动计划。结果页展示真实 Task ID，可由赛事后台核验调用日志。
 
@@ -53,7 +53,7 @@ API 实现对照 [InfiniSynapse Server API Reference](https://infinisynapse.cn/z
 - **42 个城市 / 适用范围**：`data/cities.json`。其中「全国」是适用范围，不会在 AI 报告中被当作城市推荐。
 - **125 条政策记录**：`data/policies.json`；其中 106 条填有 `links.official` 主来源字段，按当前前端官方域名白名单会展示 99 条「官方来源」与 26 条参考 / 缺官链记录。
 - **128 条社区 / 载体样本**：`data/communities.json`。「样本」表示数据集记录，不等同于全国完整名录。
-- **188 个 sitemap URL**：当前 `sitemap.xml` 中 `<url>` 节点数，对应主页、工具页、城市页和政策详情页。
+- **185 个 sitemap URL**：当前 `sitemap.xml` 中 `<url>` 节点数，对应主页、工具页、VibeSocial 专项页、现有城市页和非草稿政策详情页；生成器会排除不存在的城市静态页与草稿政策。
 
 来源展示遵循「**官方原文优先，缺失必须明示**」：
 
@@ -73,6 +73,17 @@ API 实现对照 [InfiniSynapse Server API Reference](https://infinisynapse.cn/z
 | 城市深页 | [seo/cities](https://opcgate.com/seo/cities) | 查看单城政策、载体与来源 |
 | 开放申报窗口 | [now-open](https://opcgate.com/now-open) | 按 schedule 字段查看当前 / 近期机会 |
 | 变更追踪 | [changelog](https://opcgate.com/changelog) · [RSS](https://opcgate.com/rss.xml) | 追踪公开数据变更 |
+| VibeSocial 政策热点雷达 | [vibesocial](https://opcgate.com/vibesocial) | 将用户提供的公开话题与全量政策、城市和载体数据关联，生成分层草稿与发布门禁 |
+
+### VibeSocial 专项能力与主产品关系
+
+`opcgate.com/vibesocial` 是 OPC Gate 内的内容研究入口，不是脱离主站的第二个产品。它复用 125 条政策、42 个城市 / 适用范围和 128 个载体数据，输出关键词、城市机会、政策官链、载体线索，以及“事实 / 推断 / 待核验”草稿；分析后可继续进入城市对比、窗口期与路线诊断。
+
+- 当前不接微博实时 API，只处理用户手动输入的公开文本或明确标注的非实时演示场景。
+- 政策关联是内容相关性线索，不是资格判断、获批概率或补贴承诺。
+- AI 改写使用专用 Pages Function，限定在给定证据内，返回后再经确定性规则扫描；失败时保留规则草稿。
+- 全部人工核验完成前禁止复制；草稿发生修改后门禁自动重锁；支持导出 Markdown。
+- 原独立 Trust Agent Demo 保留为风险扫描与门禁的技术证明，不承担 OPC Gate 主产品叙事。
 
 ## 技术架构
 

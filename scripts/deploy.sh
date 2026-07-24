@@ -102,6 +102,9 @@ fi
 if [[ -d seo ]]; then
   cp -r seo "$DIST/"
 fi
+if [[ -d vibesocial ]]; then
+  cp -r vibesocial "$DIST/"
+fi
 if [[ -d functions ]]; then
   echo "→ 编译 Cloudflare Pages Functions"
   FUNCTIONS_BUILD_DIR="$(mktemp -d /tmp/opcgate-functions.XXXXXX)"

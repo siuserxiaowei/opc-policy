@@ -415,6 +415,13 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   .topnav a{padding-inline:8px}
   .topnav .opc-brand{padding-inline:4px}
 }
+.vibesocial-strip{max-width:900px;margin:0 auto 22px;padding:0 20px}
+.vibesocial-card{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:18px;padding:18px 20px;border:1px solid rgba(37,99,235,.18);border-radius:12px;background:linear-gradient(120deg,#fff,#EFF6FF 62%,#F0FDFA);box-shadow:0 10px 28px rgba(15,23,42,.045)}
+.vibesocial-card .vibe-kicker{font-size:.68em;color:var(--accent);font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.vibesocial-card h2{font-size:1.08em;margin:3px 0;color:var(--text)}
+.vibesocial-card p{font-size:.78em;color:var(--dim);margin:0}
+.vibesocial-card a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 16px;border-radius:8px;background:var(--accent);color:#fff;font-size:.78em;font-weight:800;white-space:nowrap}
+@media(max-width:640px){.vibesocial-strip{padding:0 14px}.vibesocial-card{grid-template-columns:1fr}.vibesocial-card a{width:100%}}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
@@ -507,6 +514,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   </div>
   <a href="compare.html">对比</a>
   <a href="now-open.html">🟢 窗口期</a>
+  <a href="/vibesocial">热点雷达</a>
   <a href="aliyun-opc.html">阿里云OPC</a>
   <a href="tax.html">税务</a>
   <a href="changelog.html">更新记录</a>
@@ -568,6 +576,17 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
   }
 })();
 </script>
+
+<section class="vibesocial-strip" aria-label="VibeSocial 热点可信解读">
+  <div class="vibesocial-card">
+    <div>
+      <div class="vibe-kicker">OPC Gate × VibeSocial</div>
+      <h2>把公开话题变成带政策证据的可信内容</h2>
+      <p>关联全量政策、城市与载体数据，区分事实 / 推断 / 待核验，全部核验前锁定复制。</p>
+    </div>
+    <a href="/vibesocial">打开政策热点雷达 →</a>
+  </div>
+</section>
 
 <!-- Mode Switch -->
 <div class="mode-tabs">
@@ -1126,6 +1145,7 @@ footer{text-align:center;padding:30px 20px;color:var(--dim);font-size:.78em;bord
     <a href="guangzhou.html">广州专版</a> · <a href="chengdu.html">成都专版</a> · <a href="suzhou.html">苏州专版</a> ·
     <a href="seo/index.html">热门对比页</a> · <a href="seo/cities/index.html">城市入口</a> ·
 	    <a href="tax.html">税务边界</a> · <a href="dashboard.html">数据看板</a> · <a href="changelog.html">维护日志</a> ·
+	    <a href="/vibesocial">政策热点雷达</a> ·
 	    <a href="/miniprogram">小程序说明</a> · <a href="#business">商务合作</a> · <a href="rss.xml">RSS 订阅</a> · <a href="https://github.com/siuserxiaowei/opc-policy" target="_blank">GitHub</a>
   </p>
   <p style="font-size:.78em;color:var(--dim)">

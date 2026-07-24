@@ -45,6 +45,69 @@ test('static site starts and home data loads', async ({ page }) => {
   await expect(page.locator('#cityGrid .city-card')).toHaveCount(expectedCounts.cities);
 });
 
+test('home links the VibeSocial capability back into OPC Gate', async ({ page }) => {
+  await openHome(page);
+  await expect(page.getByRole('link', { name: '打开政策热点雷达 →' })).toHaveAttribute('href', '/vibesocial');
+  await expect(page.getByRole('heading', { name: '把公开话题变成带政策证据的可信内容' })).toBeVisible();
+});
+
+test('VibeSocial demo uses full data and keeps copy locked until verification', async ({ page }) => {
+  await page.goto('/vibesocial/');
+  await expect(page).toHaveTitle(/OPC 政策热点雷达/);
+  await expect(page.getByText('125', { exact: true }).first()).toBeVisible();
+  await expect(page.getByText('128', { exact: true }).first()).toBeVisible();
+
+  await page.getByRole('button', { name: '填入演示场景' }).click();
+  await page.getByRole('button', { name: '开始关联 OPC Gate 全量数据' }).click();
+
+  await expect(page.locator('#results')).toBeVisible();
+  await expect(page.locator('#scopePolicies')).toHaveText('125');
+  await expect(page.locator('#scopeMatches')).not.toHaveText('0');
+  await expect(page.locator('#policyGrid .policy-card')).toHaveCount(8);
+  await expect(page.locator('#draftText')).toHaveValue(/【事实】/);
+  await expect(page.locator('#draftText')).toHaveValue(/【推断】/);
+  await expect(page.locator('#draftText')).toHaveValue(/【待核验】/);
+  await expect(page.locator('#copyButton')).toBeDisabled();
+
+  const checks = page.locator('#verificationChecklist input');
+  await checks.evaluateAll(inputs => inputs.forEach(input => input.click()));
+  await expect(page.locator('#copyButton')).toBeEnabled();
+
+  await page.locator('#draftText').pressSequentially('补充');
+  await expect(page.locator('#copyButton')).toBeDisabled();
+  await expect(page.locator('#gateCount')).toContainText('0 /');
+});
+
+test('VibeSocial accepts only AI drafts that pass the deterministic scan', async ({ page }) => {
+  await page.route('**/api/vibesocial-report', async route => {
+    const body = route.request().postDataJSON();
+    expect(body.policies.length).toBeGreaterThan(0);
+    expect(body.policies[0]).toHaveProperty('officialUrl');
+    const draft = [
+      '【非实时演示场景】AI 智能体创业者开始寻找 OPC 落地资源',
+      '【事实】OPC Gate 数据库收录给定政策条目。',
+      '【推断】相关城市值得继续核验，不代表落地推荐。',
+      '【待核验】请回到官方原文核对适用对象、时效与入口。',
+      '当前未接入微博实时 API；政策关联不等于资格判断；本工具不自动发布。',
+      '#微博VibeLab# #VibeSocial#',
+    ].join('\n');
+    const stream = [
+      `event: meta\ndata: ${JSON.stringify({ taskId: 'vibesocial-task-123', provider: 'InfiniSynapse Server API' })}\n\n`,
+      `event: result\ndata: ${JSON.stringify({ taskId: 'vibesocial-task-123', report: { executiveSummary: '仅基于给定证据。', interpretation: '需继续核验。', draft, verificationPriorities: [], limitations: [] } })}\n\n`,
+    ].join('');
+    await route.fulfill({ status: 200, contentType: 'text/event-stream', body: stream });
+  });
+
+  await page.goto('/vibesocial/');
+  await page.getByRole('button', { name: '填入演示场景' }).click();
+  await page.getByRole('button', { name: '开始关联 OPC Gate 全量数据' }).click();
+  await page.getByRole('button', { name: '生成 AI 可信解读' }).click();
+
+  await expect(page.locator('#draftState')).toContainText('AI 可信解读');
+  await expect(page.locator('#aiStatus')).toContainText('Task ID：vibesocial-task-123');
+  await expect(page.locator('#scanStatus')).toHaveText('规则扫描通过');
+});
+
 test('contest demo runs the explainable analysis and starts the InfiniSynapse API', async ({ page }) => {
   let aiRequests = 0;
   await page.route('**/api/infinisynapse-report', async route => {
