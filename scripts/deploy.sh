@@ -170,11 +170,17 @@ fi
 
 # commit hash 作为 deployment 标签
 COMMIT=$(git rev-parse --short HEAD 2>/dev/null || echo "manual")
-BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "main")
+GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "main")
+# opcgate.com 绑定 Cloudflare Pages 的 production branch。可通过环境变量覆盖，
+# 避免从功能分支执行脚本时只更新预览别名、主域名仍停留在旧版本。
+PAGES_BRANCH="${CLOUDFLARE_PAGES_BRANCH:-main}"
+
+echo "  Git 分支: $GIT_BRANCH"
+echo "  Pages 生产分支: $PAGES_BRANCH"
 
 wrangler pages deploy "$DIST" \
   --project-name="$PROJECT_NAME" \
-  --branch="$BRANCH" \
+  --branch="$PAGES_BRANCH" \
   --commit-hash="$COMMIT" \
   --commit-dirty=true \
   --commit-message="deploy $COMMIT"
